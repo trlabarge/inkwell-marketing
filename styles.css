@@ -187,24 +187,25 @@ h3.display { font-size: 1.5rem; }
   white-space: nowrap;
 }
 .hero-sub.active { opacity: 1; }
-.hero-sub .word-display {   /* FOCUS — Spectral italic */
+.hero-sub .word-display {   /* FOCUS: Spectral italic */
   font-family: 'Spectral', Georgia, serif;
   font-style: italic;
   font-size: 1.1em;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--ink);
 }
-.hero-sub .word-uncial {   /* WORLD — Cinzel Decorative */
+.hero-sub .word-uncial {   /* WORLD: Cinzel Decorative */
   font-family: 'Cinzel Decorative', serif;
+  font-weight: 400;
   font-size: .88em;
   letter-spacing: .04em;
   color: var(--ink);
 }
-.hero-sub .word-script {   /* story — Allura script */
+.hero-sub .word-script {   /* story: Allura script */
   font-family: 'Allura', cursive;
   font-size: 1.9em;
   line-height: 1;
-  vertical-align: -.22em;
+  vertical-align: -0.12em;
   color: var(--ink);
 }
 
