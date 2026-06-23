@@ -524,9 +524,85 @@
             </div>
           </div>
           <div class="fs-panel" id="fs-share" role="tabpanel" aria-labelledby="tab-fs-share" hidden>
-            <div class="fs-placeholder">
-              <span class="fs-placeholder__label">Share Access</span>
-              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            <div class="codex-anim share-anim" role="img" aria-label="Animated preview of Inkwell's sharing: opening the share dialog, choosing a document and an expiry, allowing comments, and generating a link for a beta reader.">
+              <!-- Editor behind the dialog -->
+              <div class="share-editor">
+                <div class="share-ed-bar">
+                  <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> The Ember Throne <span class="cx__sep">›</span> <b>The Hollow Crown</b></div>
+                  <div class="share-ed-tools">
+                    <span class="cx__saved">✓ All changes saved</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>
+                    <svg class="share-btn" id="share-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.1 10.9 15.9 7.1M8.1 13.1l7.8 3.8"/></svg>
+                  </div>
+                </div>
+                <div class="share-ed-body">
+                  <div class="cx__prose">
+                    <p>The crown was never meant for him. Stable-born and ash-scarred, the boy had no claim to the Ember Throne, and yet the embers had begun to whisper his name through the smoke.</p>
+                    <p>Two hunters met in the dark beneath the keep, both wanting the same quiet thing, and neither willing to name it first.</p>
+                    <p>A small man stepped out from the shadow of the colonnade, and the night drew its breath and waited.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="share-overlay" id="share-overlay" aria-hidden="true"></div>
+
+              <!-- Share dialog -->
+              <div class="share-modal" id="share-modal" aria-hidden="true">
+                <div class="share-mhead">
+                  <svg class="sh-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.1 10.9 15.9 7.1M8.1 13.1l7.8 3.8"/></svg>
+                  <div>
+                    <h5>Share Document</h5>
+                    <div class="sh-sub" id="share-sub">The Hollow Crown</div>
+                  </div>
+                  <svg class="sh-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                </div>
+                <div class="share-mbody">
+                  <div class="share-info"><b>About sharing</b>Beta readers can view this document and the characters and lore it draws on. They cannot edit anything or see your other documents.</div>
+
+                  <p class="share-sect">Create new share link</p>
+                  <div class="share-radio is-on"><span class="sh-dot"></span><span>Specific Document<i>Share just one document</i></span></div>
+                  <div class="share-radio"><span class="sh-dot"></span><span>All Documents in Project<i>Share the entire project</i></span></div>
+
+                  <div class="share-lbl">Select document</div>
+                  <div class="share-select" id="share-doc">
+                    <span id="share-doc-val">The Hollow Crown</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    <div class="share-select__menu" id="share-doc-menu">
+                      <div class="share-opt is-sel">The Hollow Crown</div>
+                      <div class="share-opt" id="share-doc-opt">Emberfall</div>
+                      <div class="share-opt">Daughter of Ash</div>
+                      <div class="share-opt">Stormhold</div>
+                    </div>
+                  </div>
+
+                  <div class="share-lbl">Link expiration</div>
+                  <div class="share-select share-select--up" id="share-exp">
+                    <span id="share-exp-val">Never expires</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    <div class="share-select__menu" id="share-exp-menu">
+                      <div class="share-opt is-sel">Never expires</div>
+                      <div class="share-opt">Expires in 1 day</div>
+                      <div class="share-opt" id="share-exp-opt">Expires in 1 week</div>
+                      <div class="share-opt">Expires in 1 month</div>
+                    </div>
+                  </div>
+
+                  <div class="share-check" id="share-check">
+                    <span class="share-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg></span>
+                    <span>Allow comments<i>Beta readers can leave feedback on this share</i></span>
+                  </div>
+
+                  <div class="share-gen" id="share-gen">Generate Link</div>
+                  <div class="share-success" id="share-success">
+                    <div class="share-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 12 5 5 9-10"/></svg><span>inkwell.world/s/3fa9c2e1</span><span class="share-copied">Copied</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
             </div>
           </div>
           <div class="fs-panel" id="fs-export" role="tabpanel" aria-labelledby="tab-fs-export" hidden>
@@ -1066,6 +1142,119 @@
                           newCard.style.display = 'none'; newCard.classList.remove('show', 'leaving');
                           series.classList.add('show');
                           wait(2700, run);
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+
+    /* Share preview: open the dialog, set options, allow comments, generate a link */
+    (function () {
+      var root = document.querySelector('.share-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var btn = document.getElementById('share-btn');
+      var overlay = document.getElementById('share-overlay');
+      var modal = document.getElementById('share-modal');
+      var sub = document.getElementById('share-sub');
+      var doc = document.getElementById('share-doc'), docMenu = document.getElementById('share-doc-menu');
+      var docVal = document.getElementById('share-doc-val'), docOpt = document.getElementById('share-doc-opt');
+      var exp = document.getElementById('share-exp'), expMenu = document.getElementById('share-exp-menu');
+      var expVal = document.getElementById('share-exp-val'), expOpt = document.getElementById('share-exp-opt');
+      var check = document.getElementById('share-check');
+      var gen = document.getElementById('share-gen'), success = document.getElementById('share-success');
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        cursor.style.transform = 'translate(' + (eb.left - rb.left + (offX == null ? eb.width / 2 : offX)) +
+          'px,' + (eb.top - rb.top + (offY == null ? eb.height / 2 : offY)) + 'px)';
+      }
+      function pulse() { cursor.classList.remove('click'); void cursor.offsetWidth; cursor.classList.add('click'); }
+
+      function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        overlay.classList.remove('show'); modal.classList.remove('show');
+        docMenu.classList.remove('open'); expMenu.classList.remove('open');
+        docVal.textContent = 'The Hollow Crown'; sub.textContent = 'The Hollow Crown';
+        expVal.textContent = 'Never expires';
+        docOpt.classList.remove('is-sel'); expOpt.classList.remove('is-sel');
+        docMenu.querySelector('.is-sel') && docMenu.querySelector('.is-sel').classList.remove('is-sel');
+        expMenu.querySelector('.is-sel') && expMenu.querySelector('.is-sel').classList.remove('is-sel');
+        docMenu.children[0].classList.add('is-sel'); expMenu.children[0].classList.add('is-sel');
+        check.classList.remove('checked');
+        gen.style.display = ''; success.classList.remove('show', 'pop');
+        cursor.classList.remove('click');
+      }
+      function setSel(menu, opt) {
+        var cur = menu.querySelector('.is-sel'); if (cur) cur.classList.remove('is-sel');
+        opt.classList.add('is-sel');
+      }
+
+      function run() {
+        reset();
+        wait(500, function () {
+          moveTo(btn, null, null);
+          wait(850, function () {                         /* open dialog */
+            pulse(); overlay.classList.add('show'); modal.classList.add('show');
+            wait(1500, function () {                       /* select document */
+              moveTo(doc, null, 16);
+              wait(650, function () {
+                pulse(); docMenu.classList.add('open');
+                wait(900, function () {
+                  moveTo(docOpt, null, null);
+                  wait(550, function () {
+                    pulse(); setSel(docMenu, docOpt);
+                    docVal.textContent = 'Emberfall'; sub.textContent = 'Emberfall';
+                    docMenu.classList.remove('open');
+                    wait(900, function () {                 /* select expiration */
+                      moveTo(exp, null, 16);
+                      wait(600, function () {
+                        pulse(); expMenu.classList.add('open');
+                        wait(900, function () {
+                          moveTo(expOpt, null, null);
+                          wait(550, function () {
+                            pulse(); setSel(expMenu, expOpt);
+                            expVal.textContent = 'Expires in 1 week';
+                            expMenu.classList.remove('open');
+                            wait(850, function () {           /* allow comments */
+                              moveTo(check, 18, null);
+                              wait(600, function () {
+                                pulse(); check.classList.add('checked');
+                                wait(900, function () {        /* generate link */
+                                  moveTo(gen, null, null);
+                                  wait(650, function () {
+                                    pulse();
+                                    gen.style.display = 'none';
+                                    success.classList.add('show');
+                                    void success.offsetWidth; success.classList.add('pop');
+                                    wait(3000, function () {    /* close + loop */
+                                      overlay.classList.remove('show'); modal.classList.remove('show');
+                                      wait(900, run);
+                                    });
+                                  });
+                                });
+                              });
+                            });
+                          });
                         });
                       });
                     });
