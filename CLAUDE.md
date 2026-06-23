@@ -20,13 +20,18 @@ begin. If a change doesn't serve that, question it.
 
 ## Working agreement
 
-- **Always confirm before committing or pushing.** Show me the change first and
-  wait for approval. Routine edits included.
+Be fast, efficient, and autonomous.
+
+- **Create and edit freely.** You don't need explicit permission to make changes,
+  commit them, and push to the working branch. Move quickly.
+- **Never merge without me knowing.** Don't merge a PR (or push directly to
+  `main`) unless I've explicitly said so. I want to be aware of anything that
+  goes live.
 - **Clear major changes with me first.** Anything structural, or that adds
   complexity (new tooling, dependencies, a build step, JS frameworks, large
   refactors), needs a go-ahead before you start — not after.
-- Active PR for the current branch: **#1**. Pushing to the branch updates it.
-  Don't open new PRs unless asked.
+- Open a PR for new work and tell me the number. Pushing to the branch updates
+  the open PR; don't open duplicates.
 
 ## Hard rules (don't break these)
 
@@ -81,10 +86,15 @@ README.md         Deploy + domain notes
 
 ## SEO / metadata
 
-Pages currently have `<title>` and `<meta name="description">`, but **no Open
-Graph, Twitter Card, or canonical tags** yet — that's the main SEO gap. When
-adding metadata, do it consistently across all pages and confirm OG image
-assets with me first.
+Every page has `<title>`, `<meta name="description">`, `<link rel="canonical">`,
+and a full Open Graph + Twitter Card block in `<head>`. Keep these consistent
+across all pages and in sync with the page title/description when you edit copy.
+
+- Canonical and `og:url` use the absolute apex URL, extensionless
+  (`https://inkwell.world/pricing`).
+- The social card image is currently `assets/wordmark-dark.png` as a stopgap. A
+  dedicated **1200×630** social card (`assets/og-image.png`) would be better —
+  swap it in across all pages once it exists.
 
 ## Local preview
 
