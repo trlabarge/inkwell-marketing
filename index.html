@@ -125,7 +125,7 @@
               <span class="fs-num">04</span>
               <span class="fs-text">
                 <span class="fs-title">Project Management</span>
-                <span class="fs-desc">Outlines, chapters, and a manuscript binder keep your draft structured from first idea to final page.</span>
+                <span class="fs-desc">Keep every novel in one calm library. Start a new project in a click, then gather related books into a series.</span>
               </span>
             </button>
           </li>
@@ -448,9 +448,79 @@
             </div>
           </div>
           <div class="fs-panel" id="fs-project" role="tabpanel" aria-labelledby="tab-fs-project" hidden>
-            <div class="fs-placeholder">
-              <span class="fs-placeholder__label">Project Management</span>
-              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            <div class="codex-anim pm-anim" role="img" aria-label="Animated preview of Inkwell's project dashboard, starting a new novel and moving it into a series.">
+              <div class="pm-bar">
+                <div class="pm-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4v16M9 4v16M13 5l4 15"/></svg> My Projects</div>
+                <div class="pm-bar-right">
+                  <span>your@email.com</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.4-2.3 1a7 7 0 0 0-1.7-1l-.3-2.5h-4l-.3 2.5a7 7 0 0 0-1.7 1l-2.3-1-2 3.4 2 1.5a7 7 0 0 0 0 2l-2 1.5 2 3.4 2.3-1a7 7 0 0 0 1.7 1l.3 2.5h4l.3-2.5a7 7 0 0 0 1.7-1l2.3 1 2-3.4-2-1.5a7 7 0 0 0 .1-1z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4M9 16l4-4-4-4M13 12H4"/></svg>
+                </div>
+              </div>
+              <div class="pm-body" aria-hidden="true">
+                <!-- Series group (revealed after move) -->
+                <div class="pm-series" id="pm-series">
+                  <div class="pm-series-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg> The Coastal Novels <i id="pm-series-count">1 project</i></div>
+                  <div class="pm-card">
+                    <h5>The Lighthouse Keeper</h5>
+                    <div class="pm-stat"><span>Documents</span><b>1</b></div>
+                    <div class="pm-stat"><span>Total Words</span><b>0</b></div>
+                    <div class="pm-sep"></div>
+                    <div class="pm-edited">Last edited 6/23/2026</div>
+                  </div>
+                </div>
+
+                <div class="pm-head">
+                  <h4>My Projects</h4>
+                  <span class="pm-newseries"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M12 11v4M10 13h4"/></svg> New Series</span>
+                </div>
+
+                <div class="pm-grid">
+                  <div class="pm-card pm-card--start" id="pm-start">
+                    <span class="pm-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></span>
+                    <span>Start New Project</span>
+                  </div>
+                  <div class="pm-card">
+                    <h5>The Hours Between</h5>
+                    <div class="pm-stat"><span>Documents</span><b>12</b></div>
+                    <div class="pm-stat"><span>Total Words</span><b>38.2k</b></div>
+                    <div class="pm-sep"></div>
+                    <div class="pm-edited">Last edited 6/18/2026</div>
+                  </div>
+                  <div class="pm-card">
+                    <h5>Salt and Stone</h5>
+                    <div class="pm-stat"><span>Documents</span><b>9</b></div>
+                    <div class="pm-stat"><span>Total Words</span><b>51.7k</b></div>
+                    <div class="pm-sep"></div>
+                    <div class="pm-edited">Last edited 6/9/2026</div>
+                  </div>
+                  <div class="pm-card pm-card--new" id="pm-new">
+                    <span class="pm-dots" id="pm-dots"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span>
+                    <h5>The Lighthouse Keeper</h5>
+                    <div class="pm-stat"><span>Documents</span><b>1</b></div>
+                    <div class="pm-stat"><span>Total Words</span><b>0</b></div>
+                    <div class="pm-sep"></div>
+                    <div class="pm-edited">Last edited 6/23/2026</div>
+                  </div>
+                </div>
+
+                <!-- Context menu -->
+                <div class="pm-menu" id="pm-menu">
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="2"/></svg> Rename</div>
+                  <div class="pm-mi" id="pm-mi-move"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg> Move to Series <svg class="pm-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></div>
+                  <div class="pm-mi pm-mi--danger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg> Delete</div>
+                </div>
+                <!-- Move-to-Series submenu -->
+                <div class="pm-submenu" id="pm-submenu">
+                  <div class="pm-mi" id="pm-series-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg> The Coastal Novels</div>
+                  <div class="pm-mi pm-mi--accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg> New Series…</div>
+                </div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
             </div>
           </div>
           <div class="fs-panel" id="fs-share" role="tabpanel" aria-labelledby="tab-fs-share" hidden>
@@ -910,6 +980,101 @@
         timers.forEach(clearTimeout); timers = [];
         typed.textContent = coreText; caret.classList.remove('on');
         step(0);
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+
+    /* Project dashboard preview: start a new project, then move it into a series */
+    (function () {
+      var root = document.querySelector('.pm-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var startCard = document.getElementById('pm-start');
+      var newCard = document.getElementById('pm-new');
+      var dots = document.getElementById('pm-dots');
+      var menu = document.getElementById('pm-menu');
+      var submenu = document.getElementById('pm-submenu');
+      var miMove = document.getElementById('pm-mi-move');
+      var seriesOpt = document.getElementById('pm-series-opt');
+      var series = document.getElementById('pm-series');
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        var x = eb.left - rb.left + offX;
+        var y = eb.top - rb.top + (offY == null ? eb.height / 2 : offY);
+        cursor.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      }
+      function pulse() { cursor.classList.remove('click'); void cursor.offsetWidth; cursor.classList.add('click'); }
+      function placeMenu(anchor, el, toRight) {
+        var rb = root.getBoundingClientRect(), ab = anchor.getBoundingClientRect();
+        var mw = el.offsetWidth, mh = el.offsetHeight, x, y;
+        if (toRight) {
+          x = ab.right - rb.left + 4;
+          if (x + mw > rb.width - 8) x = ab.left - rb.left - mw - 4;
+          y = ab.top - rb.top - 5;
+        } else {
+          x = ab.left - rb.left;
+          if (x + mw > rb.width - 8) x = rb.width - 8 - mw;
+          y = ab.top - rb.top + ab.height + 6;
+          if (y + mh > rb.height - 8) y = ab.top - rb.top - mh - 6;
+        }
+        if (x < 8) x = 8;
+        if (y < 8) y = 8;
+        if (y + mh > rb.height - 6) y = rb.height - 6 - mh;
+        el.style.left = x + 'px'; el.style.top = y + 'px';
+      }
+      function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        newCard.classList.remove('show', 'leaving'); newCard.style.display = 'none';
+        menu.classList.remove('show'); submenu.classList.remove('show'); miMove.classList.remove('hi');
+        series.classList.remove('show'); cursor.classList.remove('click');
+      }
+      function run() {
+        reset();
+        wait(450, function () {
+          moveTo(startCard, 32, 30);
+          wait(950, function () {                     /* 1. create a new project */
+            pulse();
+            newCard.style.display = 'block'; void newCard.offsetWidth; newCard.classList.add('show');
+            wait(1650, function () {                  /* 2. open the card menu */
+              moveTo(dots, 6, 8);
+              wait(720, function () {
+                pulse(); placeMenu(dots, menu, false); menu.classList.add('show');
+                wait(1500, function () {              /* 3. hover Move to Series */
+                  moveTo(miMove, 16, null);
+                  wait(680, function () {
+                    miMove.classList.add('hi'); placeMenu(miMove, submenu, true); submenu.classList.add('show');
+                    wait(1500, function () {          /* 4. choose the series */
+                      moveTo(seriesOpt, 16, null);
+                      wait(680, function () {
+                        pulse();
+                        menu.classList.remove('show'); submenu.classList.remove('show'); miMove.classList.remove('hi');
+                        newCard.classList.add('leaving');
+                        wait(430, function () {
+                          newCard.style.display = 'none'; newCard.classList.remove('show', 'leaving');
+                          series.classList.add('show');
+                          wait(2700, run);
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
       }
 
       var started = false;
