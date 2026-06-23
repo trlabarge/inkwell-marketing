@@ -14,8 +14,9 @@ pricing.html      Pricing tiers
 privacy.html      Privacy Policy
 terms.html        Terms of Service
 styles.css        All styling
-favicon.png       Favicon
-wordmark-*.png    Logo (dark = on light header, light = on dark footer)
+assets/           Images
+  favicon.png       Favicon
+  wordmark-*.png    Logo (dark = on light header, light = on dark footer)
 vercel.json       Clean URLs + caching/security headers
 ```
 
