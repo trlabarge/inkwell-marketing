@@ -50,6 +50,23 @@ Be fast, efficient, and autonomous.
 elegant, human, and craft-focused. Favor calm, evocative language over hype,
 buzzwords, or exclamation-heavy SaaS-speak. Keep it concise and welcoming.
 
+### Copy rules (match the product app's voice)
+
+- **No em dashes, ever.** Rewrite with commas, periods, parentheses, or "and".
+  This applies to all on-page copy and metadata.
+- **Never say "AI."** The product never brands features as "AI" or "AI-powered."
+  Name features by their outcome (e.g. "summarization and brainstorming tools",
+  "story intelligence"). The only sanctioned use of the word is a future privacy
+  pledge about what we will never do.
+- **Lead with momentum and finishing.** The product's positioning is "the best
+  place to actually finish your novel" and "start writing in seconds." Emphasize
+  how quick and easy it is to begin, not just serenity.
+- **"Your story stays connected"** is the approved framing for the codex / linked
+  characters and lore. Do not market it as a "wiki" or a "graph" product.
+- Mirror the app's tone: calm, encouraging, craft-focused. Avoid hype and
+  pressure. Reference `CLAUDE-inkwell-app-*.md` for product facts and positioning
+  before writing feature or pricing copy.
+
 ## Project structure
 
 ```
