@@ -746,7 +746,7 @@
         scrollTo(fields[idx]);
         wait(640, function () { typeField(fields[idx], function () { sequence(idx + 1); }); });
       }
-      function run() { reset(); wait(520, function () { sequence(0); }); }
+      function run() { reset(); wait(1600, function () { sequence(0); }); }
 
       var started = false;
       if ('IntersectionObserver' in window) {
