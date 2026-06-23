@@ -54,14 +54,14 @@
         <a class="btn btn--ghost" href="#features">Explore Features</a>
       </div>
       <div class="hero-callout">
-        <svg class="hero-callout__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>
+        <svg class="hero-callout__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4" width="13" height="5" rx="1.2"/><rect x="5.5" y="9" width="13" height="5" rx="1.2"/><rect x="3.5" y="14" width="13" height="5" rx="1.2"/></svg>
         <p>Go from blank page to Chapter One in seconds. The calm, organized place to finally start (and finish!) your novel.</p>
       </div>
     </div>
   </section>
 
   <!-- Start in seconds -->
-  <section class="section">
+  <section class="section section--sage">
     <div class="container center">
       <h2 class="display">Start writing in seconds</h2>
       <p class="lede">Finally, just you and the page.</p>
@@ -194,7 +194,7 @@
   <!-- Features -->
   <section class="section">
     <div class="container center">
-      <h2 class="display">All the structure of other tools. None of the chaos.</h2>
+      <h2 class="display">All the structure of other tools.<br>None of the chaos.</h2>
       <p class="lede">Outlines, a manuscript binder, characters, and lore, organized the way your story actually works. Powerful when you need it, and quietly out of the way when you do not.</p>
 
       <div class="grid-3">
@@ -441,10 +441,10 @@
         clear();
         steps.forEach(function (s) { s.classList.remove('lit'); });
         steps.forEach(function (s, i) {
-          timers.push(setTimeout(function () { s.classList.add('lit'); }, 500 + i * 900));
+          timers.push(setTimeout(function () { s.classList.add('lit'); }, 600 + i * 1300));
         });
         // pause with all lit, then replay
-        timers.push(setTimeout(runSequence, 500 + steps.length * 900 + 2600));
+        timers.push(setTimeout(runSequence, 600 + steps.length * 1300 + 3200));
       }
 
       var started = false;

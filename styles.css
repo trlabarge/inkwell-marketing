@@ -158,8 +158,8 @@ h3.display { font-size: 1.5rem; }
 }
 /* Homepage hero — tall, full-bleed behind transparent header */
 .hero--home {
-  min-height: 600px;
-  padding: 170px 0 90px; /* 72px header + 98px breathing room above */
+  min-height: 540px;
+  padding: 150px 0 64px; /* trimmed so the next section peeks above the fold */
 }
 /* Tame the home headline so the hero reads less stacked */
 .hero--home h1.display { font-size: clamp(2.4rem, 4.6vw, 3.8rem); }
@@ -167,13 +167,13 @@ h3.display { font-size: 1.5rem; }
 .hero--page {
   padding: calc(72px + 72px) 0 72px;
 }
-.hero .cta-row { margin-top: 38px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.hero .cta-row { margin-top: 56px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
 /* rotating hero subhead */
 .hero-sub-wrap {
   position: relative;
   height: 3.4rem;
-  margin: 26px auto 0;
+  margin: 14px auto 0;
   max-width: 720px;
 }
 .hero-sub {
@@ -189,11 +189,11 @@ h3.display { font-size: 1.5rem; }
   white-space: nowrap;
 }
 .hero-sub.active { opacity: 1; }
-.hero-sub .word-display {   /* FOCUS: Spectral italic */
+.hero-sub .word-display {   /* FOCUS: Spectral */
   font-family: 'Spectral', Georgia, serif;
-  font-style: italic;
+  font-style: normal;
   font-size: 1.1em;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--ink);
 }
 .hero-sub .word-uncial {   /* WORLD: Cinzel Decorative */
@@ -207,7 +207,7 @@ h3.display { font-size: 1.5rem; }
   font-family: 'Allura', cursive;
   font-size: 1.25em;
   line-height: 1;
-  vertical-align: -0.02em;
+  vertical-align: 0.12em;
   color: var(--ink);
 }
 
