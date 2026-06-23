@@ -604,9 +604,54 @@
             </div>
           </div>
           <div class="fs-panel" id="fs-export" role="tabpanel" aria-labelledby="tab-fs-export" hidden>
-            <div class="fs-placeholder">
-              <span class="fs-placeholder__label">Export Documents</span>
-              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            <div class="codex-anim export-anim" role="img" aria-label="Animated preview of Inkwell's export menu: opening it, moving through the format options, and downloading a PDF.">
+              <div class="share-editor">
+                <div class="share-ed-bar">
+                  <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> The Ember Throne <span class="cx__sep">›</span> <b>The Hollow Crown</b></div>
+                  <div class="share-ed-tools">
+                    <span class="cx__saved">✓ All changes saved</span>
+                    <svg class="share-btn" id="ex-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.1 10.9 15.9 7.1M8.1 13.1l7.8 3.8"/></svg>
+                  </div>
+                </div>
+                <div class="share-ed-body">
+                  <div class="cx__prose">
+                    <p>The crown was never meant for him. Stable-born and ash-scarred, the boy had no claim to the Ember Throne, and yet the embers had begun to whisper his name through the smoke.</p>
+                    <p>Two hunters met in the dark beneath the keep, both wanting the same quiet thing, and neither willing to name it first.</p>
+                    <p>When the moon was at its height and the long day had finally burned down to coals, the pair found that exhaustion set in quickly, and they made camp where the firelight still held.</p>
+                    <p>A small man stepped out from the shadow of the colonnade, and the night drew its breath and waited.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Export menu -->
+              <div class="ex-menu" id="ex-menu" aria-hidden="true">
+                <div class="ex-item" id="ex-md"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg> Export as Markdown</div>
+                <div class="ex-item" id="ex-txt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 6h14M12 6v13"/></svg> Export as Plain Text</div>
+                <div class="ex-item" id="ex-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg> Export as PDF</div>
+                <div class="ex-item" id="ex-docx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg> Export as DOCX</div>
+                <div class="ex-item" id="ex-epub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 0-2 2z"/><path d="M5 4v16"/></svg> Export as EPUB</div>
+                <div class="ex-sep"></div>
+                <div class="ex-item" id="ex-backup"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg> <b>Download Backup<span class="ex-sub">Full Project</span></b><svg class="ex-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg>
+                  <div class="ex-submenu" id="ex-submenu">
+                    <div class="ex-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg> Plain Text (Markdown)</div>
+                    <div class="ex-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg> Document (DOCX)</div>
+                    <div class="ex-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg> Full Backup (JSON)</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Download toast -->
+              <div class="ex-toast" id="ex-toast" aria-hidden="true">
+                <span class="ex-spin"></span>
+                <svg class="ex-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-10"/></svg>
+                <div><b>The Hollow Crown.pdf</b><span class="ex-state" id="ex-state">Preparing export…</span></div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
             </div>
           </div>
         </div>
@@ -1261,6 +1306,83 @@
               });
             });
           });
+        });
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+
+    /* Export preview: open the menu, move through the formats, download one */
+    (function () {
+      var root = document.querySelector('.export-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var btn = document.getElementById('ex-btn');
+      var menu = document.getElementById('ex-menu');
+      var submenu = document.getElementById('ex-submenu');
+      var toast = document.getElementById('ex-toast');
+      var state = document.getElementById('ex-state');
+      var backup = document.getElementById('ex-backup');
+      var ids = ['ex-md', 'ex-txt', 'ex-pdf', 'ex-docx', 'ex-epub'];
+      var items = ids.map(function (id) { return document.getElementById(id); });
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        cursor.style.transform = 'translate(' + (eb.left - rb.left + (offX == null ? eb.width / 2 : offX)) +
+          'px,' + (eb.top - rb.top + (offY == null ? eb.height / 2 : offY)) + 'px)';
+      }
+      function pulse() { cursor.classList.remove('click'); void cursor.offsetWidth; cursor.classList.add('click'); }
+      function hiOnly(el) {
+        root.querySelectorAll('.ex-item.hi').forEach(function (i) { i.classList.remove('hi'); });
+        if (el) el.classList.add('hi');
+      }
+      function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        menu.classList.remove('show'); submenu.classList.remove('show'); hiOnly(null);
+        toast.classList.remove('show', 'done'); state.textContent = 'Preparing export…';
+        cursor.classList.remove('click');
+      }
+
+      function hover(i) {
+        if (i < items.length) {                      /* glide through each format */
+          moveTo(items[i], 18, null);
+          wait(180, function () { hiOnly(items[i]); });
+          wait(560, function () { hover(i + 1); });
+        } else {                                      /* peek at the backup submenu */
+          moveTo(backup, 18, null);
+          wait(180, function () { hiOnly(backup); submenu.classList.add('show'); });
+          wait(950, function () {
+            submenu.classList.remove('show');
+            moveTo(items[2], 18, null);               /* settle on PDF and choose it */
+            wait(200, function () { hiOnly(items[2]); });
+            wait(620, function () {
+              pulse();
+              menu.classList.remove('show'); hiOnly(null);
+              toast.classList.add('show');
+              wait(1200, function () {
+                toast.classList.add('done'); state.textContent = 'Downloaded';
+                wait(2600, function () { toast.classList.remove('show', 'done'); wait(700, run); });
+              });
+            });
+          });
+        }
+      }
+      function run() {
+        reset();
+        wait(550, function () {
+          moveTo(btn, null, null);
+          wait(850, function () { pulse(); menu.classList.add('show'); wait(700, function () { hover(0); }); });
         });
       }
 
