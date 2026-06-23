@@ -167,7 +167,7 @@ h3.display { font-size: 1.5rem; }
 .hero--page {
   padding: calc(72px + 72px) 0 72px;
 }
-.hero .cta-row { margin-top: 56px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.hero .cta-row { margin-top: 76px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
 /* rotating hero subhead */
 .hero-sub-wrap {
@@ -193,7 +193,7 @@ h3.display { font-size: 1.5rem; }
   font-family: 'Spectral', Georgia, serif;
   font-style: normal;
   font-size: 1.1em;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--ink);
 }
 .hero-sub .word-uncial {   /* WORLD: Cinzel Decorative */
@@ -207,7 +207,7 @@ h3.display { font-size: 1.5rem; }
   font-family: 'Allura', cursive;
   font-size: 1.25em;
   line-height: 1;
-  vertical-align: 0.12em;
+  vertical-align: 0.06em;
   color: var(--ink);
 }
 
@@ -216,7 +216,7 @@ h3.display { font-size: 1.5rem; }
   display: inline-flex;
   align-items: center;
   gap: 14px;
-  margin: 34px auto 0;
+  margin: 44px auto 0;
   max-width: 560px;
   padding: 15px 22px;
   text-align: left;
@@ -396,8 +396,8 @@ h3.display { font-size: 1.5rem; }
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
 .step {
   text-align: center; padding: 8px;
-  opacity: .42;
-  transition: opacity .5s ease;
+  opacity: .4;
+  transition: opacity 1.1s ease;
 }
 .step.lit { opacity: 1; }
 .step-num {
@@ -406,15 +406,16 @@ h3.display { font-size: 1.5rem; }
   background: #d7dbe2; color: #fff;
   font-family: var(--font-display); font-weight: 600; font-size: 1.1rem;
   margin-bottom: 16px;
-  transition: background .4s ease, box-shadow .4s ease;
+  transition: background 1.1s ease;
 }
 .step.lit .step-num {
   background: var(--ink);
-  animation: step-bing .55s ease;
+  animation: step-glow 2s ease-in-out;
 }
-@keyframes step-bing {
-  0%   { transform: scale(1);    box-shadow: 0 0 0 0 rgba(11,18,32,.35); }
-  45%  { transform: scale(1.18); box-shadow: 0 0 0 10px rgba(11,18,32,0); }
+/* a soft, slow breath of light — no abrupt pop */
+@keyframes step-glow {
+  0%   { transform: scale(.98); box-shadow: 0 0 0 0 rgba(11,18,32,0); }
+  50%  { transform: scale(1.03); box-shadow: 0 0 0 9px rgba(11,18,32,.07); }
   100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(11,18,32,0); }
 }
 .step h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.12rem; color: var(--ink); margin: 0 0 8px; }
