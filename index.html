@@ -49,20 +49,23 @@
     <div class="container">
       <h1 class="display">Your Writing Sanctuary</h1>
       <div id="hero-sub-wrap" class="hero-sub-wrap" aria-live="polite"></div>
-      <p class="lede">Go from blank page to Chapter One in seconds. The calm, organized place to finally start (and finish!) your novel.</p>
       <div class="cta-row">
         <a class="btn btn--primary" href="https://app.inkwell.world/auth">Start Writing</a>
         <a class="btn btn--ghost" href="#features">Explore Features</a>
+      </div>
+      <div class="hero-callout">
+        <svg class="hero-callout__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="14" height="4.4" rx="1.1"/><path d="M6.4 4v4.4"/><rect x="4.5" y="9.6" width="14" height="4.4" rx="1.1"/><path d="M7.9 9.6V14"/><rect x="3" y="15.2" width="14" height="4.4" rx="1.1"/><path d="M6.4 15.2v4.4"/></svg>
+        <p>Go from blank page to Chapter One in seconds. The calm, organized place to finally start (and finish!) your novel.</p>
       </div>
     </div>
   </section>
 
   <!-- Start in seconds -->
-  <section class="section">
+  <section class="section section--sage">
     <div class="container center">
       <h2 class="display">Start writing in seconds</h2>
       <p class="lede">Finally, just you and the page.</p>
-      <div class="steps">
+      <div class="steps" id="seconds-steps">
         <div class="step">
           <span class="step-num">1</span>
           <h3>Create a project</h3>
@@ -82,46 +85,117 @@
     </div>
   </section>
 
-  <!-- Editor preview -->
-  <section class="section section--tint">
+  <!-- Interactive feature explorer -->
+  <section class="section section--tint" id="features">
     <div class="container center">
-      <h2 class="display">Write the way your brain works</h2>
-      <p class="lede">Easy planning, intuitive structure, and space to explore big ideas.</p>
+      <h2 class="display">Everything you need to <span class="tw-wrap"><span class="tw" id="tw">build</span><span class="tw-cursor"></span></span></h2>
+      <p class="lede">Build worlds, shape characters, and stay organized from first idea to final draft.</p>
 
-      <div class="preview-shell" aria-hidden="true">
-        <div class="preview-tabs">
-          <span class="preview-tab preview-tab--active">Codex Navigation</span>
-          <span class="preview-tab">Character Development</span>
-          <span class="preview-tab">Lore Management</span>
-          <span class="preview-tab">Project Management</span>
-          <span class="preview-tab">Share Access</span>
-          <span class="preview-tab">Export Documents</span>
-        </div>
-        <div class="preview-body">
-          <div class="doc-meta"><span>✓ All changes saved</span><span>1,446 words</span></div>
-          <div class="chapter">The Space Between Stars &nbsp;›&nbsp; One</div>
-          <p>The observation deck of the <em>Meridian</em> was empty at 0300 hours, which was exactly why Kael Vosarian chose it. The reinforced glass curved overhead like the inside of a bubble, offering an unobstructed view of the Carina Expanse. Out here, six months from the nearest inhabited system, the stars didn't twinkle. They burned with steady, ancient light.</p>
-          <p>Kael pressed his palm against the glass, feeling the faint hum of the ship's engines transmitted through the hull. Somewhere beyond that infinite scatter of light, there were answers. There had to be.</p>
-          <p>"You're up late."</p>
-          <p>He didn't turn at the voice. Lyra Chen-Okafor moved like smoke when she wanted to, a habit from her years doing gods-knew-what in the outer colonies.</p>
+      <div class="feature-split">
+        <ul class="fs-list" role="tablist" aria-label="Inkwell features">
+          <li>
+            <button type="button" class="fs-item is-active" role="tab" aria-selected="true" aria-controls="fs-codex" id="tab-fs-codex">
+              <span class="fs-num">01</span>
+              <span class="fs-text">
+                <span class="fs-title">Codex Navigation</span>
+                <span class="fs-desc">Jump between characters, locations, and lore in a click. Your whole world, a keystroke away.</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="fs-item" role="tab" aria-selected="false" aria-controls="fs-character" id="tab-fs-character">
+              <span class="fs-num">02</span>
+              <span class="fs-text">
+                <span class="fs-title">Character Development</span>
+                <span class="fs-desc">Build deep, memorable characters with profiles, relationships, and arcs that grow with your story.</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="fs-item" role="tab" aria-selected="false" aria-controls="fs-lore" id="tab-fs-lore">
+              <span class="fs-num">03</span>
+              <span class="fs-text">
+                <span class="fs-title">Lore Management</span>
+                <span class="fs-desc">Capture every rule, myth, and history in dedicated spaces, so your world stays consistent as it expands.</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="fs-item" role="tab" aria-selected="false" aria-controls="fs-project" id="tab-fs-project">
+              <span class="fs-num">04</span>
+              <span class="fs-text">
+                <span class="fs-title">Project Management</span>
+                <span class="fs-desc">Outlines, chapters, and a manuscript binder keep your draft structured from first idea to final page.</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="fs-item" role="tab" aria-selected="false" aria-controls="fs-share" id="tab-fs-share">
+              <span class="fs-num">05</span>
+              <span class="fs-text">
+                <span class="fs-title">Share Access</span>
+                <span class="fs-desc">Invite beta readers and editors with scoped links, for a day, a week, or forever. You decide who sees your work.</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="fs-item" role="tab" aria-selected="false" aria-controls="fs-export" id="tab-fs-export">
+              <span class="fs-num">06</span>
+              <span class="fs-text">
+                <span class="fs-title">Export Documents</span>
+                <span class="fs-desc">Send your manuscript out as Markdown, PDF, DOCX, or EPUB, ready for submission or self-publishing.</span>
+              </span>
+            </button>
+          </li>
+        </ul>
+
+        <div class="fs-stage">
+          <div class="fs-panel is-active" id="fs-codex" role="tabpanel" aria-labelledby="tab-fs-codex">
+            <div class="fs-placeholder">
+              <span class="fs-placeholder__label">Codex Navigation</span>
+              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            </div>
+          </div>
+          <div class="fs-panel" id="fs-character" role="tabpanel" aria-labelledby="tab-fs-character" hidden>
+            <div class="fs-placeholder">
+              <span class="fs-placeholder__label">Character Development</span>
+              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            </div>
+          </div>
+          <div class="fs-panel" id="fs-lore" role="tabpanel" aria-labelledby="tab-fs-lore" hidden>
+            <div class="fs-placeholder">
+              <span class="fs-placeholder__label">Lore Management</span>
+              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            </div>
+          </div>
+          <div class="fs-panel" id="fs-project" role="tabpanel" aria-labelledby="tab-fs-project" hidden>
+            <div class="fs-placeholder">
+              <span class="fs-placeholder__label">Project Management</span>
+              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            </div>
+          </div>
+          <div class="fs-panel" id="fs-share" role="tabpanel" aria-labelledby="tab-fs-share" hidden>
+            <div class="fs-placeholder">
+              <span class="fs-placeholder__label">Share Access</span>
+              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            </div>
+          </div>
+          <div class="fs-panel" id="fs-export" role="tabpanel" aria-labelledby="tab-fs-export" hidden>
+            <div class="fs-placeholder">
+              <span class="fs-placeholder__label">Export Documents</span>
+              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Scrivener positioning -->
-  <section class="section section--sage">
-    <div class="container center">
-      <h2 class="display">All the structure of other tools. None of the chaos.</h2>
-      <p class="lede">Outlines, a manuscript binder, characters, and lore, organized the way your story actually works. Powerful when you need it, and quietly out of the way when you do not.</p>
-    </div>
-  </section>
-
   <!-- Features -->
-  <section class="section" id="features">
+  <section class="section">
     <div class="container center">
-      <h2 class="display">Everything you need to <span class="tw-wrap"><span class="tw" id="tw">build</span><span class="tw-cursor"></span></span></h2>
-      <p class="lede">Build worlds, shape characters, and stay organized from first idea to final draft.</p>
+      <h2 class="display">All the structure of other tools.<br>None of the chaos.</h2>
+      <p class="lede">Outlines, a manuscript binder, characters, and lore, organized the way your story actually works. Powerful when you need it, and quietly out of the way when you do not.</p>
 
       <div class="grid-3">
         <article class="feature">
@@ -163,7 +237,41 @@
     <div class="container center">
       <h2 class="display">Start Your Story</h2>
       <p class="lede">Take the Start Your Story challenge: write 10,000 words in your first two weeks and earn a free month of Storyteller. Use those weeks to lay the foundation of your world, your narrative, and your characters, then bring them fully to life with everything your free month of Storyteller unlocks.</p>
-      <div style="margin-top:28px">
+
+      <div class="challenge" id="challenge">
+        <div class="challenge__head">
+          <span class="challenge__eyebrow">The Start Your Story Challenge</span>
+          <span class="challenge__reward">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 5H4v2a3 3 0 0 0 3 3M17 5h3v2a3 3 0 0 1-3 3"/></svg>
+            One free month of Storyteller
+          </span>
+        </div>
+
+        <div class="challenge__track" aria-hidden="true">
+          <div class="challenge__fill"></div>
+          <span class="challenge__node" style="left:0%"><b>0</b><i>Day 1</i></span>
+          <span class="challenge__node" style="left:33.33%"><b>2.5k</b><i>words</i></span>
+          <span class="challenge__node" style="left:66.66%"><b>6k</b><i>words</i></span>
+          <span class="challenge__node challenge__node--goal" style="left:100%"><b>10k</b><i>Day 14</i></span>
+        </div>
+
+        <div class="challenge__stats">
+          <div class="challenge__stat">
+            <strong>10,000</strong>
+            <span>words to write</span>
+          </div>
+          <div class="challenge__stat">
+            <strong>14</strong>
+            <span>days to do it</span>
+          </div>
+          <div class="challenge__stat">
+            <strong>Free</strong>
+            <span>month unlocked</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:32px">
         <a class="btn btn--primary" href="https://app.inkwell.world/auth">Start Your Story</a>
       </div>
     </div>
@@ -178,8 +286,9 @@
       <div class="quote-grid" style="text-align:left">
         <div class="quote"><div class="mark">”</div><p>The codex grouping looks great &amp; feels incredibly intuitive.</p></div>
         <div class="quote"><div class="mark">”</div><p>I love the ability to categorize ideas in the Lore section. Inkwell is like a more streamlined Scrivener.</p></div>
-        <div class="quote"><div class="mark">”</div><p>This is beautiful.</p></div>
+        <div class="quote"><div class="mark">”</div><p>This is BEAUTIFUL.</p></div>
         <div class="quote"><div class="mark">”</div><p>I know a lot of people who have been looking for this kind of software. Inkwell developed something there's definitely a niche for.</p></div>
+        <div class="quote"><div class="mark">”</div><p>Inkwell came up with genuinely new ideas for getting into creative flow, and the whole thing is so slick. I have never seen a writing tool think about it this way.</p></div>
         <div class="quote"><div class="mark">”</div><p>Had a dive straight in and I love it so far. Just building out my Lore and Characters, fantastic stuff.</p></div>
       </div>
     </div>
@@ -243,10 +352,8 @@
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
-          <a href="#features">Features</a>
           <a href="https://app.inkwell.world/auth">Launch App</a>
           <a href="/pricing">Pricing</a>
-          <a href="#">Blog</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -317,6 +424,80 @@
         spans[prev].classList.remove('active');
         setTimeout(function () { spans[current].classList.add('active'); }, 320);
       }, 3400);
+    })();
+
+    /* "Start writing in seconds": steps light up one by one, in sequence */
+    (function () {
+      var wrap = document.getElementById('seconds-steps');
+      if (!wrap) return;
+      var steps = Array.prototype.slice.call(wrap.querySelectorAll('.step'));
+      if (!steps.length) return;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { steps.forEach(function (s) { s.classList.add('lit'); }); return; }
+
+      var timers = [];
+      function clear() { timers.forEach(clearTimeout); timers = []; }
+      function runSequence() {
+        clear();
+        steps.forEach(function (s) { s.classList.remove('lit'); });
+        steps.forEach(function (s, i) {
+          timers.push(setTimeout(function () { s.classList.add('lit'); }, 600 + i * 1300));
+        });
+        // pause with all lit, then replay
+        timers.push(setTimeout(runSequence, 600 + steps.length * 1300 + 3200));
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting && !started) { started = true; runSequence(); }
+          });
+        }, { threshold: 0.4 });
+        io.observe(wrap);
+      } else {
+        runSequence();
+      }
+    })();
+
+    /* Start Your Story challenge bar fills as it scrolls into view */
+    (function () {
+      var el = document.getElementById('challenge');
+      if (!el) return;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) { el.classList.add('in-view'); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { el.classList.add('in-view'); io.disconnect(); }
+        });
+      }, { threshold: 0.4 });
+      io.observe(el);
+    })();
+
+    /* Interactive feature explorer: click an item to swap the stage panel */
+    (function () {
+      var root = document.querySelector('.feature-split');
+      if (!root) return;
+      var tabs = Array.prototype.slice.call(root.querySelectorAll('.fs-item'));
+      var panels = Array.prototype.slice.call(root.querySelectorAll('.fs-panel'));
+
+      function activate(tab) {
+        tabs.forEach(function (t) {
+          var on = t === tab;
+          t.classList.toggle('is-active', on);
+          t.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        var id = tab.getAttribute('aria-controls');
+        panels.forEach(function (p) {
+          var on = p.id === id;
+          p.classList.toggle('is-active', on);
+          if (on) { p.removeAttribute('hidden'); } else { p.setAttribute('hidden', ''); }
+        });
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () { activate(tab); });
+      });
     })();
   </script>
 </body>
