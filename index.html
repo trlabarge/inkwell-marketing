@@ -363,9 +363,88 @@
             </div>
           </div>
           <div class="fs-panel" id="fs-lore" role="tabpanel" aria-labelledby="tab-fs-lore" hidden>
-            <div class="fs-placeholder">
-              <span class="fs-placeholder__label">Lore Management</span>
-              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            <div class="codex-anim lore-anim" role="img" aria-label="Animated preview of Inkwell's lore management, opening a location, a faction, and a magic system, then writing a religion entry.">
+              <div class="cx__bar">
+                <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> The Ember Throne <span class="cx__sep">›</span> <b class="lore-crumb">Locations and Realms</b></div>
+                <div class="cx__status"><span class="cx__saved">✓ All changes saved</span><span class="cx__count">6,815 words</span></div>
+              </div>
+              <div class="cx__body">
+                <div class="cx__side" aria-hidden="true">
+                  <div class="cx__side-head">Codex <span>‹</span></div>
+                  <div class="cx__tabs">
+                    <span class="cx__tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg></span>
+                    <span class="cx__tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span>
+                    <span class="cx__tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M3.5 19c.6-3 3-4.5 5.5-4.5S14 16 14.5 19"/></svg></span>
+                    <span class="cx__tab is-on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 4h9v13a3 3 0 0 1-3 3H8z"/><path d="M8 20a3 3 0 0 1-3-3v-1h3M8 4a3 3 0 0 0-3 3"/></svg></span>
+                  </div>
+                  <div class="lore-manage"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.4-2.3 1a7 7 0 0 0-1.7-1l-.3-2.5h-4l-.3 2.5a7 7 0 0 0-1.7 1l-2.3-1-2 3.4 2 1.5a7 7 0 0 0 0 2l-2 1.5 2 3.4 2.3-1a7 7 0 0 0 1.7 1l.3 2.5h4l.3-2.5a7 7 0 0 0 1.7-1l2.3 1 2-3.4-2-1.5a7 7 0 0 0 .1-1z"/></svg> Manage Categories</div>
+                  <div class="lore-cats-h">Categories</div>
+                  <div class="lore-tree">
+                    <div class="lore-cat" id="lore-cat-loc"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg><svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg><b>Locations and Realms</b><i>7</i></div>
+                    <div class="lore-cat" id="lore-cat-fac"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg><svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M3.5 19c.6-3 3-4.5 5.5-4.5S14 16 14.5 19"/></svg><b>Factions and Organizations</b><i>1</i></div>
+                    <div class="lore-cat"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg><svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 11h16"/></svg><b>History and Events</b><i>1</i></div>
+                    <div class="lore-cat" id="lore-cat-mag"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg><svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="2"/><path d="M5 8c5-3 9-3 14 0M5 16c5 3 9 3 14 0M8 5c3 5 3 9 0 14M16 5c-3 5-3 9 0 14"/></svg><b>Magic and Technology Systems</b><i>1</i></div>
+                    <div class="lore-cat"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg><svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><b>Species, Races, and Cultures</b><i>1</i></div>
+                    <div class="lore-cat"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg><svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18"/></svg><b>Economy and Artifacts</b><i>1</i></div>
+                    <div class="lore-cat" id="lore-cat-rel"><svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg><svg class="cat-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 0-2 2z"/><path d="M5 4v16"/></svg><b>Religion and Mythology</b><i>1</i></div>
+                  </div>
+                </div>
+
+                <div class="lore-main" aria-hidden="true">
+                  <!-- Location -->
+                  <div class="lore-detail is-shown" id="lore-d-loc">
+                    <div class="lore-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Back to Locations and Realms</div>
+                    <p class="lore-appears">Appears in 7 of 8 documents</p>
+                    <p class="lore-appears-sub">Not linked yet</p>
+                    <div class="cx__bars"><span class="on2"></span><span class="on2"></span><span class="on2"></span><span class="on2"></span><span class="on2"></span><span class="on"></span><span></span><span class="on2"></span></div>
+                    <div class="lore-divider"></div>
+                    <div class="csk__block"><div class="csk__lbl">Name</div><div class="csk__input csk__input--filled">Emberhold</div></div>
+                    <div class="csk__block"><div class="csk__lbl">Type <span class="csk__lbl-tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></span></div><div class="csk__input csk__input--filled">Capital City</div></div>
+                    <div class="csk__block"><div class="csk__lbl">Geography <span class="csk__lbl-tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></span></div><div class="csk__input">Black basalt spires built into the throat of a dormant volcano, ringed by ash plains.</div></div>
+                  </div>
+
+                  <!-- Faction -->
+                  <div class="lore-detail" id="lore-d-fac">
+                    <div class="lore-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Back to Factions and Organizations</div>
+                    <p class="lore-appears">Appears in 4 of 8 documents</p>
+                    <p class="lore-appears-sub">Not linked yet</p>
+                    <div class="cx__bars"><span class="on2"></span><span></span><span class="on"></span><span class="on2"></span><span></span><span class="on2"></span><span></span><span class="on"></span></div>
+                    <div class="lore-divider"></div>
+                    <div class="csk__block"><div class="csk__lbl">Name</div><div class="csk__input csk__input--filled">The Cinder Court</div></div>
+                    <div class="csk__block"><div class="csk__lbl">Type <span class="csk__lbl-tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></span></div><div class="csk__input csk__input--filled">Royal Council</div></div>
+                    <div class="csk__block"><div class="csk__lbl">Leadership <span class="csk__lbl-tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></span></div><div class="csk__input">The Ashen Regent rules in the heir's name, with the seven Emberborn lords.</div></div>
+                  </div>
+
+                  <!-- Magic system -->
+                  <div class="lore-detail" id="lore-d-mag">
+                    <div class="lore-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Back to Magic and Technology Systems</div>
+                    <p class="lore-appears">Appears in 3 of 8 documents</p>
+                    <p class="lore-appears-sub">Not linked yet</p>
+                    <div class="cx__bars"><span class="on2"></span><span></span><span></span><span class="on"></span><span></span><span class="on2"></span><span></span><span class="on2"></span></div>
+                    <div class="lore-divider"></div>
+                    <div class="csk__block"><div class="csk__lbl">System Name</div><div class="csk__input csk__input--filled">Emberbinding</div></div>
+                    <div class="csk__block"><div class="csk__lbl">Type <span class="csk__lbl-tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></span></div><div class="csk__input csk__input--filled">Elemental Craft</div></div>
+                    <div class="csk__block"><div class="csk__lbl">How It Works <span class="csk__lbl-tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></span></div><div class="csk__input">Binders draw heat from dying flame and shape it into light, ward, or weapon.</div></div>
+                  </div>
+
+                  <!-- Religion (typed) -->
+                  <div class="lore-detail" id="lore-d-rel">
+                    <div class="lore-back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Back to Religion and Mythology</div>
+                    <p class="lore-appears">Appears in 5 of 8 documents</p>
+                    <p class="lore-appears-sub">Not linked yet</p>
+                    <div class="cx__bars"><span class="on2"></span><span class="on"></span><span></span><span class="on2"></span><span class="on2"></span><span></span><span class="on"></span><span class="on2"></span></div>
+                    <div class="lore-divider"></div>
+                    <div class="csk__block"><div class="csk__lbl">Name</div><div class="csk__input csk__input--filled">The Ember Faith</div></div>
+                    <div class="csk__block"><div class="csk__lbl">Type <span class="csk__lbl-tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></span></div><div class="csk__input csk__input--filled">State Religion</div></div>
+                    <div class="csk__block"><div class="csk__lbl">Core Beliefs <span class="csk__lbl-tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></span></div><div class="csk__input"><span class="csk__typed" id="lore-core" data-ph="Central tenets and teachings">Fire is memory. To burn is to be remembered, and ash is the proof a thing once lived.</span><span class="csk__caret"></span></div></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
             </div>
           </div>
           <div class="fs-panel" id="fs-project" role="tabpanel" aria-labelledby="tab-fs-project" hidden>
@@ -747,6 +826,91 @@
         wait(640, function () { typeField(fields[idx], function () { sequence(idx + 1); }); });
       }
       function run() { reset(); wait(1600, function () { sequence(0); }); }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+
+    /* Lore management preview: cursor opens three entries, then writes a fourth */
+    (function () {
+      var root = document.querySelector('.lore-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var crumb = root.querySelector('.lore-crumb');
+      var details = Array.prototype.slice.call(root.querySelectorAll('.lore-detail'));
+      var cats = Array.prototype.slice.call(root.querySelectorAll('.lore-cat'));
+      var typed = document.getElementById('lore-core');
+      var caret = typed.nextElementSibling;
+      var coreText = typed.textContent;
+
+      var steps = [
+        { cat: 'lore-cat-loc', detail: 'lore-d-loc', label: 'Locations and Realms' },
+        { cat: 'lore-cat-fac', detail: 'lore-d-fac', label: 'Factions and Organizations' },
+        { cat: 'lore-cat-mag', detail: 'lore-d-mag', label: 'Magic and Technology Systems' },
+        { cat: 'lore-cat-rel', detail: 'lore-d-rel', label: 'Religion and Mythology' }
+      ];
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { return; } /* static markup already shows the location + filled fields */
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        var x = eb.left - rb.left + offX;
+        var y = eb.top - rb.top + (offY == null ? eb.height / 2 : offY);
+        cursor.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      }
+      function pulse() {
+        cursor.classList.remove('click');
+        void cursor.offsetWidth;
+        cursor.classList.add('click');
+      }
+      function show(s) {
+        details.forEach(function (d) { d.classList.toggle('is-shown', d.id === s.detail); });
+        cats.forEach(function (c) { c.classList.toggle('is-active', c.id === s.cat); });
+        crumb.textContent = s.label;
+      }
+      function typeCore(done) {
+        caret.classList.add('on');
+        typed.textContent = '';
+        var i = 0;
+        (function step() {
+          if (i <= coreText.length) {
+            typed.textContent = coreText.slice(0, i); i++;
+            wait(30 + Math.random() * 46, step);
+          } else {
+            wait(900, function () { caret.classList.remove('on'); done(); });
+          }
+        })();
+      }
+      function step(i) {
+        var s = steps[i];
+        moveTo(document.getElementById(s.cat), 13, 14);
+        wait(560, function () {
+          pulse();
+          show(s);
+          if (i === steps.length - 1) {
+            wait(1000, function () {
+              moveTo(typed, 4, 12);
+              wait(560, function () { typeCore(function () { wait(2400, run); }); });
+            });
+          } else {
+            wait(2100, function () { step(i + 1); });
+          }
+        });
+      }
+      function run() {
+        timers.forEach(clearTimeout); timers = [];
+        typed.textContent = coreText; caret.classList.remove('on');
+        step(0);
+      }
 
       var started = false;
       if ('IntersectionObserver' in window) {

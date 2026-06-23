@@ -808,6 +808,36 @@ h3.display { font-size: 1.5rem; }
 .csk__caret.on { animation: cskBlink 1.05s steps(1, end) infinite; }
 @keyframes cskBlink { 0%,50% { opacity: 1; } 50.01%,100% { opacity: 0; } }
 
+/* ---- Animated lore management (feature explorer, panel 03) ---- */
+.lore-anim { display: flex; flex-direction: column; }
+.lore-manage { display: flex; align-items: center; gap: 8px; padding: 9px 14px; font-size: 11.5px; color: var(--text-muted); border-bottom: 1px solid var(--line); }
+.lore-manage svg { width: 13px; height: 13px; }
+.lore-cats-h { padding: 9px 14px 5px; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-faint); font-weight: 700; }
+.lore-tree { padding: 0 6px 6px; overflow: hidden; }
+.lore-cat { display: flex; align-items: center; gap: 7px; padding: 6px 8px; font-size: 11.5px; color: var(--text); border-radius: 6px; }
+.lore-cat .chev { width: 10px; height: 10px; color: var(--text-faint); flex: none; }
+.lore-cat .cat-ico { width: 14px; height: 14px; color: var(--text-muted); flex: none; }
+.lore-cat b { font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lore-cat i { margin-left: auto; color: var(--text-faint); font-style: normal; font-size: 10px; padding-left: 4px; }
+.lore-cat.is-active { background: rgba(79, 70, 229, .1); color: var(--cx-accent); font-weight: 600; }
+.lore-cat.is-active .cat-ico, .lore-cat.is-active .chev { color: var(--cx-accent); }
+
+.lore-main { flex: 1; position: relative; overflow: hidden; }
+.lore-detail { position: absolute; inset: 0; opacity: 0; padding: 14px 22px; overflow: hidden; transition: opacity .45s ease; }
+.lore-detail.is-shown { opacity: 1; }
+.lore-back { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
+.lore-back svg { width: 14px; height: 14px; }
+.lore-appears { font-size: 13px; font-weight: 600; color: var(--ink); margin: 0 0 3px; }
+.lore-appears-sub { font-size: 11px; color: var(--text-faint); margin: 0 0 9px; }
+.lore-divider { height: 1px; background: var(--line); margin: 12px 0 14px; }
+
+/* JS-driven cursor for the lore preview */
+.lore-cursor { position: absolute; top: 0; left: 0; width: 18px; height: 18px; z-index: 20; pointer-events: none; transition: transform .5s ease; }
+.lore-cursor svg { width: 18px; height: 18px; filter: drop-shadow(0 1px 2px rgba(11, 18, 32, .4)); }
+.lore-ring { position: absolute; top: 0; left: 0; width: 20px; height: 20px; margin: -10px; border-radius: 50%; border: 2px solid var(--cx-accent); opacity: 0; }
+.lore-cursor.click .lore-ring { animation: cxClick .55s ease-out 1; }
+@keyframes cxClick { 0% { opacity: .5; transform: scale(.4); } 100% { opacity: 0; transform: scale(1.6); } }
+
 @media (max-width: 900px) {
   .codex-anim { min-height: 280px; }
 }
