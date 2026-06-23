@@ -783,6 +783,31 @@ h3.display { font-size: 1.5rem; }
   100%   { opacity: 0; transform: scale(1.5); }
 }
 
+/* ---- Animated character sketch (feature explorer, panel 02) ---- */
+.codex-anim--char { display: flex; flex-direction: column; }
+.csk__scroll-wrap { flex: 1; overflow: hidden; }
+.csk__scroll { position: relative; padding: 16px 22px 40px; transition: transform .6s ease; }
+.csk__section { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-faint); font-weight: 700; margin: 16px 0 9px; }
+.csk__section--first { margin-top: 0; }
+.csk__block { margin-bottom: 12px; }
+.csk__lbl { display: flex; align-items: center; justify-content: space-between; font-weight: 700; font-size: 12.5px; color: var(--ink); margin-bottom: 6px; }
+.csk__lbl-tools { display: flex; gap: 12px; color: var(--text-faint); }
+.csk__lbl-tools svg { width: 13px; height: 13px; }
+.csk__input {
+  border: 1px solid var(--line); border-radius: 8px;
+  padding: 9px 12px; min-height: 42px;
+  font-family: var(--font-sans); font-size: 13px; line-height: 1.55; color: var(--ink);
+}
+.csk__input--filled { display: flex; align-items: center; justify-content: space-between; min-height: 0; }
+.csk__input--filled svg { width: 13px; height: 13px; color: var(--text-faint); }
+.csk__typed:empty::before { content: attr(data-ph); color: var(--text-faint); }
+.csk__caret {
+  display: inline-block; width: 1.5px; height: 1.05em;
+  background: var(--cx-accent); margin-left: 1px; vertical-align: text-bottom; opacity: 0;
+}
+.csk__caret.on { animation: cskBlink 1.05s steps(1, end) infinite; }
+@keyframes cskBlink { 0%,50% { opacity: 1; } 50.01%,100% { opacity: 0; } }
+
 @media (max-width: 900px) {
   .codex-anim { min-height: 280px; }
 }

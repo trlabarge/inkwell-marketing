@@ -319,9 +319,47 @@
             </div>
           </div>
           <div class="fs-panel" id="fs-character" role="tabpanel" aria-labelledby="tab-fs-character" hidden>
-            <div class="fs-placeholder">
-              <span class="fs-placeholder__label">Character Development</span>
-              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            <div class="codex-anim codex-anim--char" role="img" aria-label="Animated preview of an Inkwell character sketch for a science fiction novel, filling in the Goal, Physical Appearance, and Flaws fields.">
+              <div class="cx__bar">
+                <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> The Halcyon Drift <span class="cx__sep">›</span> <b>Cael Voss</b></div>
+                <div class="cx__status"><span class="cx__saved">✓ All changes saved</span><span class="cx__count">6,815 words</span></div>
+              </div>
+              <div class="csk__scroll-wrap" aria-hidden="true">
+                <div class="csk__scroll" id="cskScroll">
+                  <div class="csk__block">
+                    <div class="csk__lbl">Name (primary)</div>
+                    <div class="csk__input csk__input--filled">Cael Voss</div>
+                  </div>
+                  <div class="csk__block">
+                    <div class="csk__lbl">Category</div>
+                    <div class="csk__input csk__input--filled">Crew <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+                  </div>
+
+                  <div class="csk__section csk__section--first">Core</div>
+                  <div class="csk__block">
+                    <div class="csk__lbl">Goal
+                      <span class="csk__lbl-tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></span>
+                    </div>
+                    <div class="csk__input"><span class="csk__typed" id="csk-goal" data-ph="What does this character want?"></span><span class="csk__caret"></span></div>
+                  </div>
+
+                  <div class="csk__section">Identity</div>
+                  <div class="csk__block">
+                    <div class="csk__lbl">Physical Appearance
+                      <span class="csk__lbl-tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></span>
+                    </div>
+                    <div class="csk__input"><span class="csk__typed" id="csk-appear" data-ph="Physical description, distinguishing features"></span><span class="csk__caret"></span></div>
+                  </div>
+
+                  <div class="csk__section">Psyche</div>
+                  <div class="csk__block">
+                    <div class="csk__lbl">Flaws
+                      <span class="csk__lbl-tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg></span>
+                    </div>
+                    <div class="csk__input"><span class="csk__typed" id="csk-flaws" data-ph="Weaknesses and character flaws"></span><span class="csk__caret"></span></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="fs-panel" id="fs-lore" role="tabpanel" aria-labelledby="tab-fs-lore" hidden>
@@ -660,6 +698,63 @@
       tabs.forEach(function (tab) {
         tab.addEventListener('click', function () { activate(tab); });
       });
+    })();
+
+    /* Character sketch preview: a caret types out a few key fields, then loops */
+    (function () {
+      var root = document.querySelector('.codex-anim--char');
+      if (!root) return;
+      var scroll = root.querySelector('#cskScroll');
+      var data = [
+        { id: 'csk-goal',   text: 'Reach the derelict ark before its reactor goes dark, and learn who is still broadcasting from inside.' },
+        { id: 'csk-appear', text: 'Lean build, a chrome ocular implant where the left eye once was, old burn scars mapping both forearms.' },
+        { id: 'csk-flaws',  text: 'Trusts machines more than people, and never powers down long enough to grieve.' }
+      ];
+      var fields = data.map(function (d) {
+        var typed = document.getElementById(d.id);
+        return { typed: typed, caret: typed.nextElementSibling, block: typed.closest('.csk__block'), text: d.text };
+      });
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { fields.forEach(function (f) { f.typed.textContent = f.text; }); return; }
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        fields.forEach(function (f) { f.typed.textContent = ''; f.caret.classList.remove('on'); });
+        scroll.style.transform = 'translateY(0)';
+      }
+      function scrollTo(f) {
+        var top = Math.max(0, f.block.offsetTop - 56);
+        scroll.style.transform = 'translateY(' + (-top) + 'px)';
+      }
+      function typeField(f, done) {
+        f.caret.classList.add('on');
+        var i = 0;
+        (function step() {
+          if (i <= f.text.length) {
+            f.typed.textContent = f.text.slice(0, i); i++;
+            wait(28 + Math.random() * 46, step);
+          } else {
+            wait(750, function () { f.caret.classList.remove('on'); done(); });
+          }
+        })();
+      }
+      function sequence(idx) {
+        if (idx >= fields.length) { wait(2600, run); return; }
+        scrollTo(fields[idx]);
+        wait(640, function () { typeField(fields[idx], function () { sequence(idx + 1); }); });
+      }
+      function run() { reset(); wait(520, function () { sequence(0); }); }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
     })();
   </script>
 </body>
