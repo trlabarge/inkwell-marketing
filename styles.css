@@ -421,6 +421,17 @@ h3.display { font-size: 1.5rem; }
 .challenge__stat strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--ink); line-height: 1; }
 .challenge__stat span { font-family: var(--font-sans); font-size: .78rem; color: var(--text-muted); margin-top: 5px; display: block; }
 
+/* the four challenge pillars, pulled out as cards above the graphic */
+.quest { list-style: none; margin: 30px auto 0; padding: 0; max-width: 760px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; text-align: left; }
+.quest__item {
+  display: flex; flex-direction: column; gap: 12px;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 18px; box-shadow: 0 14px 30px -26px rgba(11, 18, 32, .4);
+}
+.quest__ico { width: 36px; height: 36px; border-radius: 10px; background: var(--bg-sage); display: flex; align-items: center; justify-content: center; color: var(--ink); }
+.quest__ico svg { width: 19px; height: 19px; }
+.quest__item > span:last-child { font-family: var(--font-display); font-weight: 600; font-size: .96rem; color: var(--ink); line-height: 1.32; }
+
 /* ---- Feature grid ---- */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; }
 .feature {
@@ -623,6 +634,7 @@ h3.display { font-size: 1.5rem; }
   .section { padding-block: 64px; }
   .tier--featured { order: -1; }
   .feature-split { grid-template-columns: 1fr; }
+  .quest { grid-template-columns: repeat(2, 1fr); max-width: 460px; }
   .fs-stage { min-height: 340px; }
   /* On stacked layout, always show descriptions so the list reads on its own */
   .fs-desc { max-height: 8rem; opacity: 1; }
