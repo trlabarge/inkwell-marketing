@@ -348,35 +348,98 @@ h3.display { font-size: 1.5rem; }
   font-size: .72rem; font-weight: 700; color: var(--text-faint);
 }
 .challenge__reward {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-family: var(--font-sans); font-weight: 500; font-size: .86rem; color: var(--ink);
-  background: var(--bg-sage); border-radius: 999px; padding: 7px 14px;
+  display: inline-flex; align-items: center; gap: 9px;
+  font-family: var(--font-sans); font-weight: 600; font-size: .9rem; color: var(--text-muted);
+  background: var(--bg-tint); border: 1px solid var(--line); border-radius: 999px; padding: 10px 20px;
+  transition: background .5s ease, color .5s ease, box-shadow .5s ease, border-color .5s ease;
 }
-.challenge__reward svg { width: 17px; height: 17px; flex: none; }
+.challenge__reward svg { width: 18px; height: 18px; flex: none; transition: color .5s ease; }
+.challenge__reward-wrap { display: flex; justify-content: center; margin-top: 34px; }
+/* reward chip stays gray, then lights up amber once the bar finishes filling */
+.challenge.is-filled .challenge__reward {
+  background: linear-gradient(180deg, #fbe7a8, #f3cf7a);
+  border-color: #e7c878; color: #5b4715;
+  box-shadow: 0 0 0 4px rgba(243, 207, 122, .35), 0 12px 26px -10px rgba(196, 148, 41, .7);
+  animation: rewardPop .6s ease both;
+}
+.challenge.is-filled .challenge__reward svg { color: #b07c12; }
+@keyframes rewardPop { 0%, 100% { transform: scale(1); } 45% { transform: scale(1.07); } }
 
-.challenge__track { position: relative; height: 8px; border-radius: 999px; background: var(--line); margin: 0 6px 56px; }
+.challenge__progress { position: relative; margin: 4px 8px 0; }
+.challenge__track { position: relative; height: 8px; border-radius: 999px; background: var(--line); }
 .challenge__fill {
   position: absolute; left: 0; top: 0; bottom: 0; width: 0;
   border-radius: 999px;
   background: linear-gradient(90deg, #06b6d4, #059669);
-  transition: width 1.6s cubic-bezier(.4, 0, .2, 1);
+  transition: width 6s linear;
 }
 .challenge.in-view .challenge__fill { width: 100%; }
-.challenge__node { position: absolute; top: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; }
-.challenge__node::before {
-  content: ""; width: 14px; height: 14px; border-radius: 999px;
-  background: #fff; border: 2px solid #c2cad6; box-shadow: 0 2px 6px rgba(11, 18, 32, .12);
-  transition: border-color .4s ease, background .4s ease;
-}
-.challenge.in-view .challenge__node::before { border-color: #059669; }
-.challenge.in-view .challenge__node--goal::before { background: #059669; }
-.challenge__node b { font-family: var(--font-display); font-weight: 600; font-size: .9rem; color: var(--ink); margin-top: 10px; }
-.challenge__node i { font-style: normal; font-family: var(--font-sans); font-size: .72rem; color: var(--text-faint); margin-top: 2px; }
 
-.challenge__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; border-top: 1px solid var(--line); padding-top: 24px; }
+/* typewriter that chugs along the bar as it fills */
+.challenge__type {
+  position: absolute; left: 0; bottom: calc(100% + 7px); transform: translateX(-50%);
+  color: #0f766e; z-index: 3; transition: left 6s linear;
+}
+.challenge__type svg { width: 23px; height: 23px; display: block; }
+.challenge.in-view .challenge__type { left: 100%; }
+.challenge.in-view .challenge__type svg { animation: chug .4s steps(2, end) 15; }
+@keyframes chug { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
+
+.challenge__dot {
+  position: absolute; top: 50%; transform: translate(-50%, -50%); z-index: 2;
+  width: 14px; height: 14px; border-radius: 999px;
+  background: #fff; border: 2px solid #c2cad6; box-shadow: 0 2px 6px rgba(11, 18, 32, .12);
+  transition: border-color .35s ease var(--d, 0s), background .35s ease var(--d, 0s);
+}
+.challenge.in-view .challenge__dot { border-color: #059669; }
+.challenge.in-view .challenge__dot--goal { background: #059669; }
+
+.challenge__milestones { position: relative; height: 48px; margin-top: 24px; }
+.challenge__ms { position: absolute; top: 0; transform: translateX(-50%); width: 120px; text-align: center; }
+.challenge__ms--start { left: 0; transform: none; width: 80px; text-align: left; }
+.challenge__ms--goal { transform: translateX(-100%); text-align: right; }
+.challenge__ms b {
+  display: block; font-family: var(--font-display); font-weight: 600; font-size: .95rem;
+  color: var(--ink); transform-origin: center bottom;
+}
+.challenge__ms--start b { transform-origin: left bottom; }
+.challenge__ms--goal b { transform-origin: right bottom; }
+.challenge.in-view .challenge__ms b { color: #059669; }
+/* each number pops as the typewriter reaches it (delay set inline via --d) */
+.challenge.in-view .challenge__ms:not(.challenge__ms--start) b { animation: msPop .55s ease var(--d, 0s) both; }
+@keyframes msPop {
+  0%   { transform: scale(1);    color: var(--ink); text-shadow: none; }
+  35%  { transform: scale(1.38); color: #059669; text-shadow: 0 0 14px rgba(5, 150, 105, .45); }
+  100% { transform: scale(1);    color: #059669; text-shadow: none; }
+}
+.challenge__ms--start b { color: var(--text-faint); }
+.challenge.in-view .challenge__ms--start b { color: var(--text-muted); }
+.challenge__ms i { display: block; font-style: normal; font-family: var(--font-serif); font-size: .76rem; line-height: 1.3; color: var(--text-muted); margin-top: 5px; }
+
+.challenge__stats { display: flex; gap: 34px; flex: none; }
 .challenge__stat { text-align: center; }
-.challenge__stat strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.9rem; color: var(--ink); line-height: 1; }
-.challenge__stat span { font-family: var(--font-sans); font-size: .88rem; color: var(--text-muted); margin-top: 6px; display: block; }
+.challenge__stat strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--ink); line-height: 1; }
+.challenge__stat span { font-family: var(--font-sans); font-size: .78rem; color: var(--text-muted); margin-top: 5px; display: block; }
+
+/* heroic intro lines above the challenge graphic */
+.quest-hed {
+  font-family: 'Cinzel Decorative', var(--font-display);
+  font-weight: 700; font-size: clamp(1rem, 2.3vw, 1.5rem);
+  color: var(--ink); line-height: 1.3; white-space: nowrap; margin: 26px 0 22px;
+}
+.quest-sub { font-family: var(--font-serif); font-size: 1.05rem; color: var(--text-muted); margin: 0; }
+
+/* the four challenge pillars, pulled out as numbered cards above the graphic */
+.quest { list-style: none; margin: 30px auto 0; padding: 0; max-width: 760px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.quest__item {
+  display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px 16px; box-shadow: 0 14px 30px -26px rgba(11, 18, 32, .4);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.quest__item:hover { transform: translateY(-5px); box-shadow: 0 22px 38px -16px rgba(214, 164, 58, .55); border-color: #e7c878; }
+.quest__num { font-family: var(--font-display); font-weight: 700; font-size: 1.7rem; line-height: 1; color: #c79a3c; }
+.quest__item > span:last-child { font-family: var(--font-display); font-weight: 600; font-size: .96rem; color: var(--ink); line-height: 1.32; }
 
 /* ---- Feature grid ---- */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; }
@@ -580,13 +643,20 @@ h3.display { font-size: 1.5rem; }
   .section { padding-block: 64px; }
   .tier--featured { order: -1; }
   .feature-split { grid-template-columns: 1fr; }
+  .quest { grid-template-columns: repeat(2, 1fr); max-width: 460px; }
   .fs-stage { min-height: 340px; }
   /* On stacked layout, always show descriptions so the list reads on its own */
   .fs-desc { max-height: 8rem; opacity: 1; }
 }
 @media (max-width: 560px) {
   .challenge__stats { grid-template-columns: 1fr; gap: 14px; }
-  .challenge__node i { display: none; }
+  .challenge__ms i { display: none; }
+  .challenge__ms { width: 56px; }
+  .challenge__ms--start { width: 42px; }
+  .challenge__ms b { font-size: .78rem; }
+  .challenge__milestones { height: 22px; }
+  .quest-hed { white-space: normal; font-size: 1.15rem; }
+  .quest-sub { font-size: .95rem; }
   .hero-callout { flex-direction: column; text-align: center; gap: 10px; }
   .hero-callout p { text-align: center; }
 }
