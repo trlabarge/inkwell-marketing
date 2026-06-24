@@ -564,8 +564,8 @@ h3.display { font-size: 1.5rem; }
 
 /* personal intro letter */
 .legal-letter {
-  background: #f6ead8;
-  border: 1px solid #e0c99a;
+  background: #fdf9f0;
+  border: 1px solid #ece1cc;
   border-radius: var(--radius-lg);
   padding: 34px 38px; margin-bottom: 40px;
 }
