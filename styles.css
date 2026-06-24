@@ -348,70 +348,78 @@ h3.display { font-size: 1.5rem; }
   font-size: .72rem; font-weight: 700; color: var(--text-faint);
 }
 .challenge__reward {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-family: var(--font-sans); font-weight: 500; font-size: .86rem; color: var(--ink);
-  background: var(--bg-sage); border-radius: 999px; padding: 7px 14px;
+  display: inline-flex; align-items: center; gap: 9px;
+  font-family: var(--font-sans); font-weight: 600; font-size: .9rem; color: var(--text-muted);
+  background: var(--bg-tint); border: 1px solid var(--line); border-radius: 999px; padding: 10px 20px;
 }
-.challenge__reward svg { width: 17px; height: 17px; flex: none; transition: color .5s ease 1.4s; }
+.challenge__reward svg { width: 18px; height: 18px; flex: none; transition: color .5s ease 6s; }
+.challenge__reward-wrap { display: flex; justify-content: center; margin-top: 34px; }
 /* reward chip lights up once the bar finishes filling */
 .challenge.in-view .challenge__reward {
   background: linear-gradient(180deg, #fbe7a8, #f3cf7a);
-  color: #5b4715;
-  box-shadow: 0 0 0 4px rgba(243, 207, 122, .35), 0 12px 24px -10px rgba(196, 148, 41, .7);
-  transition: background .5s ease 1.4s, color .5s ease 1.4s, box-shadow .5s ease 1.4s;
-  animation: rewardPop .6s ease 1.4s both;
+  border-color: #e7c878; color: #5b4715;
+  box-shadow: 0 0 0 4px rgba(243, 207, 122, .35), 0 12px 26px -10px rgba(196, 148, 41, .7);
+  transition: background .6s ease 6s, color .6s ease 6s, box-shadow .6s ease 6s, border-color .6s ease 6s;
+  animation: rewardPop .7s ease 6s both;
 }
 .challenge.in-view .challenge__reward svg { color: #b07c12; }
-@keyframes rewardPop { 0%, 100% { transform: scale(1); } 45% { transform: scale(1.06); } }
+@keyframes rewardPop { 0%, 100% { transform: scale(1); } 45% { transform: scale(1.07); } }
 
-.challenge__progress { position: relative; margin: 6px 8px 0; }
+.challenge__progress { position: relative; margin: 4px 8px 0; }
 .challenge__track { position: relative; height: 8px; border-radius: 999px; background: var(--line); }
 .challenge__fill {
   position: absolute; left: 0; top: 0; bottom: 0; width: 0;
   border-radius: 999px;
   background: linear-gradient(90deg, #06b6d4, #059669);
-  transition: width 1.6s cubic-bezier(.4, 0, .2, 1);
+  transition: width 6s linear;
 }
 .challenge.in-view .challenge__fill { width: 100%; }
 
 /* typewriter that chugs along the bar as it fills */
 .challenge__type {
   position: absolute; left: 0; bottom: calc(100% + 7px); transform: translateX(-50%);
-  color: #0f766e; z-index: 3; transition: left 1.6s cubic-bezier(.4, 0, .2, 1);
+  color: #0f766e; z-index: 3; transition: left 6s linear;
 }
 .challenge__type svg { width: 23px; height: 23px; display: block; }
 .challenge.in-view .challenge__type { left: 100%; }
-.challenge.in-view .challenge__type svg { animation: chug .4s steps(2, end) 4; }
+.challenge.in-view .challenge__type svg { animation: chug .4s steps(2, end) 15; }
 @keyframes chug { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2.5px); } }
 
 .challenge__dot {
   position: absolute; top: 50%; transform: translate(-50%, -50%); z-index: 2;
   width: 14px; height: 14px; border-radius: 999px;
   background: #fff; border: 2px solid #c2cad6; box-shadow: 0 2px 6px rgba(11, 18, 32, .12);
-  transition: border-color .4s ease, background .4s ease;
+  transition: border-color .35s ease var(--d, 0s), background .35s ease var(--d, 0s);
 }
 .challenge.in-view .challenge__dot { border-color: #059669; }
 .challenge.in-view .challenge__dot--goal { background: #059669; }
 
-.challenge__milestones { position: relative; height: 64px; margin-top: 26px; }
-.challenge__ms { position: absolute; top: 0; transform: translateX(-50%); width: 132px; text-align: center; }
-.challenge__ms--start { left: 0; transform: none; width: 96px; text-align: left; }
+.challenge__milestones { position: relative; height: 48px; margin-top: 24px; }
+.challenge__ms { position: absolute; top: 0; transform: translateX(-50%); width: 120px; text-align: center; }
+.challenge__ms--start { left: 0; transform: none; width: 80px; text-align: left; }
 .challenge__ms--goal { transform: translateX(-100%); text-align: right; }
-.challenge__ms b { display: block; font-family: var(--font-display); font-weight: 600; font-size: .92rem; color: var(--ink); transition: color .3s ease; }
+.challenge__ms b {
+  display: block; font-family: var(--font-display); font-weight: 600; font-size: .95rem;
+  color: var(--ink); transform-origin: center bottom;
+}
+.challenge__ms--start b { transform-origin: left bottom; }
+.challenge__ms--goal b { transform-origin: right bottom; }
 .challenge.in-view .challenge__ms b { color: #059669; }
+/* each number pops as the typewriter reaches it (delay set inline via --d) */
+.challenge.in-view .challenge__ms:not(.challenge__ms--start) b { animation: msPop .55s ease var(--d, 0s) both; }
+@keyframes msPop {
+  0%   { transform: scale(1);    color: var(--ink); text-shadow: none; }
+  35%  { transform: scale(1.38); color: #059669; text-shadow: 0 0 14px rgba(5, 150, 105, .45); }
+  100% { transform: scale(1);    color: #059669; text-shadow: none; }
+}
 .challenge__ms--start b { color: var(--text-faint); }
 .challenge.in-view .challenge__ms--start b { color: var(--text-muted); }
-.challenge__ms i { display: block; font-style: normal; font-family: var(--font-serif); font-size: .74rem; line-height: 1.32; color: var(--text-muted); margin-top: 4px; }
-/* numbers turn green in sequence as the typewriter passes each milestone */
-.challenge__ms:nth-child(2) b { transition-delay: .4s; }
-.challenge__ms:nth-child(3) b { transition-delay: .8s; }
-.challenge__ms:nth-child(4) b { transition-delay: 1.2s; }
-.challenge__ms:nth-child(5) b { transition-delay: 1.55s; }
+.challenge__ms i { display: block; font-style: normal; font-family: var(--font-serif); font-size: .76rem; line-height: 1.3; color: var(--text-muted); margin-top: 5px; }
 
-.challenge__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; border-top: 1px solid var(--line); padding-top: 24px; }
+.challenge__stats { display: flex; gap: 34px; flex: none; }
 .challenge__stat { text-align: center; }
-.challenge__stat strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.9rem; color: var(--ink); line-height: 1; }
-.challenge__stat span { font-family: var(--font-sans); font-size: .88rem; color: var(--text-muted); margin-top: 6px; display: block; }
+.challenge__stat strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--ink); line-height: 1; }
+.challenge__stat span { font-family: var(--font-sans); font-size: .78rem; color: var(--text-muted); margin-top: 5px; display: block; }
 
 /* ---- Feature grid ---- */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; }
