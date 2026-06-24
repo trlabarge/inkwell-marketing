@@ -351,18 +351,18 @@ h3.display { font-size: 1.5rem; }
   display: inline-flex; align-items: center; gap: 9px;
   font-family: var(--font-sans); font-weight: 600; font-size: .9rem; color: var(--text-muted);
   background: var(--bg-tint); border: 1px solid var(--line); border-radius: 999px; padding: 10px 20px;
+  transition: background .5s ease, color .5s ease, box-shadow .5s ease, border-color .5s ease;
 }
-.challenge__reward svg { width: 18px; height: 18px; flex: none; transition: color .5s ease 6s; }
+.challenge__reward svg { width: 18px; height: 18px; flex: none; transition: color .5s ease; }
 .challenge__reward-wrap { display: flex; justify-content: center; margin-top: 34px; }
-/* reward chip lights up once the bar finishes filling */
-.challenge.in-view .challenge__reward {
+/* reward chip stays gray, then lights up amber once the bar finishes filling */
+.challenge.is-filled .challenge__reward {
   background: linear-gradient(180deg, #fbe7a8, #f3cf7a);
   border-color: #e7c878; color: #5b4715;
   box-shadow: 0 0 0 4px rgba(243, 207, 122, .35), 0 12px 26px -10px rgba(196, 148, 41, .7);
-  transition: background .6s ease 6s, color .6s ease 6s, box-shadow .6s ease 6s, border-color .6s ease 6s;
-  animation: rewardPop .7s ease 6s both;
+  animation: rewardPop .6s ease both;
 }
-.challenge.in-view .challenge__reward svg { color: #b07c12; }
+.challenge.is-filled .challenge__reward svg { color: #b07c12; }
 @keyframes rewardPop { 0%, 100% { transform: scale(1); } 45% { transform: scale(1.07); } }
 
 .challenge__progress { position: relative; margin: 4px 8px 0; }
@@ -421,15 +421,24 @@ h3.display { font-size: 1.5rem; }
 .challenge__stat strong { display: block; font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--ink); line-height: 1; }
 .challenge__stat span { font-family: var(--font-sans); font-size: .78rem; color: var(--text-muted); margin-top: 5px; display: block; }
 
-/* the four challenge pillars, pulled out as cards above the graphic */
-.quest { list-style: none; margin: 30px auto 0; padding: 0; max-width: 760px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; text-align: left; }
-.quest__item {
-  display: flex; flex-direction: column; gap: 12px;
-  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 18px; box-shadow: 0 14px 30px -26px rgba(11, 18, 32, .4);
+/* heroic intro lines above the challenge graphic */
+.quest-hed {
+  font-family: 'Cinzel Decorative', var(--font-display);
+  font-weight: 700; font-size: clamp(1rem, 2.3vw, 1.5rem);
+  color: var(--ink); line-height: 1.3; white-space: nowrap; margin: 0 0 12px;
 }
-.quest__ico { width: 36px; height: 36px; border-radius: 10px; background: var(--bg-sage); display: flex; align-items: center; justify-content: center; color: var(--ink); }
-.quest__ico svg { width: 19px; height: 19px; }
+.quest-sub { font-family: var(--font-serif); font-size: 1.05rem; color: var(--text-muted); margin: 0; }
+
+/* the four challenge pillars, pulled out as numbered cards above the graphic */
+.quest { list-style: none; margin: 30px auto 0; padding: 0; max-width: 760px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.quest__item {
+  display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px 16px; box-shadow: 0 14px 30px -26px rgba(11, 18, 32, .4);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.quest__item:hover { transform: translateY(-5px); box-shadow: 0 22px 38px -16px rgba(214, 164, 58, .55); border-color: #e7c878; }
+.quest__num { font-family: var(--font-display); font-weight: 700; font-size: 1.7rem; line-height: 1; color: #c79a3c; }
 .quest__item > span:last-child { font-family: var(--font-display); font-weight: 600; font-size: .96rem; color: var(--ink); line-height: 1.32; }
 
 /* ---- Feature grid ---- */
@@ -646,6 +655,8 @@ h3.display { font-size: 1.5rem; }
   .challenge__ms--start { width: 42px; }
   .challenge__ms b { font-size: .78rem; }
   .challenge__milestones { height: 22px; }
+  .quest-hed { white-space: normal; font-size: 1.15rem; }
+  .quest-sub { font-size: .95rem; }
   .hero-callout { flex-direction: column; text-align: center; gap: 10px; }
   .hero-callout p { text-align: center; }
 }
