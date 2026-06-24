@@ -125,7 +125,7 @@
               <span class="fs-num">04</span>
               <span class="fs-text">
                 <span class="fs-title">Project Management</span>
-                <span class="fs-desc">Outlines, chapters, and a manuscript binder keep your draft structured from first idea to final page.</span>
+                <span class="fs-desc">Keep every novel in one calm library. Start a new project in a click, then gather related books into a series.</span>
               </span>
             </button>
           </li>
@@ -448,21 +448,210 @@
             </div>
           </div>
           <div class="fs-panel" id="fs-project" role="tabpanel" aria-labelledby="tab-fs-project" hidden>
-            <div class="fs-placeholder">
-              <span class="fs-placeholder__label">Project Management</span>
-              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            <div class="codex-anim pm-anim" role="img" aria-label="Animated preview of Inkwell's project dashboard, starting a new novel and moving it into a series.">
+              <div class="pm-bar">
+                <div class="pm-brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4v16M9 4v16M13 5l4 15"/></svg> My Projects</div>
+                <div class="pm-bar-right">
+                  <span>your@email.com</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1l2-1.5-2-3.4-2.3 1a7 7 0 0 0-1.7-1l-.3-2.5h-4l-.3 2.5a7 7 0 0 0-1.7 1l-2.3-1-2 3.4 2 1.5a7 7 0 0 0 0 2l-2 1.5 2 3.4 2.3-1a7 7 0 0 0 1.7 1l.3 2.5h4l.3-2.5a7 7 0 0 0 1.7-1l2.3 1 2-3.4-2-1.5a7 7 0 0 0 .1-1z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4M9 16l4-4-4-4M13 12H4"/></svg>
+                </div>
+              </div>
+              <div class="pm-body" aria-hidden="true">
+                <!-- Series group (revealed after move) -->
+                <div class="pm-series" id="pm-series">
+                  <div class="pm-series-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg> The Coastal Novels <i id="pm-series-count">1 project</i></div>
+                  <div class="pm-card">
+                    <h5>The Lighthouse Keeper</h5>
+                    <div class="pm-stat"><span>Documents</span><b>1</b></div>
+                    <div class="pm-stat"><span>Total Words</span><b>0</b></div>
+                    <div class="pm-sep"></div>
+                    <div class="pm-edited">Last edited 6/23/2026</div>
+                  </div>
+                </div>
+
+                <div class="pm-head">
+                  <h4>My Projects</h4>
+                  <span class="pm-newseries"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M12 11v4M10 13h4"/></svg> New Series</span>
+                </div>
+
+                <div class="pm-grid">
+                  <div class="pm-card pm-card--start" id="pm-start">
+                    <span class="pm-plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg></span>
+                    <span>Start New Project</span>
+                  </div>
+                  <div class="pm-card">
+                    <h5>The Hours Between</h5>
+                    <div class="pm-stat"><span>Documents</span><b>12</b></div>
+                    <div class="pm-stat"><span>Total Words</span><b>38.2k</b></div>
+                    <div class="pm-sep"></div>
+                    <div class="pm-edited">Last edited 6/18/2026</div>
+                  </div>
+                  <div class="pm-card">
+                    <h5>Salt and Stone</h5>
+                    <div class="pm-stat"><span>Documents</span><b>9</b></div>
+                    <div class="pm-stat"><span>Total Words</span><b>51.7k</b></div>
+                    <div class="pm-sep"></div>
+                    <div class="pm-edited">Last edited 6/9/2026</div>
+                  </div>
+                  <div class="pm-card pm-card--new" id="pm-new">
+                    <span class="pm-dots" id="pm-dots"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg></span>
+                    <h5>The Lighthouse Keeper</h5>
+                    <div class="pm-stat"><span>Documents</span><b>1</b></div>
+                    <div class="pm-stat"><span>Total Words</span><b>0</b></div>
+                    <div class="pm-sep"></div>
+                    <div class="pm-edited">Last edited 6/23/2026</div>
+                  </div>
+                </div>
+
+                <!-- Context menu -->
+                <div class="pm-menu" id="pm-menu">
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="2"/></svg> Rename</div>
+                  <div class="pm-mi" id="pm-mi-move"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg> Move to Series <svg class="pm-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg></div>
+                  <div class="pm-mi pm-mi--danger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13"/></svg> Delete</div>
+                </div>
+                <!-- Move-to-Series submenu -->
+                <div class="pm-submenu" id="pm-submenu">
+                  <div class="pm-mi" id="pm-series-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg> The Coastal Novels</div>
+                  <div class="pm-mi pm-mi--accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg> New Series…</div>
+                </div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
             </div>
           </div>
           <div class="fs-panel" id="fs-share" role="tabpanel" aria-labelledby="tab-fs-share" hidden>
-            <div class="fs-placeholder">
-              <span class="fs-placeholder__label">Share Access</span>
-              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            <div class="codex-anim share-anim" role="img" aria-label="Animated preview of Inkwell's sharing: opening the share dialog, choosing a document and an expiry, allowing comments, and generating a link for a beta reader.">
+              <!-- Editor behind the dialog -->
+              <div class="share-editor">
+                <div class="share-ed-bar">
+                  <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> The Ember Throne <span class="cx__sep">›</span> <b>The Hollow Crown</b></div>
+                  <div class="share-ed-tools">
+                    <span class="cx__saved">✓ All changes saved</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>
+                    <svg class="share-btn" id="share-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.1 10.9 15.9 7.1M8.1 13.1l7.8 3.8"/></svg>
+                  </div>
+                </div>
+                <div class="share-ed-body">
+                  <div class="cx__prose">
+                    <p>The crown was never meant for him. Stable-born and ash-scarred, the boy had no claim to the Ember Throne, and yet the embers had begun to whisper his name through the smoke.</p>
+                    <p>Two hunters met in the dark beneath the keep, both wanting the same quiet thing, and neither willing to name it first.</p>
+                    <p>A small man stepped out from the shadow of the colonnade, and the night drew its breath and waited.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="share-overlay" id="share-overlay" aria-hidden="true"></div>
+
+              <!-- Share dialog -->
+              <div class="share-modal" id="share-modal" aria-hidden="true">
+                <div class="share-mhead">
+                  <svg class="sh-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.1 10.9 15.9 7.1M8.1 13.1l7.8 3.8"/></svg>
+                  <div>
+                    <h5>Share Document</h5>
+                    <div class="sh-sub" id="share-sub">The Hollow Crown</div>
+                  </div>
+                  <svg class="sh-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                </div>
+                <div class="share-mbody">
+                  <p class="share-sect">Create new share link</p>
+                  <div class="share-radio is-on"><span class="sh-dot"></span><span>Specific Document</span></div>
+                  <div class="share-radio"><span class="sh-dot"></span><span>All Documents in Project</span></div>
+
+                  <div class="share-lbl">Select document</div>
+                  <div class="share-select" id="share-doc">
+                    <span id="share-doc-val">The Hollow Crown</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    <div class="share-select__menu" id="share-doc-menu">
+                      <div class="share-opt is-sel">The Hollow Crown</div>
+                      <div class="share-opt" id="share-doc-opt">Emberfall</div>
+                      <div class="share-opt">Daughter of Ash</div>
+                      <div class="share-opt">Stormhold</div>
+                    </div>
+                  </div>
+
+                  <div class="share-lbl">Link expiration</div>
+                  <div class="share-select share-select--up" id="share-exp">
+                    <span id="share-exp-val">Never expires</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+                    <div class="share-select__menu" id="share-exp-menu">
+                      <div class="share-opt is-sel">Never expires</div>
+                      <div class="share-opt">Expires in 1 day</div>
+                      <div class="share-opt" id="share-exp-opt">Expires in 1 week</div>
+                      <div class="share-opt">Expires in 1 month</div>
+                    </div>
+                  </div>
+
+                  <div class="share-check" id="share-check">
+                    <span class="share-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-10"/></svg></span>
+                    <span>Allow comments</span>
+                  </div>
+
+                  <div class="share-gen" id="share-gen">Generate Link</div>
+                  <div class="share-success" id="share-success">
+                    <div class="share-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m5 12 5 5 9-10"/></svg><span>inkwell.world/s/3fa9c2e1</span><span class="share-copied">Copied</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
             </div>
           </div>
           <div class="fs-panel" id="fs-export" role="tabpanel" aria-labelledby="tab-fs-export" hidden>
-            <div class="fs-placeholder">
-              <span class="fs-placeholder__label">Export Documents</span>
-              <span class="fs-placeholder__note">Interactive preview coming soon</span>
+            <div class="codex-anim export-anim" role="img" aria-label="Animated preview of Inkwell's export menu: opening it, moving through the format options, and downloading a PDF.">
+              <div class="share-editor">
+                <div class="share-ed-bar">
+                  <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> The Cartographer's Daughter <span class="cx__sep">›</span> <b>The Harbor at Dawn</b></div>
+                  <div class="share-ed-tools">
+                    <span class="cx__saved">✓ All changes saved</span>
+                    <svg class="share-btn" id="ex-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.1 10.9 15.9 7.1M8.1 13.1l7.8 3.8"/></svg>
+                  </div>
+                </div>
+                <div class="share-ed-body">
+                  <div class="cx__prose">
+                    <p>Marisol had counted the ships since she was old enough to climb the seawall, and she knew this one by its torn sail before it ever cleared the breakwater.</p>
+                    <p>Her father had charted every coastline from here to Cadiz, but never once the small harbor where he was born.</p>
+                    <p>The letter came at dawn, salt-stained and three months late. She read it twice before she let herself believe it, then folded it small and slipped it into the lining of her coat.</p>
+                    <p>By noon the whole town would know. For now there was only the gulls, the grey water, and a name she had not spoken aloud in years.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Export menu -->
+              <div class="ex-menu" id="ex-menu" aria-hidden="true">
+                <div class="ex-item" id="ex-md"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg> Export as Markdown</div>
+                <div class="ex-item" id="ex-txt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 6h14M12 6v13"/></svg> Export as Plain Text</div>
+                <div class="ex-item" id="ex-pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg> Export as PDF</div>
+                <div class="ex-item" id="ex-docx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg> Export as DOCX</div>
+                <div class="ex-item" id="ex-epub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 0-2 2z"/><path d="M5 4v16"/></svg> Export as EPUB</div>
+                <div class="ex-sep"></div>
+                <div class="ex-item" id="ex-backup"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg> <b>Download Backup<span class="ex-sub">Full Project</span></b><svg class="ex-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg>
+                  <div class="ex-submenu" id="ex-submenu">
+                    <div class="ex-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg> Plain Text (Markdown)</div>
+                    <div class="ex-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg> Document (DOCX)</div>
+                    <div class="ex-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/></svg> Full Backup (JSON)</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Download toast -->
+              <div class="ex-toast" id="ex-toast" aria-hidden="true">
+                <span class="ex-spin"></span>
+                <svg class="ex-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-10"/></svg>
+                <div><b>The Harbor at Dawn.pdf</b><span class="ex-state" id="ex-state">Preparing export…</span></div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
             </div>
           </div>
         </div>
@@ -910,6 +1099,291 @@
         timers.forEach(clearTimeout); timers = [];
         typed.textContent = coreText; caret.classList.remove('on');
         step(0);
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+
+    /* Project dashboard preview: start a new project, then move it into a series */
+    (function () {
+      var root = document.querySelector('.pm-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var startCard = document.getElementById('pm-start');
+      var newCard = document.getElementById('pm-new');
+      var dots = document.getElementById('pm-dots');
+      var menu = document.getElementById('pm-menu');
+      var submenu = document.getElementById('pm-submenu');
+      var miMove = document.getElementById('pm-mi-move');
+      var seriesOpt = document.getElementById('pm-series-opt');
+      var series = document.getElementById('pm-series');
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        var x = eb.left - rb.left + offX;
+        var y = eb.top - rb.top + (offY == null ? eb.height / 2 : offY);
+        cursor.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      }
+      function pulse() { cursor.classList.remove('click'); void cursor.offsetWidth; cursor.classList.add('click'); }
+      function placeMenu(anchor, el, toRight) {
+        var rb = root.getBoundingClientRect(), ab = anchor.getBoundingClientRect();
+        var mw = el.offsetWidth, mh = el.offsetHeight, x, y;
+        if (toRight) {
+          x = ab.right - rb.left + 4;
+          if (x + mw > rb.width - 8) x = ab.left - rb.left - mw - 4;
+          y = ab.top - rb.top - 5;
+        } else {
+          x = ab.left - rb.left;
+          if (x + mw > rb.width - 8) x = rb.width - 8 - mw;
+          y = ab.top - rb.top + ab.height + 6;
+          if (y + mh > rb.height - 8) y = ab.top - rb.top - mh - 6;
+        }
+        if (x < 8) x = 8;
+        if (y < 8) y = 8;
+        if (y + mh > rb.height - 6) y = rb.height - 6 - mh;
+        el.style.left = x + 'px'; el.style.top = y + 'px';
+      }
+      function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        newCard.classList.remove('show', 'leaving'); newCard.style.display = 'none';
+        menu.classList.remove('show'); submenu.classList.remove('show'); miMove.classList.remove('hi');
+        series.classList.remove('show'); cursor.classList.remove('click');
+      }
+      function run() {
+        reset();
+        wait(450, function () {
+          moveTo(startCard, 32, 30);
+          wait(950, function () {                     /* 1. create a new project */
+            pulse();
+            newCard.style.display = 'block'; void newCard.offsetWidth; newCard.classList.add('show');
+            wait(1650, function () {                  /* 2. open the card menu */
+              moveTo(dots, 6, 8);
+              wait(720, function () {
+                pulse(); placeMenu(dots, menu, false); menu.classList.add('show');
+                wait(1500, function () {              /* 3. hover Move to Series */
+                  moveTo(miMove, 16, null);
+                  wait(680, function () {
+                    miMove.classList.add('hi'); placeMenu(miMove, submenu, true); submenu.classList.add('show');
+                    wait(1500, function () {          /* 4. choose the series */
+                      moveTo(seriesOpt, 16, null);
+                      wait(680, function () {
+                        pulse();
+                        menu.classList.remove('show'); submenu.classList.remove('show'); miMove.classList.remove('hi');
+                        newCard.classList.add('leaving');
+                        wait(430, function () {
+                          newCard.style.display = 'none'; newCard.classList.remove('show', 'leaving');
+                          series.classList.add('show');
+                          wait(2700, run);
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+
+    /* Share preview: open the dialog, set options, allow comments, generate a link */
+    (function () {
+      var root = document.querySelector('.share-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var btn = document.getElementById('share-btn');
+      var overlay = document.getElementById('share-overlay');
+      var modal = document.getElementById('share-modal');
+      var sub = document.getElementById('share-sub');
+      var doc = document.getElementById('share-doc'), docMenu = document.getElementById('share-doc-menu');
+      var docVal = document.getElementById('share-doc-val'), docOpt = document.getElementById('share-doc-opt');
+      var exp = document.getElementById('share-exp'), expMenu = document.getElementById('share-exp-menu');
+      var expVal = document.getElementById('share-exp-val'), expOpt = document.getElementById('share-exp-opt');
+      var check = document.getElementById('share-check');
+      var gen = document.getElementById('share-gen'), success = document.getElementById('share-success');
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        cursor.style.transform = 'translate(' + (eb.left - rb.left + (offX == null ? eb.width / 2 : offX)) +
+          'px,' + (eb.top - rb.top + (offY == null ? eb.height / 2 : offY)) + 'px)';
+      }
+      function pulse() { cursor.classList.remove('click'); void cursor.offsetWidth; cursor.classList.add('click'); }
+
+      function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        overlay.classList.remove('show'); modal.classList.remove('show');
+        docMenu.classList.remove('open'); expMenu.classList.remove('open');
+        docVal.textContent = 'The Hollow Crown'; sub.textContent = 'The Hollow Crown';
+        expVal.textContent = 'Never expires';
+        docOpt.classList.remove('is-sel'); expOpt.classList.remove('is-sel');
+        docMenu.querySelector('.is-sel') && docMenu.querySelector('.is-sel').classList.remove('is-sel');
+        expMenu.querySelector('.is-sel') && expMenu.querySelector('.is-sel').classList.remove('is-sel');
+        docMenu.children[0].classList.add('is-sel'); expMenu.children[0].classList.add('is-sel');
+        check.classList.remove('checked');
+        gen.style.display = ''; success.classList.remove('show', 'pop');
+        cursor.classList.remove('click');
+      }
+      function setSel(menu, opt) {
+        var cur = menu.querySelector('.is-sel'); if (cur) cur.classList.remove('is-sel');
+        opt.classList.add('is-sel');
+      }
+
+      function run() {
+        reset();
+        wait(500, function () {
+          moveTo(btn, null, null);
+          wait(850, function () {                         /* open dialog */
+            pulse(); overlay.classList.add('show'); modal.classList.add('show');
+            wait(1500, function () {                       /* select document */
+              moveTo(doc, null, 16);
+              wait(650, function () {
+                pulse(); docMenu.classList.add('open');
+                wait(900, function () {
+                  moveTo(docOpt, null, null);
+                  wait(550, function () {
+                    pulse(); setSel(docMenu, docOpt);
+                    docVal.textContent = 'Emberfall'; sub.textContent = 'Emberfall';
+                    docMenu.classList.remove('open');
+                    wait(900, function () {                 /* select expiration */
+                      moveTo(exp, null, 16);
+                      wait(600, function () {
+                        pulse(); expMenu.classList.add('open');
+                        wait(900, function () {
+                          moveTo(expOpt, null, null);
+                          wait(550, function () {
+                            pulse(); setSel(expMenu, expOpt);
+                            expVal.textContent = 'Expires in 1 week';
+                            expMenu.classList.remove('open');
+                            wait(850, function () {           /* allow comments */
+                              moveTo(check, 18, null);
+                              wait(600, function () {
+                                pulse(); check.classList.add('checked');
+                                wait(900, function () {        /* generate link */
+                                  moveTo(gen, null, null);
+                                  wait(650, function () {
+                                    pulse();
+                                    gen.style.display = 'none';
+                                    success.classList.add('show');
+                                    void success.offsetWidth; success.classList.add('pop');
+                                    wait(3000, function () {    /* close + loop */
+                                      overlay.classList.remove('show'); modal.classList.remove('show');
+                                      wait(900, run);
+                                    });
+                                  });
+                                });
+                              });
+                            });
+                          });
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+
+    /* Export preview: open the menu, move through the formats, download one */
+    (function () {
+      var root = document.querySelector('.export-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var btn = document.getElementById('ex-btn');
+      var menu = document.getElementById('ex-menu');
+      var submenu = document.getElementById('ex-submenu');
+      var toast = document.getElementById('ex-toast');
+      var state = document.getElementById('ex-state');
+      var backup = document.getElementById('ex-backup');
+      var ids = ['ex-md', 'ex-txt', 'ex-pdf', 'ex-docx', 'ex-epub'];
+      var items = ids.map(function (id) { return document.getElementById(id); });
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        cursor.style.transform = 'translate(' + (eb.left - rb.left + (offX == null ? eb.width / 2 : offX)) +
+          'px,' + (eb.top - rb.top + (offY == null ? eb.height / 2 : offY)) + 'px)';
+      }
+      function pulse() { cursor.classList.remove('click'); void cursor.offsetWidth; cursor.classList.add('click'); }
+      function hiOnly(el) {
+        root.querySelectorAll('.ex-item.hi').forEach(function (i) { i.classList.remove('hi'); });
+        if (el) el.classList.add('hi');
+      }
+      function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        menu.classList.remove('show'); submenu.classList.remove('show'); hiOnly(null);
+        toast.classList.remove('show', 'done'); state.textContent = 'Preparing export…';
+        cursor.classList.remove('click');
+      }
+
+      function hover(i) {
+        if (i < items.length) {                      /* glide through each format */
+          moveTo(items[i], 18, null);
+          wait(180, function () { hiOnly(items[i]); });
+          wait(560, function () { hover(i + 1); });
+        } else {                                      /* peek at the backup submenu */
+          moveTo(backup, 18, null);
+          wait(180, function () { hiOnly(backup); submenu.classList.add('show'); });
+          wait(950, function () {
+            submenu.classList.remove('show');
+            moveTo(items[2], 18, null);               /* settle on PDF and choose it */
+            wait(200, function () { hiOnly(items[2]); });
+            wait(620, function () {
+              pulse();
+              menu.classList.remove('show'); hiOnly(null);
+              toast.classList.add('show');
+              wait(1200, function () {
+                toast.classList.add('done'); state.textContent = 'Downloaded';
+                wait(2600, function () { toast.classList.remove('show', 'done'); wait(700, run); });
+              });
+            });
+          });
+        }
+      }
+      function run() {
+        reset();
+        wait(550, function () {
+          moveTo(btn, null, null);
+          wait(850, function () { pulse(); menu.classList.add('show'); wait(700, function () { hover(0); }); });
+        });
       }
 
       var started = false;
