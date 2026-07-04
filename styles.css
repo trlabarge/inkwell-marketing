@@ -1183,8 +1183,7 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 .cmp-era-col { padding-right: 4px; }
 .cmp-era-col + .cmp-era-col { border-left: 1px solid var(--line); padding-left: 32px; }
 .cmp-era-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
-.cmp-era-head .ico { width: 26px; height: 26px; color: var(--ink); flex: none; }
-.cmp-era-col--gold .ico { color: var(--gold); }
+.cmp-era-head .ico { width: 26px; height: 26px; flex: none; }
 .cmp-era-logo { object-fit: contain; border-radius: 4px; }
 .cmp-era-head h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; color: var(--ink); margin: 0; }
 .cmp-era-tag {
