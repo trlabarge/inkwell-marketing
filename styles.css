@@ -1173,6 +1173,36 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 .cmp-glance div h3 { font-family: var(--font-display); font-weight: 600; color: var(--ink); margin: 0 0 8px; }
 .cmp-glance div p { margin: 0; color: var(--text); }
 
+/* At-a-glance: two standalone cards instead of one split card */
+.cmp-glance-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.cmp-glance-card h3 { font-family: var(--font-display); font-weight: 600; color: var(--ink); margin: 0 0 8px; }
+.cmp-glance-card p { margin: 0; color: var(--text); }
+
+/* Two eras: side-by-side columns instead of a stacked wall of paragraphs */
+.cmp-era-row { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 30px; align-items: start; }
+.cmp-era-col { padding-right: 4px; }
+.cmp-era-col + .cmp-era-col { border-left: 1px solid var(--line); padding-left: 32px; }
+.cmp-era-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+.cmp-era-head .ico { width: 26px; height: 26px; color: var(--ink); flex: none; }
+.cmp-era-col--gold .ico { color: var(--gold); }
+.cmp-era-head h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; color: var(--ink); margin: 0; }
+.cmp-era-tag {
+  display: block; font-family: var(--font-sans); font-size: .74rem; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--text-faint); margin: 0 0 16px;
+}
+.cmp-era-col p { font-family: var(--font-serif); color: var(--text); margin-top: 14px; }
+.cmp-era-col p:first-of-type { margin-top: 0; }
+
+/* Who should choose which: two choice cards instead of a wall of prose */
+.cmp-choice-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 34px; }
+.cmp-choice-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+.cmp-choice-card--gold { border-color: #ecdba8; background: #fffdf8; }
+.cmp-choice-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; color: var(--ink); margin: 0 0 16px; }
+.cmp-choice-card ul { list-style: none; margin: 0 0 16px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.cmp-choice-card li { display: flex; gap: 10px; font-family: var(--font-serif); color: var(--text); }
+.cmp-choice-card li svg { flex: none; width: 17px; height: 17px; margin-top: 4px; color: var(--good); }
+.cmp-choice-card p { margin: 0; color: var(--text-muted); font-size: .93rem; font-family: var(--font-serif); }
+
 .cmp-cta { text-align: center; }
 .cmp-cta h2 { margin: 0 0 10px; }
 .cmp-cta p { color: var(--text); margin: 0 0 22px; }
@@ -1193,6 +1223,10 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   .cmp-cards { grid-template-columns: repeat(2, 1fr); }
   .cmp-feature-group { grid-template-columns: repeat(2, 1fr); }
   .cmp-glance { grid-template-columns: 1fr; }
+  .cmp-glance-row { grid-template-columns: 1fr; }
+  .cmp-era-row { grid-template-columns: 1fr; gap: 36px; }
+  .cmp-era-col + .cmp-era-col { border-left: none; padding-left: 4px; border-top: 1px solid var(--line); padding-top: 30px; }
+  .cmp-choice-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .cmp-cards { grid-template-columns: 1fr; }
