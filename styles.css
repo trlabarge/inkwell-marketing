@@ -1185,6 +1185,7 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 .cmp-era-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
 .cmp-era-head .ico { width: 26px; height: 26px; color: var(--ink); flex: none; }
 .cmp-era-col--gold .ico { color: var(--gold); }
+.cmp-era-logo { object-fit: contain; border-radius: 4px; }
 .cmp-era-head h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; color: var(--ink); margin: 0; }
 .cmp-era-tag {
   display: block; font-family: var(--font-sans); font-size: .74rem; letter-spacing: .06em;
