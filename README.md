@@ -13,12 +13,26 @@ index.html        Home (hero, features, testimonials, FAQ)
 pricing.html      Pricing tiers
 privacy.html      Privacy Policy
 terms.html        Terms of Service
+compare/          Comparison pages (vs. Scrivener, Dabble, etc.)
 styles.css        All styling
 assets/           Images
   favicon.png       Favicon
   wordmark-*.png    Logo (dark = on light header, light = on dark footer)
 vercel.json       Clean URLs + caching/security headers
+robots.txt        Crawler rules (search + AI/LLM answer-engine bots), points to sitemap.xml
+sitemap.xml       Canonical list of pages for search engines
+llms.txt          Plain-language site summary for LLM/GEO crawlers
 ```
+
+## SEO / GEO notes
+
+- Every page ships `<title>`, meta description, canonical, and Open Graph/Twitter
+  tags. Keep these in sync when copy changes.
+- `index.html`, `pricing.html`, and the `compare/` pages carry JSON-LD
+  (`Organization`, `WebSite`, `SoftwareApplication`, `FAQPage`, `Product`,
+  `BreadcrumbList`). If you edit the visible FAQ or pricing copy, update the
+  matching JSON-LD text too, since it must mirror what's on the page.
+- Add new pages to `sitemap.xml` and, if user-facing, to `llms.txt`.
 
 All app CTAs link to `https://app.inkwell.world/auth`.
 
