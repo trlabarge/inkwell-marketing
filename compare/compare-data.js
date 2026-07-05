@@ -33,7 +33,7 @@ window.COMPARE_DATA = {
     {
       key: "dabble",
       name: "Dabble",
-      pageUrl: null,
+      pageUrl: "/compare/dabble",
       desc: "For writers who want a subscription tool focused on plotting and drafting, with story-organization features built in.",
       values: {
         cost:          { symbol: "$$$", tone: "bad",  label: "$19–49/mo" },
