@@ -36,7 +36,7 @@ window.COMPARE_DATA = {
       pageUrl: null,
       desc: "For writers who want a subscription tool focused on plotting and drafting, with story-organization features built in.",
       values: {
-        cost:          { symbol: "$$$", tone: "bad",  label: "$9–29/mo" },
+        cost:          { symbol: "$$$", tone: "bad",  label: "$19–49/mo" },
         cloudSync:     { symbol: "✓", tone: "good", label: "Automatic" },
         novelists:     { symbol: "✓", tone: "good", label: "Yes" },
         collab:        { symbol: "✓", tone: "good", label: "Yes" },
