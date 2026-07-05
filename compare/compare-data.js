@@ -41,7 +41,7 @@ window.COMPARE_DATA = {
         novelists:     { symbol: "✓", tone: "good", label: "Yes" },
         collab:        { symbol: "✓", tone: "good", label: "Yes" },
         worldbuilding: { symbol: "✓", tone: "good", label: "Deep" },
-        exportFormats: { symbol: "✗", tone: "bad",  label: "Word only" },
+        exportFormats: { symbol: "✗", tone: "bad",  label: "Word, Text" },
         focusMode:     { symbol: "✓", tone: "good", label: "Yes" },
         offline:       { symbol: "≈", tone: "warn", label: "Desktop app" }
       }
