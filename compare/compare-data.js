@@ -33,15 +33,15 @@ window.COMPARE_DATA = {
     {
       key: "dabble",
       name: "Dabble",
-      pageUrl: null,
+      pageUrl: "/compare/dabble",
       desc: "For writers who want a subscription tool focused on plotting and drafting, with story-organization features built in.",
       values: {
-        cost:          { symbol: "$$$", tone: "bad",  label: "$9–29/mo" },
+        cost:          { symbol: "$$$", tone: "bad",  label: "$19–49/mo" },
         cloudSync:     { symbol: "✓", tone: "good", label: "Automatic" },
         novelists:     { symbol: "✓", tone: "good", label: "Yes" },
         collab:        { symbol: "✓", tone: "good", label: "Yes" },
         worldbuilding: { symbol: "✓", tone: "good", label: "Deep" },
-        exportFormats: { symbol: "✗", tone: "bad",  label: "Word only" },
+        exportFormats: { symbol: "✗", tone: "bad",  label: "Word, Text" },
         focusMode:     { symbol: "✓", tone: "good", label: "Yes" },
         offline:       { symbol: "≈", tone: "warn", label: "Desktop app" }
       }
