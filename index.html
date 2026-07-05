@@ -28,6 +28,110 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cinzel+Decorative:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Alegreya+Sans:wght@400;500;700&family=Spectral:ital,wght@0,400;0,600;1,400;1,600&family=Allura&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://inkwell.world/#organization",
+        "name": "Inkwell",
+        "url": "https://inkwell.world/",
+        "logo": "https://inkwell.world/assets/wordmark-dark.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://inkwell.world/#website",
+        "url": "https://inkwell.world/",
+        "name": "Inkwell",
+        "publisher": { "@id": "https://inkwell.world/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Inkwell",
+        "applicationCategory": "Writing Software",
+        "operatingSystem": "Web",
+        "url": "https://inkwell.world/",
+        "description": "Inkwell is a serene home for your writing. Build worlds, shape characters, and bring your stories to life, all in one connected universe.",
+        "image": "https://inkwell.world/assets/wordmark-dark.png",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Inkling",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Storyteller",
+            "price": "9",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "9",
+              "priceCurrency": "USD",
+              "billingDuration": "P1M"
+            }
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What makes Inkwell different from other writing apps?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Inkwell combines a distraction-free writing environment with powerful world-building tools. We focus on creating a tranquil sanctuary for writers while providing everything you need to organize characters, lore, and story elements in one beautiful interface."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my writing data secure and private?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Your work is encrypted and securely stored with industry-standard security protocols. We never share or access your content. You own your work completely, and you can export it anytime in multiple formats."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I collaborate with other writers or editors?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can share a project or document with beta readers and editors through scoped, permission-based links, so you decide exactly who sees your work. They can leave general feedback or inline margin notes anchored to a specific passage, while your manuscript stays safely yours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What devices and platforms does Inkwell support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Inkwell works seamlessly across all your devices through any modern web browser. Your work syncs automatically, so you can write on your desktop at home and continue on your tablet while traveling without missing a beat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I work offline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Inkwell offers offline support. You can continue writing without an internet connection, and your changes will automatically sync when you're back online. Your creative flow should never be interrupted."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What export formats are available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can export individual documents as Markdown, Plain Text (.txt), PDF, DOCX, or EPUB. Full project backup downloads are also available: Markdown on all plans, with DOCX and JSON available on paid plans. Your work is always portable and ready for submission or self-publishing."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 

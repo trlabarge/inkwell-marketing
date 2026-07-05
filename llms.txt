@@ -1,0 +1,31 @@
+# Inkwell
+
+> Inkwell is a calm, distraction-free writing home for novelists. It combines a
+> focused editor with connected world-building tools (characters, lore, and
+> story elements), so writers can start a project in seconds and stay
+> organized as their story grows. Inkwell's positioning is "the best place to
+> actually finish your novel."
+
+Inkwell works in any modern browser, syncs across devices, and supports
+offline writing. Documents export as Markdown, plain text, PDF, DOCX, or EPUB.
+There is a free plan (Inkling) and a paid plan (Storyteller, $9/month) with a
+higher-tier plan (Worldbuilder) coming soon.
+
+Inkwell does not brand its features as "AI." Story intelligence features
+(summarization, brainstorming, keeping the story connected) are described by
+their outcome, not by the underlying technology.
+
+## Key pages
+
+- [Home](https://inkwell.world/): overview, features, and how to start writing in seconds.
+- [Pricing](https://inkwell.world/pricing): plans and what's included in each.
+- [App comparisons](https://inkwell.world/compare): how Inkwell compares to other novel-writing apps.
+- [Inkwell vs. Scrivener](https://inkwell.world/compare/scrivener)
+- [Inkwell vs. Dabble](https://inkwell.world/compare/dabble)
+- [Privacy Policy](https://inkwell.world/privacy)
+- [Terms of Service](https://inkwell.world/terms)
+
+## Getting started
+
+Writers can start using Inkwell immediately at https://app.inkwell.world/auth,
+no download or installation required.
