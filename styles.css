@@ -80,6 +80,8 @@ h3.display { font-size: 1.5rem; }
   margin: 18px auto 0;
   max-width: 620px;
 }
+.lede + .lede { margin-top: 10px; }
+.lede--accent { color: var(--text); font-weight: 500; }
 .eyebrow {
   font-family: var(--font-sans);
   text-transform: uppercase;
@@ -153,6 +155,26 @@ h3.display { font-size: 1.5rem; }
 .nav { display: flex; align-items: center; gap: 26px; }
 .nav a.navlink { font-size: .98rem; color: var(--text-muted); }
 .nav a.navlink:hover { color: var(--ink); }
+
+.nav-toggle {
+  display: none; background: none; border: none; padding: 6px; margin: 0;
+  color: var(--ink); cursor: pointer; border-radius: 6px;
+}
+.nav-toggle svg { width: 24px; height: 24px; display: block; }
+
+.mobile-nav {
+  display: none; flex-direction: column;
+  position: fixed; top: 72px; left: 0; right: 0; z-index: 49;
+  background: #fff; border-top: 1px solid var(--line);
+  padding: 6px 24px 12px;
+  box-shadow: 0 16px 30px -18px rgba(11, 18, 32, .3);
+}
+.mobile-nav.is-open { display: flex; }
+.mobile-nav a {
+  padding: 14px 0; font-family: var(--font-sans); font-size: 1.02rem;
+  color: var(--text); border-bottom: 1px solid var(--line);
+}
+.mobile-nav a:last-child { border-bottom: none; }
 
 /* ---- Hero ---- */
 .hero {
@@ -668,8 +690,9 @@ h3.display { font-size: 1.5rem; }
   .hero-callout p { text-align: center; }
 }
 @media (max-width: 560px) {
-  .nav { gap: 14px; }
+  .nav { gap: 10px; }
   .nav .navlink { display: none; }
+  .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
   body { font-size: 17px; }
 }
 
@@ -1123,6 +1146,7 @@ table.cmp-matrix th.cmp-rowlabel-head, table.cmp-matrix td.cmp-rowlabel {
   background: #fff; position: sticky; left: 0; z-index: 1; border-right: 1px solid var(--line);
 }
 table.cmp-matrix th.cmp-rowlabel-head { background: var(--bg-tint); }
+table.cmp-matrix th.cmp-col-inkwell { background: #fffaf0; color: var(--ink); border-bottom: 3px solid var(--gold); }
 table.cmp-matrix tbody tr:last-child td { border-bottom: none; }
 table.cmp-matrix tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: var(--bg-tint); }
 .cmp-cell { display: flex; flex-direction: column; align-items: center; gap: 3px; }

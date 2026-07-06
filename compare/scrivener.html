@@ -51,8 +51,16 @@
       </a>
       <nav class="nav">
         <a class="navlink" href="/pricing">Pricing</a>
+        <a class="navlink" href="/compare">Compare</a>
         <a class="btn btn--primary" href="https://app.inkwell.world/auth">Enter Inkwell</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </nav>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="/pricing">Pricing</a>
+      <a href="/compare">Compare</a>
     </div>
   </header>
 
@@ -60,7 +68,9 @@
   <section class="hero hero--page">
     <div class="container">
       <h1 class="display">Inkwell vs. Scrivener</h1>
-      <p class="lede">Scrivener is the long-established workshop for serious long-form writers. Inkwell is a lighter, cloud-native writing space built around momentum. Here is an honest look at where each one fits.</p>
+      <p class="lede">Scrivener is the long-established workshop for serious long-form writers.</p>
+      <p class="lede lede--accent">Inkwell is a lighter, cloud-native writing space built around momentum.</p>
+      <p class="lede">Here is an honest look at where each one fits.</p>
     </div>
   </section>
 
@@ -313,6 +323,30 @@
       function check() { hdr.classList.toggle('scrolled', window.scrollY > 10); }
       window.addEventListener('scroll', check, { passive: true });
       check();
+    })();
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var panel = document.getElementById('mobile-nav');
+      if (!btn || !panel) return;
+      function closeMenu() {
+        panel.hidden = true;
+        panel.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+      function openMenu() {
+        panel.hidden = false;
+        panel.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+      btn.addEventListener('click', function () {
+        if (panel.classList.contains('is-open')) { closeMenu(); } else { openMenu(); }
+      });
+      panel.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') { closeMenu(); }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { closeMenu(); }
+      });
     })();
   </script>
 </body>
