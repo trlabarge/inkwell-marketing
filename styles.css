@@ -1123,7 +1123,7 @@ table.cmp-matrix th.cmp-rowlabel-head, table.cmp-matrix td.cmp-rowlabel {
   background: #fff; position: sticky; left: 0; z-index: 1; border-right: 1px solid var(--line);
 }
 table.cmp-matrix th.cmp-rowlabel-head { background: var(--bg-tint); }
-table.cmp-matrix th.cmp-col-inkwell { background: var(--ink); color: #fff; }
+table.cmp-matrix th.cmp-col-inkwell { background: #fffaf0; color: var(--ink); border-bottom: 3px solid var(--gold); }
 table.cmp-matrix tbody tr:last-child td { border-bottom: none; }
 table.cmp-matrix tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: var(--bg-tint); }
 .cmp-cell { display: flex; flex-direction: column; align-items: center; gap: 3px; }
