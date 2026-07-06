@@ -15,6 +15,22 @@ window.COMPARE_DATA = {
 
   tools: [
     {
+      key: "inkwell",
+      name: "Inkwell",
+      pageUrl: null,
+      desc: "For writers who want a calm, organized space that follows them across every device, and helps them keep the habit.",
+      values: {
+        cost:          { symbol: "$",   tone: "good", label: "Free tier" },
+        cloudSync:     { symbol: "✓", tone: "good", label: "Automatic" },
+        novelists:     { symbol: "✓", tone: "good", label: "Yes" },
+        collab:        { symbol: "≈", tone: "warn", label: "Basic" },
+        worldbuilding: { symbol: "✓", tone: "good", label: "Deep" },
+        exportFormats: { symbol: "✓", tone: "good", label: "EPUB, PDF" },
+        focusMode:     { symbol: "✓", tone: "good", label: "Yes" },
+        offline:       { symbol: "✓", tone: "good", label: "Yes" }
+      }
+    },
+    {
       key: "scrivener",
       name: "Scrivener",
       pageUrl: "/compare/scrivener",
@@ -49,7 +65,7 @@ window.COMPARE_DATA = {
     {
       key: "reedsy",
       name: "Reedsy",
-      pageUrl: null,
+      pageUrl: "/compare/reedsy",
       desc: "For writers who want a clean, free writing space with professional typesetting.",
       values: {
         cost:          { symbol: "$",   tone: "good", label: "Free core" },
@@ -60,22 +76,6 @@ window.COMPARE_DATA = {
         exportFormats: { symbol: "✓", tone: "good", label: "EPUB, PDF" },
         focusMode:     { symbol: "✓", tone: "good", label: "Yes" },
         offline:       { symbol: "✗", tone: "bad",  label: "Browser only" }
-      }
-    },
-    {
-      key: "inkwell",
-      name: "Inkwell",
-      pageUrl: null,
-      desc: "For writers who want a calm, organized space that follows them across every device, and helps them keep the habit.",
-      values: {
-        cost:          { symbol: "$",   tone: "good", label: "Free tier" },
-        cloudSync:     { symbol: "✓", tone: "good", label: "Automatic" },
-        novelists:     { symbol: "✓", tone: "good", label: "Yes" },
-        collab:        { symbol: "≈", tone: "warn", label: "Basic" },
-        worldbuilding: { symbol: "✓", tone: "good", label: "Deep" },
-        exportFormats: { symbol: "✓", tone: "good", label: "EPUB, PDF" },
-        focusMode:     { symbol: "✓", tone: "good", label: "Yes" },
-        offline:       { symbol: "✓", tone: "good", label: "Yes" }
       }
     },
     {
