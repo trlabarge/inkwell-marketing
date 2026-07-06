@@ -80,6 +80,8 @@ h3.display { font-size: 1.5rem; }
   margin: 18px auto 0;
   max-width: 620px;
 }
+.lede + .lede { margin-top: 10px; }
+.lede--accent { color: var(--text); font-weight: 500; }
 .eyebrow {
   font-family: var(--font-sans);
   text-transform: uppercase;
