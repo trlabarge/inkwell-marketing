@@ -776,7 +776,7 @@
             </div>
           </div>
           <div class="fs-panel" id="fs-notes" role="tabpanel" aria-labelledby="tab-fs-notes" hidden>
-            <div class="codex-anim" role="img" aria-label="Preview of Inkwell's Story Notes, a private notebook docked beside the manuscript.">
+            <div class="codex-anim notes-anim" role="img" aria-label="Animated preview of Inkwell's Story Notes: clicking the notes icon slides open a private notebook beside the manuscript.">
               <div class="notes-dock">
                 <div class="notes-dock__editor">
                   <div class="share-ed-bar">
@@ -788,12 +788,21 @@
                     <p>Two hunters met in the dark beneath the keep, both wanting the same quiet thing, and neither willing to name it first.</p>
                   </div>
                 </div>
-                <div class="notes-dock__side">
+                <div class="notes-dock__side" id="notes-side">
                   <div class="notes-dock__side-head">Story Notes</div>
                   <div class="notes-dock__note">Give the hunters a shared history, maybe they trained under the same master.</div>
                   <div class="notes-dock__note">Ember imagery should escalate each time the throne is mentioned.</div>
                   <div class="notes-dock__note">Check: does the boy know the crown is speaking to him yet, or just us?</div>
                 </div>
+              </div>
+
+              <button type="button" class="notes-btn" id="notes-btn" tabindex="-1" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4"/><path d="M9.5 11h5M9.5 14h5M9.5 17h3"/></svg>
+              </button>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
               </div>
             </div>
           </div>
@@ -840,6 +849,35 @@
           <p>Link characters and lore right inside your prose, then see everywhere they appear. Your world stays consistent and connected as it grows, without leaving the page.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- The Compass -->
+  <section class="section">
+    <div class="container center">
+      <h2 class="display">The Compass</h2>
+      <p class="lede">The Compass analyzes what you've already written and reflects it back, so you can see your own work more clearly.</p>
+
+      <div class="compass-grid">
+        <article class="feature">
+          <h3>Synopsis</h3>
+          <p>A short, factual recap of any document, so coming back to your story after a break gets you caught up in seconds.</p>
+        </article>
+        <article class="feature">
+          <h3>Heartbeat</h3>
+          <p>See the shape of your manuscript's dramatic tension across every document. Visualize the rising and falling action so you can spot where the story surges and where it sags.</p>
+        </article>
+        <article class="feature">
+          <h3>The Atlas</h3>
+          <p>A living map of how your characters and your world connect, drawn from what you've actually written, built organically from the characters you've created and the world you have built.</p>
+        </article>
+        <article class="feature">
+          <h3>Ask</h3>
+          <p>Ask a question about your story and get an answer grounded in your manuscript, with a link to the passage to prove it.</p>
+        </article>
+      </div>
+
+      <p class="lede" style="margin-top:32px">Everything the Compass shows you comes from your own writing. Nothing is invented, and nothing is written for you.</p>
     </div>
   </section>
 
@@ -1574,6 +1612,60 @@
         wait(550, function () {
           moveTo(btn, null, null);
           wait(850, function () { pulse(); menu.classList.add('show'); wait(700, function () { hover(0); }); });
+        });
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+
+    /* Story Notes preview: click the notepad icon to slide the notebook out from the right */
+    (function () {
+      var root = document.querySelector('.notes-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var btn = document.getElementById('notes-btn');
+      var side = document.getElementById('notes-side');
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        cursor.style.transform = 'translate(' + (eb.left - rb.left + (offX == null ? eb.width / 2 : offX)) +
+          'px,' + (eb.top - rb.top + (offY == null ? eb.height / 2 : offY)) + 'px)';
+      }
+      function pulse() { cursor.classList.remove('click'); void cursor.offsetWidth; cursor.classList.add('click'); }
+      function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        side.classList.remove('is-open');
+        cursor.classList.remove('click');
+        cursor.style.transform = 'translate(-40px,-40px)';
+      }
+
+      function run() {
+        reset();
+        wait(700, function () {
+          moveTo(btn, null, null);
+          wait(700, function () {
+            pulse();
+            side.classList.add('is-open');
+            wait(3200, function () {                       /* leave it open a beat, then tuck it away */
+              moveTo(btn, null, null);
+              wait(500, function () {
+                pulse();
+                side.classList.remove('is-open');
+                wait(900, run);
+              });
+            });
+          });
         });
       }
 
