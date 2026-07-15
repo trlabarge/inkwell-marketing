@@ -879,7 +879,7 @@
         </g>
         <circle cx="32" cy="32" r="2.6" fill="currentColor" stroke="none"/>
       </svg>
-      <h2 class="display compass-title">The Compass</h2>
+      <h2 class="display">The Compass</h2>
       <p class="lede">The Compass analyzes what you've already written and reflects it back, so you can see your own work more clearly.</p>
 
       <div class="compass-grid">
@@ -1145,24 +1145,6 @@
         spans[prev].classList.remove('active');
         setTimeout(function () { spans[current].classList.add('active'); }, 320);
       }, 3400);
-    })();
-
-    /* "The Compass": replay a reflective sheen across the heading on scroll-in */
-    (function () {
-      var el = document.querySelector('.compass-title');
-      if (!el) return;
-      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduce || !('IntersectionObserver' in window)) return;
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            el.classList.remove('sheen'); void el.offsetWidth; el.classList.add('sheen');
-          } else {
-            el.classList.remove('sheen');
-          }
-        });
-      }, { threshold: 0.6 });
-      io.observe(el);
     })();
 
     /* "Start writing in seconds": steps light up one by one, in sequence */
