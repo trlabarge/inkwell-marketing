@@ -97,7 +97,7 @@ window.COMPARE_DATA = {
     {
       key: "google-docs",
       name: "Google Docs",
-      pageUrl: null,
+      pageUrl: "/compare/google-docs",
       desc: "For writers who want simple, free, cloud-based writing and easy sharing, without any novel-specific structure.",
       values: {
         cost:          { symbol: "$",   tone: "good", label: "Free" },
