@@ -81,7 +81,7 @@ window.COMPARE_DATA = {
     {
       key: "word",
       name: "MS Word",
-      pageUrl: null,
+      pageUrl: "/compare/word",
       desc: "For writers who already live in Word and want a familiar page, though it was built for documents rather than novels.",
       values: {
         cost:          { symbol: "$$$", tone: "bad",  label: "~$70/yr" },
