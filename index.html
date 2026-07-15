@@ -245,8 +245,8 @@
             <button type="button" class="fs-item" role="tab" aria-selected="false" aria-controls="fs-share" id="tab-fs-share">
               <span class="fs-num">05</span>
               <span class="fs-text">
-                <span class="fs-title">Share Access</span>
-                <span class="fs-desc">Invite beta readers and editors with scoped links, for a day, a week, or forever. You decide who sees your work.</span>
+                <span class="fs-title">Share & Feedback</span>
+                <span class="fs-desc">Invite beta readers and editors with share links for a day, a week, or forever. Readers can leave notes in the margin or general feedback, anchored right to your prose.</span>
               </span>
             </button>
           </li>
@@ -256,6 +256,15 @@
               <span class="fs-text">
                 <span class="fs-title">Export Documents</span>
                 <span class="fs-desc">Send your manuscript out as Markdown, PDF, DOCX, or EPUB, ready for submission or self-publishing.</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="fs-item" role="tab" aria-selected="false" aria-controls="fs-notes" id="tab-fs-notes">
+              <span class="fs-num">07</span>
+              <span class="fs-text">
+                <span class="fs-title">Story Notes</span>
+                <span class="fs-desc">Keep a private notebook right beside your manuscript, for the ideas that aren't ready for the page yet. It never becomes part of your word count.</span>
               </span>
             </button>
           </li>
@@ -766,6 +775,28 @@
               </div>
             </div>
           </div>
+          <div class="fs-panel" id="fs-notes" role="tabpanel" aria-labelledby="tab-fs-notes" hidden>
+            <div class="codex-anim" role="img" aria-label="Preview of Inkwell's Story Notes, a private notebook docked beside the manuscript.">
+              <div class="notes-dock">
+                <div class="notes-dock__editor">
+                  <div class="share-ed-bar">
+                    <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> The Ember Throne <span class="cx__sep">›</span> <b>The Hollow Crown</b></div>
+                    <div class="share-ed-tools"><span class="cx__saved">✓ All changes saved</span></div>
+                  </div>
+                  <div class="notes-dock__body cx__prose">
+                    <p>The crown was never meant for him. Stable-born and ash-scarred, the boy had no claim to the Ember Throne, and yet the embers had begun to whisper his name through the smoke.</p>
+                    <p>Two hunters met in the dark beneath the keep, both wanting the same quiet thing, and neither willing to name it first.</p>
+                  </div>
+                </div>
+                <div class="notes-dock__side">
+                  <div class="notes-dock__side-head">Story Notes</div>
+                  <div class="notes-dock__note">Give the hunters a shared history, maybe they trained under the same master.</div>
+                  <div class="notes-dock__note">Ember imagery should escalate each time the throne is mentioned.</div>
+                  <div class="notes-dock__note">Check: does the boy know the crown is speaking to him yet, or just us?</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -781,7 +812,7 @@
         <article class="feature">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.6"/><circle cx="12" cy="12" r=".7" fill="currentColor"/></svg>
           <h3>Goals and Streaks</h3>
-          <p>Set a daily or weekly goal, keep your streak alive, and watch milestones arrive as your word count climbs.</p>
+          <p>Set a session, daily, or weekly word count goal. Keep your streak alive, and earn badges as you unlock milestones and achievements along the way.</p>
         </article>
         <article class="feature">
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
