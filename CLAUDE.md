@@ -74,11 +74,47 @@ index.html        Home (hero, features, testimonials, FAQ)
 pricing.html      Pricing tiers
 privacy.html      Privacy Policy
 terms.html        Terms of Service
+compare/          Comparison landing page + one page per competitor
 styles.css        All styling (single shared stylesheet)
-assets/           Images (favicon.png, wordmark-dark.png, wordmark-light.png)
+assets/           Images (favicon.png, wordmark-dark.png, wordmark-light.png,
+                  scrivener.png, dabble-logo.png)
+llms.txt          Plain-language summary of the product for LLM crawlers
+sitemap.xml       Lists every indexable URL (keep in sync when adding pages)
+robots.txt        Crawler rules
 vercel.json       Clean URLs + caching/security headers
 README.md         Deploy + domain notes
 ```
+
+## What's on the site
+
+- **Home (`index.html`)** — Hero ("Your Writing Sanctuary") with a typewriter
+  sub-headline, a "Start writing in seconds" steps section, a tabbed feature
+  showcase (Codex, Character sketch, Lore, Project management, Share, Export)
+  with interactive mocked-up UI demos, a "structure without chaos" section,
+  a "Start Your Story" challenge/demo block, testimonials ("Loved by Writers"),
+  and an FAQ (differentiation, data security/privacy, collaboration, device
+  support, offline use, export formats).
+- **Pricing (`pricing.html`)** — Three tiers: **Inkling** (free forever — 1
+  active project, unlimited documents, character profiles, lore database,
+  Focus Mode, autosave, Markdown/TXT export, beta reader sharing), **Storyteller**
+  ($9/mo, featured — unlimited projects, multi-book/series organization, DOCX/
+  PDF/EPUB export, writing stats, summarization and brainstorming tools "in
+  development", priority support), and **Worldbuilder** ($19/mo, "Coming soon" —
+  advanced lore relationships, story graph/universe visualization, faction
+  tracking, timeline management, continuity tracking).
+- **Compare (`compare/`)** — A comparison hub (`compare/index.html`) plus
+  dedicated alternative pages for Scrivener, Dabble, Google Docs, Microsoft
+  Word, and Reedsy, each pitching Inkwell as the alternative. Only the
+  Scrivener and Dabble pages are currently listed in `sitemap.xml`.
+- **Privacy (`privacy.html`)** and **Terms (`terms.html`)** — Standard policy
+  pages matching the product app's data practices.
+- **`llms.txt`** — A short, structured summary of Inkwell (what it is, pricing,
+  export formats, key page links) aimed at LLM crawlers. Keep it in sync with
+  on-page copy and the brand voice rules (no "AI", no em dashes) whenever
+  product facts or pricing change.
+
+App CTAs throughout the site read "Start Writing" / "Become a Storyteller" and
+all point to `https://app.inkwell.world/auth`.
 
 ## Conventions
 
