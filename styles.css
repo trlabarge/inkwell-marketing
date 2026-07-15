@@ -473,6 +473,17 @@ h3.display { font-size: 1.5rem; }
 /* ---- Feature grid ---- */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; }
 .compass-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 44px; text-align: left; }
+.compass-mark { width: 40px; height: 40px; margin: 0 auto 18px; display: block; color: var(--gold); }
+.compass-grid .feature { position: relative; z-index: 1; isolation: isolate; }
+.compass-grid .feature::before {
+  content: '';
+  position: absolute; inset: -18px;
+  border-radius: calc(var(--radius) + 18px);
+  background: radial-gradient(circle, rgba(176, 124, 18, .35), rgba(176, 124, 18, 0) 72%);
+  opacity: 0; transition: opacity .3s ease;
+  z-index: -1; pointer-events: none;
+}
+.compass-grid .feature:hover::before { opacity: 1; }
 .feature {
   background: var(--card);
   border: 1px solid var(--line);
