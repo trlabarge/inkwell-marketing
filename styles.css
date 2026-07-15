@@ -474,6 +474,25 @@ h3.display { font-size: 1.5rem; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; }
 .compass-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 44px; text-align: left; }
 .compass-mark { width: 58px; height: 58px; margin: 0 auto 20px; display: block; color: var(--gold); }
+/* Reflective sheen that sweeps across "The Compass" when it scrolls into view.
+   Guarded so text stays fully visible where background-clip: text is unsupported. */
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .compass-title {
+    background-image: linear-gradient(100deg, var(--ink) 0%, var(--ink) 42%, var(--gold-soft) 50%, var(--ink) 58%, var(--ink) 100%);
+    background-size: 250% 100%;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .compass-title.sheen { animation: compassSheen 1.7s ease-in-out 1; }
+}
+@keyframes compassSheen {
+  0% { background-position: 135% 0; }
+  100% { background-position: -35% 0; }
+}
 .compass-grid .feature {
   background: var(--card);
   transition: transform .18s ease, box-shadow .35s ease, border-color .35s ease;

@@ -879,12 +879,12 @@
         </g>
         <circle cx="32" cy="32" r="2.6" fill="currentColor" stroke="none"/>
       </svg>
-      <h2 class="display">The Compass</h2>
+      <h2 class="display compass-title">The Compass</h2>
       <p class="lede">The Compass analyzes what you've already written and reflects it back, so you can see your own work more clearly.</p>
 
       <div class="compass-grid">
         <article class="feature">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2.5h8l4 4v15H6z"/><path d="M14 2.5v4h4"/><path d="M9 11h6M9 14h6M9 17h3"/></svg>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg>
           <h3>Synopsis</h3>
           <p>A short, factual recap of any document, so coming back to your story after a break gets you caught up in seconds.</p>
         </article>
@@ -894,7 +894,7 @@
           <p>See the shape of your manuscript's dramatic tension across every document. Visualize the rising and falling action so you can spot where the story surges and where it sags.</p>
         </article>
         <article class="feature">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg>
           <h3>The Atlas</h3>
           <p>A living map of how your characters and your world connect, drawn from what you've actually written, built organically from the characters you've created and the world you have built.</p>
         </article>
@@ -1145,6 +1145,24 @@
         spans[prev].classList.remove('active');
         setTimeout(function () { spans[current].classList.add('active'); }, 320);
       }, 3400);
+    })();
+
+    /* "The Compass": replay a reflective sheen across the heading on scroll-in */
+    (function () {
+      var el = document.querySelector('.compass-title');
+      if (!el) return;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) return;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            el.classList.remove('sheen'); void el.offsetWidth; el.classList.add('sheen');
+          } else {
+            el.classList.remove('sheen');
+          }
+        });
+      }, { threshold: 0.6 });
+      io.observe(el);
     })();
 
     /* "Start writing in seconds": steps light up one by one, in sequence */
