@@ -1301,7 +1301,7 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 .wab-intro { max-width: 640px; }
 
 /* Disclosure card with buttons */
-.wab-disclosure p { margin: 0; color: var(--text); font-size: 1.08rem; font-family: var(--font-serif); line-height: 1.6; max-width: 720px; }
+.wab-disclosure p { margin: 0; color: var(--text); font-size: 1.08rem; font-family: var(--font-serif); line-height: 1.6; }
 .wab-disclosure-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
 
 .wab-toc {
