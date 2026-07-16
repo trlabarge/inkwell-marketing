@@ -113,7 +113,7 @@ window.COMPARE_DATA = {
     {
       key: "ellipsus",
       name: "Ellipsus",
-      pageUrl: null,
+      pageUrl: "/compare/ellipsus",
       desc: "For writers who value collaborative drafting and version history, especially those writing with others.",
       values: {
         cost:          { symbol: "$",   tone: "good", label: "Free core" },
