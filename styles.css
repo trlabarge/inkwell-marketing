@@ -1336,12 +1336,6 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   width: 46px; height: 46px; flex: none; object-fit: contain;
   border-radius: 10px; border: 1px solid var(--line); background: #fff; padding: 5px;
 }
-/* Placeholder monogram for a tool whose logo asset is not yet in the repo */
-.wab-logo--ph {
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-weight: 700; font-size: 1.3rem;
-  color: var(--gold); background: var(--parchment); border-color: #e6d3a8;
-}
 .wab-summary h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.28rem; color: var(--ink); margin: 0; flex: 1; }
 .wab-summary .chev { flex: none; color: var(--gold); transition: transform .2s ease; }
 .wab-item[open] .wab-summary .chev { transform: rotate(180deg); }
