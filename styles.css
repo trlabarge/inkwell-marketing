@@ -1300,55 +1300,96 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 /* ---- Writing apps breakdown page ---- */
 .wab-intro { max-width: 640px; }
 
+/* Disclosure card with buttons */
+.wab-disclosure p { margin: 0; color: var(--text); font-size: 1.08rem; font-family: var(--font-serif); line-height: 1.6; max-width: 720px; }
+.wab-disclosure-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
+
 .wab-toc {
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 20px 26px; margin-top: 34px; display: flex; flex-wrap: wrap;
-  align-items: center; gap: 10px 22px;
+  padding: 22px 28px; margin-top: 30px; display: flex; flex-wrap: wrap;
+  align-items: center; gap: 12px 24px;
 }
-.wab-toc span { font-family: var(--font-sans); font-weight: 700; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--text-faint); }
-.wab-toc a { font-family: var(--font-sans); font-size: .95rem; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--gold-soft); }
+.wab-toc span { font-family: var(--font-sans); font-weight: 700; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: var(--text-faint); }
+.wab-toc a { font-family: var(--font-sans); font-size: 1rem; font-weight: 500; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--gold-soft); }
 .wab-toc a:hover { color: var(--gold); }
 
-.wab-category { font-family: var(--font-display); font-weight: 600; margin: 0 0 22px; scroll-margin-top: 90px; }
+.wab-category { font-family: var(--font-display); font-weight: 600; margin: 0 0 26px; padding-bottom: 16px; border-bottom: 2px solid var(--gold-soft); scroll-margin-top: 90px; }
 
-.wab-list { display: flex; flex-direction: column; gap: 14px; }
-.wab-item { border: 1px solid var(--line); border-radius: var(--radius); background: #fff; overflow: hidden; }
-.wab-item + .wab-category { margin-top: 56px; }
+.wab-list { display: flex; flex-direction: column; gap: 18px; }
+.wab-item {
+  border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff;
+  overflow: hidden; transition: box-shadow .18s ease, border-color .18s ease;
+}
+.wab-item:hover { border-color: var(--gold-soft); box-shadow: 0 14px 30px -24px rgba(11,18,32,.35); }
+.wab-item[open] { border-color: var(--gold-soft); box-shadow: 0 18px 40px -26px rgba(11,18,32,.4); }
+.wab-item + .wab-category { margin-top: 60px; }
 
 .wab-summary {
-  list-style: none; cursor: pointer; padding: 16px 22px; display: flex;
-  align-items: center; gap: 14px; font-family: var(--font-sans);
+  list-style: none; cursor: pointer; padding: 22px 26px; display: flex;
+  align-items: center; gap: 18px; font-family: var(--font-sans);
+  transition: background .18s ease;
 }
+.wab-summary:hover { background: var(--bg-tint); }
+.wab-item[open] .wab-summary { background: var(--bg-tint); border-bottom: 1px solid var(--line); }
 .wab-summary::-webkit-details-marker { display: none; }
 .wab-logo {
-  width: 34px; height: 34px; flex: none; object-fit: contain;
-  border-radius: 6px; border: 1px solid var(--line); background: #fff; padding: 3px;
+  width: 46px; height: 46px; flex: none; object-fit: contain;
+  border-radius: 10px; border: 1px solid var(--line); background: #fff; padding: 5px;
 }
-.wab-summary h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.08rem; color: var(--ink); margin: 0; flex: 1; }
-.wab-summary .chev { flex: none; color: var(--text-muted); transition: transform .2s ease; }
+/* Placeholder monogram for a tool whose logo asset is not yet in the repo */
+.wab-logo--ph {
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700; font-size: 1.3rem;
+  color: var(--gold); background: var(--parchment); border-color: #e6d3a8;
+}
+.wab-summary h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.28rem; color: var(--ink); margin: 0; flex: 1; }
+.wab-summary .chev { flex: none; color: var(--gold); transition: transform .2s ease; }
 .wab-item[open] .wab-summary .chev { transform: rotate(180deg); }
 
-.wab-body { padding: 0 24px 26px; border-top: 1px solid var(--line); }
-.wab-glance { font-family: var(--font-serif); font-size: 1rem; color: var(--text); margin: 18px 0 0; }
-.wab-price { font-family: var(--font-sans); font-size: .92rem; color: var(--text-muted); margin: 10px 0 0; }
-.wab-price b { color: var(--ink); font-weight: 600; }
+.wab-body { padding: 26px; }
+.wab-glance { font-family: var(--font-serif); font-size: 1.14rem; line-height: 1.6; color: var(--ink); margin: 0; }
+.wab-price {
+  font-family: var(--font-sans); font-size: 1rem; color: var(--text); margin: 16px 0 0;
+  background: var(--bg-tint); border-radius: var(--radius); padding: 14px 18px; line-height: 1.55;
+}
+.wab-price b { color: var(--ink); font-weight: 700; }
 
-.wab-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 20px; }
-.wab-col h4 { font-family: var(--font-sans); font-weight: 700; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--text-faint); margin: 0 0 10px; }
-.wab-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-.wab-col li { display: flex; gap: 9px; font-family: var(--font-serif); font-size: .94rem; color: var(--text); }
-.wab-col li svg { flex: none; width: 16px; height: 16px; margin-top: 4px; }
+.wab-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
+.wab-col { border-radius: var(--radius); padding: 20px 22px; }
+.wab-pros { background: #f2f7f3; border: 1px solid #d9e8dd; }
+.wab-cons { background: #fbf3f1; border: 1px solid #f0d9d3; }
+.wab-col h4 {
+  font-family: var(--font-sans); font-weight: 700; font-size: .82rem; letter-spacing: .07em;
+  text-transform: uppercase; margin: 0 0 14px; display: flex; align-items: center; gap: 8px;
+}
+.wab-pros h4 { color: var(--good); }
+.wab-cons h4 { color: var(--bad); }
+.wab-col h4::before {
+  content: ""; width: 8px; height: 8px; border-radius: 50%; flex: none; background: currentColor;
+}
+.wab-col ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.wab-col li { display: flex; gap: 10px; font-family: var(--font-serif); font-size: 1rem; line-height: 1.5; color: var(--text); }
+.wab-col li svg { flex: none; width: 17px; height: 17px; margin-top: 4px; }
 .wab-pros li svg { color: var(--good); }
 .wab-cons li svg { color: var(--bad); }
 
-.wab-best { font-family: var(--font-serif); font-size: .96rem; color: var(--text); margin: 20px 0 0; padding-top: 16px; border-top: 1px solid var(--line); }
-.wab-best b { font-family: var(--font-sans); font-weight: 700; font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--text-faint); display: block; margin-bottom: 6px; }
+.wab-best {
+  font-family: var(--font-serif); font-size: 1.05rem; line-height: 1.6; color: var(--text);
+  margin: 24px 0 0; background: var(--parchment); border-radius: var(--radius); padding: 20px 22px;
+}
+.wab-best b {
+  font-family: var(--font-sans); font-weight: 700; font-size: .82rem; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 8px;
+}
 
-.wab-full-link { display: inline-block; margin-top: 16px; font-family: var(--font-sans); font-size: .92rem; font-weight: 600; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-soft); }
+.wab-full-link { display: inline-block; margin-top: 20px; font-family: var(--font-sans); font-size: 1rem; font-weight: 600; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-soft); }
 .wab-full-link:hover { color: var(--ink); }
 
 @media (max-width: 640px) {
-  .wab-columns { grid-template-columns: 1fr; gap: 16px; }
-  .wab-summary { padding: 14px 16px; gap: 12px; }
-  .wab-body { padding: 0 16px 20px; }
+  .wab-columns { grid-template-columns: 1fr; gap: 14px; }
+  .wab-summary { padding: 18px 18px; gap: 14px; }
+  .wab-logo { width: 40px; height: 40px; }
+  .wab-summary h3 { font-size: 1.14rem; }
+  .wab-body { padding: 20px 18px; }
+  .wab-disclosure-actions .btn { width: 100%; }
 }
