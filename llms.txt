@@ -22,6 +22,11 @@ their outcome, not by the underlying technology.
 - [App comparisons](https://inkwell.world/compare): how Inkwell compares to other novel-writing apps.
 - [Inkwell vs. Scrivener](https://inkwell.world/compare/scrivener)
 - [Inkwell vs. Dabble](https://inkwell.world/compare/dabble)
+- [Inkwell vs. Ellipsus](https://inkwell.world/compare/ellipsus)
+- [Inkwell vs. Google Docs](https://inkwell.world/compare/google-docs)
+- [Inkwell vs. Microsoft Word](https://inkwell.world/compare/word)
+- [Inkwell vs. Reedsy](https://inkwell.world/compare/reedsy)
+- [Best novel writing software 2026](https://inkwell.world/writing-apps-breakdown): a breakdown of eleven novel-writing apps by price, pros, cons, and fit.
 - [Privacy Policy](https://inkwell.world/privacy)
 - [Terms of Service](https://inkwell.world/terms)
 
