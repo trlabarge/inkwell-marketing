@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LXL2R4NKZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1LXL2R4NKZ');
+  </script>
+  <title>The Compass | Inkwell</title>
+  <meta name="description" content="The Compass analyzes what you've written and surfaces it back as synopses, dramatic tension scans, relationship maps, and answers to your direct questions. All drawn from your own manuscript." />
+  <link rel="canonical" href="https://inkwell.world/compass" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Inkwell" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://inkwell.world/compass" />
+  <meta property="og:title" content="The Compass | Inkwell" />
+  <meta property="og:description" content="The Compass analyzes what you've written and surfaces it back as synopses, dramatic tension scans, relationship maps, and answers to your direct questions. All drawn from your own manuscript." />
+  <meta property="og:image" content="https://inkwell.world/assets/wordmark-dark.png" />
+  <meta property="og:image:alt" content="Inkwell" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Compass | Inkwell" />
+  <meta name="twitter:description" content="The Compass analyzes what you've written and surfaces it back as synopses, dramatic tension scans, relationship maps, and answers to your direct questions. All drawn from your own manuscript." />
+  <meta name="twitter:image" content="https://inkwell.world/assets/wordmark-dark.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cinzel+Decorative:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Alegreya+Sans:wght@400;500;700&family=Spectral:ital,wght@0,400;0,600;1,400;1,600&family=Allura&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inkwell", "item": "https://inkwell.world/" },
+          { "@type": "ListItem", "position": 2, "name": "The Compass", "item": "https://inkwell.world/compass" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does the Compass work on a draft in progress?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. It analyzes whatever is on the page right now, whether that's a finished chapter or a scene you started this morning. You don't need to wait until you're \"done.\"" }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work across a whole series?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Each analysis draws from the project you're working in. Series-spanning analysis is on the way." }
+          },
+          {
+            "@type": "Question",
+            "name": "What if my manuscript is enormous?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The Compass is built for long-form work. Analysis is scoped to what you're asking about, so a single document's Synopsis stays fast whether it sits in a novella or a nine-book epic." }
+          },
+          {
+            "@type": "Question",
+            "name": "Where does the analysis come from?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Your manuscript, and nothing else. Every recap, curve, map, and answer is derived from the words you wrote, and Ask links back to the exact passage behind its answer." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Inkwell home">
+        <img src="assets/wordmark-dark.png" alt="Inkwell" />
+      </a>
+      <nav class="nav">
+        <a class="navlink" href="/compass">Compass</a>
+        <a class="navlink" href="/pricing">Pricing</a>
+        <a class="navlink" href="/compare">Compare</a>
+        <a class="btn btn--primary" href="https://app.inkwell.world/auth">Enter Inkwell</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="/compass">Compass</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/compare">Compare</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero--page compass-hero">
+    <div class="container center">
+      <svg class="compass-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" stroke-width="1.3"/>
+        <circle cx="32" cy="32" r="21.5" stroke-width=".85"/>
+        <g stroke-width=".9" stroke-linecap="round">
+          <path d="M32 2.5v3.6"/><path d="M32 57.9v3.6"/><path d="M2.5 32h3.6"/><path d="M57.9 32h3.6"/>
+          <path d="M13.15 13.15l2.55 2.55"/><path d="M50.85 13.15l-2.55 2.55"/><path d="M13.15 50.85l2.55-2.55"/><path d="M50.85 50.85l-2.55-2.55"/>
+        </g>
+        <g stroke-width="1">
+          <g transform="rotate(45 32 32)"><path d="M32 15 L34.2 30 L32 32 L29.8 30 Z"/><path d="M32 15 L32 32"/></g>
+          <g transform="rotate(135 32 32)"><path d="M32 15 L34.2 30 L32 32 L29.8 30 Z"/><path d="M32 15 L32 32"/></g>
+          <g transform="rotate(225 32 32)"><path d="M32 15 L34.2 30 L32 32 L29.8 30 Z"/><path d="M32 15 L32 32"/></g>
+          <g transform="rotate(315 32 32)"><path d="M32 15 L34.2 30 L32 32 L29.8 30 Z"/><path d="M32 15 L32 32"/></g>
+        </g>
+        <g stroke-width="1.2">
+          <g><path d="M32 6.5 L34.8 29 L32 32 L29.2 29 Z"/><path d="M32 6.5 L32 32"/></g>
+          <g transform="rotate(90 32 32)"><path d="M32 6.5 L34.8 29 L32 32 L29.2 29 Z"/><path d="M32 6.5 L32 32"/></g>
+          <g transform="rotate(180 32 32)"><path d="M32 6.5 L34.8 29 L32 32 L29.2 29 Z"/><path d="M32 6.5 L32 32"/></g>
+          <g transform="rotate(270 32 32)"><path d="M32 6.5 L34.8 29 L32 32 L29.2 29 Z"/><path d="M32 6.5 L32 32"/></g>
+        </g>
+        <circle cx="32" cy="32" r="2.6" fill="currentColor" stroke="none"/>
+      </svg>
+      <h1 class="display">The Compass</h1>
+      <p class="lede">Your manuscript knows things you've forgotten. The Compass analyzes what you've written and surfaces it back to you in the shape of synopses, dramatic tension scans, relationship maps, and answers to your direct questions.</p>
+    </div>
+  </section>
+
+  <!-- Opening -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="compass-prose">
+        <h2 class="display">Every draft outgrows the writer's memory of it</h2>
+        <p>We've all stepped away from a manuscript for longer than intended, and come back to it weeks or months (or years!) later to realize that we've forgotten many of its details. If you haven't experienced this, you probably aren't a writer.</p>
+        <p>You know the story's pacing is sagging somewhere in the middle. You know you established something about a character three chapters ago, but you can't find where. You know the pieces connect, but the connections live in your head mixed up with everything else, instead of on the page where you can see them.</p>
+        <p>The Compass is a set of writing analysis tools built into Inkwell. Each one examines the words, characters, and worlds you've created, and serves it back to you in a form you can work with: a recap, a curve, a map, an answer. All pulled directly from the words you've already written.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Synopsis -->
+  <section class="section">
+    <div class="container">
+      <div class="cf-narrow">
+        <h2 class="cf-name">Synopsis</h2>
+        <p class="cf-badge">Inkling (limited) &middot; Storyteller &middot; Worldbuilder</p>
+        <h3 class="cf-sub">Catch yourself up in seconds</h3>
+        <div class="cf-body">
+          <p>You put your manuscript down because of a vacation, or a career, or a new baby, or any number of other interruptions. Now you're back (yes!), the cursor is blinking, and you cannot remember how your characters got to where they are.</p>
+          <p>Synopsis analyzes any document in your project and produces a short, factual recap of what happens in it. Simply open your document, click recap, get your bearings, and get back to writing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heartbeat -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="cf-split">
+        <div class="cf-split__text">
+          <h2 class="cf-name">Heartbeat</h2>
+          <p class="cf-badge">Inkling (limited) &middot; Storyteller &middot; Worldbuilder</p>
+          <h3 class="cf-sub">See the shape of your story</h3>
+          <div class="cf-body">
+            <p>Pacing is the hardest thing to judge when you're still "inside" your story. You're reading your manuscript one chapter at a time, in the order you wrote it, with all the intentions still attached. The shape of the thing is almost impossible to feel from that vantage point.</p>
+            <p>Heartbeat measures the dramatic tension in each document of your manuscript and plots it as a curve across the whole work. You can see the rising action, the falling action, the quiet stretches, and the places where three tense chapters sit back to back with no room to breathe. The curve becomes visible all at once, in a single view.</p>
+            <p>The curve doesn't tell you what your story should look like. Plenty of extraordinary novels take different shapes. What it tells you is what your story actually looks like right now, so that if a section feels slack, you can see whether it truly is, and exactly where.</p>
+          </div>
+        </div>
+        <div class="cf-split__media">
+          <!-- Image to follow: tension curve. Replace inner SVG with <img> when ready. -->
+          <div class="cf-media__frame">
+            <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M8 118 C30 108 40 70 56 74 C72 78 74 116 92 110 C108 105 108 44 128 40 C146 37 150 92 168 78 C180 69 186 52 192 30"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Atlas -->
+  <section class="section">
+    <div class="container">
+      <div class="cf-split cf-split--rev">
+        <div class="cf-split__text">
+          <h2 class="cf-name">The Atlas</h2>
+          <p class="cf-badge"><span class="cf-soon">Coming soon</span> Worldbuilder</p>
+          <h3 class="cf-sub">A map of your world, built from your words</h3>
+          <div class="cf-body">
+            <p>Worldbuilding tools generally ask you to do the building twice. Once in the manuscript, where the story lives, and again in a separate database of entries and fields and relationship charts that you have to maintain by hand, and which starts drifting out of date the moment you stop feeding it.</p>
+            <p>Your Atlas works the other direction. It analyzes your manuscript and maps the connections it finds there: which characters appear alongside each other, how they relate, where your lore and locations tie into the story. The map is drawn from the prose itself, so it reflects the book you've actually written rather than the book you meant to write.</p>
+            <p>Your Atlas grows as your world does. Write a new character into a chapter, and they arrive on the map with the connections they've already made. Visualize your world, one piece at a time.</p>
+          </div>
+        </div>
+        <div class="cf-split__media">
+          <!-- Image to follow: relationship graph. Replace inner SVG with <img> when ready. -->
+          <div class="cf-media__frame">
+            <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <g stroke-width="1.6" opacity=".8">
+                <path d="M100 75 L52 40"/><path d="M100 75 L150 48"/><path d="M100 75 L60 112"/><path d="M100 75 L148 108"/><path d="M52 40 L60 112"/><path d="M150 48 L148 108"/>
+              </g>
+              <g fill="currentColor" stroke="none">
+                <circle cx="100" cy="75" r="9"/><circle cx="52" cy="40" r="6"/><circle cx="150" cy="48" r="6"/><circle cx="60" cy="112" r="6"/><circle cx="148" cy="108" r="6"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ask -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="cf-narrow">
+        <h2 class="cf-name">Ask</h2>
+        <p class="cf-badge">Inkling (limited) &middot; Storyteller &middot; Worldbuilder</p>
+        <h3 class="cf-sub">Search your manuscript by meaning</h3>
+        <div class="cf-body">
+          <p>Find-and-replace can locate a word, but it cannot answer a question.</p>
+          <p>Ask lets you query your own manuscript in plain language. Did I already establish that my main character distrusts her brother? Where did I describe the harbor? How many times does the pocket watch come up before chapter nine? Ask analyzes your prose and answers from it, with a link straight to the passage so you can verify it yourself and pick up right where the evidence is.</p>
+          <p class="cf-body__grounded">Every answer is grounded in your manuscript and points back to the exact place it came from.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="section">
+    <div class="container center">
+      <div class="compass-prose">
+        <h2 class="display">It's already where your story is</h2>
+        <p>The Compass lives inside Inkwell, alongside your manuscript, your characters, and your world. There's nothing to configure, no separate system to maintain, no second copy of your novel to keep in sync. The analysis is always drawn from your current draft, because it's drawn from your current draft.</p>
+      </div>
+      <div style="margin-top:32px">
+        <a class="btn btn--gradient" href="https://app.inkwell.world/auth">Start writing free &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--tint">
+    <div class="container center">
+      <h2 class="display">Compass questions</h2>
+      <div class="faq" style="text-align:left">
+        <details class="faq-item">
+          <summary class="faq-q">Does the Compass work on a draft in progress? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. It analyzes whatever is on the page right now, whether that's a finished chapter or a scene you started this morning. You don't need to wait until you're "done."</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Does it work across a whole series? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Each analysis draws from the project you're working in. Series-spanning analysis is on the way.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">What if my manuscript is enormous? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">The Compass is built for long-form work. Analysis is scoped to what you're asking about, so a single document's Synopsis stays fast whether it sits in a novella or a nine-book epic.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Where does the analysis come from? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Your manuscript, and nothing else. Every recap, curve, map, and answer is derived from the words you wrote, and Ask links back to the exact passage behind its answer.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <span class="brand">
+            <img src="assets/wordmark-light.png" alt="Inkwell" />
+          </span>
+          <p class="footer-tagline">Your tranquil writing sanctuary. Create, build worlds, and bring your stories to life.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="https://app.inkwell.world/auth">Launch App</a>
+          <a href="/compass">Compass</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/compare">Compare</a>
+          <a href="/writing-apps-breakdown">Writing Apps Breakdown</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Inkwell. All rights reserved.</span>
+        <span class="legal-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){var h=document.querySelector('.site-header');function c(){h.classList.toggle('scrolled',window.scrollY>10);}window.addEventListener('scroll',c,{passive:true});c();})();
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var panel = document.getElementById('mobile-nav');
+      if (!btn || !panel) return;
+      function closeMenu() {
+        panel.hidden = true;
+        panel.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+      function openMenu() {
+        panel.hidden = false;
+        panel.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+      btn.addEventListener('click', function () {
+        if (panel.classList.contains('is-open')) { closeMenu(); } else { openMenu(); }
+      });
+      panel.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') { closeMenu(); }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { closeMenu(); }
+      });
+    })();
+  </script>
+</body>
+</html>

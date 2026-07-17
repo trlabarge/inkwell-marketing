@@ -17,9 +17,16 @@ Inkwell does not brand its features as "AI." Story intelligence features
 (summarization, brainstorming, keeping the story connected) are described by
 their outcome, not by the underlying technology.
 
+The Compass is Inkwell's set of writing analysis tools, all drawn from a
+writer's own manuscript: Synopsis (a short factual recap of any document),
+Heartbeat (a dramatic-tension curve across the whole work), Ask (plain-language
+questions answered from the prose, with a link back to the passage), and the
+Atlas (a relationship map built from the writing, coming soon on Worldbuilder).
+
 ## Key pages
 
 - [Home](https://inkwell.world/): overview, features, and how to start writing in seconds.
+- [The Compass](https://inkwell.world/compass): writing analysis tools (Synopsis, Heartbeat, Ask, and the Atlas) drawn from your own manuscript.
 - [Pricing](https://inkwell.world/pricing): plans and what's included in each.
 - [App comparisons](https://inkwell.world/compare): how Inkwell compares to other novel-writing apps.
 - [Inkwell vs. Scrivener](https://inkwell.world/compare/scrivener)
