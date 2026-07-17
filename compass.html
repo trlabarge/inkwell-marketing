@@ -137,35 +137,77 @@
     <div class="container">
       <div class="compass-prose">
         <h2 class="display">Every draft outgrows the writer's memory of it</h2>
-        <p>We've all stepped away from a manuscript for longer than intended, and come back to it weeks or months (or years!) later to realize that we've forgotten many of its details. If you haven't experienced this, you probably aren't a writer.</p>
-        <p>You know the story's pacing is sagging somewhere in the middle. You know you established something about a character three chapters ago, but you can't find where. You know the pieces connect, but the connections live in your head mixed up with everything else, instead of on the page where you can see them.</p>
-        <p>The Compass is a set of writing analysis tools built into Inkwell. Each one examines the words, characters, and worlds you've created, and serves it back to you in a form you can work with: a recap, a curve, a map, an answer. All pulled directly from the words you've already written.</p>
+        <div class="compass-intro-card">
+          <p>We've all stepped away from a manuscript for longer than intended, and come back to it weeks or months (or years!) later to realize that we've forgotten many of its details. If you haven't experienced this, you probably aren't a writer.</p>
+          <p>You know the story's pacing is sagging somewhere in the middle. You know you established something about a character three chapters ago, but you can't find where. You know the pieces connect, but the connections live in your head mixed up with everything else, instead of on the page where you can see them.</p>
+          <p>The Compass is a set of writing analysis tools built into Inkwell. Each one examines the words, characters, and worlds you've created, and serves it back to you in a form you can work with: a recap, a curve, a map, an answer. All pulled directly from the words you've already written.</p>
+        </div>
+      </div>
+      <div class="compass-outcomes">
+        <a class="outcome" href="#synopsis">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg>
+          <b>A recap</b><span>Synopsis</span>
+        </a>
+        <a class="outcome" href="#heartbeat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <b>A curve</b><span>Heartbeat</span>
+        </a>
+        <a class="outcome" href="#ask">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg>
+          <b>An answer</b><span>Ask</span>
+        </a>
+        <a class="outcome" href="#atlas">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg>
+          <b>A map</b><span>The Atlas</span>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Synopsis -->
-  <section class="section">
+  <section class="section" id="synopsis">
     <div class="container">
-      <div class="cf-narrow">
-        <h2 class="cf-name">Synopsis</h2>
-        <p class="cf-badge">Inkling (limited) &middot; Storyteller &middot; Worldbuilder</p>
-        <h3 class="cf-sub">Catch yourself up in seconds</h3>
-        <div class="cf-body">
-          <p>You put your manuscript down because of a vacation, or a career, or a new baby, or any number of other interruptions. Now you're back (yes!), the cursor is blinking, and you cannot remember how your characters got to where they are.</p>
-          <p>Synopsis analyzes any document in your project and produces a short, factual recap of what happens in it. Simply open your document, click recap, get your bearings, and get back to writing.</p>
+      <div class="cf-split">
+        <div class="cf-split__text">
+          <h2 class="cf-name">Synopsis</h2>
+          <div class="cf-chips">
+            <span class="cf-chip">Inkling (limited)</span>
+            <span class="cf-chip">Storyteller</span>
+            <span class="cf-chip">Worldbuilder</span>
+          </div>
+          <h3 class="cf-sub">Catch yourself up in seconds</h3>
+          <div class="cf-body">
+            <p>You put your manuscript down because of a vacation, or a career, or a new baby, or any number of other interruptions. Now you're back (yes!), the cursor is blinking, and you cannot remember how your characters got to where they are.</p>
+            <p>Synopsis analyzes any document in your project and produces a short, factual recap of what happens in it. Simply open your document, click recap, get your bearings, and get back to writing.</p>
+          </div>
+        </div>
+        <div class="cf-split__media">
+          <!-- Image to follow: document recap. Replace inner SVG with <img> when ready. -->
+          <div class="cf-media__frame">
+            <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="50" y="26" width="100" height="98" rx="8" stroke-width="2.4"/>
+              <path d="M68 52 H132" stroke-width="4.5"/>
+              <g stroke-width="2.2" opacity=".55">
+                <path d="M68 72 H132"/><path d="M68 86 H132"/><path d="M68 100 H112"/>
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Heartbeat -->
-  <section class="section section--tint">
+  <section class="section section--tint" id="heartbeat">
     <div class="container">
-      <div class="cf-split">
+      <div class="cf-split cf-split--rev">
         <div class="cf-split__text">
           <h2 class="cf-name">Heartbeat</h2>
-          <p class="cf-badge">Inkling (limited) &middot; Storyteller &middot; Worldbuilder</p>
+          <div class="cf-chips">
+            <span class="cf-chip">Inkling (limited)</span>
+            <span class="cf-chip">Storyteller</span>
+            <span class="cf-chip">Worldbuilder</span>
+          </div>
           <h3 class="cf-sub">See the shape of your story</h3>
           <div class="cf-body">
             <p>Pacing is the hardest thing to judge when you're still "inside" your story. You're reading your manuscript one chapter at a time, in the order you wrote it, with all the intentions still attached. The shape of the thing is almost impossible to feel from that vantage point.</p>
@@ -185,13 +227,50 @@
     </div>
   </section>
 
+  <!-- Ask -->
+  <section class="section" id="ask">
+    <div class="container">
+      <div class="cf-split">
+        <div class="cf-split__text">
+          <h2 class="cf-name">Ask</h2>
+          <div class="cf-chips">
+            <span class="cf-chip">Inkling (limited)</span>
+            <span class="cf-chip">Storyteller</span>
+            <span class="cf-chip">Worldbuilder</span>
+          </div>
+          <h3 class="cf-sub">Search your manuscript by meaning</h3>
+          <div class="cf-body">
+            <p>Find-and-replace can locate a word, but it cannot answer a question.</p>
+            <p>Ask lets you query your own manuscript in plain language. Did I already establish that my main character distrusts her brother? Where did I describe the harbor? How many times does the pocket watch come up before chapter nine? Ask analyzes your prose and answers from it, with a link straight to the passage so you can verify it yourself and pick up right where the evidence is.</p>
+            <p class="cf-body__grounded">Every answer is grounded in your manuscript and points back to the exact place it came from.</p>
+          </div>
+        </div>
+        <div class="cf-split__media">
+          <!-- Image to follow: semantic search. Replace inner SVG with <img> when ready. -->
+          <div class="cf-media__frame">
+            <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <g stroke-width="2.2" opacity=".5">
+                <path d="M40 46 H160"/><path d="M40 64 H150"/><path d="M40 82 H120"/>
+              </g>
+              <circle cx="116" cy="94" r="27" stroke-width="3"/>
+              <path d="M135 113 L154 132" stroke-width="3"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- The Atlas -->
-  <section class="section">
+  <section class="section section--tint" id="atlas">
     <div class="container">
       <div class="cf-split cf-split--rev">
         <div class="cf-split__text">
           <h2 class="cf-name">The Atlas</h2>
-          <p class="cf-badge"><span class="cf-soon">Coming soon</span> Worldbuilder</p>
+          <div class="cf-chips">
+            <span class="cf-chip cf-chip--soon">Coming soon</span>
+            <span class="cf-chip">Worldbuilder</span>
+          </div>
           <h3 class="cf-sub">A map of your world, built from your words</h3>
           <div class="cf-body">
             <p>Worldbuilding tools generally ask you to do the building twice. Once in the manuscript, where the story lives, and again in a separate database of entries and fields and relationship charts that you have to maintain by hand, and which starts drifting out of date the moment you stop feeding it.</p>
@@ -216,27 +295,11 @@
     </div>
   </section>
 
-  <!-- Ask -->
-  <section class="section section--tint">
-    <div class="container">
-      <div class="cf-narrow">
-        <h2 class="cf-name">Ask</h2>
-        <p class="cf-badge">Inkling (limited) &middot; Storyteller &middot; Worldbuilder</p>
-        <h3 class="cf-sub">Search your manuscript by meaning</h3>
-        <div class="cf-body">
-          <p>Find-and-replace can locate a word, but it cannot answer a question.</p>
-          <p>Ask lets you query your own manuscript in plain language. Did I already establish that my main character distrusts her brother? Where did I describe the harbor? How many times does the pocket watch come up before chapter nine? Ask analyzes your prose and answers from it, with a link straight to the passage so you can verify it yourself and pick up right where the evidence is.</p>
-          <p class="cf-body__grounded">Every answer is grounded in your manuscript and points back to the exact place it came from.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Closing -->
   <section class="section">
     <div class="container center">
       <div class="compass-prose">
-        <h2 class="display">It's already where your story is</h2>
+        <h2 class="display">Never lose your bearings</h2>
         <p>The Compass lives inside Inkwell, alongside your manuscript, your characters, and your world. There's nothing to configure, no separate system to maintain, no second copy of your novel to keep in sync. The analysis is always drawn from your current draft, because it's drawn from your current draft.</p>
       </div>
       <div style="margin-top:32px">
