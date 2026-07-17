@@ -1,5 +1,7 @@
 # Inkwell
 
+> Last updated: 2026-07-17
+
 > Inkwell is a calm, distraction-free writing home for novelists. It combines a
 > focused editor with connected world-building tools (characters, lore, and
 > story elements), so writers can start a project in seconds and stay
