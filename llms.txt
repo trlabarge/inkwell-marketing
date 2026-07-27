@@ -22,6 +22,7 @@ their outcome, not by the underlying technology.
 - [App comparisons](https://inkwell.world/compare): how Inkwell compares to other novel-writing apps.
 - [Inkwell vs. Scrivener](https://inkwell.world/compare/scrivener)
 - [Inkwell vs. Dabble](https://inkwell.world/compare/dabble)
+- [Compare and rank writing tools](https://inkwell.world/compare/rank): pick specific tools and see them ranked side by side.
 - [Privacy Policy](https://inkwell.world/privacy)
 - [Terms of Service](https://inkwell.world/terms)
 

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compare Writing Apps Side by Side | Inkwell</title>
+  <meta name="description" content="Pick the novel-writing tools you're deciding between, Scrivener, Dabble, Reedsy, and more, and see them ranked against Inkwell across cost, worldbuilding, and export." />
+  <link rel="canonical" href="https://inkwell.world/compare/rank" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Inkwell" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://inkwell.world/compare/rank" />
+  <meta property="og:title" content="Compare Writing Apps Side by Side | Inkwell" />
+  <meta property="og:description" content="Pick the novel-writing tools you're deciding between, Scrivener, Dabble, Reedsy, and more, and see them ranked against Inkwell across cost, worldbuilding, and export." />
+  <meta property="og:image" content="https://inkwell.world/assets/wordmark-dark.png" />
+  <meta property="og:image:alt" content="Inkwell" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Compare Writing Apps Side by Side | Inkwell" />
+  <meta name="twitter:description" content="Pick the novel-writing tools you're deciding between, Scrivener, Dabble, Reedsy, and more, and see them ranked against Inkwell across cost, worldbuilding, and export." />
+  <meta name="twitter:image" content="https://inkwell.world/assets/wordmark-dark.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cinzel+Decorative:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Alegreya+Sans:wght@400;500;700&family=Spectral:ital,wght@0,400;0,600;1,400;1,600&family=Allura&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/assets/favicon.png" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inkwell", "item": "https://inkwell.world/" },
+      { "@type": "ListItem", "position": 2, "name": "Compare", "item": "https://inkwell.world/compare" },
+      { "@type": "ListItem", "position": 3, "name": "Rank writing tools", "item": "https://inkwell.world/compare/rank" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Inkwell home">
+        <img src="/assets/wordmark-dark.png" alt="Inkwell" />
+      </a>
+      <nav class="nav">
+        <a class="navlink" href="/pricing">Pricing</a>
+        <a class="navlink" href="/compare">Compare</a>
+        <a class="btn btn--primary" href="https://app.inkwell.world/auth">Enter Inkwell</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="/pricing">Pricing</a>
+      <a href="/compare">Compare</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero--page">
+    <div class="container">
+      <p class="eyebrow">Choosing a writing tool</p>
+      <h1 class="display">Pick your tools, see them ranked</h1>
+      <p class="cmp-intro">Only deciding between a few of these? Choose the ones you're weighing below and we'll rank them against Inkwell, side by side, across the same eight categories writers care about most.</p>
+    </div>
+  </section>
+
+  <!-- Picker + ranked matrix -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+
+      <div class="tool-picker" role="group" aria-label="Choose tools to compare">
+        <button type="button" class="tool-chip is-locked" data-tool="inkwell" aria-pressed="true" aria-disabled="true">Inkwell</button>
+        <button type="button" class="tool-chip" data-tool="scrivener" aria-pressed="true">Scrivener</button>
+        <button type="button" class="tool-chip" data-tool="dabble" aria-pressed="true">Dabble</button>
+        <button type="button" class="tool-chip" data-tool="reedsy" aria-pressed="true">Reedsy</button>
+        <button type="button" class="tool-chip" data-tool="word" aria-pressed="true">MS Word</button>
+        <button type="button" class="tool-chip" data-tool="google-docs" aria-pressed="true">Google Docs</button>
+        <button type="button" class="tool-chip" data-tool="ellipsus" aria-pressed="true">Ellipsus</button>
+        <button type="button" class="tool-chip" data-tool="obsidian" aria-pressed="true">Obsidian</button>
+      </div>
+      <p class="tool-picker-note">Inkwell is always included, so you can see exactly how it compares. <button type="button" class="link-btn" id="copy-link">Copy comparison link</button></p>
+
+      <p class="rank-banner" id="rank-banner" aria-live="polite">Comparing all eight tools below. Deselect any you're not considering to narrow the field and see a ranked match.</p>
+
+      <div class="cmp-matrix-wrap">
+        <!--
+          Static HTML, generated by hand from compare-data.js, same values as the
+          matrix on compare/index.html. This site has no build step, so keep this
+          in sync by hand: if a value changes there, mirror it here.
+        -->
+        <table class="cmp-matrix" id="rank-table" aria-label="Comparison of novel-writing apps, updates as you choose which to compare">
+          <thead>
+            <tr>
+              <th scope="col" class="cmp-rowlabel-head">&nbsp;</th>
+              <th scope="col" class="cmp-col-inkwell" data-tool="inkwell">Inkwell</th>
+              <th scope="col" data-tool="scrivener"><a href="/compare/scrivener">Scrivener</a></th>
+              <th scope="col" data-tool="dabble"><a href="/compare/dabble">Dabble</a></th>
+              <th scope="col" data-tool="reedsy"><a href="/compare/reedsy">Reedsy</a></th>
+              <th scope="col" data-tool="word"><a href="/compare/word">MS Word</a></th>
+              <th scope="col" data-tool="google-docs"><a href="/compare/google-docs">Google Docs</a></th>
+              <th scope="col" data-tool="ellipsus"><a href="/compare/ellipsus">Ellipsus</a></th>
+              <th scope="col" data-tool="obsidian">Obsidian</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" class="cmp-rowlabel">Cost</th>
+              <td data-tool="inkwell"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">$</span><span class="cmp-cell-label">Free tier</span></div></td>
+              <td data-tool="scrivener"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">$</span><span class="cmp-cell-label">$60 once</span></div></td>
+              <td data-tool="dabble"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">$$$</span><span class="cmp-cell-label">$19&ndash;49/mo</span></div></td>
+              <td data-tool="reedsy"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">$</span><span class="cmp-cell-label">Free core</span></div></td>
+              <td data-tool="word"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">$$$</span><span class="cmp-cell-label">~$70/yr</span></div></td>
+              <td data-tool="google-docs"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">$</span><span class="cmp-cell-label">Free</span></div></td>
+              <td data-tool="ellipsus"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">$</span><span class="cmp-cell-label">Free core</span></div></td>
+              <td data-tool="obsidian"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">$</span><span class="cmp-cell-label">Free core</span></div></td>
+            </tr>
+            <tr>
+              <th scope="row" class="cmp-rowlabel">Cloud sync</th>
+              <td data-tool="inkwell"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Automatic</span></div></td>
+              <td data-tool="scrivener"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">Manual setup</span></div></td>
+              <td data-tool="dabble"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Automatic</span></div></td>
+              <td data-tool="reedsy"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Automatic</span></div></td>
+              <td data-tool="word"><div class="cmp-cell"><span class="cmp-symbol tone-warn" aria-hidden="true">≈</span><span class="cmp-cell-label">If set up</span></div></td>
+              <td data-tool="google-docs"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Automatic</span></div></td>
+              <td data-tool="ellipsus"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Automatic</span></div></td>
+              <td data-tool="obsidian"><div class="cmp-cell"><span class="cmp-symbol tone-warn" aria-hidden="true">≈</span><span class="cmp-cell-label">Paid add-on</span></div></td>
+            </tr>
+            <tr>
+              <th scope="row" class="cmp-rowlabel">Built for novelists</th>
+              <td data-tool="inkwell"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="scrivener"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="dabble"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="reedsy"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="word"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">No</span></div></td>
+              <td data-tool="google-docs"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">No</span></div></td>
+              <td data-tool="ellipsus"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="obsidian"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">No</span></div></td>
+            </tr>
+            <tr>
+              <th scope="row" class="cmp-rowlabel">Comments &amp; collab</th>
+              <td data-tool="inkwell"><div class="cmp-cell"><span class="cmp-symbol tone-warn" aria-hidden="true">≈</span><span class="cmp-cell-label">Basic</span></div></td>
+              <td data-tool="scrivener"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">No</span></div></td>
+              <td data-tool="dabble"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="reedsy"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="word"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="google-docs"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="ellipsus"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="obsidian"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">No</span></div></td>
+            </tr>
+            <tr>
+              <th scope="row" class="cmp-rowlabel">Worldbuilding tools</th>
+              <td data-tool="inkwell"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Deep</span></div></td>
+              <td data-tool="scrivener"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Deep</span></div></td>
+              <td data-tool="dabble"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Deep</span></div></td>
+              <td data-tool="reedsy"><div class="cmp-cell"><span class="cmp-symbol tone-warn" aria-hidden="true">≈</span><span class="cmp-cell-label">Light</span></div></td>
+              <td data-tool="word"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">None</span></div></td>
+              <td data-tool="google-docs"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">None</span></div></td>
+              <td data-tool="ellipsus"><div class="cmp-cell"><span class="cmp-symbol tone-warn" aria-hidden="true">≈</span><span class="cmp-cell-label">Light</span></div></td>
+              <td data-tool="obsidian"><div class="cmp-cell"><span class="cmp-symbol tone-warn" aria-hidden="true">≈</span><span class="cmp-cell-label">DIY</span></div></td>
+            </tr>
+            <tr>
+              <th scope="row" class="cmp-rowlabel">Export formats</th>
+              <td data-tool="inkwell"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">EPUB, PDF</span></div></td>
+              <td data-tool="scrivener"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">EPUB, PDF</span></div></td>
+              <td data-tool="dabble"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">Word, Text</span></div></td>
+              <td data-tool="reedsy"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">EPUB, PDF</span></div></td>
+              <td data-tool="word"><div class="cmp-cell"><span class="cmp-symbol tone-warn" aria-hidden="true">≈</span><span class="cmp-cell-label">No EPUB</span></div></td>
+              <td data-tool="google-docs"><div class="cmp-cell"><span class="cmp-symbol tone-warn" aria-hidden="true">≈</span><span class="cmp-cell-label">No EPUB</span></div></td>
+              <td data-tool="ellipsus"><div class="cmp-cell"><span class="cmp-symbol tone-warn" aria-hidden="true">≈</span><span class="cmp-cell-label">No EPUB</span></div></td>
+              <td data-tool="obsidian"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">Plugins only</span></div></td>
+            </tr>
+            <tr>
+              <th scope="row" class="cmp-rowlabel">Focus mode</th>
+              <td data-tool="inkwell"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="scrivener"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="dabble"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="reedsy"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="word"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">No</span></div></td>
+              <td data-tool="google-docs"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">No</span></div></td>
+              <td data-tool="ellipsus"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="obsidian"><div class="cmp-cell"><span class="cmp-symbol tone-warn" aria-hidden="true">≈</span><span class="cmp-cell-label">Plugin-based</span></div></td>
+            </tr>
+            <tr>
+              <th scope="row" class="cmp-rowlabel">Offline access</th>
+              <td data-tool="inkwell"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="scrivener"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="dabble"><div class="cmp-cell"><span class="cmp-symbol tone-warn" aria-hidden="true">≈</span><span class="cmp-cell-label">Desktop app</span></div></td>
+              <td data-tool="reedsy"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">Browser only</span></div></td>
+              <td data-tool="word"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+              <td data-tool="google-docs"><div class="cmp-cell"><span class="cmp-symbol tone-warn" aria-hidden="true">≈</span><span class="cmp-cell-label">If enabled</span></div></td>
+              <td data-tool="ellipsus"><div class="cmp-cell"><span class="cmp-symbol tone-bad" aria-hidden="true">✗</span><span class="cmp-cell-label">Browser only</span></div></td>
+              <td data-tool="obsidian"><div class="cmp-cell"><span class="cmp-symbol tone-good" aria-hidden="true">✓</span><span class="cmp-cell-label">Yes</span></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="cmp-legend" aria-hidden="false">
+        <span><span class="cmp-symbol tone-good">✓</span> Full support</span>
+        <span><span class="cmp-symbol tone-warn">≈</span> Partial or conditional</span>
+        <span><span class="cmp-symbol tone-bad">✗</span> Not available</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Methodology + disclaimer -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cmp-parchment cmp-disclosure">
+        <p>The ranking above scores each tool across these same eight categories, weighted equally, using the values shown in the table (full support counts higher than partial, which counts higher than none). It is a simple, transparent way to sort what you have selected, not a universal verdict. Some of these categories will matter far more to you than others, so use the table itself, not just the ranking, to decide.</p>
+        <p>Pricing and features current as of mid-2026 and subject to change. Check each provider directly before deciding.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cmp-parchment cmp-cta">
+        <h2 class="display">Try Inkwell free</h2>
+        <p>See for yourself whether it earns a place on your shortlist.</p>
+        <a class="btn btn--primary" href="https://app.inkwell.world/auth">Start Writing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <span class="brand">
+            <img src="/assets/wordmark-light.png" alt="Inkwell" />
+          </span>
+          <p class="footer-tagline">Your tranquil writing sanctuary. Create, build worlds, and bring your stories to life.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="https://app.inkwell.world/auth">Launch App</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/compare">Compare</a>
+          <a href="/writing-apps-breakdown">Writing Apps Breakdown</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Inkwell. All rights reserved.</span>
+        <span class="legal-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var hdr = document.querySelector('.site-header');
+      function check() { hdr.classList.toggle('scrolled', window.scrollY > 10); }
+      window.addEventListener('scroll', check, { passive: true });
+      check();
+    })();
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var panel = document.getElementById('mobile-nav');
+      if (!btn || !panel) return;
+      function closeMenu() {
+        panel.hidden = true;
+        panel.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+      function openMenu() {
+        panel.hidden = false;
+        panel.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+      btn.addEventListener('click', function () {
+        if (panel.classList.contains('is-open')) { closeMenu(); } else { openMenu(); }
+      });
+      panel.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') { closeMenu(); }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { closeMenu(); }
+      });
+    })();
+
+    // Tool picker: show/hide table columns and rank the visible tools.
+    (function () {
+      var table = document.getElementById('rank-table');
+      var banner = document.getElementById('rank-banner');
+      var copyBtn = document.getElementById('copy-link');
+      var chips = Array.prototype.slice.call(document.querySelectorAll('.tool-chip'));
+      if (!table || !chips.length) return;
+
+      var TONE_SCORE = { 'tone-good': 2, 'tone-warn': 1, 'tone-bad': 0 };
+
+      function cellsFor(tool) {
+        return Array.prototype.slice.call(table.querySelectorAll('[data-tool="' + tool + '"]'));
+      }
+
+      function setVisible(tool, visible) {
+        cellsFor(tool).forEach(function (el) { el.classList.toggle('is-hidden', !visible); });
+      }
+
+      function scoreFor(tool) {
+        var symbols = table.querySelectorAll('td[data-tool="' + tool + '"] .cmp-symbol');
+        var total = 0;
+        symbols.forEach(function (sym) {
+          for (var tone in TONE_SCORE) {
+            if (sym.classList.contains(tone)) { total += TONE_SCORE[tone]; break; }
+          }
+        });
+        return total;
+      }
+
+      function activeChips() {
+        return chips.filter(function (c) { return c.getAttribute('aria-pressed') === 'true'; });
+      }
+
+      function updateBanner() {
+        var scored = activeChips().map(function (chip) {
+          return { name: chip.textContent.trim(), score: scoreFor(chip.dataset.tool) };
+        }).sort(function (a, b) { return b.score - a.score; });
+
+        var parts = [];
+        var rank = 0;
+        var prevScore = null;
+        scored.forEach(function (item, i) {
+          if (item.score !== prevScore) { rank = i + 1; }
+          parts.push((rank === 1 ? 'Best match: ' : ('#' + rank + ' ')) + item.name);
+          prevScore = item.score;
+        });
+        banner.textContent = parts.length > 1
+          ? parts.join(' · ')
+          : 'Add another tool above to see a ranked comparison.';
+      }
+
+      function syncUrl() {
+        var selected = chips
+          .filter(function (c) { return !c.classList.contains('is-locked') && c.getAttribute('aria-pressed') === 'true'; })
+          .map(function (c) { return c.dataset.tool; });
+        var params = new URLSearchParams(window.location.search);
+        if (selected.length === chips.length - 1) {
+          params.delete('tools');
+        } else {
+          params.set('tools', selected.join(','));
+        }
+        var qs = params.toString();
+        window.history.replaceState(null, '', window.location.pathname + (qs ? '?' + qs : ''));
+      }
+
+      function applyFromUrl() {
+        var wanted = new URLSearchParams(window.location.search).get('tools');
+        if (!wanted) return;
+        var list = wanted.split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+        var unlockedChips = chips.filter(function (c) { return !c.classList.contains('is-locked'); });
+        var matched = list.filter(function (t) {
+          return unlockedChips.some(function (c) { return c.dataset.tool === t; });
+        });
+        if (!matched.length) return;
+        unlockedChips.forEach(function (chip) {
+          var show = matched.indexOf(chip.dataset.tool) !== -1;
+          chip.setAttribute('aria-pressed', String(show));
+          setVisible(chip.dataset.tool, show);
+        });
+      }
+
+      chips.forEach(function (chip) {
+        if (chip.classList.contains('is-locked')) return;
+        chip.addEventListener('click', function () {
+          var pressed = chip.getAttribute('aria-pressed') === 'true';
+          if (pressed) {
+            var othersStillActive = chips.some(function (c) {
+              return c !== chip && !c.classList.contains('is-locked') && c.getAttribute('aria-pressed') === 'true';
+            });
+            if (!othersStillActive) return;
+          }
+          chip.setAttribute('aria-pressed', String(!pressed));
+          setVisible(chip.dataset.tool, !pressed);
+          updateBanner();
+          syncUrl();
+        });
+      });
+
+      if (copyBtn && navigator.clipboard) {
+        copyBtn.addEventListener('click', function () {
+          navigator.clipboard.writeText(window.location.href).then(function () {
+            var original = copyBtn.textContent;
+            copyBtn.textContent = 'Link copied';
+            setTimeout(function () { copyBtn.textContent = original; }, 2000);
+          });
+        });
+      }
+
+      applyFromUrl();
+      updateBanner();
+    })();
+  </script>
+</body>
+</html>

@@ -1209,6 +1209,30 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 .cmp-legend span { display: inline-flex; align-items: center; gap: 7px; }
 .cmp-legend .cmp-symbol { font-size: .95rem; }
 
+/* Tool picker (compare/rank.html) */
+.tool-picker { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 0 0 14px; }
+.tool-chip {
+  font-family: var(--font-sans); font-size: .92rem; font-weight: 600; color: var(--text-muted);
+  background: #fff; border: 1.5px solid var(--line); border-radius: 999px; padding: 9px 18px;
+  cursor: pointer; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, background .15s ease, color .15s ease;
+}
+.tool-chip:hover { border-color: var(--gold-soft); color: var(--ink); }
+.tool-chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.tool-chip[aria-pressed="false"] { background: var(--bg-tint); color: var(--text-faint); }
+.tool-chip.is-locked { cursor: default; opacity: .92; }
+.tool-chip.is-locked:hover { border-color: var(--ink); color: #fff; }
+.tool-picker-note { text-align: center; color: var(--text-muted); font-size: .9rem; margin: 0 0 28px; }
+.link-btn {
+  font: inherit; color: var(--gold); background: none; border: 0; padding: 0; cursor: pointer;
+  text-decoration: underline; text-decoration-color: var(--gold-soft); text-underline-offset: 3px;
+}
+.link-btn:hover { color: var(--gold-soft); }
+.rank-banner {
+  text-align: center; font-family: var(--font-serif); font-style: italic; color: var(--ink);
+  background: var(--bg-sage); border-radius: var(--radius); padding: 14px 20px; margin: 0 0 28px;
+}
+.is-hidden { display: none !important; }
+
 /* Drilldown cards */
 .cmp-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
 .cmp-card {
