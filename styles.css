@@ -1473,8 +1473,11 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   box-shadow: 0 30px 60px -40px rgba(11, 18, 32, .35);
   display: flex; align-items: center; justify-content: center;
 }
-.cf-media__frame svg { width: 78%; height: 78%; color: var(--gold); opacity: .9; }
+.cf-media__frame > svg { width: 78%; height: 78%; color: var(--gold); opacity: .9; }
 .cf-media__frame img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Frame variant that hosts a live interactive demo instead of a static glyph */
+.cf-media__frame--anim { display: block; padding: 0; background: #fff; aspect-ratio: 4 / 3.6; }
 
 @media (max-width: 700px) {
   .compass-outcomes { grid-template-columns: repeat(2, 1fr); }
@@ -1483,4 +1486,59 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   .cf-split { grid-template-columns: 1fr; gap: 28px; }
   .cf-split--rev .cf-split__text { order: 1; }
   .cf-split--rev .cf-split__media { order: 2; }
+}
+
+/* ---- Animated Synopsis demo (Compass page) ---- */
+.syn-anim {
+  --cx-accent: #4f46e5;
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  background: #fff; font-family: var(--font-sans); color: var(--text);
+  user-select: none;
+}
+.syn-anim .cx__crumb b { color: var(--ink); }
+.syn-anim .share-ed-tools { position: relative; z-index: 2; }
+.syn-btn { border-radius: 6px; padding: 3px; transition: color .2s ease, background .2s ease; }
+.syn-btn.is-on { color: var(--cx-accent); background: rgba(79, 70, 229, .1); }
+.syn-body { flex: 1; padding: 18px 22px; overflow: hidden; }
+
+.syn-pop {
+  position: absolute; top: 50px; right: 14px; bottom: 16px; width: 240px; z-index: 10;
+  background: #fff; border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 24px 48px -18px rgba(11, 18, 32, .38);
+  opacity: 0; transform: translateY(-6px) scale(.97); pointer-events: none;
+  transition: opacity .28s ease, transform .28s ease;
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.syn-pop.show { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.syn-pop__head { flex: none; display: flex; align-items: flex-start; gap: 9px; padding: 12px 13px; border-bottom: 1px solid var(--line); }
+.syn-pop__ico { width: 15px; height: 15px; color: var(--cx-accent); margin-top: 2px; flex: none; }
+.syn-pop__head h5 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 12.5px; color: var(--ink); }
+.syn-pop__sub { font-size: 10px; color: var(--text-faint); margin-top: 1px; }
+.syn-pop__x { margin-left: auto; width: 12px; height: 12px; color: var(--text-faint); flex: none; }
+.syn-pop__body { flex: 1; min-height: 0; overflow-y: auto; padding: 11px 13px 13px; }
+
+/* Content states swap via display so the card's height follows whichever
+   state is current, matching the real panel growing once the recap lands. */
+.syn-pop__desc, .syn-pop__loading, .syn-pop__result { display: none; }
+.syn-pop__desc.show { display: block; animation: synFade .3s ease; }
+.syn-pop__result.show { display: block; animation: synFade .3s ease; }
+.syn-pop__loading.show { display: flex; animation: synFade .3s ease; }
+@keyframes synFade { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
+.syn-pop__desc p, .syn-pop__result p { margin: 0 0 10px; font-size: 11px; line-height: 1.55; color: var(--text-muted); }
+
+.syn-pop__btn {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  background: var(--ink); color: #fff; border-radius: 8px; padding: 8px;
+  font-size: 11.5px; font-weight: 600;
+}
+.syn-pop__btn svg { width: 13px; height: 13px; }
+
+.syn-pop__loading { align-items: center; gap: 8px; padding: 6px 0; font-size: 11px; color: var(--text-faint); }
+
+.syn-pop__update { font-size: 11px; color: var(--cx-accent); font-weight: 600; display: inline-flex; gap: 5px; align-items: center; }
+.syn-pop__update svg { width: 11px; height: 11px; }
+
+@media (max-width: 700px) {
+  .syn-pop { width: 74%; }
 }
