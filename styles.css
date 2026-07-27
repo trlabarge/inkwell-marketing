@@ -1675,12 +1675,6 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   #ask-menu { right: 14px; }
 }
 
-/* ---- Full-width stacked feature (Atlas: needs a much larger canvas
-   than the two-column split can offer) ---- */
-.cf-stack__text { max-width: 720px; }
-.cf-stack__media { margin-top: 32px; }
-.cf-media__frame--atlas { aspect-ratio: auto; height: clamp(440px, 46vw, 620px); }
-
 /* ---- Animated Atlas demo (Compass page) ---- */
 .atlas-anim {
   --cx-accent: #4f46e5;
@@ -1730,7 +1724,6 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 .atlas-legend span { display: flex; align-items: center; gap: 5px; }
 .atlas-legend i { display: inline-block; width: 16px; height: 0; border-top: 1.6px solid var(--gold); font-style: normal; }
 .atlas-legend i.dashed { border-top-style: dashed; border-top-color: var(--gold-soft); }
-.atlas-describe { margin-left: auto; font-size: 10.5px; font-weight: 600; color: #fff; background: var(--ink); border-radius: 999px; padding: 8px 15px; white-space: nowrap; }
 
 .atlas-graph { position: relative; flex: 1; min-height: 0; }
 .atlas-graph svg { position: absolute; inset: 0; width: 100%; height: 100%; }
@@ -1772,6 +1765,5 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 .atlas-detail__link { font-size: 10.5px; font-weight: 600; color: var(--cx-accent); }
 
 @media (max-width: 700px) {
-  .atlas-describe { display: none; }
   .atlas-detail { width: 68%; }
 }
