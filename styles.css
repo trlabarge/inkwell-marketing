@@ -1477,7 +1477,11 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 .cf-media__frame img { width: 100%; height: 100%; object-fit: cover; }
 
 /* Frame variant that hosts a live interactive demo instead of a static glyph */
-.cf-media__frame--anim { display: block; padding: 0; background: #fff; aspect-ratio: 4 / 3.6; }
+.cf-media__frame--anim {
+  display: block; padding: 0; background: #fff; aspect-ratio: 4 / 3.6;
+  border: 2px solid var(--gold-soft);
+  box-shadow: 0 30px 60px -40px rgba(11, 18, 32, .35), 0 0 0 1px rgba(176, 124, 18, .08);
+}
 
 @media (max-width: 700px) {
   .compass-outcomes { grid-template-columns: repeat(2, 1fr); }
@@ -1541,4 +1545,65 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 
 @media (max-width: 700px) {
   .syn-pop { width: 74%; }
+}
+
+/* ---- Animated Heartbeat demo (Compass page) ---- */
+.hb-anim {
+  --cx-accent: #4f46e5;
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  background: #fff; font-family: var(--font-sans); color: var(--text);
+  user-select: none;
+}
+.hb-anim .cx__crumb b { color: var(--ink); }
+.hb-anim .share-ed-tools { position: relative; z-index: 2; }
+.hb-btn { border-radius: 6px; padding: 3px; transition: color .2s ease, background .2s ease; }
+.hb-btn.is-on { color: var(--gold); background: rgba(176, 124, 18, .1); }
+.hb-content { flex: 1; position: relative; overflow: hidden; }
+.hb-content .syn-body { position: absolute; inset: 0; padding: 18px 22px; overflow: hidden; }
+
+#hb-menu { top: 46px; right: 45px; }
+.pm-mi.hi svg { color: var(--gold); }
+
+.hb-panel {
+  position: absolute; inset: 0; background: #fff; padding: 20px 22px;
+  opacity: 0; transform: translateY(6px); pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+}
+.hb-panel.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.hb-panel__head { display: flex; align-items: center; gap: 9px; }
+.hb-panel__ico { width: 17px; height: 17px; color: var(--ink); flex: none; }
+.hb-panel__head h5 { margin: 0; font-family: var(--font-display); font-weight: 700; font-size: 15px; color: var(--ink); }
+.hb-panel__x { margin-left: auto; width: 14px; height: 14px; color: var(--text-faint); flex: none; }
+.hb-panel__sub { margin: 5px 0 0; font-size: 11px; color: var(--text-muted); }
+
+.hb-panel__card {
+  position: relative; margin-top: 16px; border: 1px solid var(--line); border-radius: 12px;
+  padding: 20px 20px 16px; min-height: 170px;
+}
+
+.hb-empty { display: none; flex-direction: column; align-items: center; text-align: center; gap: 14px; padding: 22px 10px; }
+.hb-empty.show { display: flex; animation: synFade .3s ease; }
+.hb-empty p { margin: 0; font-size: 11.5px; color: var(--text-muted); max-width: 30ch; }
+.hb-scan-btn { background: var(--ink); color: #fff; border-radius: 8px; padding: 9px 16px; font-size: 11.5px; font-weight: 600; }
+
+.hb-loading { display: none; align-items: center; justify-content: center; gap: 8px; padding: 40px 10px; font-size: 11px; color: var(--text-faint); }
+.hb-loading.show { display: flex; animation: synFade .3s ease; }
+
+.hb-chart { display: none; }
+.hb-chart.show { display: block; animation: synFade .3s ease; }
+.hb-chart svg { width: 100%; height: auto; display: block; }
+.hb-fill { fill: var(--parchment); opacity: 0; transition: opacity .5s ease .1s; }
+.hb-line {
+  fill: none; stroke: var(--gold); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+  stroke-dasharray: 720; stroke-dashoffset: 720; transition: stroke-dashoffset 1.3s ease;
+}
+.hb-chart.show .hb-fill { opacity: 1; }
+.hb-chart.show .hb-line { stroke-dashoffset: 0; }
+.hb-axis { display: flex; justify-content: space-between; margin-top: 4px; font-size: 9.5px; color: var(--text-faint); }
+.hb-caption { margin: 10px 0 0; font-size: 10.5px; color: var(--text-muted); }
+.hb-rescan { position: absolute; right: 18px; bottom: 14px; font-size: 10.5px; font-weight: 600; color: var(--gold); }
+
+@media (max-width: 700px) {
+  #hb-menu { right: 14px; }
 }
