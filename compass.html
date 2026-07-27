@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1LXL2R4NKZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-1LXL2R4NKZ');
+  </script>
+  <title>The Compass | Inkwell</title>
+  <meta name="description" content="The Compass analyzes what you've written and surfaces it back as synopses, dramatic tension scans, relationship maps, and answers to your direct questions. All drawn from your own manuscript." />
+  <link rel="canonical" href="https://inkwell.world/compass" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Inkwell" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://inkwell.world/compass" />
+  <meta property="og:title" content="The Compass | Inkwell" />
+  <meta property="og:description" content="The Compass analyzes what you've written and surfaces it back as synopses, dramatic tension scans, relationship maps, and answers to your direct questions. All drawn from your own manuscript." />
+  <meta property="og:image" content="https://inkwell.world/assets/wordmark-dark.png" />
+  <meta property="og:image:alt" content="Inkwell" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Compass | Inkwell" />
+  <meta name="twitter:description" content="The Compass analyzes what you've written and surfaces it back as synopses, dramatic tension scans, relationship maps, and answers to your direct questions. All drawn from your own manuscript." />
+  <meta name="twitter:image" content="https://inkwell.world/assets/wordmark-dark.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cinzel+Decorative:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Alegreya+Sans:wght@400;500;700&family=Spectral:ital,wght@0,400;0,600;1,400;1,600&family=Allura&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inkwell", "item": "https://inkwell.world/" },
+          { "@type": "ListItem", "position": 2, "name": "The Compass", "item": "https://inkwell.world/compass" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does the Compass work on a draft in progress?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. It analyzes whatever is on the page right now, whether that's a finished chapter or a scene you started this morning. You don't need to wait until you're \"done.\"" }
+          },
+          {
+            "@type": "Question",
+            "name": "Does it work across a whole series?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Each analysis draws from the project you're working in. Series-spanning analysis is on the way." }
+          },
+          {
+            "@type": "Question",
+            "name": "What if my manuscript is enormous?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The Compass is built for long-form work. Analysis is scoped to what you're asking about, so a single document's Synopsis stays fast whether it sits in a novella or a nine-book epic." }
+          },
+          {
+            "@type": "Question",
+            "name": "Where does the analysis come from?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Your manuscript, and nothing else. Every recap, curve, map, and answer is derived from the words you wrote, and Ask links back to the exact passage behind its answer." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" aria-label="Inkwell home">
+        <img src="assets/wordmark-dark.png" alt="Inkwell" />
+      </a>
+      <nav class="nav">
+        <a class="navlink" href="/compass">Compass</a>
+        <a class="navlink" href="/pricing">Pricing</a>
+        <a class="navlink" href="/compare">Compare</a>
+        <a class="btn btn--primary" href="https://app.inkwell.world/auth">Enter Inkwell</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </nav>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" hidden>
+      <a href="/compass">Compass</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/compare">Compare</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero hero--page compass-hero">
+    <div class="container center">
+      <svg class="compass-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="32" cy="32" r="30" stroke-width="1.3"/>
+        <circle cx="32" cy="32" r="21.5" stroke-width=".85"/>
+        <g stroke-width=".9" stroke-linecap="round">
+          <path d="M32 2.5v3.6"/><path d="M32 57.9v3.6"/><path d="M2.5 32h3.6"/><path d="M57.9 32h3.6"/>
+          <path d="M13.15 13.15l2.55 2.55"/><path d="M50.85 13.15l-2.55 2.55"/><path d="M13.15 50.85l2.55-2.55"/><path d="M50.85 50.85l-2.55-2.55"/>
+        </g>
+        <g stroke-width="1">
+          <g transform="rotate(45 32 32)"><path d="M32 15 L34.2 30 L32 32 L29.8 30 Z"/><path d="M32 15 L32 32"/></g>
+          <g transform="rotate(135 32 32)"><path d="M32 15 L34.2 30 L32 32 L29.8 30 Z"/><path d="M32 15 L32 32"/></g>
+          <g transform="rotate(225 32 32)"><path d="M32 15 L34.2 30 L32 32 L29.8 30 Z"/><path d="M32 15 L32 32"/></g>
+          <g transform="rotate(315 32 32)"><path d="M32 15 L34.2 30 L32 32 L29.8 30 Z"/><path d="M32 15 L32 32"/></g>
+        </g>
+        <g stroke-width="1.2">
+          <g><path d="M32 6.5 L34.8 29 L32 32 L29.2 29 Z"/><path d="M32 6.5 L32 32"/></g>
+          <g transform="rotate(90 32 32)"><path d="M32 6.5 L34.8 29 L32 32 L29.2 29 Z"/><path d="M32 6.5 L32 32"/></g>
+          <g transform="rotate(180 32 32)"><path d="M32 6.5 L34.8 29 L32 32 L29.2 29 Z"/><path d="M32 6.5 L32 32"/></g>
+          <g transform="rotate(270 32 32)"><path d="M32 6.5 L34.8 29 L32 32 L29.2 29 Z"/><path d="M32 6.5 L32 32"/></g>
+        </g>
+        <circle cx="32" cy="32" r="2.6" fill="currentColor" stroke="none"/>
+      </svg>
+      <h1 class="display">The Compass</h1>
+      <p class="lede">Your manuscript knows things you've forgotten. The Compass analyzes what you've written and surfaces it back to you in the shape of synopses, dramatic tension scans, relationship maps, and answers to your direct questions.</p>
+    </div>
+  </section>
+
+  <!-- Opening -->
+  <section class="section section--tint">
+    <div class="container">
+      <div class="compass-prose">
+        <h2 class="display">See your whole story at once, from every angle</h2>
+        <div class="compass-intro-card">
+          <p>We've all stepped away from a manuscript for longer than intended, and come back to it weeks or months (or years!) later to realize that we've forgotten many of its details. If you haven't experienced this, you probably aren't a writer.</p>
+          <p>The Compass is a set of writing analysis tools built into Inkwell. Each one examines the words, characters, and worlds you've created, and serves it back to you in a form you can work with: a recap, a curve, a map, an answer. All pulled directly from the words you've already written.</p>
+        </div>
+      </div>
+      <div class="compass-outcomes">
+        <a class="outcome" href="#synopsis">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg>
+          <b>A recap</b><span>Synopsis</span>
+        </a>
+        <a class="outcome" href="#heartbeat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <b>A curve</b><span>Heartbeat</span>
+        </a>
+        <a class="outcome" href="#ask">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg>
+          <b>An answer</b><span>Ask</span>
+        </a>
+        <a class="outcome" href="#atlas">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg>
+          <b>A map</b><span>The Atlas</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Synopsis -->
+  <section class="section" id="synopsis">
+    <div class="container">
+      <div class="cf-split">
+        <div class="cf-split__text">
+          <h2 class="cf-name">Synopsis</h2>
+          <div class="cf-chips">
+            <span class="cf-chip">Inkling (limited)</span>
+            <span class="cf-chip">Storyteller</span>
+            <span class="cf-chip">Worldbuilder</span>
+          </div>
+          <h3 class="cf-sub">Catch yourself up in seconds</h3>
+          <div class="cf-body">
+            <p>You put your manuscript down because of a vacation, or a career, or a new baby, or any number of other interruptions. Now you're back (yes!), the cursor is blinking, and you cannot remember how your characters got to where they are.</p>
+            <p>Synopsis analyzes any document in your project and produces a short, factual recap of what happens in it. Simply open your document, click recap, get your bearings, and get back to writing.</p>
+          </div>
+        </div>
+        <div class="cf-split__media">
+          <div class="cf-media__frame cf-media__frame--anim">
+            <div class="syn-anim" role="img" aria-label="Animated preview of Inkwell's Synopsis: clicking the Synopsis icon opens a panel, then generating a recap of the current document.">
+              <div class="cx__bar">
+                <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> Wren of the Tideglass <span class="cx__sep">&rsaquo;</span> <b>The Ninth Bell</b></div>
+                <div class="share-ed-tools">
+                  <span class="cx__saved">&#10003; All changes saved</span>
+                  <span class="cx__count">1,940 words</span>
+                  <svg class="syn-btn" id="syn-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.1 10.9 15.9 7.1M8.1 13.1l7.8 3.8"/></svg>
+                </div>
+              </div>
+              <div class="syn-body">
+                <div class="cx__prose">
+                  <p>The skiff came in on the low tide, its hull scraped white by a reef no chart marked, and Wren was the only one awake to see it.</p>
+                  <p>She meant to leave the stranger to the surf. She always meant to leave things to the surf. Instead she found herself hauling him over the rocks by the collar of a coat too fine for a drowned man, muttering his name back to him before she'd even asked it.</p>
+                  <p>He woke calling for someone named Iseult, and would not say who that was.</p>
+                </div>
+              </div>
+
+              <!-- Synopsis popover -->
+              <div class="syn-pop" id="syn-pop" aria-hidden="true">
+                <div class="syn-pop__head">
+                  <svg class="syn-pop__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg>
+                  <div>
+                    <h5>Synopsis</h5>
+                    <div class="syn-pop__sub">The story so far in The Ninth Bell</div>
+                  </div>
+                  <svg class="syn-pop__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                </div>
+                <div class="syn-pop__body">
+                  <div class="syn-pop__desc show" id="syn-desc">
+                    <p>A few sentences recapping what happens in this document, so you can catch up before you keep writing.</p>
+                    <div class="syn-pop__btn" id="syn-gen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Recap this document</div>
+                  </div>
+                  <div class="syn-pop__loading" id="syn-loading"><span class="ex-spin"></span> Reading the document&hellip;</div>
+                  <div class="syn-pop__result" id="syn-result">
+                    <p>Wren pulls a half-drowned stranger, Bellamy, from the wreck of a skiff that shouldn't have survived the reef, and nurses him through a fever in which he keeps repeating a name she doesn't recognize: Iseult. He wakes claiming to carry a map of coastline that hasn't eroded yet, information the mainland survey office has been quietly paying to keep buried.</p>
+                    <div class="syn-pop__update"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg> Update</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heartbeat -->
+  <section class="section section--tint" id="heartbeat">
+    <div class="container">
+      <div class="cf-split cf-split--rev">
+        <div class="cf-split__text">
+          <h2 class="cf-name">Heartbeat</h2>
+          <div class="cf-chips">
+            <span class="cf-chip">Inkling (limited)</span>
+            <span class="cf-chip">Storyteller</span>
+            <span class="cf-chip">Worldbuilder</span>
+          </div>
+          <h3 class="cf-sub">See the shape of your story</h3>
+          <div class="cf-body">
+            <p>Pacing is the hardest thing to judge when you're still "inside" your story. You're reading your manuscript one chapter at a time, in the order you wrote it, with all the intentions still attached. The shape of the thing is almost impossible to feel from that vantage point.</p>
+            <p>Heartbeat measures the dramatic tension in each document of your manuscript and plots it as a curve across the whole work. You can see the rising action, the falling action, the quiet stretches, and the places where three tense chapters sit back to back with no room to breathe. The curve becomes visible all at once, in a single view.</p>
+            <p>The curve doesn't tell you what your story should look like. Plenty of extraordinary novels take different shapes. What it tells you is what your story actually looks like right now, so that if a section feels slack, you can see whether it truly is, and exactly where.</p>
+          </div>
+        </div>
+        <div class="cf-split__media">
+          <div class="cf-media__frame cf-media__frame--anim">
+            <div class="hb-anim" role="img" aria-label="Animated preview of Inkwell's Heartbeat: opening the analysis menu, selecting Heartbeat, and generating a dramatic tension curve across the manuscript.">
+              <div class="cx__bar">
+                <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> Wren of the Tideglass <span class="cx__sep">&rsaquo;</span> <b>The Undertow</b></div>
+                <div class="share-ed-tools">
+                  <span class="cx__saved">&#10003; All changes saved</span>
+                  <span class="cx__count">4,128 words</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h10M4 12h6M4 18h14"/><circle cx="17" cy="6" r="2"/><circle cx="12" cy="18" r="2"/></svg>
+                  <svg class="hb-btn" id="hb-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg>
+                </div>
+              </div>
+
+              <div class="hb-content">
+                <div class="syn-body">
+                  <div class="cx__prose">
+                    <p>By the time the tide turned again, half of Nitor already knew Bellamy's name, and none of them agreed on what he was.</p>
+                    <p>Wren's brother came back a second time, no longer polite about it. He wanted the map, or he wanted her, and she was fairly sure he hadn't decided which.</p>
+                    <p>She rowed out past the reef anyway, the same as she always had, only this time someone was rowing back.</p>
+                  </div>
+                </div>
+
+                <!-- Analysis picker -->
+                <div class="pm-menu" id="hb-menu">
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Synopsis</div>
+                  <div class="pm-mi hi" id="hb-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Heartbeat</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg> Atlas</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg> Ask</div>
+                </div>
+
+                <!-- Heartbeat panel -->
+                <div class="hb-panel" id="hb-panel">
+                  <div class="hb-panel__head">
+                    <svg class="hb-panel__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <h5>Heartbeat</h5>
+                    <svg class="hb-panel__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                  </div>
+                  <p class="hb-panel__sub">The shape of your story: dramatic tension across your manuscript, document by document.</p>
+
+                  <div class="hb-panel__card">
+                    <div class="hb-empty show" id="hb-empty">
+                      <p>See where tension rises and falls across your manuscript, one read for every document.</p>
+                      <div class="hb-scan-btn" id="hb-scan">Read your story's shape</div>
+                    </div>
+                    <div class="hb-loading" id="hb-loading"><span class="ex-spin"></span> Reading your manuscript&hellip;</div>
+                    <div class="hb-chart" id="hb-chart">
+                      <svg viewBox="0 0 412 150" aria-hidden="true">
+                        <path class="hb-fill" d="M4,128 C18,118 26,98 40,102 C54,106 60,78 72,72 C84,66 92,96 104,100 C118,104 128,74 140,68 C152,62 160,100 172,110 C186,120 196,84 210,76 C224,68 232,40 246,34 C258,30 266,58 278,64 C292,70 300,46 312,40 C326,34 334,16 348,12 C360,9 368,26 380,24 C392,22 400,10 408,8 L408,140 L4,140 Z"/>
+                        <path class="hb-line" d="M4,128 C18,118 26,98 40,102 C54,106 60,78 72,72 C84,66 92,96 104,100 C118,104 128,74 140,68 C152,62 160,100 172,110 C186,120 196,84 210,76 C224,68 232,40 246,34 C258,30 266,58 278,64 C292,70 300,46 312,40 C326,34 334,16 348,12 C360,9 368,26 380,24 C392,22 400,10 408,8"/>
+                      </svg>
+                      <div class="hb-axis">
+                        <span>1</span><span>5</span><span>9</span><span>13</span><span>17</span><span>21</span><span>25</span><span>29</span><span>33</span><span>37</span><span>41</span><span>45</span>
+                      </div>
+                      <p class="hb-caption">Average tension 6.2 / 10. Peaks late, in chapters 38 through 45.</p>
+                      <div class="hb-rescan" id="hb-rescan">Rescan</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ask -->
+  <section class="section" id="ask">
+    <div class="container">
+      <div class="cf-split">
+        <div class="cf-split__text">
+          <h2 class="cf-name">Ask</h2>
+          <div class="cf-chips">
+            <span class="cf-chip">Inkling (limited)</span>
+            <span class="cf-chip">Storyteller</span>
+            <span class="cf-chip">Worldbuilder</span>
+          </div>
+          <h3 class="cf-sub">Search your manuscript by meaning</h3>
+          <div class="cf-body">
+            <p>Find-and-replace can locate a word, but it cannot answer a question.</p>
+            <p>Ask lets you query your own manuscript in plain language. Did I already establish that my main character distrusts her brother? Where did I describe the harbor? How many times does the pocket watch come up before chapter nine? Ask analyzes your prose and answers from it, with a link straight to the passage so you can verify it yourself and pick up right where the evidence is.</p>
+            <p class="cf-body__grounded">Every answer is grounded in your manuscript and points back to the exact place it came from.</p>
+          </div>
+        </div>
+        <div class="cf-split__media">
+          <div class="cf-media__frame cf-media__frame--anim">
+            <div class="ask-anim" role="img" aria-label="Animated preview of Inkwell's Ask: opening the analysis menu, selecting Ask, typing a question, and receiving an answer grounded in the manuscript with linked citations.">
+              <div class="cx__bar">
+                <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> Wren of the Tideglass <span class="cx__sep">&rsaquo;</span> <b>Landfall</b></div>
+                <div class="share-ed-tools">
+                  <span class="cx__saved">&#10003; All changes saved</span>
+                  <span class="cx__count">1,520 words</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h10M4 12h6M4 18h14"/><circle cx="17" cy="6" r="2"/><circle cx="12" cy="18" r="2"/></svg>
+                  <svg class="ask-btn" id="ask-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
+                </div>
+              </div>
+
+              <div class="ask-content">
+                <div class="syn-body">
+                  <div class="cx__prose">
+                    <p>Bellamy's fever broke on the third night, and with it came the questions Wren had been too afraid to ask.</p>
+                    <p>"Who is Iseult," she said, not really a question anymore. He looked at her for a long moment before he answered, and when he did, she wished she hadn't asked.</p>
+                  </div>
+                </div>
+
+                <!-- Analysis picker -->
+                <div class="pm-menu" id="ask-menu">
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Synopsis</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Heartbeat</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg> Atlas</div>
+                  <div class="pm-mi hi" id="ask-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg> Ask</div>
+                </div>
+
+                <!-- Ask panel -->
+                <div class="ask-panel" id="ask-panel">
+                  <div class="ask-panel__head">
+                    <svg class="ask-panel__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg>
+                    <h5>Ask</h5>
+                    <svg class="ask-panel__trash" id="ask-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg>
+                    <svg class="ask-panel__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                  </div>
+                  <div class="ask-panel__body" id="ask-body">
+                    <div class="ask-empty show" id="ask-empty">
+                      <p>Ask a question about your story, like "did I already establish that Wren distrusts her brother" or "where did I describe the harbor." Answers are pulled from what you've actually written, with a link back to where.</p>
+                    </div>
+                    <div class="ask-convo" id="ask-convo">
+                      <div class="ask-bubble ask-bubble--user">Why didn't Wren turn Bellamy in to her brother?</div>
+                      <div class="ask-loading" id="ask-loading"><span class="ex-spin"></span> Reading the manuscript&hellip;</div>
+                      <div class="ask-answer" id="ask-answer">
+                        <div class="ask-bubble ask-bubble--reply">
+                          <p>Wren doesn't trust the survey office to use Bellamy's map honestly, and she trusts her brother even less once he starts asking questions on their behalf. She also hasn't forgotten that the map might be the only proof the coastline warnings were true all along. Turning Bellamy in would settle the matter quickly. Rowing him past the reef keeps the question open, which is what she wants.</p>
+                          <div class="ask-cites">
+                            <span class="ask-chip">The Ninth Bell</span>
+                            <span class="ask-chip">Landfall</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ask-input-row">
+                    <div class="ask-input" id="ask-input"><span class="csk__typed" id="ask-typed" data-ph="Ask your story&hellip;"></span><span class="csk__caret" id="ask-caret"></span></div>
+                    <div class="ask-send" id="ask-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Atlas -->
+  <section class="section section--tint" id="atlas">
+    <div class="container">
+      <div class="cf-split cf-split--rev">
+        <div class="cf-split__text">
+          <h2 class="cf-name">The Atlas</h2>
+          <div class="cf-chips">
+            <span class="cf-chip cf-chip--soon">Coming soon</span>
+            <span class="cf-chip">Worldbuilder</span>
+          </div>
+          <h3 class="cf-sub">A map of your world, built from your words</h3>
+          <div class="cf-body">
+            <p>Worldbuilding tools generally ask you to do the building twice. Once in the manuscript, where the story lives, and again in a separate database of entries and fields and relationship charts that you have to maintain by hand, and which starts drifting out of date the moment you stop feeding it.</p>
+            <p>Your Atlas works the other direction. It analyzes your manuscript and maps the connections it finds there: which characters appear alongside each other, how they relate, where your lore and locations tie into the story. The map is drawn from the prose itself, so it reflects the book you've actually written rather than the book you meant to write.</p>
+            <p>Your Atlas grows as your world does. Write a new character into a chapter, and they arrive on the map with the connections they've already made. Visualize your world, one piece at a time.</p>
+          </div>
+        </div>
+        <div class="cf-split__media">
+          <div class="cf-media__frame cf-media__frame--anim">
+            <div class="atlas-anim" role="img" aria-label="Animated preview of Inkwell's Atlas: opening the analysis menu, selecting Atlas, filtering between characters and lore, and selecting a character to see how they connect.">
+              <div class="cx__bar">
+                <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> Wren of the Tideglass</div>
+                <div class="share-ed-tools">
+                  <span class="cx__saved">&#10003; All changes saved</span>
+                  <span class="cx__count">12,660 words</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h10M4 12h6M4 18h14"/><circle cx="17" cy="6" r="2"/><circle cx="12" cy="18" r="2"/></svg>
+                  <svg class="atlas-btn" id="atlas-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
+                </div>
+              </div>
+
+              <div class="atlas-content">
+                <div class="syn-body">
+                  <div class="cx__prose">
+                    <p>Grandma Maim used to say Tideglass Cove remembered everyone who ever rowed past the reef, whether the sea let them back or not.</p>
+                    <p>Wren was starting to believe her.</p>
+                  </div>
+                </div>
+
+                <!-- Analysis picker -->
+                <div class="pm-menu" id="atlas-menu">
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Synopsis</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Heartbeat</div>
+                  <div class="pm-mi hi" id="atlas-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg> Atlas</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg> Ask</div>
+                </div>
+
+                <!-- Atlas panel -->
+                <div class="atlas-panel" id="atlas-panel">
+                  <div class="atlas-panel__head">
+                    <svg class="atlas-panel__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg>
+                    <h5>Atlas</h5>
+                    <svg class="atlas-panel__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                  </div>
+                  <p class="atlas-panel__sub">Who and what your story connects, drawn from every character and lore entry that appears in your prose.</p>
+
+                  <div class="atlas-card">
+                    <div class="atlas-toolbar">
+                      <div class="atlas-toggle">
+                        <div class="atlas-pill" id="atlas-pill-char"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2.5 19.5c0-4 3-6.5 6.5-6.5s6.5 2.5 6.5 6.5"/><circle cx="17.5" cy="8" r="2.3"/><path d="M15.5 13.2c2.5.4 4.2 2.4 4.5 5.3"/></svg> Characters</div>
+                        <div class="atlas-pill" id="atlas-pill-lore"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.2c-2.2-2-6-2.2-8.2-.6v13c2.2-1.6 6-1.4 8.2.6"/><path d="M12 6.2c2.2-2 6-2.2 8.2-.6v13c-2.2-1.6-6-1.4-8.2.6z"/></svg> Lore</div>
+                      </div>
+                      <div class="atlas-legend"><span><i></i> linked</span><span><i class="dashed"></i> named only</span></div>
+                    </div>
+
+                    <div class="atlas-graph" id="atlas-graph">
+                      <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                        <line class="atlas-edge" data-a="wren" data-b="bellamy" x1="44" y1="52" x2="24" y2="24"/>
+                        <line class="atlas-edge" data-a="wren" data-b="anders" x1="44" y1="52" x2="68" y2="60"/>
+                        <line class="atlas-edge" data-a="wren" data-b="reef" x1="44" y1="52" x2="12" y2="58"/>
+                        <line class="atlas-edge" data-a="wren" data-b="skiff" x1="44" y1="52" x2="22" y2="84"/>
+                        <line class="atlas-edge" data-a="wren" data-b="cove" x1="44" y1="52" x2="46" y2="90"/>
+                        <line class="atlas-edge" data-a="wren" data-b="map" x1="44" y1="52" x2="90" y2="40"/>
+                        <line class="atlas-edge atlas-edge--dashed" data-a="bellamy" data-b="iseult" x1="24" y1="24" x2="60" y2="14"/>
+                        <line class="atlas-edge" data-a="bellamy" data-b="map" x1="24" y1="24" x2="90" y2="40"/>
+                        <line class="atlas-edge" data-a="bellamy" data-b="skiff" x1="24" y1="24" x2="22" y2="84"/>
+                        <line class="atlas-edge" data-a="anders" data-b="office" x1="68" y1="60" x2="78" y2="88"/>
+                        <line class="atlas-edge atlas-edge--dashed" data-a="anders" data-b="map" x1="68" y1="60" x2="90" y2="40"/>
+                        <line class="atlas-edge" data-a="office" data-b="map" x1="78" y1="88" x2="90" y2="40"/>
+                        <line class="atlas-edge" data-a="skiff" data-b="reef" x1="22" y1="84" x2="12" y2="58"/>
+                        <line class="atlas-edge" data-a="cove" data-b="reef" x1="46" y1="90" x2="12" y2="58"/>
+                      </svg>
+
+                      <div class="atlas-node" data-id="wren" data-type="char" style="left:44%;top:52%"><span class="atlas-dot"></span><span class="atlas-label">Wren</span></div>
+                      <div class="atlas-node" data-id="bellamy" data-type="char" style="left:24%;top:24%"><span class="atlas-dot"></span><span class="atlas-label">Bellamy</span></div>
+                      <div class="atlas-node" data-id="iseult" data-type="char" style="left:60%;top:14%"><span class="atlas-dot"></span><span class="atlas-label">Iseult</span></div>
+                      <div class="atlas-node" data-id="anders" data-type="char" style="left:68%;top:60%"><span class="atlas-dot"></span><span class="atlas-label">Anders</span></div>
+
+                      <div class="atlas-node atlas-node--lore" data-id="reef" data-type="lore" style="left:12%;top:58%"><span class="atlas-dot"></span><span class="atlas-label">The Reef</span></div>
+                      <div class="atlas-node atlas-node--lore" data-id="skiff" data-type="lore" style="left:22%;top:84%"><span class="atlas-dot"></span><span class="atlas-label">The Skiff</span></div>
+                      <div class="atlas-node atlas-node--lore" data-id="cove" data-type="lore" style="left:46%;top:90%"><span class="atlas-dot"></span><span class="atlas-label">Tideglass Cove</span></div>
+                      <div class="atlas-node atlas-node--lore" data-id="office" data-type="lore" style="left:78%;top:88%"><span class="atlas-dot"></span><span class="atlas-label">Survey Office</span></div>
+                      <div class="atlas-node atlas-node--lore" data-id="map" data-type="lore" style="left:90%;top:40%"><span class="atlas-dot"></span><span class="atlas-label">Coastline Map</span></div>
+
+                      <div class="atlas-detail" id="atlas-detail">
+                        <div class="atlas-detail__name"><span class="atlas-dot"></span> Wren</div>
+                        <p class="atlas-detail__count">Connected to 6 other entries.</p>
+                        <div class="atlas-detail__list">
+                          <div class="atlas-detail__item"><b>Bellamy</b>, rescued from the wreck</div>
+                          <div class="atlas-detail__item"><b>Anders</b>, her brother</div>
+                          <div class="atlas-detail__item"><b>Tideglass Cove</b>, home</div>
+                        </div>
+                        <div class="atlas-detail__link">Open in codex</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="section">
+    <div class="container center">
+      <div class="compass-prose">
+        <h2 class="display">Never lose your bearings</h2>
+        <p>The Compass lives inside Inkwell, alongside your manuscript, your characters, and your world. There's nothing to configure, no separate system to maintain, no second copy of your novel to keep in sync. The analysis is always drawn from your current draft, because it's drawn from your current draft.</p>
+      </div>
+      <div style="margin-top:32px">
+        <a class="btn btn--gradient" href="https://app.inkwell.world/auth">Start writing free &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--tint">
+    <div class="container center">
+      <h2 class="display">Compass questions</h2>
+      <div class="faq" style="text-align:left">
+        <details class="faq-item">
+          <summary class="faq-q">Does the Compass work on a draft in progress? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Yes. It analyzes whatever is on the page right now, whether that's a finished chapter or a scene you started this morning. You don't need to wait until you're "done."</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Does it work across a whole series? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Each analysis draws from the project you're working in. Series-spanning analysis is on the way.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">What if my manuscript is enormous? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">The Compass is built for long-form work. Analysis is scoped to what you're asking about, so a single document's Synopsis stays fast whether it sits in a novella or a nine-book epic.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Where does the analysis come from? <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <div class="faq-a">Your manuscript, and nothing else. Every recap, curve, map, and answer is derived from the words you wrote, and Ask links back to the exact passage behind its answer.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <span class="brand">
+            <img src="assets/wordmark-light.png" alt="Inkwell" />
+          </span>
+          <p class="footer-tagline">Your tranquil writing sanctuary. Create, build worlds, and bring your stories to life.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="https://app.inkwell.world/auth">Launch App</a>
+          <a href="/compass">Compass</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/compare">Compare</a>
+          <a href="/writing-apps-breakdown">Writing Apps Breakdown</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Inkwell. All rights reserved.</span>
+        <span class="legal-links">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){var h=document.querySelector('.site-header');function c(){h.classList.toggle('scrolled',window.scrollY>10);}window.addEventListener('scroll',c,{passive:true});c();})();
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var panel = document.getElementById('mobile-nav');
+      if (!btn || !panel) return;
+      function closeMenu() {
+        panel.hidden = true;
+        panel.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+      function openMenu() {
+        panel.hidden = false;
+        panel.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+      btn.addEventListener('click', function () {
+        if (panel.classList.contains('is-open')) { closeMenu(); } else { openMenu(); }
+      });
+      panel.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') { closeMenu(); }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { closeMenu(); }
+      });
+    })();
+
+    /* Synopsis preview: click the Synopsis icon, generate a recap, then reset and loop */
+    (function () {
+      var root = document.querySelector('.syn-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var synBtn = document.getElementById('syn-btn');
+      var pop = document.getElementById('syn-pop');
+      var desc = document.getElementById('syn-desc');
+      var gen = document.getElementById('syn-gen');
+      var loading = document.getElementById('syn-loading');
+      var result = document.getElementById('syn-result');
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        cursor.style.transform = 'translate(' + (eb.left - rb.left + (offX == null ? eb.width / 2 : offX)) +
+          'px,' + (eb.top - rb.top + (offY == null ? eb.height / 2 : offY)) + 'px)';
+      }
+      function pulse() { cursor.classList.remove('click'); void cursor.offsetWidth; cursor.classList.add('click'); }
+
+      function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        pop.classList.remove('show'); synBtn.classList.remove('is-on');
+        desc.classList.add('show'); loading.classList.remove('show'); result.classList.remove('show');
+        cursor.classList.remove('click');
+        cursor.style.transform = 'translate(20px,20px)';
+      }
+
+      function run() {
+        reset();
+        wait(700, function () {
+          moveTo(synBtn, null, null);
+          wait(750, function () {                    /* open the panel */
+            pulse(); synBtn.classList.add('is-on'); pop.classList.add('show');
+            wait(1400, function () {                  /* generate the recap */
+              moveTo(gen, null, null);
+              wait(650, function () {
+                pulse();
+                desc.classList.remove('show'); loading.classList.add('show');
+                wait(1600, function () {                /* recap appears */
+                  loading.classList.remove('show'); result.classList.add('show');
+                  wait(4200, function () {                /* close + loop */
+                    pop.classList.remove('show'); synBtn.classList.remove('is-on');
+                    wait(1000, run);
+                  });
+                });
+              });
+            });
+          });
+        });
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+
+    /* Heartbeat preview: open the analysis menu, pick Heartbeat, scan, then reset and loop */
+    (function () {
+      var root = document.querySelector('.hb-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var btn = document.getElementById('hb-btn');
+      var menu = document.getElementById('hb-menu');
+      var opt = document.getElementById('hb-opt');
+      var panel = document.getElementById('hb-panel');
+      var empty = document.getElementById('hb-empty');
+      var scan = document.getElementById('hb-scan');
+      var loading = document.getElementById('hb-loading');
+      var chart = document.getElementById('hb-chart');
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        cursor.style.transform = 'translate(' + (eb.left - rb.left + (offX == null ? eb.width / 2 : offX)) +
+          'px,' + (eb.top - rb.top + (offY == null ? eb.height / 2 : offY)) + 'px)';
+      }
+      function pulse() { cursor.classList.remove('click'); void cursor.offsetWidth; cursor.classList.add('click'); }
+
+      function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        menu.classList.remove('show'); panel.classList.remove('show'); btn.classList.remove('is-on');
+        empty.classList.add('show'); loading.classList.remove('show'); chart.classList.remove('show');
+        cursor.classList.remove('click');
+        cursor.style.transform = 'translate(20px,20px)';
+      }
+
+      function run() {
+        reset();
+        wait(700, function () {
+          moveTo(btn, null, null);
+          wait(750, function () {                    /* open the analysis menu */
+            pulse(); btn.classList.add('is-on'); menu.classList.add('show');
+            wait(900, function () {                   /* pick Heartbeat */
+              moveTo(opt, null, null);
+              wait(550, function () {
+                pulse(); menu.classList.remove('show'); panel.classList.add('show');
+                wait(1300, function () {                /* scan the manuscript */
+                  moveTo(scan, null, null);
+                  wait(650, function () {
+                    pulse();
+                    empty.classList.remove('show'); loading.classList.add('show');
+                    wait(1600, function () {              /* curve appears */
+                      loading.classList.remove('show'); chart.classList.add('show');
+                      wait(4600, function () {              /* close + loop */
+                        panel.classList.remove('show'); btn.classList.remove('is-on');
+                        wait(1000, run);
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+
+    /* Ask preview: open the analysis menu, pick Ask, type a question, then reset and loop */
+    (function () {
+      var root = document.querySelector('.ask-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var btn = document.getElementById('ask-btn');
+      var menu = document.getElementById('ask-menu');
+      var opt = document.getElementById('ask-opt');
+      var panel = document.getElementById('ask-panel');
+      var empty = document.getElementById('ask-empty');
+      var convo = document.getElementById('ask-convo');
+      var loading = document.getElementById('ask-loading');
+      var answer = document.getElementById('ask-answer');
+      var trash = document.getElementById('ask-trash');
+      var input = document.getElementById('ask-input');
+      var typed = document.getElementById('ask-typed');
+      var caret = document.getElementById('ask-caret');
+      var send = document.getElementById('ask-send');
+      var question = "Why didn't Wren turn Bellamy in to her brother?";
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        cursor.style.transform = 'translate(' + (eb.left - rb.left + (offX == null ? eb.width / 2 : offX)) +
+          'px,' + (eb.top - rb.top + (offY == null ? eb.height / 2 : offY)) + 'px)';
+      }
+      function pulse() { cursor.classList.remove('click'); void cursor.offsetWidth; cursor.classList.add('click'); }
+
+      function typeText(el, text, ms, done) {
+        var i = 0;
+        el.textContent = '';
+        var iv = setInterval(function () {
+          i++;
+          el.textContent = text.slice(0, i);
+          if (i >= text.length) { clearInterval(iv); if (done) done(); }
+        }, ms);
+        timers.push(iv);
+      }
+
+      function reset() {
+        timers.forEach(function (t) { clearTimeout(t); clearInterval(t); }); timers = [];
+        menu.classList.remove('show'); panel.classList.remove('show'); btn.classList.remove('is-on');
+        empty.classList.add('show'); convo.classList.remove('show');
+        loading.classList.remove('show'); answer.classList.remove('show'); trash.classList.remove('show');
+        caret.classList.remove('on'); typed.textContent = '';
+        cursor.classList.remove('click');
+        cursor.style.transform = 'translate(20px,20px)';
+      }
+
+      function run() {
+        reset();
+        wait(700, function () {
+          moveTo(btn, null, null);
+          wait(750, function () {                    /* open the analysis menu */
+            pulse(); btn.classList.add('is-on'); menu.classList.add('show');
+            wait(900, function () {                   /* pick Ask */
+              moveTo(opt, null, null);
+              wait(550, function () {
+                pulse(); menu.classList.remove('show'); panel.classList.add('show');
+                wait(1200, function () {                /* click into the question field */
+                  moveTo(input, 16, null);
+                  wait(500, function () {
+                    pulse(); caret.classList.add('on');
+                    typeText(typed, question, 34, function () {
+                      wait(500, function () {             /* send the question */
+                        moveTo(send, null, null);
+                        wait(500, function () {
+                          pulse();
+                          caret.classList.remove('on'); typed.textContent = '';
+                          empty.classList.remove('show'); convo.classList.add('show'); trash.classList.add('show');
+                          loading.classList.add('show');
+                          wait(1500, function () {          /* answer appears */
+                            loading.classList.remove('show'); answer.classList.add('show');
+                            wait(4800, function () {          /* close + loop */
+                              panel.classList.remove('show'); btn.classList.remove('is-on');
+                              wait(1000, run);
+                            });
+                          });
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+
+    /* Atlas preview: open the analysis menu, pick Atlas, filter by type, then select a node */
+    (function () {
+      var root = document.querySelector('.atlas-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var btn = document.getElementById('atlas-btn');
+      var menu = document.getElementById('atlas-menu');
+      var opt = document.getElementById('atlas-opt');
+      var panel = document.getElementById('atlas-panel');
+      var pillChar = document.getElementById('atlas-pill-char');
+      var pillLore = document.getElementById('atlas-pill-lore');
+      var detail = document.getElementById('atlas-detail');
+      var wrenNode = root.querySelector('.atlas-node[data-id="wren"]');
+      var nodes = Array.prototype.slice.call(root.querySelectorAll('.atlas-node'));
+      var edges = Array.prototype.slice.call(root.querySelectorAll('.atlas-edge'));
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        cursor.style.transform = 'translate(' + (eb.left - rb.left + (offX == null ? eb.width / 2 : offX)) +
+          'px,' + (eb.top - rb.top + (offY == null ? eb.height / 2 : offY)) + 'px)';
+      }
+      function pulse() { cursor.classList.remove('click'); void cursor.offsetWidth; cursor.classList.add('click'); }
+
+      function setFilter(type) {
+        pillChar.classList.toggle('is-active', type === 'char');
+        pillLore.classList.toggle('is-active', type === 'lore');
+        nodes.forEach(function (n) { n.classList.toggle('dim', !!type && n.dataset.type !== type); });
+        edges.forEach(function (e) {
+          var aType = nodeType(e.dataset.a), bType = nodeType(e.dataset.b);
+          e.classList.toggle('dim', !!type && (aType !== type || bType !== type));
+        });
+      }
+      function nodeType(id) {
+        var n = nodes.filter(function (x) { return x.dataset.id === id; })[0];
+        return n ? n.dataset.type : null;
+      }
+      function connectedIds(id) {
+        var set = { }; set[id] = true;
+        edges.forEach(function (e) {
+          if (e.dataset.a === id) { set[e.dataset.b] = true; }
+          if (e.dataset.b === id) { set[e.dataset.a] = true; }
+        });
+        return set;
+      }
+      function selectNode(id) {
+        var connected = connectedIds(id);
+        nodes.forEach(function (n) {
+          n.classList.toggle('is-sel', n.dataset.id === id);
+          n.classList.toggle('dim', !connected[n.dataset.id]);
+        });
+        edges.forEach(function (e) {
+          var involved = e.dataset.a === id || e.dataset.b === id;
+          e.classList.toggle('hi', involved);
+          e.classList.toggle('dim', !involved);
+        });
+      }
+      function clearSelection() {
+        nodes.forEach(function (n) { n.classList.remove('is-sel', 'dim'); });
+        edges.forEach(function (e) { e.classList.remove('hi', 'dim'); });
+      }
+
+      function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        menu.classList.remove('show'); panel.classList.remove('show'); btn.classList.remove('is-on');
+        detail.classList.remove('show');
+        clearSelection(); setFilter(null);
+        cursor.classList.remove('click');
+        cursor.style.transform = 'translate(20px,20px)';
+      }
+
+      function run() {
+        reset();
+        wait(700, function () {
+          moveTo(btn, null, null);
+          wait(750, function () {                    /* open the analysis menu */
+            pulse(); btn.classList.add('is-on'); menu.classList.add('show');
+            wait(900, function () {                   /* pick Atlas */
+              moveTo(opt, null, null);
+              wait(550, function () {
+                pulse(); menu.classList.remove('show'); panel.classList.add('show');
+                wait(1200, function () {                /* filter to Lore */
+                  moveTo(pillLore, null, null);
+                  wait(550, function () {
+                    pulse(); setFilter('lore');
+                    wait(1500, function () {              /* filter to Characters */
+                      moveTo(pillChar, null, null);
+                      wait(550, function () {
+                        pulse(); setFilter('char');
+                        wait(1500, function () {            /* clear the filter */
+                          pulse(); setFilter(null);
+                          wait(900, function () {           /* select Wren */
+                            moveTo(wrenNode, null, null);
+                            wait(550, function () {
+                              pulse(); selectNode('wren'); detail.classList.add('show');
+                              wait(4800, function () {        /* close + loop */
+                                panel.classList.remove('show'); btn.classList.remove('is-on');
+                                wait(1000, run);
+                              });
+                            });
+                          });
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+  </script>
+</body>
+</html>
