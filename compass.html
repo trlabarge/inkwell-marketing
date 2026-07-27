@@ -418,8 +418,8 @@
   <!-- The Atlas -->
   <section class="section section--tint" id="atlas">
     <div class="container">
-      <div class="cf-split cf-split--rev">
-        <div class="cf-split__text">
+      <div class="cf-stack">
+        <div class="cf-stack__text">
           <h2 class="cf-name">The Atlas</h2>
           <div class="cf-chips">
             <span class="cf-chip cf-chip--soon">Coming soon</span>
@@ -432,17 +432,103 @@
             <p>Your Atlas grows as your world does. Write a new character into a chapter, and they arrive on the map with the connections they've already made. Visualize your world, one piece at a time.</p>
           </div>
         </div>
-        <div class="cf-split__media">
-          <!-- Image to follow: relationship graph. Replace inner SVG with <img> when ready. -->
-          <div class="cf-media__frame">
-            <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <g stroke-width="1.6" opacity=".8">
-                <path d="M100 75 L52 40"/><path d="M100 75 L150 48"/><path d="M100 75 L60 112"/><path d="M100 75 L148 108"/><path d="M52 40 L60 112"/><path d="M150 48 L148 108"/>
-              </g>
-              <g fill="currentColor" stroke="none">
-                <circle cx="100" cy="75" r="9"/><circle cx="52" cy="40" r="6"/><circle cx="150" cy="48" r="6"/><circle cx="60" cy="112" r="6"/><circle cx="148" cy="108" r="6"/>
-              </g>
-            </svg>
+        <div class="cf-stack__media">
+          <div class="cf-media__frame cf-media__frame--anim cf-media__frame--atlas">
+            <div class="atlas-anim" role="img" aria-label="Animated preview of Inkwell's Atlas: opening the analysis menu, selecting Atlas, filtering between characters and lore, and selecting a character to see how they connect.">
+              <div class="cx__bar">
+                <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> Wren of the Tideglass</div>
+                <div class="share-ed-tools">
+                  <span class="cx__saved">&#10003; All changes saved</span>
+                  <span class="cx__count">12,660 words</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h10M4 12h6M4 18h14"/><circle cx="17" cy="6" r="2"/><circle cx="12" cy="18" r="2"/></svg>
+                  <svg class="atlas-btn" id="atlas-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
+                </div>
+              </div>
+
+              <div class="atlas-content">
+                <div class="syn-body">
+                  <div class="cx__prose">
+                    <p>Grandma Maim used to say Tideglass Cove remembered everyone who ever rowed past the reef, whether the sea let them back or not.</p>
+                    <p>Wren was starting to believe her.</p>
+                  </div>
+                </div>
+
+                <!-- Analysis picker -->
+                <div class="pm-menu" id="atlas-menu">
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Synopsis</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Heartbeat</div>
+                  <div class="pm-mi hi" id="atlas-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg> Atlas</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg> Ask</div>
+                </div>
+
+                <!-- Atlas panel -->
+                <div class="atlas-panel" id="atlas-panel">
+                  <div class="atlas-panel__head">
+                    <svg class="atlas-panel__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg>
+                    <h5>Atlas</h5>
+                    <svg class="atlas-panel__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                  </div>
+                  <p class="atlas-panel__sub">Who and what your story connects, drawn from every character and lore entry that appears in your prose.</p>
+
+                  <div class="atlas-card">
+                    <div class="atlas-toolbar">
+                      <div class="atlas-toggle">
+                        <div class="atlas-pill" id="atlas-pill-char"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2.5 19.5c0-4 3-6.5 6.5-6.5s6.5 2.5 6.5 6.5"/><circle cx="17.5" cy="8" r="2.3"/><path d="M15.5 13.2c2.5.4 4.2 2.4 4.5 5.3"/></svg> Characters</div>
+                        <div class="atlas-pill" id="atlas-pill-lore"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.2c-2.2-2-6-2.2-8.2-.6v13c2.2-1.6 6-1.4 8.2.6"/><path d="M12 6.2c2.2-2 6-2.2 8.2-.6v13c-2.2-1.6-6-1.4-8.2.6z"/></svg> Lore</div>
+                      </div>
+                      <div class="atlas-legend"><span><i></i> linked</span><span><i class="dashed"></i> named only</span></div>
+                      <div class="atlas-describe">Describe how they connect (14)</div>
+                    </div>
+
+                    <div class="atlas-graph" id="atlas-graph">
+                      <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                        <line class="atlas-edge" data-a="wren" data-b="bellamy" x1="44" y1="52" x2="24" y2="24"/>
+                        <line class="atlas-edge" data-a="wren" data-b="anders" x1="44" y1="52" x2="68" y2="60"/>
+                        <line class="atlas-edge" data-a="wren" data-b="reef" x1="44" y1="52" x2="12" y2="58"/>
+                        <line class="atlas-edge" data-a="wren" data-b="skiff" x1="44" y1="52" x2="22" y2="84"/>
+                        <line class="atlas-edge" data-a="wren" data-b="cove" x1="44" y1="52" x2="46" y2="90"/>
+                        <line class="atlas-edge" data-a="wren" data-b="map" x1="44" y1="52" x2="90" y2="40"/>
+                        <line class="atlas-edge atlas-edge--dashed" data-a="bellamy" data-b="iseult" x1="24" y1="24" x2="60" y2="14"/>
+                        <line class="atlas-edge" data-a="bellamy" data-b="map" x1="24" y1="24" x2="90" y2="40"/>
+                        <line class="atlas-edge" data-a="bellamy" data-b="skiff" x1="24" y1="24" x2="22" y2="84"/>
+                        <line class="atlas-edge" data-a="anders" data-b="office" x1="68" y1="60" x2="78" y2="88"/>
+                        <line class="atlas-edge atlas-edge--dashed" data-a="anders" data-b="map" x1="68" y1="60" x2="90" y2="40"/>
+                        <line class="atlas-edge" data-a="office" data-b="map" x1="78" y1="88" x2="90" y2="40"/>
+                        <line class="atlas-edge" data-a="skiff" data-b="reef" x1="22" y1="84" x2="12" y2="58"/>
+                        <line class="atlas-edge" data-a="cove" data-b="reef" x1="46" y1="90" x2="12" y2="58"/>
+                      </svg>
+
+                      <div class="atlas-node" data-id="wren" data-type="char" style="left:44%;top:52%"><span class="atlas-dot"></span><span class="atlas-label">Wren</span></div>
+                      <div class="atlas-node" data-id="bellamy" data-type="char" style="left:24%;top:24%"><span class="atlas-dot"></span><span class="atlas-label">Bellamy</span></div>
+                      <div class="atlas-node" data-id="iseult" data-type="char" style="left:60%;top:14%"><span class="atlas-dot"></span><span class="atlas-label">Iseult</span></div>
+                      <div class="atlas-node" data-id="anders" data-type="char" style="left:68%;top:60%"><span class="atlas-dot"></span><span class="atlas-label">Anders</span></div>
+
+                      <div class="atlas-node atlas-node--lore" data-id="reef" data-type="lore" style="left:12%;top:58%"><span class="atlas-dot"></span><span class="atlas-label">The Reef</span></div>
+                      <div class="atlas-node atlas-node--lore" data-id="skiff" data-type="lore" style="left:22%;top:84%"><span class="atlas-dot"></span><span class="atlas-label">The Skiff</span></div>
+                      <div class="atlas-node atlas-node--lore" data-id="cove" data-type="lore" style="left:46%;top:90%"><span class="atlas-dot"></span><span class="atlas-label">Tideglass Cove</span></div>
+                      <div class="atlas-node atlas-node--lore" data-id="office" data-type="lore" style="left:78%;top:88%"><span class="atlas-dot"></span><span class="atlas-label">Survey Office</span></div>
+                      <div class="atlas-node atlas-node--lore" data-id="map" data-type="lore" style="left:90%;top:40%"><span class="atlas-dot"></span><span class="atlas-label">Coastline Map</span></div>
+
+                      <div class="atlas-detail" id="atlas-detail">
+                        <div class="atlas-detail__name"><span class="atlas-dot"></span> Wren</div>
+                        <p class="atlas-detail__count">Connected to 6 other entries.</p>
+                        <div class="atlas-detail__list">
+                          <div class="atlas-detail__item"><b>Bellamy</b>, rescued from the wreck</div>
+                          <div class="atlas-detail__item"><b>Anders</b>, her brother</div>
+                          <div class="atlas-detail__item"><b>Tideglass Cove</b>, home</div>
+                        </div>
+                        <div class="atlas-detail__link">Open in codex</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -761,6 +847,131 @@
                             wait(4800, function () {          /* close + loop */
                               panel.classList.remove('show'); btn.classList.remove('is-on');
                               wait(1000, run);
+                            });
+                          });
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      }
+
+      var started = false;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting && !started) { started = true; run(); } });
+        }, { threshold: 0.25 });
+        io.observe(root);
+      } else { run(); }
+    })();
+
+    /* Atlas preview: open the analysis menu, pick Atlas, filter by type, then select a node */
+    (function () {
+      var root = document.querySelector('.atlas-anim');
+      if (!root) return;
+      var cursor = root.querySelector('.lore-cursor');
+      var btn = document.getElementById('atlas-btn');
+      var menu = document.getElementById('atlas-menu');
+      var opt = document.getElementById('atlas-opt');
+      var panel = document.getElementById('atlas-panel');
+      var pillChar = document.getElementById('atlas-pill-char');
+      var pillLore = document.getElementById('atlas-pill-lore');
+      var detail = document.getElementById('atlas-detail');
+      var wrenNode = root.querySelector('.atlas-node[data-id="wren"]');
+      var nodes = Array.prototype.slice.call(root.querySelectorAll('.atlas-node'));
+      var edges = Array.prototype.slice.call(root.querySelectorAll('.atlas-edge'));
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+
+      var timers = [];
+      function wait(ms, fn) { timers.push(setTimeout(fn, ms)); }
+      function moveTo(el, offX, offY) {
+        var rb = root.getBoundingClientRect(), eb = el.getBoundingClientRect();
+        cursor.style.transform = 'translate(' + (eb.left - rb.left + (offX == null ? eb.width / 2 : offX)) +
+          'px,' + (eb.top - rb.top + (offY == null ? eb.height / 2 : offY)) + 'px)';
+      }
+      function pulse() { cursor.classList.remove('click'); void cursor.offsetWidth; cursor.classList.add('click'); }
+
+      function setFilter(type) {
+        pillChar.classList.toggle('is-active', type === 'char');
+        pillLore.classList.toggle('is-active', type === 'lore');
+        nodes.forEach(function (n) { n.classList.toggle('dim', !!type && n.dataset.type !== type); });
+        edges.forEach(function (e) {
+          var aType = nodeType(e.dataset.a), bType = nodeType(e.dataset.b);
+          e.classList.toggle('dim', !!type && (aType !== type || bType !== type));
+        });
+      }
+      function nodeType(id) {
+        var n = nodes.filter(function (x) { return x.dataset.id === id; })[0];
+        return n ? n.dataset.type : null;
+      }
+      function connectedIds(id) {
+        var set = { }; set[id] = true;
+        edges.forEach(function (e) {
+          if (e.dataset.a === id) { set[e.dataset.b] = true; }
+          if (e.dataset.b === id) { set[e.dataset.a] = true; }
+        });
+        return set;
+      }
+      function selectNode(id) {
+        var connected = connectedIds(id);
+        nodes.forEach(function (n) {
+          n.classList.toggle('is-sel', n.dataset.id === id);
+          n.classList.toggle('dim', !connected[n.dataset.id]);
+        });
+        edges.forEach(function (e) {
+          var involved = e.dataset.a === id || e.dataset.b === id;
+          e.classList.toggle('hi', involved);
+          e.classList.toggle('dim', !involved);
+        });
+      }
+      function clearSelection() {
+        nodes.forEach(function (n) { n.classList.remove('is-sel', 'dim'); });
+        edges.forEach(function (e) { e.classList.remove('hi', 'dim'); });
+      }
+
+      function reset() {
+        timers.forEach(clearTimeout); timers = [];
+        menu.classList.remove('show'); panel.classList.remove('show'); btn.classList.remove('is-on');
+        detail.classList.remove('show');
+        clearSelection(); setFilter(null);
+        cursor.classList.remove('click');
+        cursor.style.transform = 'translate(20px,20px)';
+      }
+
+      function run() {
+        reset();
+        wait(700, function () {
+          moveTo(btn, null, null);
+          wait(750, function () {                    /* open the analysis menu */
+            pulse(); btn.classList.add('is-on'); menu.classList.add('show');
+            wait(900, function () {                   /* pick Atlas */
+              moveTo(opt, null, null);
+              wait(550, function () {
+                pulse(); menu.classList.remove('show'); panel.classList.add('show');
+                wait(1200, function () {                /* filter to Lore */
+                  moveTo(pillLore, null, null);
+                  wait(550, function () {
+                    pulse(); setFilter('lore');
+                    wait(1500, function () {              /* filter to Characters */
+                      moveTo(pillChar, null, null);
+                      wait(550, function () {
+                        pulse(); setFilter('char');
+                        wait(1500, function () {            /* clear the filter */
+                          pulse(); setFilter(null);
+                          wait(900, function () {           /* select Wren */
+                            moveTo(wrenNode, null, null);
+                            wait(550, function () {
+                              pulse(); selectNode('wren'); detail.classList.add('show');
+                              wait(4800, function () {        /* close + loop */
+                                panel.classList.remove('show'); btn.classList.remove('is-on');
+                                wait(1000, run);
+                              });
                             });
                           });
                         });
