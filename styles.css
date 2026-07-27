@@ -131,6 +131,17 @@ h3.display { font-size: 1.5rem; }
   100% { box-shadow: 0 0 0 1.5px #2563eb, 0 0 10px 3px rgba(37,99,235,.55), 0 0 26px 10px rgba(37,99,235,.28); }
 }
 
+/* Start Your Story nav CTA — matches the challenge reward pill's gold */
+.btn--gold {
+  background: linear-gradient(180deg, #fbe7a8, #f3cf7a);
+  border: 1.5px solid #e7c878;
+  color: #5b4715;
+}
+.btn--gold:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px -8px rgba(196,148,41,.55);
+}
+
 /* ---- Header ---- */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 50;
@@ -147,8 +158,8 @@ h3.display { font-size: 1.5rem; }
   display: flex; align-items: center; justify-content: space-between;
   height: 72px;
 }
-/* Slightly smaller nav button */
-.site-header .btn--primary { font-size: .88rem; padding: 9px 18px; }
+/* Slightly smaller nav buttons */
+.site-header .btn--primary, .site-header .btn--gold { font-size: .88rem; padding: 9px 18px; }
 .brand { display: inline-flex; align-items: center; }
 .brand img { height: 42px; width: auto; display: block; }
 .site-footer .brand img { height: 40px; }
@@ -501,6 +512,21 @@ h3.display { font-size: 1.5rem; }
 .feature h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.12rem; margin: 0 0 8px; color: var(--ink); }
 .feature p { margin: 0; color: var(--text-muted); font-size: .98rem; }
 
+/* ---- How it works (Start Your Story) ---- */
+.hiw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; }
+.hiw-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 32px 26px; text-align: center;
+}
+.hiw-num {
+  display: block; font-family: var(--font-display); font-weight: 700;
+  font-size: clamp(2.4rem, 5vw, 3.2rem); line-height: 1; color: var(--gold);
+  margin-bottom: 12px;
+}
+.hiw-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; margin: 0 0 12px; color: var(--ink); }
+.hiw-card p { margin: 0; color: var(--text-muted); font-size: 1rem; line-height: 1.6; }
+@media (max-width: 900px) { .hiw-grid { grid-template-columns: 1fr; } }
+
 /* ---- Steps (start in seconds) ---- */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 48px; }
 
@@ -508,8 +534,8 @@ h3.display { font-size: 1.5rem; }
 .steps-trust {
   list-style: none; margin: 40px auto 0; padding: 22px 0 0;
   border-top: 1px solid var(--line);
-  display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 14px 26px;
+  display: grid; grid-template-columns: repeat(3, auto);
+  justify-content: center; gap: 14px 34px;
 }
 .steps-trust li {
   display: inline-flex; align-items: center; gap: 9px;
@@ -517,8 +543,11 @@ h3.display { font-size: 1.5rem; }
   white-space: nowrap;
 }
 .steps-trust svg { width: 17px; height: 17px; flex: none; color: var(--gold); opacity: .85; }
+@media (max-width: 700px) {
+  .steps-trust { grid-template-columns: repeat(2, auto); gap: 12px 24px; }
+}
 @media (max-width: 560px) {
-  .steps-trust { gap: 12px 20px; }
+  .steps-trust { grid-template-columns: max-content; justify-items: start; gap: 10px; }
   .steps-trust li { font-size: .88rem; white-space: normal; }
 }
 .step {
@@ -747,6 +776,7 @@ h3.display { font-size: 1.5rem; }
 @media (max-width: 560px) {
   .nav { gap: 10px; }
   .nav .navlink { display: none; }
+  .site-header .btn--gold { display: none; }
   .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
   body { font-size: 17px; }
 }
