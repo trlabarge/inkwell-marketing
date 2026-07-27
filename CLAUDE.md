@@ -70,12 +70,15 @@ buzzwords, or exclamation-heavy SaaS-speak. Keep it concise and welcoming.
 ## Project structure
 
 ```
-index.html        Home (hero, features, testimonials, FAQ)
-pricing.html      Pricing tiers
-privacy.html      Privacy Policy
-terms.html        Terms of Service
-compare/          Comparison landing page + one page per competitor
-styles.css        All styling (single shared stylesheet)
+index.html               Home (hero, features, Compass, finishing, testimonials, FAQ)
+compass.html             The Compass feature page (Synopsis, Heartbeat, Ask, Atlas)
+start-your-story.html    The Start Your Story Challenge
+writing-apps-breakdown.html  Roundup of eleven novel-writing apps
+pricing.html             Pricing tiers
+privacy.html             Privacy Policy
+terms.html               Terms of Service
+compare/                 Comparison landing page + one page per competitor
+styles.css               All styling (single shared stylesheet)
 assets/           Images (favicon.png, wordmark-dark.png, wordmark-light.png,
                   scrivener.png, dabble-logo.png)
 llms.txt          Plain-language summary of the product for LLM crawlers
@@ -87,25 +90,43 @@ README.md         Deploy + domain notes
 
 ## What's on the site
 
-- **Home (`index.html`)** — Hero ("Your Writing Sanctuary") with a typewriter
-  sub-headline, a "Start writing in seconds" steps section, a tabbed feature
-  showcase (Codex, Character sketch, Lore, Project management, Share, Export)
-  with interactive mocked-up UI demos, a "structure without chaos" section,
-  a "Start Your Story" challenge/demo block, testimonials ("Loved by Writers"),
-  and an FAQ (differentiation, data security/privacy, collaboration, device
-  support, offline use, export formats).
+- **Home (`index.html`)** — In order: hero ("Your Writing Sanctuary") with a
+  typewriter sub-headline; a "Start writing in seconds" steps section closing
+  with a five-item trust row; a tabbed feature showcase (Codex, Character
+  sketch, Lore, Project management, Share, Export, Story notes) with
+  interactive mocked-up UI demos; **The Compass** (a live Synopsis demo
+  borrowed from `compass.html`, plus four feature cards); a finishing section
+  ("Starting is easy. Inkwell helps you finish.") covering goals, streaks,
+  milestones, Writing Insights, and writing analytics; testimonials ("Loved by
+  Writers"); an FAQ (differentiation, data security/privacy, collaboration,
+  device support, offline use, export formats); and a final CTA that links to
+  the Start Your Story Challenge.
+  The homepage carries most of the site's JS. Every demo is IIFE-wrapped,
+  IntersectionObserver-gated, and short-circuits under `prefers-reduced-motion`.
+- **The Compass (`compass.html`)** — Feature page for the writing analysis
+  tools, each with its own animated demo: Synopsis, Heartbeat, Ask (all live)
+  and the Atlas (marked "Coming soon", Worldbuilder tier).
+- **Start Your Story (`start-your-story.html`)** — The challenge: 10,000 words
+  across 5 writing days in the first 14 days earns a free month of Storyteller.
+  Holds the `.challenge` progress demo and `.quest` steps that used to sit on
+  the homepage.
+- **Writing apps breakdown (`writing-apps-breakdown.html`)** — A roundup of
+  eleven novel-writing apps by price, pros, cons, and fit.
 - **Pricing (`pricing.html`)** — Three tiers: **Inkling** (free forever — 1
   active project, unlimited documents, character profiles, lore database,
   Focus Mode, autosave, Markdown/TXT export, beta reader sharing), **Storyteller**
   ($9/mo, featured — unlimited projects, multi-book/series organization, DOCX/
-  PDF/EPUB export, writing stats, summarization and brainstorming tools "in
-  development", priority support), and **Worldbuilder** ($19/mo, "Coming soon" —
-  advanced lore relationships, story graph/universe visualization, faction
-  tracking, timeline management, continuity tracking).
+  PDF/EPUB export, Writing Insights, writing analytics, unlimited Compass), and
+  **Worldbuilder** ($19/mo, "Coming soon" — advanced lore relationships, the
+  Atlas, faction tracking, timeline management, continuity tracking).
+  `pricing.html` is the source of truth for tier contents and Compass metering,
+  not this file.
 - **Compare (`compare/`)** — A comparison hub (`compare/index.html`) plus
-  dedicated alternative pages for Scrivener, Dabble, Google Docs, Microsoft
-  Word, and Reedsy, each pitching Inkwell as the alternative. Only the
-  Scrivener and Dabble pages are currently listed in `sitemap.xml`.
+  dedicated alternative pages for Scrivener, Dabble, Ellipsus, Google Docs,
+  Microsoft Word, and Reedsy, each pitching Inkwell as the alternative. All six
+  are listed in `sitemap.xml`. `compare/compare-data.js` is the declared source
+  of truth for comparison values, but the hub matrix and each spoke's table are
+  hand-written copies of it, so all three have to be kept in sync by hand.
 - **Privacy (`privacy.html`)** and **Terms (`terms.html`)** — Standard policy
   pages matching the product app's data practices.
 - **`llms.txt`** — A short, structured summary of Inkwell (what it is, pricing,
