@@ -79,6 +79,7 @@ h3.display { font-size: 1.5rem; }
   color: var(--text-muted);
   margin: 18px auto 0;
   max-width: 620px;
+  text-wrap: pretty;
 }
 .lede + .lede { margin-top: 10px; }
 .lede--accent { color: var(--text); font-weight: 500; }
@@ -466,8 +467,9 @@ h3.display { font-size: 1.5rem; }
   font-family: 'Cinzel Decorative', var(--font-display);
   font-weight: 700; font-size: clamp(1rem, 2.3vw, 1.5rem);
   color: var(--ink); line-height: 1.3; white-space: nowrap; margin: 26px 0 22px;
+  text-wrap: pretty;
 }
-.quest-sub { font-family: var(--font-serif); font-size: 1.05rem; color: var(--text-muted); margin: 0; }
+.quest-sub { font-family: var(--font-serif); font-size: 1.05rem; color: var(--text-muted); margin: 0; text-wrap: pretty; }
 
 /* the four challenge pillars, pulled out as numbered cards above the graphic */
 .quest { list-style: none; margin: 30px auto 0; padding: 0; max-width: 760px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
@@ -479,7 +481,7 @@ h3.display { font-size: 1.5rem; }
 }
 .quest__item:hover { transform: translateY(-5px); box-shadow: 0 22px 38px -16px rgba(214, 164, 58, .55); border-color: #e7c878; }
 .quest__num { font-family: var(--font-display); font-weight: 700; font-size: 1.7rem; line-height: 1; color: #c79a3c; }
-.quest__item > span:last-child { font-family: var(--font-display); font-weight: 600; font-size: .96rem; color: var(--ink); line-height: 1.32; }
+.quest__item > span:last-child { font-family: var(--font-display); font-weight: 600; font-size: .96rem; color: var(--ink); line-height: 1.32; text-wrap: pretty; }
 
 /* ---- Feature grid ---- */
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; }
@@ -524,7 +526,7 @@ h3.display { font-size: 1.5rem; }
   margin-bottom: 12px;
 }
 .hiw-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; margin: 0 0 12px; color: var(--ink); }
-.hiw-card p { margin: 0; color: var(--text-muted); font-size: 1rem; line-height: 1.6; }
+.hiw-card p { margin: 0; color: var(--text-muted); font-size: 1rem; line-height: 1.6; text-wrap: pretty; }
 @media (max-width: 900px) { .hiw-grid { grid-template-columns: 1fr; } }
 
 /* ---- Steps (start in seconds) ---- */
@@ -613,7 +615,7 @@ h3.display { font-size: 1.5rem; }
 }
 .faq-q .chev { transition: transform .2s ease; flex: none; }
 .faq-item[open] .faq-q .chev { transform: rotate(180deg); }
-.faq-a { padding: 0 18px 14px; color: var(--text-muted); font-family: var(--font-serif); font-size: .95rem; line-height: 1.6; }
+.faq-a { padding: 0 18px 14px; color: var(--text-muted); font-family: var(--font-serif); font-size: .95rem; line-height: 1.6; text-wrap: pretty; }
 
 /* ---- Pricing ---- */
 .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 56px; align-items: start; }
