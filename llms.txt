@@ -1,6 +1,6 @@
 # Inkwell
 
-> Last updated: 2026-07-27
+> Last updated: 2026-08-04
 
 > Inkwell is a calm, distraction-free writing home for novelists. It combines a
 > focused editor with connected world-building tools (characters, lore, and
@@ -29,6 +29,7 @@ Atlas (a relationship map built from the writing, coming soon on Worldbuilder).
 - [The Compass](https://inkwell.world/compass): writing analysis tools (Synopsis, Heartbeat, Ask, and the Atlas) drawn from your own manuscript.
 - [Start Your Story Challenge](https://inkwell.world/start-your-story): write 10,000 words across 5 writing days in your first two weeks and earn a free month of Storyteller.
 - [Pricing](https://inkwell.world/pricing): plans and what's included in each.
+- [Learn](https://inkwell.world/learn): craft guides for novelists, written for writers using any tool.
 - [App comparisons](https://inkwell.world/compare): how Inkwell compares to other novel-writing apps.
 - [Inkwell vs. Scrivener](https://inkwell.world/compare/scrivener)
 - [Inkwell vs. Dabble](https://inkwell.world/compare/dabble)
@@ -39,6 +40,16 @@ Atlas (a relationship map built from the writing, coming soon on Worldbuilder).
 - [Best novel writing software 2026](https://inkwell.world/writing-apps-breakdown): a breakdown of eleven novel-writing apps by price, pros, cons, and fit.
 - [Privacy Policy](https://inkwell.world/privacy)
 - [Terms of Service](https://inkwell.world/terms)
+
+## Craft guides
+
+Practical, tool-agnostic guides for novelists, published under /learn. They are
+written to be useful to any writer, whether or not they use Inkwell.
+
+- [How to outline a novel](https://inkwell.world/learn/how-to-outline-a-novel): six outlining methods compared (beat sheet, snowflake, index cards, chapter grid, reverse outline, guardrails), how much to plan before drafting, and what to do when the draft diverges from the outline.
+- [How to write a story bible](https://inkwell.world/learn/how-to-write-a-story-bible): what a story bible is (a reference document of what is true, as distinct from an outline of what happens), when to start one, the six sections that matter, and a copyable template.
+- [How to build a character profile](https://inkwell.world/learn/how-to-build-a-character-profile): why long character questionnaires produce flat characters, the fields that change your prose (want, need, the lie, voice, behaviour under pressure), and a copyable template.
+- [How to plan a book series](https://inkwell.world/learn/how-to-plan-a-book-series): choosing a series shape, balancing the series arc against each book's own arc, seeding book one, ending each book, and keeping continuity across books.
 
 ## Getting started
 
