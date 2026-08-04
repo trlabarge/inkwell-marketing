@@ -1854,6 +1854,12 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
 }
 .learn-card:hover { transform: translateY(-3px); box-shadow: 0 16px 34px -22px rgba(11,18,32,.3); border-color: var(--gold-soft); }
+.learn-card__icon {
+  display: block; width: 32px; height: 32px; flex: none;
+  color: var(--gold-soft); margin-bottom: 18px;
+  transition: color .15s ease;
+}
+.learn-card:hover .learn-card__icon { color: var(--gold); }
 .learn-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.28rem; color: var(--ink); margin: 0 0 10px; line-height: 1.25; }
 .learn-card p { margin: 0; color: var(--text-muted); font-family: var(--font-serif); font-size: .97rem; line-height: 1.6; text-wrap: pretty; }
 .learn-card__meta {
