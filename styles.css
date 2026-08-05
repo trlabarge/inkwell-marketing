@@ -1888,10 +1888,12 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   padding: 28px 26px 12px;
 }
 .learn-phase__title {
+  display: flex; align-items: center; gap: 11px;
   font-family: var(--font-display); font-weight: 600; font-size: 1.15rem;
   color: var(--ink); margin: 0 0 4px; padding-bottom: 14px;
   border-bottom: 2px solid var(--gold-soft);
 }
+.learn-phase__icon { width: 22px; height: 22px; flex: none; color: var(--gold-soft); }
 .learn-phase__item {
   display: block; padding: 20px 0; border-bottom: 1px solid var(--line);
   color: inherit; text-decoration: none;
