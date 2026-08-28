@@ -75,12 +75,15 @@ compass.html             The Compass feature page (Synopsis, Heartbeat, Ask, Atl
 start-your-story.html    The Start Your Story Challenge
 writing-apps-breakdown.html  Roundup of eleven novel-writing apps
 pricing.html             Pricing tiers
+learn/                   Craft guides hub + four guide pages (tool-agnostic SEO content)
 privacy.html             Privacy Policy
 terms.html               Terms of Service
 compare/                 Comparison landing page + one page per competitor
 styles.css               All styling (single shared stylesheet)
-assets/           Images (favicon.png, wordmark-dark.png, wordmark-light.png,
-                  scrivener.png, dabble-logo.png)
+assets/           Images: favicon.png, wordmark-dark.png, wordmark-light.png, plus one
+                  logo per app referenced in compare/ and writing-apps-breakdown.html
+                  (scrivener, dabble, reedsy, novlr, ulysses, living-writer, sudowrite,
+                  Microsoft Word, Google Docs, ellipsus, Obsidian)
 llms.txt          Plain-language summary of the product for LLM crawlers
 sitemap.xml       Lists every indexable URL (keep in sync when adding pages)
 robots.txt        Crawler rules
@@ -92,10 +95,11 @@ README.md         Deploy + domain notes
 
 - **Home (`index.html`)** — In order: hero ("Your Writing Sanctuary") with a
   typewriter sub-headline; a "Start writing in seconds" steps section closing
-  with a five-item trust row; a tabbed feature showcase (Codex, Character
-  sketch, Lore, Project management, Share, Export, Story notes) with
-  interactive mocked-up UI demos; **The Compass** (a live Synopsis demo
-  borrowed from `compass.html`, plus four feature cards); a finishing section
+  with a six-item trust row; a tabbed feature showcase (Codex Navigation,
+  Character Development, Lore Management, Project Management, Share &
+  Feedback, Export Documents, Story Notes) with interactive mocked-up UI
+  demos; **The Compass** (a live Synopsis demo borrowed from `compass.html`,
+  plus four feature cards); a finishing section
   ("Starting is easy. Inkwell helps you finish.") covering goals, streaks,
   milestones, Writing Insights, and writing analytics; testimonials ("Loved by
   Writers"); an FAQ (differentiation, data security/privacy, collaboration,
@@ -111,7 +115,15 @@ README.md         Deploy + domain notes
   Holds the `.challenge` progress demo and `.quest` steps that used to sit on
   the homepage.
 - **Writing apps breakdown (`writing-apps-breakdown.html`)** — A roundup of
-  eleven novel-writing apps by price, pros, cons, and fit.
+  eleven novel-writing apps by price, pros, cons, and fit: Scrivener, Dabble,
+  Reedsy, Novlr, Ulysses, LivingWriter, Sudowrite, Microsoft Word, Google
+  Docs, Ellipsus, and Obsidian.
+- **Learn (`learn/`)** — A craft-guides hub (`learn/index.html`) plus four
+  tool-agnostic guide pages aimed at novelists regardless of what app they
+  use: how to outline a novel, how to write a story bible, how to build a
+  character profile, and how to plan a book series. Linked from primary nav
+  as "Learn" and from the homepage footer as "Guides for Novelists." All five
+  URLs are in `sitemap.xml` and `llms.txt`.
 - **Pricing (`pricing.html`)** — Three tiers: **Inkling** (free forever — 1
   active project, unlimited documents, character profiles, lore database,
   Focus Mode, autosave, Markdown/TXT export, beta reader sharing), **Storyteller**
@@ -121,10 +133,13 @@ README.md         Deploy + domain notes
   Atlas, faction tracking, timeline management, continuity tracking).
   `pricing.html` is the source of truth for tier contents and Compass metering,
   not this file.
-- **Compare (`compare/`)** — A comparison hub (`compare/index.html`) plus
-  dedicated alternative pages for Scrivener, Dabble, Ellipsus, Google Docs,
-  Microsoft Word, and Reedsy, each pitching Inkwell as the alternative. All six
-  are listed in `sitemap.xml`. `compare/compare-data.js` is the declared source
+- **Compare (`compare/`)** — A comparison hub (`compare/index.html`) whose
+  matrix covers eight apps (Inkwell, Scrivener, Dabble, Reedsy, Microsoft
+  Word, Google Docs, Ellipsus, Obsidian), plus dedicated alternative pages for
+  six of them (Scrivener, Dabble, Ellipsus, Google Docs, Microsoft Word, and
+  Reedsy), each pitching Inkwell as the alternative. Obsidian has no spoke
+  page yet (`pageUrl: null` in `compare-data.js`). All six spoke pages are
+  listed in `sitemap.xml`. `compare/compare-data.js` is the declared source
   of truth for comparison values, but the hub matrix and each spoke's table are
   hand-written copies of it, so all three have to be kept in sync by hand.
 - **Privacy (`privacy.html`)** and **Terms (`terms.html`)** — Standard policy
