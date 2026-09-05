@@ -296,19 +296,24 @@ The conversion rates it uses, and where they come from:
 
 Common conversions:
 
-| Word count | Manuscript pages | Printed book pages | Reading time |
-| --- | --- | --- | --- |
-| 1,000 | 4 | 2 to 4 | 4 min |
-| 5,000 | 20 | 14 to 20 | 20 min |
-| 10,000 | 40 | 28 to 40 | 40 min |
-| 25,000 | 100 | 71 to 100 | 1 hr 40 min |
-| 50,000 | 200 | 142 to 200 | 3 hr 20 min |
-| 60,000 | 240 | 171 to 240 | 4 hr |
-| 70,000 | 280 | 200 to 280 | 4 hr 40 min |
-| 80,000 | 320 | 228 to 320 | 5 hr 20 min |
-| 90,000 | 360 | 257 to 360 | 6 hr |
-| 100,000 | 400 | 285 to 400 | 6 hr 40 min |
-| 120,000 | 480 | 342 to 480 | 8 hr |
+| Word count | Roughly the length of | Manuscript pages | Printed book pages | Reading time |
+| --- | --- | --- | --- | --- |
+| 1,000 | A piece of flash fiction | 4 | 2 to 4 | 4 min |
+| 5,000 | A short story | 20 | 14 to 20 | 20 min |
+| 10,000 | A novelette | 40 | 28 to 40 | 40 min |
+| 25,000 | The Old Man and the Sea | 100 | 71 to 100 | 1 hr 40 min |
+| 50,000 | The Great Gatsby | 200 | 142 to 200 | 3 hr 20 min |
+| 60,000 | Brave New World | 240 | 171 to 240 | 4 hr |
+| 70,000 | The Catcher in the Rye | 280 | 200 to 280 | 4 hr 40 min |
+| 80,000 | Harry Potter and the Sorcerer's Stone | 320 | 228 to 320 | 5 hr 20 min |
+| 90,000 | The Hobbit | 360 | 257 to 360 | 6 hr |
+| 100,000 | The Hunger Games | 400 | 285 to 400 | 6 hr 40 min |
+| 120,000 | Pride and Prejudice | 480 | 342 to 480 | 8 hr |
+| 150,000 | Watership Down | 600 | 428 to 600 | 10 hr |
+| 200,000 | Moby-Dick | 800 | 571 to 800 | 13 hr 20 min |
+
+Published word counts vary by edition and by how the counting is done, so the
+comparisons are close approximations rather than exact matches.
 
 Agents and editors want a word count, not a page count, because a word count
 is the same number on every machine that opens the file. If a guideline does

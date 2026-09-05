@@ -2048,6 +2048,7 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   color: var(--text); margin: 18px 0 0; text-wrap: pretty;
 }
 .guide-body p.guide-lead { font-size: 1.1rem; color: var(--text); font-weight: 500; }
+.guide-body p.guide-caption { margin-top: 12px; font-size: .88rem; color: var(--text-faint); line-height: 1.55; }
 .guide-body ul, .guide-body ol { font-family: var(--font-serif); font-size: 1.04rem; line-height: 1.7; color: var(--text); margin: 18px 0 0; padding-left: 24px; }
 .guide-body li { margin-bottom: 10px; text-wrap: pretty; }
 .guide-body li:last-child { margin-bottom: 0; }
@@ -2081,6 +2082,9 @@ table.guide-table thead th {
   color: var(--text-faint); background: var(--bg-tint); white-space: nowrap;
 }
 table.guide-table tbody th { font-weight: 600; color: var(--ink); width: 26%; }
+/* Five-column tables cannot spare 26% on the row header. */
+table.guide-table--wide tbody th { width: auto; white-space: nowrap; }
+table.guide-table--wide th, table.guide-table--wide td { padding-left: 14px; padding-right: 14px; }
 table.guide-table td { color: var(--text-muted); }
 table.guide-table tbody tr:last-child th, table.guide-table tbody tr:last-child td { border-bottom: 0; }
 
