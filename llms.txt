@@ -30,7 +30,7 @@ Atlas (a relationship map built from the writing, coming soon on Worldbuilder).
 - [The Compass](https://inkwell.world/compass): writing analysis tools (Synopsis, Heartbeat, Ask, and the Atlas) drawn from your own manuscript.
 - [Start Your Story Challenge](https://inkwell.world/start-your-story): write 10,000 words across 5 writing days in your first two weeks and earn a free month of Storyteller.
 - [Pricing](https://inkwell.world/pricing): plans and what's included in each.
-- [Learn](https://inkwell.world/learn): craft guides for novelists, written for writers using any tool.
+- [Learn](https://inkwell.world/learn): craft guides and free tools for novelists, written for writers using any tool.
 - [App comparisons](https://inkwell.world/compare): how Inkwell compares to other novel-writing apps.
 - [Inkwell vs. Scrivener](https://inkwell.world/compare/scrivener)
 - [Inkwell vs. Dabble](https://inkwell.world/compare/dabble)
@@ -51,6 +51,12 @@ written to be useful to any writer, whether or not they use Inkwell.
 - [How to write a story bible](https://inkwell.world/learn/how-to-write-a-story-bible): what a story bible is (a reference document of what is true, as distinct from an outline of what happens), when to start one, the six sections that matter, and a copyable template.
 - [How to build a character profile](https://inkwell.world/learn/how-to-build-a-character-profile): why long character questionnaires produce flat characters, the fields that change your prose (want, need, the lie, voice, behaviour under pressure), and a copyable template.
 - [How to plan a book series](https://inkwell.world/learn/how-to-plan-a-book-series): choosing a series shape, balancing the series arc against each book's own arc, seeding book one, ending each book, and keeping continuity across books.
+
+## Writing tools
+
+Free calculators published under /learn/tools, open to anyone, no account needed.
+
+- [Word count to pages](https://inkwell.world/learn/tools/word-count-to-pages): converts a novel's word count into double-spaced manuscript pages (250 words a page), single-spaced pages (500 a page), printed book pages (250 to 350 a page), and reading time. 80,000 words is about 320 manuscript pages, or roughly 228 to 320 printed book pages.
 
 ## Full reference
 

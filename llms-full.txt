@@ -271,6 +271,51 @@ go wrong.
 
 ---
 
+## Writing tools
+
+Free calculators published under /learn/tools. No account, no sign-up.
+
+### Word count to pages
+https://inkwell.world/learn/tools/word-count-to-pages
+
+Converts a word count into pages, and pages back into a word count.
+
+The conversion rates it uses, and where they come from:
+
+- **Manuscript pages: 250 words a page.** Standard manuscript format is 12
+  point Times New Roman or Courier, double-spaced, one inch margins. Courier
+  lands almost exactly on 250. Times New Roman is narrower and often runs
+  closer to 300. The industry uses 250 as a shared shorthand rather than a
+  literal count.
+- **Single-spaced pages: 500 words a page.** Same font and margins.
+- **Printed book pages: 250 to 350 words a page.** The range is wide because
+  trim size, font, leading, and chapter openings all move the number. Only a
+  typesetter can give an exact count for a finished book.
+- **Reading time: 250 words a minute**, a typical adult reading speed for
+  fiction.
+
+Common conversions:
+
+| Word count | Manuscript pages | Printed book pages | Reading time |
+| --- | --- | --- | --- |
+| 1,000 | 4 | 2 to 4 | 4 min |
+| 5,000 | 20 | 14 to 20 | 20 min |
+| 10,000 | 40 | 28 to 40 | 40 min |
+| 25,000 | 100 | 71 to 100 | 1 hr 40 min |
+| 50,000 | 200 | 142 to 200 | 3 hr 20 min |
+| 60,000 | 240 | 171 to 240 | 4 hr |
+| 70,000 | 280 | 200 to 280 | 4 hr 40 min |
+| 80,000 | 320 | 228 to 320 | 5 hr 20 min |
+| 90,000 | 360 | 257 to 360 | 6 hr |
+| 100,000 | 400 | 285 to 400 | 6 hr 40 min |
+| 120,000 | 480 | 342 to 480 | 8 hr |
+
+Agents and editors want a word count, not a page count, because a word count
+is the same number on every machine that opens the file. If a guideline does
+ask for pages, it means manuscript pages in standard format.
+
+---
+
 ## How Inkwell compares to other writing apps
 
 Hub: https://inkwell.world/compare
@@ -322,6 +367,7 @@ https://inkwell.world/writing-apps-breakdown
 | How to write a story bible | https://inkwell.world/learn/how-to-write-a-story-bible | 2026-08-05 |
 | How to build a character profile | https://inkwell.world/learn/how-to-build-a-character-profile | 2026-08-05 |
 | How to plan a book series | https://inkwell.world/learn/how-to-plan-a-book-series | 2026-08-05 |
+| Word count to pages | https://inkwell.world/learn/tools/word-count-to-pages | 2026-09-05 |
 | Start Your Story Challenge | https://inkwell.world/start-your-story | 2026-08-05 |
 | Pricing | https://inkwell.world/pricing | 2026-08-05 |
 | Compare hub | https://inkwell.world/compare | 2026-08-05 |
