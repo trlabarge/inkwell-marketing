@@ -2018,6 +2018,7 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   letter-spacing: .14em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 12px;
 }
 .guide-answer p { margin: 0; font-family: var(--font-serif); font-size: 1.1rem; line-height: 1.65; color: var(--text); text-wrap: pretty; }
+.guide-answer p + p { margin-top: 14px; }
 
 /* Table of contents */
 .guide-toc {
