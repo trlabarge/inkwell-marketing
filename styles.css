@@ -1870,7 +1870,25 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   transition: color .15s ease;
 }
 .learn-card:hover .learn-card__icon { color: var(--gold); }
-.learn-card h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.28rem; color: var(--ink); margin: 0 0 10px; line-height: 1.25; }
+.learn-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.28rem; color: var(--ink); margin: 0 0 10px; line-height: 1.25; }
+
+/* Lane header on the Learn hub. Each lane (guides, and later tools and the
+   glossary) gets a named, anchorable heading so lanes can be added without
+   restructuring the page. */
+.learn-lane__head {
+  display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  margin-top: 52px; padding-bottom: 14px; border-bottom: 1px solid var(--line);
+}
+.learn-lane__title {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(1.3rem, 2.1vw, 1.6rem); color: var(--ink);
+  margin: 0; line-height: 1.2;
+}
+.learn-lane__note {
+  margin: 0; font-family: var(--font-serif); font-size: .95rem;
+  color: var(--text-muted); text-wrap: pretty;
+}
+.learn-lane__head + .learn-cards { margin-top: 26px; }
 .learn-card p { margin: 0; color: var(--text-muted); font-family: var(--font-serif); font-size: .97rem; line-height: 1.6; text-wrap: pretty; }
 .learn-card__meta {
   margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line);

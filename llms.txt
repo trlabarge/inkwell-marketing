@@ -1,6 +1,7 @@
 # Inkwell
 
-> Last updated: 2026-08-04
+> Last updated: 2026-09-05
+> Full reference: https://inkwell.world/llms-full.txt
 
 > Inkwell is a calm, distraction-free writing home for novelists. It combines a
 > focused editor with connected world-building tools (characters, lore, and
@@ -50,6 +51,12 @@ written to be useful to any writer, whether or not they use Inkwell.
 - [How to write a story bible](https://inkwell.world/learn/how-to-write-a-story-bible): what a story bible is (a reference document of what is true, as distinct from an outline of what happens), when to start one, the six sections that matter, and a copyable template.
 - [How to build a character profile](https://inkwell.world/learn/how-to-build-a-character-profile): why long character questionnaires produce flat characters, the fields that change your prose (want, need, the lie, voice, behaviour under pressure), and a copyable template.
 - [How to plan a book series](https://inkwell.world/learn/how-to-plan-a-book-series): choosing a series shape, balancing the series arc against each book's own arc, seeding book one, ending each book, and keeping continuity across books.
+
+## Full reference
+
+A longer document with complete plan contents, feature descriptions, the
+comparison matrix, and the questions writers ask is at
+https://inkwell.world/llms-full.txt
 
 ## Getting started
 
