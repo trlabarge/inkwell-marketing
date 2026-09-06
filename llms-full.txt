@@ -397,6 +397,33 @@ takes about as long again as drafting did.
 
 ---
 
+## Glossary
+
+https://inkwell.world/learn/glossary
+
+Plain definitions for 59 craft terms novelists meet in writing books and
+workshops, grouped into story structure (15), character (8), point of view and voice (10), craft and technique (12), process and publishing (14). Every term carries its own anchor, so a
+single definition can be linked directly, for example
+https://inkwell.world/learn/glossary#inciting-incident
+
+The page marks up each entry as a schema.org DefinedTerm inside a
+DefinedTermSet, generated from the same list that renders the page.
+
+A sample of the entries:
+
+- **Inciting incident** (inciting-incident): The event that disturbs the protagonist's ordinary life and sets the story moving.
+- **Three-act structure** (three-act-structure): The most common shape for a novel: a setup that establishes the world and the problem, a longer middle of escalating complications, and a resolution.
+- **Protagonist** (protagonist): The character whose choices drive the story and whose change the book is about.
+- **Antagonist** (antagonist): The force working against the protagonist.
+- **Point of view** (point-of-view): The position a story is told from, and whose thoughts the reader is given access to.
+- **First person** (first-person): A narrator telling their own story as I.
+- **Show, don't tell** (show-dont-tell): The advice to dramatize rather than summarize, so the reader draws their own conclusion.
+- **Exposition** (exposition): Background information the reader needs in order to follow the story.
+- **Plotter and pantser** (plotter-pantser): The two ends of a spectrum of process: writers who plan before drafting, and writers who discover the story as they write.
+- **Discovery writing** (discovery-writing): Drafting without a detailed plan and finding the story on the page.
+
+---
+
 ## How Inkwell compares to other writing apps
 
 Hub: https://inkwell.world/compare
