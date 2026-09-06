@@ -1995,6 +1995,13 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   color: var(--text-muted); text-wrap: pretty;
 }
 
+/* A single line of follow-up under a results row. */
+.calc__note {
+  margin: 22px 0 0; padding-top: 20px; border-top: 1px solid var(--line);
+  font-family: var(--font-serif); font-size: .97rem; color: var(--text-muted); text-wrap: pretty;
+}
+.calc__note + .calc__mini { margin-top: 20px; padding-top: 20px; }
+
 @media (max-width: 720px) {
   .calc { padding: 24px 20px; }
   .calc__results { gap: 18px; margin-top: 24px; padding-top: 22px; }
