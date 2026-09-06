@@ -60,7 +60,7 @@ Free calculators published under /learn/tools.
 
 - [Word count to pages](https://inkwell.world/learn/tools/word-count-to-pages): converts a novel's word count into double-spaced manuscript pages (250 words a page), single-spaced pages (500 a page), printed book pages (250 to 350 a page), and reading time. 80,000 words is about 320 manuscript pages, or roughly 228 to 320 printed book pages.
 - [How long should a novel be?](https://inkwell.world/learn/tools/novel-length): target word counts for sixteen categories of fiction. Most adult novels run 70,000 to 100,000 words. Adult fantasy runs 90,000 to 120,000, cozy mystery 60,000 to 80,000, young adult 55,000 to 80,000, middle grade 30,000 to 55,000. Also covers the boundaries between a short story, a novelette, a novella, and a novel.
-- [How long will my novel take?](https://inkwell.world/learn/tools/writing-pace): works out writing days, weeks, and a finish date from a target, a daily pace, and writing days a week, or the daily word count a deadline would need. An 80,000 word draft at 1,000 words a writing day, five days a week, takes about 16 weeks.
+- [How long will it take to write my novel?](https://inkwell.world/learn/tools/writing-pace): works out writing days, weeks, and a finish date from a target, a daily pace, and writing days a week, or the daily word count a deadline would need. An 80,000 word draft at 1,000 words a writing day, five days a week, takes about 16 weeks.
 
 ## Full reference
 

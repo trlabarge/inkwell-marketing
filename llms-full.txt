@@ -369,7 +369,7 @@ A book can clear the 40,000 word bar and still be too short to sell as an
 adult novel. The award category and the market expectation are different
 things.
 
-### How long will my novel take?
+### How long will it take to write my novel?
 https://inkwell.world/learn/tools/writing-pace
 
 Takes a target word count, words already written, a daily pace, and writing
@@ -450,7 +450,7 @@ https://inkwell.world/writing-apps-breakdown
 | How to plan a book series | https://inkwell.world/learn/how-to-plan-a-book-series | 2026-08-05 |
 | Word count to pages | https://inkwell.world/learn/tools/word-count-to-pages | 2026-09-05 |
 | How long should a novel be? | https://inkwell.world/learn/tools/novel-length | 2026-09-06 |
-| How long will my novel take? | https://inkwell.world/learn/tools/writing-pace | 2026-09-06 |
+| How long will it take to write my novel? | https://inkwell.world/learn/tools/writing-pace | 2026-09-06 |
 | Start Your Story Challenge | https://inkwell.world/start-your-story | 2026-08-05 |
 | Pricing | https://inkwell.world/pricing | 2026-08-05 |
 | Compare hub | https://inkwell.world/compare | 2026-08-05 |
