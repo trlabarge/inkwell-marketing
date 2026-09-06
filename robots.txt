@@ -49,3 +49,7 @@ User-agent: Meta-ExternalAgent
 Allow: /
 
 Sitemap: https://inkwell.world/sitemap.xml
+
+# Plain-language summaries for LLM crawlers:
+#   https://inkwell.world/llms.txt        (short)
+#   https://inkwell.world/llms-full.txt   (full reference)

@@ -1,6 +1,7 @@
 # Inkwell
 
-> Last updated: 2026-08-04
+> Last updated: 2026-09-06
+> Full reference: https://inkwell.world/llms-full.txt
 
 > Inkwell is a calm, distraction-free writing home for novelists. It combines a
 > focused editor with connected world-building tools (characters, lore, and
@@ -29,7 +30,10 @@ Atlas (a relationship map built from the writing, coming soon on Worldbuilder).
 - [The Compass](https://inkwell.world/compass): writing analysis tools (Synopsis, Heartbeat, Ask, and the Atlas) drawn from your own manuscript.
 - [Start Your Story Challenge](https://inkwell.world/start-your-story): write 10,000 words across 5 writing days in your first two weeks and earn a free month of Storyteller.
 - [Pricing](https://inkwell.world/pricing): plans and what's included in each.
-- [Learn](https://inkwell.world/learn): craft guides for novelists, written for writers using any tool.
+- [Learn](https://inkwell.world/learn): the hub for craft guides, free writing tools, and (soon) a glossary.
+- [Craft guides](https://inkwell.world/learn/guides): four tool-agnostic guides for novelists.
+- [Writing tools](https://inkwell.world/learn/tools): three free calculators for novelists.
+- [Glossary](https://inkwell.world/learn/glossary): plain definitions for 59 novel writing craft terms.
 - [App comparisons](https://inkwell.world/compare): how Inkwell compares to other novel-writing apps.
 - [Inkwell vs. Scrivener](https://inkwell.world/compare/scrivener)
 - [Inkwell vs. Dabble](https://inkwell.world/compare/dabble)
@@ -50,6 +54,28 @@ written to be useful to any writer, whether or not they use Inkwell.
 - [How to write a story bible](https://inkwell.world/learn/how-to-write-a-story-bible): what a story bible is (a reference document of what is true, as distinct from an outline of what happens), when to start one, the six sections that matter, and a copyable template.
 - [How to build a character profile](https://inkwell.world/learn/how-to-build-a-character-profile): why long character questionnaires produce flat characters, the fields that change your prose (want, need, the lie, voice, behaviour under pressure), and a copyable template.
 - [How to plan a book series](https://inkwell.world/learn/how-to-plan-a-book-series): choosing a series shape, balancing the series arc against each book's own arc, seeding book one, ending each book, and keeping continuity across books.
+
+## Writing tools
+
+Free calculators published under /learn/tools.
+
+- [Word count to pages](https://inkwell.world/learn/tools/word-count-to-pages): converts a novel's word count into double-spaced manuscript pages (250 words a page), single-spaced pages (500 a page), printed book pages (250 to 350 a page), and reading time. 80,000 words is about 320 manuscript pages, or roughly 228 to 320 printed book pages.
+- [How long should a novel be?](https://inkwell.world/learn/tools/novel-length): target word counts for sixteen categories of fiction. Most adult novels run 70,000 to 100,000 words. Adult fantasy runs 90,000 to 120,000, cozy mystery 60,000 to 80,000, young adult 55,000 to 80,000, middle grade 30,000 to 55,000. Also covers the boundaries between a short story, a novelette, a novella, and a novel.
+- [How long will it take to write my novel?](https://inkwell.world/learn/tools/writing-pace): works out writing days, weeks, and a finish date from a target, a daily pace, and writing days a week, or the daily word count a deadline would need. An 80,000 word draft at 1,000 words a writing day, five days a week, takes about 16 weeks.
+
+## Glossary
+
+A glossary of 59 novel writing terms at https://inkwell.world/learn/glossary,
+grouped into story structure, character, point of view and voice, craft and
+technique, and process and publishing. Each term has an anchor of its own, so
+a definition can be linked directly (for example
+https://inkwell.world/learn/glossary#inciting-incident).
+
+## Full reference
+
+A longer document with complete plan contents, feature descriptions, the
+comparison matrix, and the questions writers ask is at
+https://inkwell.world/llms-full.txt
 
 ## Getting started
 

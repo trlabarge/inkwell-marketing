@@ -1,117 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- lastmod reflects the last substantive content change to each page.
+     Update it in the same commit as the content, and leave it alone for
+     metadata-only or styling edits. Accuracy is what makes crawlers trust
+     the field, so a stale or padded date is worse than none. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://inkwell.world/</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/compass</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/learn</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://inkwell.world/learn/guides</loc>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://inkwell.world/learn/glossary</loc>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://inkwell.world/learn/tools</loc>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://inkwell.world/learn/tools/writing-pace</loc>
+    <lastmod>2026-09-06</lastmod>
+  </url>
+  <url>
+    <loc>https://inkwell.world/learn/tools/word-count-to-pages</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://inkwell.world/learn/tools/novel-length</loc>
+    <lastmod>2026-09-06</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/learn/how-to-outline-a-novel</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/learn/how-to-write-a-story-bible</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/learn/how-to-build-a-character-profile</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/learn/how-to-plan-a-book-series</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/start-your-story</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/pricing</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/compare</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/compare/scrivener</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/compare/dabble</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/compare/ellipsus</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/compare/google-docs</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/compare/word</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/compare/reedsy</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/writing-apps-breakdown</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/privacy</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
   <url>
     <loc>https://inkwell.world/terms</loc>
-    <lastmod>2026-08-04</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <lastmod>2026-08-05</lastmod>
   </url>
 </urlset>
