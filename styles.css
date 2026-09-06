@@ -168,6 +168,36 @@ h3.display { font-size: 1.5rem; }
 .nav a.navlink { font-size: .98rem; color: var(--text-muted); }
 .nav a.navlink:hover { color: var(--ink); }
 
+/* Learn dropdown. The menu is display:none by default and revealed by the
+   data-open attribute, so a page with no JavaScript simply shows the Learn
+   link pointing at the hub. */
+.navdrop { position: relative; display: flex; align-items: center; }
+.navdrop__trigger { display: inline-flex; align-items: center; gap: 5px; }
+.navdrop__chev { width: 13px; height: 13px; flex: none; transition: transform .18s ease; }
+.navdrop[data-open="true"] .navdrop__chev { transform: rotate(180deg); }
+.navdrop[data-open="true"] .navdrop__trigger { color: var(--ink); }
+.navdrop__menu {
+  display: none; position: absolute; top: calc(100% + 14px); left: 50%;
+  transform: translateX(-50%); min-width: 216px; z-index: 60;
+  flex-direction: column; padding: 8px;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: 0 18px 38px -20px rgba(11, 18, 32, .34);
+}
+.navdrop[data-open="true"] .navdrop__menu { display: flex; }
+/* Bridges the gap under the trigger so the menu survives the cursor crossing it. */
+.navdrop__menu::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 14px; }
+.navdrop__menu a, .navdrop__soon {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 10px 12px; border-radius: 8px;
+  font-family: var(--font-sans); font-size: .95rem; color: var(--text);
+}
+.navdrop__menu a:hover { background: var(--bg-tint); color: var(--ink); }
+.navdrop__soon { color: var(--text-faint); cursor: default; }
+.navdrop__soon em, .mobile-nav__soon em {
+  font-style: normal; font-size: .68rem; font-weight: 700; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--gold);
+}
+
 .nav-toggle {
   display: none; background: none; border: none; padding: 6px; margin: 0;
   color: var(--ink); cursor: pointer; border-radius: 6px;
@@ -187,6 +217,12 @@ h3.display { font-size: 1.5rem; }
   color: var(--text); border-bottom: 1px solid var(--line);
 }
 .mobile-nav a:last-child { border-bottom: none; }
+.mobile-nav a.mobile-nav__sub { padding-left: 18px; font-size: .96rem; color: var(--text-muted); }
+.mobile-nav .mobile-nav__soon {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 0 14px 18px; font-family: var(--font-sans); font-size: .96rem;
+  color: var(--text-faint); border-bottom: 1px solid var(--line);
+}
 
 /* ---- Hero ---- */
 .hero {
@@ -782,6 +818,7 @@ h3.display { font-size: 1.5rem; }
 @media (max-width: 880px) {
   .nav { gap: 10px; }
   .nav .navlink { display: none; }
+  .navdrop { display: none; }
   .site-header .btn--gold { display: none; }
   .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
 }
@@ -1870,27 +1907,15 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   transition: color .15s ease;
 }
 .learn-card:hover .learn-card__icon { color: var(--gold); }
-.learn-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.28rem; color: var(--ink); margin: 0 0 10px; line-height: 1.25; }
+.learn-card h2, .learn-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.28rem; color: var(--ink); margin: 0 0 10px; line-height: 1.25; }
 
-/* Lane header on the Learn hub. Each lane (guides, and later tools and the
-   glossary) gets a named, anchorable heading so lanes can be added without
-   restructuring the page. */
-.learn-lane__head {
-  display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
-  margin-top: 52px; padding-bottom: 14px; border-bottom: 1px solid var(--line);
-}
-.learn-lane__title {
-  font-family: var(--font-display); font-weight: 600;
-  font-size: clamp(1.3rem, 2.1vw, 1.6rem); color: var(--ink);
-  margin: 0; line-height: 1.2;
-}
-.learn-lane__note {
-  margin: 0; font-family: var(--font-serif); font-size: .95rem;
-  color: var(--text-muted); text-wrap: pretty;
-}
-.learn-lane__head + .learn-cards { margin-top: 26px; }
-/* A lane with a single entry, until its siblings land. */
-.learn-cards--single { grid-template-columns: minmax(0, 620px); }
+/* Three lanes read better in a row than in the two-up guide grid. */
+.learn-cards--lanes { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1000px) { .learn-cards--lanes { grid-template-columns: 1fr; } }
+/* A lane whose page does not exist yet: present, described, not clickable. */
+.learn-card--soon { cursor: default; opacity: .68; }
+.learn-card--soon:hover { transform: none; box-shadow: none; border-color: var(--line); }
+.learn-card--soon:hover .learn-card__icon { color: var(--gold-soft); }
 
 /* ---------------------------------------------------------------------------
    Calculators on /learn/tools/*. The gold-soft border matches the convention

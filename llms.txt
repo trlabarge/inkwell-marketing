@@ -30,7 +30,9 @@ Atlas (a relationship map built from the writing, coming soon on Worldbuilder).
 - [The Compass](https://inkwell.world/compass): writing analysis tools (Synopsis, Heartbeat, Ask, and the Atlas) drawn from your own manuscript.
 - [Start Your Story Challenge](https://inkwell.world/start-your-story): write 10,000 words across 5 writing days in your first two weeks and earn a free month of Storyteller.
 - [Pricing](https://inkwell.world/pricing): plans and what's included in each.
-- [Learn](https://inkwell.world/learn): craft guides and free tools for novelists, written for writers using any tool.
+- [Learn](https://inkwell.world/learn): the hub for craft guides, free writing tools, and (soon) a glossary.
+- [Craft guides](https://inkwell.world/learn/guides): four tool-agnostic guides for novelists.
+- [Writing tools](https://inkwell.world/learn/tools): three free calculators for novelists.
 - [App comparisons](https://inkwell.world/compare): how Inkwell compares to other novel-writing apps.
 - [Inkwell vs. Scrivener](https://inkwell.world/compare/scrivener)
 - [Inkwell vs. Dabble](https://inkwell.world/compare/dabble)
@@ -54,10 +56,11 @@ written to be useful to any writer, whether or not they use Inkwell.
 
 ## Writing tools
 
-Free calculators published under /learn/tools, open to anyone, no account needed.
+Free calculators published under /learn/tools.
 
 - [Word count to pages](https://inkwell.world/learn/tools/word-count-to-pages): converts a novel's word count into double-spaced manuscript pages (250 words a page), single-spaced pages (500 a page), printed book pages (250 to 350 a page), and reading time. 80,000 words is about 320 manuscript pages, or roughly 228 to 320 printed book pages.
 - [How long should a novel be?](https://inkwell.world/learn/tools/novel-length): target word counts for sixteen categories of fiction. Most adult novels run 70,000 to 100,000 words. Adult fantasy runs 90,000 to 120,000, cozy mystery 60,000 to 80,000, young adult 55,000 to 80,000, middle grade 30,000 to 55,000. Also covers the boundaries between a short story, a novelette, a novella, and a novel.
+- [How long will my novel take?](https://inkwell.world/learn/tools/writing-pace): works out writing days, weeks, and a finish date from a target, a daily pace, and writing days a week, or the daily word count a deadline would need. An 80,000 word draft at 1,000 words a writing day, five days a week, takes about 16 weeks.
 
 ## Full reference
 

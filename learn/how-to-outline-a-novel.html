@@ -128,7 +128,17 @@
         <a class="navlink" href="/compass">Compass</a>
         <a class="navlink" href="/compare">Compare</a>
         <a class="navlink" href="/pricing">Pricing</a>
-        <a class="navlink" href="/learn">Learn</a>
+        <div class="navdrop">
+          <a class="navlink navdrop__trigger" href="/learn" aria-expanded="false" aria-controls="learn-menu">
+            Learn
+            <svg class="navdrop__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="navdrop__menu" id="learn-menu" hidden>
+            <a href="/learn/guides">Craft Guides</a>
+            <a href="/learn/tools">Writing Tools</a>
+            <span class="navdrop__soon" aria-disabled="true">Glossary <em>Soon</em></span>
+          </div>
+        </div>
         <a class="btn btn--gold" href="/start-your-story">Start Your Story</a>
         <a class="btn btn--primary" href="https://app.inkwell.world/auth">Enter Inkwell</a>
         <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
@@ -141,6 +151,9 @@
       <a href="/compare">Compare</a>
       <a href="/pricing">Pricing</a>
       <a href="/learn">Learn</a>
+      <a class="mobile-nav__sub" href="/learn/guides">Craft Guides</a>
+      <a class="mobile-nav__sub" href="/learn/tools">Writing Tools</a>
+      <span class="mobile-nav__sub mobile-nav__soon" aria-disabled="true">Glossary <em>Soon</em></span>
       <a href="/start-your-story">Start Your Story</a>
     </div>
   </header>
@@ -394,7 +407,8 @@
         </div>
         <div class="footer-col">
           <h4>Resources</h4>
-          <a href="/learn">Guides for Novelists</a>
+          <a href="/learn/guides">Guides for Novelists</a>
+          <a href="/learn/tools">Writing Tools</a>
           <a href="/compare">Compare Writing Apps</a>
           <a href="/writing-apps-breakdown">Writing Apps Breakdown</a>
         </div>
@@ -439,6 +453,37 @@
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') { closeMenu(); }
       });
+    })();
+    /* Learn dropdown. Without JavaScript the menu stays hidden and the Learn
+       link goes to the hub, so nothing is lost. */
+    (function () {
+      var drop = document.querySelector('.navdrop');
+      if (!drop) return;
+      var trigger = drop.querySelector('.navdrop__trigger');
+      var menu = drop.querySelector('.navdrop__menu');
+      if (!trigger || !menu) return;
+      var closeTimer;
+      function openDrop() {
+        clearTimeout(closeTimer);
+        menu.hidden = false;
+        drop.setAttribute('data-open', 'true');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      function closeDrop() {
+        menu.hidden = true;
+        drop.removeAttribute('data-open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+      drop.addEventListener('mouseenter', openDrop);
+      drop.addEventListener('mouseleave', function () { closeTimer = setTimeout(closeDrop, 140); });
+      drop.addEventListener('focusin', openDrop);
+      drop.addEventListener('focusout', function (e) {
+        if (!drop.contains(e.relatedTarget)) { closeDrop(); }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && drop.hasAttribute('data-open')) { closeDrop(); trigger.focus(); }
+      });
+      closeDrop();
     })();
   </script>
 </body>

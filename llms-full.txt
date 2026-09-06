@@ -273,7 +273,8 @@ go wrong.
 
 ## Writing tools
 
-Free calculators published under /learn/tools. No account, no sign-up.
+Free calculators published under /learn/tools.
+Index: https://inkwell.world/learn/tools
 
 ### Word count to pages
 https://inkwell.world/learn/tools/word-count-to-pages
@@ -368,6 +369,32 @@ A book can clear the 40,000 word bar and still be too short to sell as an
 adult novel. The award category and the market expectation are different
 things.
 
+### How long will my novel take?
+https://inkwell.world/learn/tools/writing-pace
+
+Takes a target word count, words already written, a daily pace, and writing
+days a week, and reports words to go, writing days, weeks, and a finish date.
+A second input works backwards from a deadline to the daily word count it
+would need. It counts writing days rather than calendar days throughout.
+
+An 80,000 word draft, starting from zero, at five writing days a week:
+
+| Words a writing day | Writing days | Calendar time |
+| --- | --- | --- |
+| 250 | 320 | 64 weeks |
+| 500 | 160 | 32 weeks |
+| 750 | 107 | 21 weeks |
+| 1,000 | 80 | 16 weeks |
+| 1,667 | 48 | 10 weeks |
+| 2,000 | 40 | 8 weeks |
+| 3,000 | 27 | 5 weeks |
+| 5,000 | 16 | 3 weeks |
+
+1,667 words a day is the NaNoWriMo pace, which reaches 50,000 words in 30
+days. Most first drafts take between six months and two years in practice,
+because the arithmetic assumes every writing day happens. Revision usually
+takes about as long again as drafting did.
+
 ---
 
 ## How Inkwell compares to other writing apps
@@ -423,6 +450,7 @@ https://inkwell.world/writing-apps-breakdown
 | How to plan a book series | https://inkwell.world/learn/how-to-plan-a-book-series | 2026-08-05 |
 | Word count to pages | https://inkwell.world/learn/tools/word-count-to-pages | 2026-09-05 |
 | How long should a novel be? | https://inkwell.world/learn/tools/novel-length | 2026-09-06 |
+| How long will my novel take? | https://inkwell.world/learn/tools/writing-pace | 2026-09-06 |
 | Start Your Story Challenge | https://inkwell.world/start-your-story | 2026-08-05 |
 | Pricing | https://inkwell.world/pricing | 2026-08-05 |
 | Compare hub | https://inkwell.world/compare | 2026-08-05 |
