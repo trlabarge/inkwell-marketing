@@ -1950,6 +1950,51 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 }
 .calc__mini-out strong { color: var(--ink); font-weight: 600; }
 
+.calc__row { display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-end; }
+.calc__select {
+  font-family: var(--font-sans); font-size: 1.05rem; color: var(--ink);
+  width: 100%; min-width: 260px; height: 50px; padding: 0 16px; background: var(--bg-tint);
+  border: 1px solid var(--line); border-radius: var(--radius);
+}
+.calc__select:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; background: #fff; }
+.calc__row .calc__field { flex: 1 1 260px; }
+.calc__row .calc__field + .calc__field { flex: 0 1 190px; }
+/* Match the select's metrics so the two labels sit on one line. */
+.calc__row .calc__input { font-size: 1.05rem; height: 50px; padding: 0 16px; max-width: none; }
+/* One stacked column of results, for tools that report a verdict rather than
+   a row of figures. */
+.calc__results--stack { display: block; }
+
+.nl-verdict { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 0; }
+.nl-status {
+  flex: none; font-family: var(--font-sans); font-weight: 700; font-size: .72rem;
+  letter-spacing: .09em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px;
+}
+.nl-status--in    { color: var(--good); background: rgba(63, 122, 79, .12); }
+.nl-status--under { color: var(--warn); background: rgba(163, 121, 31, .13); }
+.nl-status--over  { color: var(--bad);  background: rgba(179, 64, 47, .11); }
+.nl-sentence {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(1.05rem, 1.9vw, 1.3rem); line-height: 1.35; color: var(--ink);
+}
+
+.nl-bar {
+  position: relative; height: 12px; margin: 26px 0 0;
+  background: var(--bg-tint); border: 1px solid var(--line); border-radius: 999px;
+}
+.nl-band {
+  position: absolute; top: 0; bottom: 0; border-radius: 999px;
+  background: var(--gold-soft); opacity: .45;
+}
+.nl-marker {
+  position: absolute; top: -6px; bottom: -6px; width: 2px;
+  background: var(--ink); border-radius: 1px; transform: translateX(-1px);
+}
+.nl-scale {
+  margin: 14px 0 0; font-family: var(--font-serif); font-size: .9rem;
+  color: var(--text-muted); text-wrap: pretty;
+}
+
 @media (max-width: 720px) {
   .calc { padding: 24px 20px; }
   .calc__results { gap: 18px; margin-top: 24px; padding-top: 22px; }

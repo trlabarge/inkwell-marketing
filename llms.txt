@@ -1,6 +1,6 @@
 # Inkwell
 
-> Last updated: 2026-09-05
+> Last updated: 2026-09-06
 > Full reference: https://inkwell.world/llms-full.txt
 
 > Inkwell is a calm, distraction-free writing home for novelists. It combines a
@@ -57,6 +57,7 @@ written to be useful to any writer, whether or not they use Inkwell.
 Free calculators published under /learn/tools, open to anyone, no account needed.
 
 - [Word count to pages](https://inkwell.world/learn/tools/word-count-to-pages): converts a novel's word count into double-spaced manuscript pages (250 words a page), single-spaced pages (500 a page), printed book pages (250 to 350 a page), and reading time. 80,000 words is about 320 manuscript pages, or roughly 228 to 320 printed book pages.
+- [How long should a novel be?](https://inkwell.world/learn/tools/novel-length): target word counts for sixteen categories of fiction. Most adult novels run 70,000 to 100,000 words. Adult fantasy runs 90,000 to 120,000, cozy mystery 60,000 to 80,000, young adult 55,000 to 80,000, middle grade 30,000 to 55,000. Also covers the boundaries between a short story, a novelette, a novella, and a novel.
 
 ## Full reference
 

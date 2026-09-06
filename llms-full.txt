@@ -1,6 +1,6 @@
 # Inkwell: Full Reference
 
-> Last updated: 2026-09-05
+> Last updated: 2026-09-06
 > Short version: https://inkwell.world/llms.txt
 > Site: https://inkwell.world
 
@@ -319,6 +319,55 @@ Agents and editors want a word count, not a page count, because a word count
 is the same number on every machine that opens the file. If a guideline does
 ask for pages, it means manuscript pages in standard format.
 
+### How long should a novel be?
+https://inkwell.world/learn/tools/novel-length
+
+Target word counts by genre, with a picker that reports whether a draft sits
+under, inside, or over its range.
+
+Most adult novels run 70,000 to 100,000 words, and 90,000 is a safe target
+with no other information. Below 50,000 a book reads as a novella to most
+trade publishers. Above 120,000 it is a harder sell for a debut, because a
+longer book costs more to edit, print, and ship.
+
+| Category | Usual range | Aim for |
+| --- | --- | --- |
+| Literary fiction | 70,000 to 100,000 | 85,000 |
+| Commercial and upmarket fiction | 80,000 to 100,000 | 90,000 |
+| Fantasy (adult) | 90,000 to 120,000 | 100,000 |
+| Epic fantasy | 120,000 to 160,000 | 130,000 |
+| Science fiction (adult) | 90,000 to 120,000 | 100,000 |
+| Thriller and suspense | 70,000 to 100,000 | 85,000 |
+| Mystery and crime | 70,000 to 90,000 | 80,000 |
+| Cozy mystery | 60,000 to 80,000 | 70,000 |
+| Romance (single title) | 70,000 to 100,000 | 85,000 |
+| Category romance | 50,000 to 60,000 | 55,000 |
+| Historical fiction | 90,000 to 120,000 | 100,000 |
+| Horror | 70,000 to 100,000 | 85,000 |
+| Young adult | 55,000 to 80,000 | 70,000 |
+| Young adult fantasy or science fiction | 75,000 to 110,000 | 90,000 |
+| Middle grade | 30,000 to 55,000 | 45,000 |
+| Chapter book | 5,000 to 12,000 | 8,000 |
+
+These are conventions for books being sold into the trade market, not rules,
+and they shift over time and between publishers. Debut authors are held closer
+to the middle of a range than established ones.
+
+Boundaries between forms, following the categories the Science Fiction and
+Fantasy Writers Association uses for the Nebula Awards:
+
+| Form | Word count |
+| --- | --- |
+| Flash fiction | Under 1,000 |
+| Short story | 1,000 to 7,500 |
+| Novelette | 7,500 to 17,500 |
+| Novella | 17,500 to 40,000 |
+| Novel | 40,000 and up |
+
+A book can clear the 40,000 word bar and still be too short to sell as an
+adult novel. The award category and the market expectation are different
+things.
+
 ---
 
 ## How Inkwell compares to other writing apps
@@ -367,12 +416,13 @@ https://inkwell.world/writing-apps-breakdown
 | --- | --- | --- |
 | Home | https://inkwell.world/ | 2026-08-05 |
 | The Compass | https://inkwell.world/compass | 2026-08-05 |
-| Learn hub | https://inkwell.world/learn | 2026-09-05 |
+| Learn hub | https://inkwell.world/learn | 2026-09-06 |
 | How to outline a novel | https://inkwell.world/learn/how-to-outline-a-novel | 2026-08-05 |
 | How to write a story bible | https://inkwell.world/learn/how-to-write-a-story-bible | 2026-08-05 |
 | How to build a character profile | https://inkwell.world/learn/how-to-build-a-character-profile | 2026-08-05 |
 | How to plan a book series | https://inkwell.world/learn/how-to-plan-a-book-series | 2026-08-05 |
 | Word count to pages | https://inkwell.world/learn/tools/word-count-to-pages | 2026-09-05 |
+| How long should a novel be? | https://inkwell.world/learn/tools/novel-length | 2026-09-06 |
 | Start Your Story Challenge | https://inkwell.world/start-your-story | 2026-08-05 |
 | Pricing | https://inkwell.world/pricing | 2026-08-05 |
 | Compare hub | https://inkwell.world/compare | 2026-08-05 |
