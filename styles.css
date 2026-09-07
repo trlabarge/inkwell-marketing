@@ -1282,6 +1282,19 @@ h3.display { font-size: 1.5rem; }
   .pm-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* The mock's title bar carries a project name, a document name, a save state
+   and a word count. Those need about 410px and the bar is ~314px wide on a
+   phone, so the breadcrumb wrapped to three lines inside a fixed 40px bar and
+   was clipped 8px top and bottom. Keep the document name, which says what the
+   demo is showing, and drop the two parts that can be inferred. Used on both
+   the homepage panels and the Compass demos. */
+@media (max-width: 560px) {
+  .cx__crumb { flex-wrap: nowrap; white-space: nowrap; min-width: 0; }
+  .cx__proj, .cx__sep, .cx__count { display: none; }
+  /* A long document name ellipsises rather than pushing the save state out. */
+  .cx__crumb b { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+}
+
 /* ---- Accessibility ---- */
 a:focus-visible, button:focus-visible, .btn:focus-visible, summary:focus-visible {
   outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 6px;
