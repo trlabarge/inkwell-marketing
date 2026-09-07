@@ -1261,6 +1261,40 @@ h3.display { font-size: 1.5rem; }
   .cx__cards { grid-template-columns: 1fr; }
 }
 
+/* The demo mocks are laid out for a 607px stage. On a phone the stage is
+   roughly 312-382px, and four pieces of fixed pixel sizing stop fitting. */
+@media (max-width: 560px) {
+  /* Panels needed 405px of height for the share dialog but were given 340px,
+     which clipped the primary action off the bottom. */
+  .fs-stage, .codex-anim { min-height: 430px; }
+  .share-modal { max-height: 100%; }
+
+  /* Opening the backup submenu beside its parent needs 380px of width, so on a
+     phone it rendered up to 77px off the left edge. Drill down over the parent
+     menu instead of flanking it. */
+  .ex-submenu { right: auto; left: 0; }
+
+  /* A 220px panel in the flex row left the manuscript a ~120px column that
+     wrapped to two words a line. Overlay it so the editor keeps full width. */
+  .notes-dock__side { position: absolute; top: 0; right: 0; bottom: 0; width: 62%; }
+
+  /* Three cards across the grid left ~95px each, colliding label and value. */
+  .pm-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* The mock's title bar carries a project name, a document name, a save state
+   and a word count. Those need about 410px and the bar is ~314px wide on a
+   phone, so the breadcrumb wrapped to three lines inside a fixed 40px bar and
+   was clipped 8px top and bottom. Keep the document name, which says what the
+   demo is showing, and drop the two parts that can be inferred. Used on both
+   the homepage panels and the Compass demos. */
+@media (max-width: 560px) {
+  .cx__crumb { flex-wrap: nowrap; white-space: nowrap; min-width: 0; }
+  .cx__proj, .cx__sep, .cx__count { display: none; }
+  /* A long document name ellipsises rather than pushing the save state out. */
+  .cx__crumb b { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+}
+
 /* ---- Accessibility ---- */
 a:focus-visible, button:focus-visible, .btn:focus-visible, summary:focus-visible {
   outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 6px;
@@ -1874,6 +1908,49 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 
 @media (max-width: 700px) {
   .atlas-detail { width: 68%; }
+}
+
+/* All four demos on this page are sized so their content exactly fills the
+   frame on a desktop. The frame is 4/3.6, so it gets shorter as it narrows,
+   while the content it holds is text that gets taller as it wraps. Squeezed
+   from both ends, each demo hides its own payload on a phone: at 360px half
+   the generated synopsis (121px of 250px) sat below its window, the Heartbeat
+   chart card hung 66px past the panel, the Ask conversation lost 152px, and
+   the Atlas graph collapsed from 262px to 13px. Give them a taller frame. */
+@media (max-width: 560px) {
+  /* An aspect ratio is the wrong tool here: it makes the frame shorter as it
+     narrows, exactly when the text inside needs more lines. Heights instead,
+     per demo, since they differ by 150px in what they need. */
+  .cf-media__frame--anim { aspect-ratio: auto; }
+  #synopsis .cf-media__frame--anim { height: 400px; }
+  #heartbeat .cf-media__frame--anim { height: 380px; }
+  #ask .cf-media__frame--anim { height: 490px; }
+  #atlas .cf-media__frame--anim { height: 460px; }
+}
+/* The narrowest phones wrap the same copy onto yet more lines. */
+@media (max-width: 380px) {
+  #synopsis .cf-media__frame--anim { height: 450px; }
+  #ask .cf-media__frame--anim { height: 530px; }
+  #atlas .cf-media__frame--anim { height: 470px; }
+}
+
+/* Atlas only: the graph is the panel's one flexible child, so on top of the
+   frame it also needed the chrome above it to take less, and its nodes to
+   stop carrying desktop footprints at phone-sized spacings. */
+@media (max-width: 560px) {
+  .atlas-panel { padding: 14px 16px 16px; }
+  .atlas-panel__sub { font-size: 10px; }
+  .atlas-toolbar { gap: 8px; padding: 9px 12px; }
+  .atlas-legend { gap: 8px; }
+
+  /* Node positions are percentages but the dots and labels were fixed, so the
+     distances between them shrank while their footprints did not. */
+  .atlas-node { gap: 3px; }
+  .atlas-dot { width: 18px; height: 18px; box-shadow: 0 0 0 3px #fff, 0 3px 8px -4px rgba(11, 18, 32, .4); }
+  /* Two-word labels on an edge node ran past the card, so let them wrap
+     rather than nudging individual nodes off their connecting lines. */
+  .atlas-label { font-size: 9px; white-space: normal; max-width: 62px; text-align: center; line-height: 1.25; }
+  .atlas-detail__name .atlas-dot { width: 11px; height: 11px; }
 }
 
 /* ============================================================
