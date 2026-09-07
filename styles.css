@@ -1261,6 +1261,27 @@ h3.display { font-size: 1.5rem; }
   .cx__cards { grid-template-columns: 1fr; }
 }
 
+/* The demo mocks are laid out for a 607px stage. On a phone the stage is
+   roughly 312-382px, and four pieces of fixed pixel sizing stop fitting. */
+@media (max-width: 560px) {
+  /* Panels needed 405px of height for the share dialog but were given 340px,
+     which clipped the primary action off the bottom. */
+  .fs-stage, .codex-anim { min-height: 430px; }
+  .share-modal { max-height: 100%; }
+
+  /* Opening the backup submenu beside its parent needs 380px of width, so on a
+     phone it rendered up to 77px off the left edge. Drill down over the parent
+     menu instead of flanking it. */
+  .ex-submenu { right: auto; left: 0; }
+
+  /* A 220px panel in the flex row left the manuscript a ~120px column that
+     wrapped to two words a line. Overlay it so the editor keeps full width. */
+  .notes-dock__side { position: absolute; top: 0; right: 0; bottom: 0; width: 62%; }
+
+  /* Three cards across the grid left ~95px each, colliding label and value. */
+  .pm-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* ---- Accessibility ---- */
 a:focus-visible, button:focus-visible, .btn:focus-visible, summary:focus-visible {
   outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 6px;
