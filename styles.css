@@ -1897,6 +1897,33 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
   .atlas-detail { width: 68%; }
 }
 
+/* The graph is the only flexible child of the Atlas panel, so it absorbed
+   every pixel the frame lost on the way down and the chrome above it gained
+   from wrapping: 262px tall on a desktop, 13px at 360px, with all nine nodes
+   piled into a sliver. Give the frame more height, spend less of it on the
+   chrome, and stop the graph collapsing below a usable size. */
+@media (max-width: 560px) {
+  #atlas .cf-media__frame--anim { aspect-ratio: 4 / 5.4; }
+  .atlas-panel { padding: 14px 16px 16px; }
+  .atlas-panel__sub { font-size: 10px; }
+  .atlas-toolbar { gap: 8px; padding: 9px 12px; }
+  .atlas-legend { gap: 8px; }
+
+  /* Node positions are percentages but the dots and labels were fixed, so the
+     distances between them shrank while their footprints did not. */
+  .atlas-node { gap: 3px; }
+  .atlas-dot { width: 18px; height: 18px; box-shadow: 0 0 0 3px #fff, 0 3px 8px -4px rgba(11, 18, 32, .4); }
+  /* Two-word labels on an edge node ran past the card, so let them wrap
+     rather than nudging individual nodes off their connecting lines. */
+  .atlas-label { font-size: 9px; white-space: normal; max-width: 62px; text-align: center; line-height: 1.25; }
+  .atlas-detail__name .atlas-dot { width: 11px; height: 11px; }
+}
+/* On the narrowest phones the intro and the toolbar both run to three rows,
+   so the frame needs to be taller again for the graph to keep its share. */
+@media (max-width: 380px) {
+  #atlas .cf-media__frame--anim { aspect-ratio: 4 / 6; }
+}
+
 /* ============================================================
    Learn hub + craft guides (/learn)
    ============================================================ */
