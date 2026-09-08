@@ -80,6 +80,8 @@ privacy.html             Privacy Policy
 terms.html               Terms of Service
 compare/                 Comparison landing page + one page per competitor
 styles.css               All styling (single shared stylesheet)
+assets/analytics.js  The one Google tag bootstrap (GA4 + Google Ads). Loaded by
+                  every page. See "Analytics and conversion tracking" below.
 assets/           Images: favicon.png, wordmark-dark.png, wordmark-light.png, plus one
                   logo per app referenced in compare/ and writing-apps-breakdown.html
                   (scrivener, dabble, reedsy, novlr, ulysses, living-writer, sudowrite,
@@ -165,6 +167,8 @@ all point to `https://app.inkwell.world/auth`.
   `<script>` at the bottom of each page (e.g. scroll-aware header, hero
   typewriter). Keep it dependency-free and progressive — the page must work
   without it.
+- **Analytics** is the one exception to page-scoped JS: `assets/analytics.js` is
+  shared and loaded from every page's `<head>`. See below.
 - **Accessibility is a feature.** Maintain `alt` text, `aria-label`s, and
   `aria-live` regions. Any motion must respect
   `prefers-reduced-motion` (existing JS already does).
@@ -172,6 +176,40 @@ all point to `https://app.inkwell.world/auth`.
   fonts, nav, brand wordmark, and CTAs stay consistent.
 - **Images** go in `assets/`. PNGs are cached 7 days via `vercel.json`; keep them
   optimized.
+
+## Analytics and conversion tracking
+
+One file, `assets/analytics.js`, loaded from every page's `<head>` via
+`<script src="/assets/analytics.js" defer>`. It is the only place tag IDs
+appear. Do not paste gtag snippets into individual pages.
+
+It loads a single gtag.js for two destinations: GA4 `G-B12PYMCSJZ` (Inkwell
+Marketing Website) and Google Ads `AW-18428669176`. Both sit in the shared
+Google tag container `GT-KDQ6RH9L` alongside the product app's GA4 property
+`G-1LXL2R4NKZ`.
+
+Three rules:
+
+- **Never add a conversion event snippet to this site.** Google Ads offers an
+  "Event snippet for Sign-up conversion page" that fires on page load. Nobody
+  signs up on inkwell.world, so it would report a conversion for every visitor
+  who reads a page and leaves. The app fires that conversion itself, at the
+  real signup moment.
+- **The tag is gated to production hostnames** (`inkwell.world`,
+  `www.inkwell.world`) so localhost and Vercel preview deploys stay out of
+  campaign data. `gtag()` is still defined everywhere, so calls on a
+  non-production host are harmless no-ops.
+- **Cross-domain linker settings must match the app.** Both sides list
+  `['inkwell.world', 'app.inkwell.world']`. Changing the list here means
+  changing it in the app too.
+
+There is no Content-Security-Policy on this site, so Google's hosts need no
+allowlisting. If a CSP is ever added to `vercel.json`, it must permit
+`https://www.googletagmanager.com`, `https://www.googleadservices.com`, and
+`https://googleads.g.doubleclick.net` in `script-src`; those plus
+`https://www.google-analytics.com` and `https://www.google.com` in
+`connect-src`; and `https://td.doubleclick.net` and
+`https://bid.g.doubleclick.net` in `frame-src`.
 
 ## SEO / metadata
 
