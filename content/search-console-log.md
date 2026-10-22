@@ -21,5 +21,31 @@ One entry per monthly refresh run. Property: `sc-domain:inkwell.world`.
   how many pages is 10000 words (10, pos 48), how many pages is 200000 words (9, pos 18),
   how long is a novel (8, pos 56)
 - Issue: `www.inkwell.world` URLs are indexed alongside the apex, splitting
-  signals. Fix in Vercel: Settings → Domains → set `www.inkwell.world` to
-  redirect (308) to `inkwell.world`.
+  signals. Cause: the apex 307-redirected to `www` while every canonical,
+  `og:url`, and the sitemap pointed at the apex. Fixed 2026-10-22 in Vercel:
+  `inkwell.world` now serves Production and `www.inkwell.world` 308-redirects
+  to it. Watch for `www.` URLs dropping out of the page report over the next
+  few weeks.
+- Index coverage (URL inspection of all 25 sitemap URLs, 2026-10-22):
+  13 indexed. Not indexed: URL unknown to Google (5): /pricing, /compare,
+  /learn, /compare/ellipsus, /compare/google-docs. Discovered, not indexed
+  (3): /compass, /compare/dabble, /compare/reedsy. Crawled, not indexed (4):
+  /learn/how-to-write-a-story-bible, /learn/how-to-build-a-character-profile,
+  /learn/how-to-plan-a-book-series, /compare/scrivener. Likely cause: the
+  apex-to-www redirect loop above. Owner requesting indexing manually from
+  2026-10-22.
+- Sitemaps: submitted https://inkwell.world/sitemap.xml (25 URLs, 0 errors)
+  on 2026-10-22; removed the www sitemap and four stale 2024 WordPress
+  sitemaps. Page indexing shows no "Not found (404)" rows, so there are no
+  legacy URLs to redirect.
+- Generative AI report (manual export, Jul 21 to Oct 20, raw CSVs in
+  `content/gsc-exports/2026-10-generative-ai/`): 2,538 impressions, the
+  report gives no clicks. Daily average rose from about 12 (late Jul to Aug)
+  to about 65 (Sep 27 to Oct 20), roughly 5x, starting around Sep 9 when
+  the learn/ guides and tools launched. Monthly: Jul (10 days) 125, Aug 314,
+  Sep 788, Oct (20 days) 1,311. Pages: home 1,764 (69%),
+  /learn/tools/word-count-to-pages 645 across apex and www (25%), writing
+  pace 32, writing apps breakdown 23, story bible guide 9; nothing else
+  above 11. Countries: Brazil 497, United States 359, Indonesia 204, India
+  147, Mexico 91. English-speaking countries are only 23% of impressions.
+  Devices: desktop 62%, mobile 37%.

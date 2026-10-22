@@ -112,6 +112,12 @@ words for guides. Never pad.
   Ignore branded queries (inkwell, ink well, inkwel and other misspellings).
   If the connector is unavailable, say so in the PR body and continue
   from web search; never invent query data.
+- **Generative AI report** (Search Console → Performance → Generative AI,
+  how often Google's AI answers show the site). The API cannot read it, so
+  the owner exports it by hand into `content/gsc-exports/<YYYY-MM>-generative-ai/`.
+  Refresh and research runs read the newest export if there is one, compare
+  it with the previous one in `content/search-console-log.md`, and, if the
+  newest export is more than 40 days old, ask in the PR body for a fresh one.
 - **Web search** for what currently ranks, People Also Ask, and gaps.
 - **Direct fetches** work only for allowlisted domains (competitor sites,
   reddit). If a fetch is blocked, note it and rely on search results.
@@ -166,9 +172,17 @@ words for guides. Never pad.
 4. Also: mark merged rows `live` in the backlog, keep the compare hub,
    spoke tables and `compare/compare-data.js` in sync, and fix any broken
    links check.py reports.
-5. Add a dated entry to `content/search-console-log.md` with totals
-   (clicks, impressions, CTR, position, non-branded share) and the top ten
-   non-branded queries, so trends are visible over time.
+5. **Index coverage.** Run `GOOGLE_SEARCH_CONSOLE_INSPECT_URL` on every
+   URL in `sitemap.xml` (about 25 calls; the quota is 2,000 a day). Record
+   each one's `coverageState`. Any page not "Submitted and indexed" for 30
+   days or more counts toward this run's five pages: strengthen its short
+   answer, add internal links to it from indexed pages, and make sure it is
+   linked from its hub. List the unindexed URLs in the PR body so the owner
+   can use "Request indexing" in Search Console (the API cannot).
+6. Add a dated entry to `content/search-console-log.md` with totals
+   (clicks, impressions, CTR, position, non-branded share), the top ten
+   non-branded queries, and the indexed / not indexed counts with the
+   unindexed URLs, so trends are visible over time.
 
 ## Mode: research
 
