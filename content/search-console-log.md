@@ -21,5 +21,8 @@ One entry per monthly refresh run. Property: `sc-domain:inkwell.world`.
   how many pages is 10000 words (10, pos 48), how many pages is 200000 words (9, pos 18),
   how long is a novel (8, pos 56)
 - Issue: `www.inkwell.world` URLs are indexed alongside the apex, splitting
-  signals. Fix in Vercel: Settings → Domains → set `www.inkwell.world` to
-  redirect (308) to `inkwell.world`.
+  signals. Cause: the apex 307-redirected to `www` while every canonical,
+  `og:url`, and the sitemap pointed at the apex. Fixed 2026-10-22 in Vercel:
+  `inkwell.world` now serves Production and `www.inkwell.world` 308-redirects
+  to it. Watch for `www.` URLs dropping out of the page report over the next
+  few weeks.
