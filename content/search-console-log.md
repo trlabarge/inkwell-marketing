@@ -38,3 +38,14 @@ One entry per monthly refresh run. Property: `sc-domain:inkwell.world`.
   on 2026-10-22; removed the www sitemap and four stale 2024 WordPress
   sitemaps. Page indexing shows no "Not found (404)" rows, so there are no
   legacy URLs to redirect.
+- Generative AI report (manual export, Jul 21 to Oct 20, raw CSVs in
+  `content/gsc-exports/2026-10-generative-ai/`): 2,538 impressions, the
+  report gives no clicks. Daily average rose from about 12 (late Jul to Aug)
+  to about 65 (Sep 27 to Oct 20), roughly 5x, starting around Sep 9 when
+  the learn/ guides and tools launched. Monthly: Jul (10 days) 125, Aug 314,
+  Sep 788, Oct (20 days) 1,311. Pages: home 1,764 (69%),
+  /learn/tools/word-count-to-pages 645 across apex and www (25%), writing
+  pace 32, writing apps breakdown 23, story bible guide 9; nothing else
+  above 11. Countries: Brazil 497, United States 359, Indonesia 204, India
+  147, Mexico 91. English-speaking countries are only 23% of impressions.
+  Devices: desktop 62%, mobile 37%.

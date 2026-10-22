@@ -112,6 +112,12 @@ words for guides. Never pad.
   Ignore branded queries (inkwell, ink well, inkwel and other misspellings).
   If the connector is unavailable, say so in the PR body and continue
   from web search; never invent query data.
+- **Generative AI report** (Search Console → Performance → Generative AI,
+  how often Google's AI answers show the site). The API cannot read it, so
+  the owner exports it by hand into `content/gsc-exports/<YYYY-MM>-generative-ai/`.
+  Refresh and research runs read the newest export if there is one, compare
+  it with the previous one in `content/search-console-log.md`, and, if the
+  newest export is more than 40 days old, ask in the PR body for a fresh one.
 - **Web search** for what currently ranks, People Also Ask, and gaps.
 - **Direct fetches** work only for allowlisted domains (competitor sites,
   reddit). If a fetch is blocked, note it and rely on search results.
