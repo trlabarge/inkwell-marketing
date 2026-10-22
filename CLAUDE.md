@@ -54,10 +54,13 @@ buzzwords, or exclamation-heavy SaaS-speak. Keep it concise and welcoming.
 
 - **No em dashes, ever.** Rewrite with commas, periods, parentheses, or "and".
   This applies to all on-page copy and metadata.
-- **Never say "AI."** The product never brands features as "AI" or "AI-powered."
-  Name features by their outcome (e.g. "summarization and brainstorming tools",
-  "story intelligence"). The only sanctioned use of the word is a future privacy
-  pledge about what we will never do.
+- **Never call Inkwell "AI."** The product never brands its own features
+  (including the Compass) as "AI" or "AI-powered." Name them by their outcome
+  (e.g. "summarization and brainstorming tools", "story intelligence"). Two
+  sanctioned uses of the word: a privacy pledge about what we will never do,
+  and describing **competitors** that position themselves as AI tools in their
+  own messaging (Sudowrite, NovelAI, and similar), on comparison pages or
+  clearly attributed to them.
 - **Lead with momentum and finishing.** The product's positioning is "the best
   place to actually finish your novel" and "start writing in seconds." Emphasize
   how quick and easy it is to begin, not just serenity.
@@ -75,7 +78,8 @@ compass.html             The Compass feature page (Synopsis, Heartbeat, Ask, Atl
 start-your-story.html    The Start Your Story Challenge
 writing-apps-breakdown.html  Roundup of eleven novel-writing apps
 pricing.html             Pricing tiers
-learn/                   Craft guides hub + four guide pages (tool-agnostic SEO content)
+learn/                   Learn hub, guides index, glossary, four guide pages, and
+                         tools/ (three calculators). Tool-agnostic SEO content
 privacy.html             Privacy Policy
 terms.html               Terms of Service
 compare/                 Comparison landing page + one page per competitor
@@ -87,10 +91,16 @@ assets/           Images: favicon.png, wordmark-dark.png, wordmark-light.png, pl
                   (scrivener, dabble, reedsy, novlr, ulysses, living-writer, sudowrite,
                   Microsoft Word, Google Docs, ellipsus, Obsidian)
 llms.txt          Plain-language summary of the product for LLM crawlers
+llms-full.txt     The long-form version of llms.txt (keep both in sync)
 sitemap.xml       Lists every indexable URL (keep in sync when adding pages)
 robots.txt        Crawler rules
 vercel.json       Clean URLs + caching/security headers
 README.md         Deploy + domain notes
+.vercelignore     Keeps repo tooling (below) out of the deployed site
+content/          SEO backlog and Search Console log (not deployed)
+scripts/          Pre-PR checks: check.py (brand/SEO/link rules), preview.js
+                  (screenshots + layout checks). Not deployed, no build step
+.claude/skills/seo-content/  Playbook for the scheduled SEO runs
 ```
 
 ## What's on the site
@@ -222,6 +232,30 @@ across all pages and in sync with the page title/description when you edit copy.
 - The social card image is currently `assets/wordmark-dark.png` as a stopgap. A
   dedicated **1200×630** social card (`assets/og-image.png`) would be better —
   swap it in across all pages once it exists.
+
+## Scheduled SEO runs
+
+Three scheduled tasks run in fresh cloud sessions and follow
+`.claude/skills/seo-content/SKILL.md`:
+
+- **Content run** (Tue and Thu, 8:39am ET): writes one page from the top of
+  `content/backlog.md` and opens a PR.
+- **Monthly refresh** (3rd of the month, 8:35am ET): uses Search Console data
+  to improve existing pages' titles, answers, and FAQs; logs the month in
+  `content/search-console-log.md`.
+- **Backlog research** (17th of the month, 8:34am ET): adds and reorders
+  backlog rows only.
+
+Every run opens a PR titled `SEO: ...` and never merges. Runs pause while four
+or more `SEO:` PRs are open. Search Console is read through the Composio
+connector (property `sc-domain:inkwell.world`).
+
+Before opening any PR that touches pages, run:
+
+```bash
+python3 scripts/check.py                                   # must show 0 errors
+NODE_PATH="$(npm root -g)" node scripts/preview.js <page>.html   # screenshots
+```
 
 ## Local preview
 

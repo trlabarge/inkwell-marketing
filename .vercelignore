@@ -1,0 +1,5 @@
+# Repo tooling and notes, not part of the public site
+.claude/
+content/
+scripts/
+.preview/
