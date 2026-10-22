@@ -26,3 +26,15 @@ One entry per monthly refresh run. Property: `sc-domain:inkwell.world`.
   `inkwell.world` now serves Production and `www.inkwell.world` 308-redirects
   to it. Watch for `www.` URLs dropping out of the page report over the next
   few weeks.
+- Index coverage (URL inspection of all 25 sitemap URLs, 2026-10-22):
+  13 indexed. Not indexed: URL unknown to Google (5): /pricing, /compare,
+  /learn, /compare/ellipsus, /compare/google-docs. Discovered, not indexed
+  (3): /compass, /compare/dabble, /compare/reedsy. Crawled, not indexed (4):
+  /learn/how-to-write-a-story-bible, /learn/how-to-build-a-character-profile,
+  /learn/how-to-plan-a-book-series, /compare/scrivener. Likely cause: the
+  apex-to-www redirect loop above. Owner requesting indexing manually from
+  2026-10-22.
+- Sitemaps: submitted https://inkwell.world/sitemap.xml (25 URLs, 0 errors)
+  on 2026-10-22; removed the www sitemap and four stale 2024 WordPress
+  sitemaps. Page indexing shows no "Not found (404)" rows, so there are no
+  legacy URLs to redirect.
