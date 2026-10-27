@@ -78,7 +78,7 @@ compass.html             The Compass feature page (Synopsis, Heartbeat, Ask, Atl
 start-your-story.html    The Start Your Story Challenge
 writing-apps-breakdown.html  Roundup of eleven novel-writing apps
 pricing.html             Pricing tiers
-learn/                   Learn hub, guides index, glossary, four guide pages, and
+learn/                   Learn hub, guides index, glossary, five guide pages, and
                          tools/ (three calculators). Tool-agnostic SEO content
 privacy.html             Privacy Policy
 terms.html               Terms of Service
@@ -130,12 +130,12 @@ scripts/          Pre-PR checks: check.py (brand/SEO/link rules), preview.js
   eleven novel-writing apps by price, pros, cons, and fit: Scrivener, Dabble,
   Reedsy, Novlr, Ulysses, LivingWriter, Sudowrite, Microsoft Word, Google
   Docs, Ellipsus, and Obsidian.
-- **Learn (`learn/`)** — A craft-guides hub (`learn/index.html`) plus four
+- **Learn (`learn/`)** — A craft-guides hub (`learn/index.html`) plus five
   tool-agnostic guide pages aimed at novelists regardless of what app they
   use: how to outline a novel, how to write a story bible, how to build a
-  character profile, and how to plan a book series. Linked from primary nav
-  as "Learn" and from the homepage footer as "Guides for Novelists." All five
-  URLs are in `sitemap.xml` and `llms.txt`.
+  character profile, how to plan a book series, and how to write 50,000 words
+  in a month. Linked from primary nav as "Learn" and from the homepage footer
+  as "Guides for Novelists." All six URLs are in `sitemap.xml` and `llms.txt`.
 - **Pricing (`pricing.html`)** — Three tiers: **Inkling** (free forever — 1
   active project, unlimited documents, character profiles, lore database,
   Focus Mode, autosave, Markdown/TXT export, beta reader sharing), **Storyteller**
