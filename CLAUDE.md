@@ -122,8 +122,8 @@ scripts/          Pre-PR checks: check.py (brand/SEO/link rules), preview.js
   The homepage carries most of the site's JS. Every demo is IIFE-wrapped,
   IntersectionObserver-gated, and short-circuits under `prefers-reduced-motion`.
 - **The Compass (`compass.html`)** — Feature page for the writing analysis
-  tools, each with its own animated demo: Synopsis, Heartbeat, Ask (all live)
-  and the Atlas (marked "Coming soon", Worldbuilder tier).
+  tools, each with its own animated demo: Synopsis, Heartbeat, Ask, and the
+  Atlas (Worldbuilder tier). All four are live.
 - **Start Your Story (`start-your-story.html`)** — The challenge: 10,000 words
   across 5 writing days in the first 14 days earns a free month of Storyteller.
   Holds the `.challenge` progress demo and `.quest` steps that used to sit on
