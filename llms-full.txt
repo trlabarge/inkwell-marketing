@@ -77,7 +77,7 @@ and nothing is drawn from outside the writer's prose.
 - **Ask.** A plain-language question about the story, answered from the
   manuscript, with a link to the passage it came from.
 - **The Atlas.** A living map of how characters and world connect, drawn from
-  what has actually been written. Coming soon, on the Worldbuilder plan.
+  what has actually been written. On the Worldbuilder plan.
 
 Page: https://inkwell.world/compass
 
@@ -137,7 +137,7 @@ Everything in Inkling, plus:
 - Enhanced writing statistics and productivity tracking
 - Priority service and support
 
-### Worldbuilder: $19 per month, coming soon
+### Worldbuilder: $19 per month
 
 Everything in Storyteller, plus:
 

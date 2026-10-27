@@ -11,8 +11,8 @@
 
 Inkwell works in any modern browser, syncs across devices, and supports
 offline writing. Documents export as Markdown, plain text, PDF, DOCX, or EPUB.
-There is a free plan (Inkling) and a paid plan (Storyteller, $9/month) with a
-higher-tier plan (Worldbuilder) coming soon.
+There is a free plan (Inkling) and two paid plans: Storyteller ($9/month) and
+Worldbuilder ($19/month).
 
 Inkwell does not brand its features as "AI." Story intelligence features
 (summarization, brainstorming, keeping the story connected) are described by
@@ -22,7 +22,7 @@ The Compass is Inkwell's set of writing analysis tools, all drawn from a
 writer's own manuscript: Synopsis (a short factual recap of any document),
 Heartbeat (a dramatic-tension curve across the whole work), Ask (plain-language
 questions answered from the prose, with a link back to the passage), and the
-Atlas (a relationship map built from the writing, coming soon on Worldbuilder).
+Atlas (a relationship map built from the writing, on the Worldbuilder plan).
 
 ## Key pages
 
