@@ -181,15 +181,17 @@
 
   <!-- Hero -->
   <section class="hero hero--home">
-    <div class="container">
-      <h1 class="display">Where big worlds become finished novels.</h1>
-      <p class="hero-lede">Your manuscript, characters, and lore in one place, on every device.</p>
-      <div class="cta-row">
-        <a class="btn btn--primary" href="https://app.inkwell.world/auth">Start Writing Free</a>
-        <a class="btn btn--ghost" href="#features">Explore Features</a>
+    <div class="container hero-split">
+      <div class="hero-copy">
+        <h1 class="display">Where big worlds become finished novels.</h1>
+        <p class="hero-lede">Your manuscript, characters, and lore in one place, on every device.</p>
+        <div class="cta-row">
+          <a class="btn btn--primary" href="https://app.inkwell.world/auth">Start Writing Free</a>
+          <a class="btn btn--ghost" href="#features">Explore Features</a>
+        </div>
+        <p class="hero-challenge">Write 10,000 words in your first two weeks and earn a free month of Storyteller. <a href="/start-your-story">Take the Start Your Story Challenge</a></p>
+        <p class="hero-note">Free to start. No card needed.</p>
       </div>
-      <p class="hero-challenge">Write 10,000 words in your first two weeks and earn a free month of Storyteller. <a href="/start-your-story">Take the Start Your Story Challenge</a></p>
-      <p class="hero-note">Free to start. No card needed.</p>
       <div class="hero-demo">
         <div class="codex-anim" role="img" aria-label="Animated preview of Inkwell's Codex, navigating between the manuscript, story outline, characters, and lore of a fantasy novel.">
 
@@ -370,7 +372,7 @@
       <div class="feature-split">
         <ul class="fs-list" role="tablist" aria-label="Inkwell features">
           <li>
-            <button type="button" class="fs-item is-active" role="tab" aria-selected="true" aria-controls="fs-codex" id="tab-fs-codex">
+            <button type="button" class="fs-item" role="tab" aria-selected="false" aria-controls="fs-codex" id="tab-fs-codex">
               <span class="fs-num">01</span>
               <span class="fs-text">
                 <span class="fs-title">Codex Navigation</span>
@@ -379,7 +381,7 @@
             </button>
           </li>
           <li>
-            <button type="button" class="fs-item" role="tab" aria-selected="false" aria-controls="fs-character" id="tab-fs-character">
+            <button type="button" class="fs-item is-active" role="tab" aria-selected="true" aria-controls="fs-character" id="tab-fs-character">
               <span class="fs-num">02</span>
               <span class="fs-text">
                 <span class="fs-title">Character Development</span>
@@ -435,10 +437,10 @@
         </ul>
 
         <div class="fs-stage">
-          <div class="fs-panel is-active" id="fs-codex" role="tabpanel" aria-labelledby="tab-fs-codex">
+          <div class="fs-panel" id="fs-codex" role="tabpanel" aria-labelledby="tab-fs-codex" hidden>
             <!-- The Codex preview lives in the hero; the script below clones it in here. -->
           </div>
-          <div class="fs-panel" id="fs-character" role="tabpanel" aria-labelledby="tab-fs-character" hidden>
+          <div class="fs-panel is-active" id="fs-character" role="tabpanel" aria-labelledby="tab-fs-character">
             <div class="codex-anim codex-anim--char" role="img" aria-label="Animated preview of an Inkwell character sketch for a science fiction novel, filling in the Goal, Physical Appearance, and Flaws fields.">
               <div class="cx__bar">
                 <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> <span class="cx__proj">The Halcyon Drift</span> <span class="cx__sep">›</span> <b>Cael Voss</b></div>
@@ -840,315 +842,316 @@
       <h2 class="display">The Compass</h2>
       <p class="lede">The Compass analyzes what you've already written and reflects it back, so you can see your own work more clearly.</p>
 
-      <div class="compass-demo">
-      <div class="cmp-panel" id="cmp-synopsis" role="tabpanel" aria-labelledby="cmp-tab-synopsis" hidden>
-        <div class="cf-media__frame cf-media__frame--anim">
-          <div class="syn-anim" role="img" aria-label="Animated preview of Inkwell's Synopsis: clicking the Synopsis icon opens a panel, then generating a recap of the current document.">
-            <div class="cx__bar">
-              <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> <span class="cx__proj">Wren of the Tideglass</span> <span class="cx__sep">&rsaquo;</span> <b>The Ninth Bell</b></div>
-              <div class="share-ed-tools">
-                <span class="cx__saved">&#10003; All changes saved</span>
-                <span class="cx__count">1,940 words</span>
-                <svg class="syn-btn" id="syn-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.1 10.9 15.9 7.1M8.1 13.1l7.8 3.8"/></svg>
+      <div class="compass-split">
+        <div class="compass-demo">
+        <div class="cmp-panel" id="cmp-synopsis" role="tabpanel" aria-labelledby="cmp-tab-synopsis" hidden>
+          <div class="cf-media__frame cf-media__frame--anim">
+            <div class="syn-anim" role="img" aria-label="Animated preview of Inkwell's Synopsis: clicking the Synopsis icon opens a panel, then generating a recap of the current document.">
+              <div class="cx__bar">
+                <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> <span class="cx__proj">Wren of the Tideglass</span> <span class="cx__sep">&rsaquo;</span> <b>The Ninth Bell</b></div>
+                <div class="share-ed-tools">
+                  <span class="cx__saved">&#10003; All changes saved</span>
+                  <span class="cx__count">1,940 words</span>
+                  <svg class="syn-btn" id="syn-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="18" cy="18" r="2.4"/><path d="M8.1 10.9 15.9 7.1M8.1 13.1l7.8 3.8"/></svg>
+                </div>
               </div>
-            </div>
-            <div class="syn-body">
-              <div class="cx__prose">
-                <p>The skiff came in on the low tide, its hull scraped white by a reef no chart marked, and Wren was the only one awake to see it.</p>
-                <p>She meant to leave the stranger to the surf. She always meant to leave things to the surf. Instead she found herself hauling him over the rocks by the collar of a coat too fine for a drowned man, muttering his name back to him before she'd even asked it.</p>
-                <p>He woke calling for someone named Iseult, and would not say who that was.</p>
+              <div class="syn-body">
+                <div class="cx__prose">
+                  <p>The skiff came in on the low tide, its hull scraped white by a reef no chart marked, and Wren was the only one awake to see it.</p>
+                  <p>She meant to leave the stranger to the surf. She always meant to leave things to the surf. Instead she found herself hauling him over the rocks by the collar of a coat too fine for a drowned man, muttering his name back to him before she'd even asked it.</p>
+                  <p>He woke calling for someone named Iseult, and would not say who that was.</p>
+                </div>
               </div>
-            </div>
 
-            <!-- Synopsis popover -->
-            <div class="syn-pop" id="syn-pop" aria-hidden="true">
-              <div class="syn-pop__head">
-                <svg class="syn-pop__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg>
-                <div>
-                  <h5>Synopsis</h5>
-                  <div class="syn-pop__sub">The story so far in The Ninth Bell</div>
+              <!-- Synopsis popover -->
+              <div class="syn-pop" id="syn-pop" aria-hidden="true">
+                <div class="syn-pop__head">
+                  <svg class="syn-pop__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg>
+                  <div>
+                    <h5>Synopsis</h5>
+                    <div class="syn-pop__sub">The story so far in The Ninth Bell</div>
+                  </div>
+                  <svg class="syn-pop__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
                 </div>
-                <svg class="syn-pop__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                <div class="syn-pop__body">
+                  <div class="syn-pop__desc show" id="syn-desc">
+                    <p>A few sentences recapping what happens in this document, so you can catch up before you keep writing.</p>
+                    <div class="syn-pop__btn" id="syn-gen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Recap this document</div>
+                  </div>
+                  <div class="syn-pop__loading" id="syn-loading"><span class="ex-spin"></span> Reading the document&hellip;</div>
+                  <div class="syn-pop__result" id="syn-result">
+                    <p>Wren pulls a half-drowned stranger, Bellamy, from the wreck of a skiff that shouldn't have survived the reef, and nurses him through a fever in which he keeps repeating a name she doesn't recognize: Iseult. He wakes claiming to carry a map of coastline that hasn't eroded yet, information the mainland survey office has been quietly paying to keep buried.</p>
+                    <div class="syn-pop__update"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg> Update</div>
+                  </div>
+                </div>
               </div>
-              <div class="syn-pop__body">
-                <div class="syn-pop__desc show" id="syn-desc">
-                  <p>A few sentences recapping what happens in this document, so you can catch up before you keep writing.</p>
-                  <div class="syn-pop__btn" id="syn-gen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Recap this document</div>
-                </div>
-                <div class="syn-pop__loading" id="syn-loading"><span class="ex-spin"></span> Reading the document&hellip;</div>
-                <div class="syn-pop__result" id="syn-result">
-                  <p>Wren pulls a half-drowned stranger, Bellamy, from the wreck of a skiff that shouldn't have survived the reef, and nurses him through a fever in which he keeps repeating a name she doesn't recognize: Iseult. He wakes claiming to carry a map of coastline that hasn't eroded yet, information the mainland survey office has been quietly paying to keep buried.</p>
-                  <div class="syn-pop__update"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg> Update</div>
-                </div>
-              </div>
-            </div>
 
-            <div class="lore-cursor" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
-              <span class="lore-ring"></span>
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="cmp-panel" id="cmp-heartbeat" role="tabpanel" aria-labelledby="cmp-tab-heartbeat">
-        <div class="cf-media__frame cf-media__frame--anim">
-          <div class="hb-anim" role="img" aria-label="Animated preview of Inkwell's Heartbeat: opening the analysis menu, selecting Heartbeat, and generating a dramatic tension curve across the manuscript.">
-            <div class="cx__bar">
-              <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> <span class="cx__proj">Wren of the Tideglass</span> <span class="cx__sep">&rsaquo;</span> <b>The Undertow</b></div>
-              <div class="share-ed-tools">
-                <span class="cx__saved">&#10003; All changes saved</span>
-                <span class="cx__count">4,128 words</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h10M4 12h6M4 18h14"/><circle cx="17" cy="6" r="2"/><circle cx="12" cy="18" r="2"/></svg>
-                <svg class="hb-btn" id="hb-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg>
-              </div>
-            </div>
-
-            <div class="hb-content">
-              <div class="syn-body">
-                <div class="cx__prose">
-                  <p>By the time the tide turned again, half of Nitor already knew Bellamy's name, and none of them agreed on what he was.</p>
-                  <p>Wren's brother came back a second time, no longer polite about it. He wanted the map, or he wanted her, and she was fairly sure he hadn't decided which.</p>
-                  <p>She rowed out past the reef anyway, the same as she always had, only this time someone was rowing back.</p>
+        <div class="cmp-panel" id="cmp-heartbeat" role="tabpanel" aria-labelledby="cmp-tab-heartbeat">
+          <div class="cf-media__frame cf-media__frame--anim">
+            <div class="hb-anim" role="img" aria-label="Animated preview of Inkwell's Heartbeat: opening the analysis menu, selecting Heartbeat, and generating a dramatic tension curve across the manuscript.">
+              <div class="cx__bar">
+                <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> <span class="cx__proj">Wren of the Tideglass</span> <span class="cx__sep">&rsaquo;</span> <b>The Undertow</b></div>
+                <div class="share-ed-tools">
+                  <span class="cx__saved">&#10003; All changes saved</span>
+                  <span class="cx__count">4,128 words</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h10M4 12h6M4 18h14"/><circle cx="17" cy="6" r="2"/><circle cx="12" cy="18" r="2"/></svg>
+                  <svg class="hb-btn" id="hb-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg>
                 </div>
               </div>
 
-              <!-- Analysis picker -->
-              <div class="pm-menu" id="hb-menu">
-                <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Synopsis</div>
-                <div class="pm-mi hi" id="hb-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Heartbeat</div>
-                <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg> Atlas</div>
-                <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg> Ask</div>
-              </div>
-
-              <!-- Heartbeat panel -->
-              <div class="hb-panel" id="hb-panel">
-                <div class="hb-panel__head">
-                  <svg class="hb-panel__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                  <h5>Heartbeat</h5>
-                  <svg class="hb-panel__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
-                </div>
-                <p class="hb-panel__sub">The shape of your story: dramatic tension across your manuscript, document by document.</p>
-
-                <div class="hb-panel__card">
-                  <div class="hb-empty show" id="hb-empty">
-                    <p>See where tension rises and falls across your manuscript, one read for every document.</p>
-                    <div class="hb-scan-btn" id="hb-scan">Read your story's shape</div>
+              <div class="hb-content">
+                <div class="syn-body">
+                  <div class="cx__prose">
+                    <p>By the time the tide turned again, half of Nitor already knew Bellamy's name, and none of them agreed on what he was.</p>
+                    <p>Wren's brother came back a second time, no longer polite about it. He wanted the map, or he wanted her, and she was fairly sure he hadn't decided which.</p>
+                    <p>She rowed out past the reef anyway, the same as she always had, only this time someone was rowing back.</p>
                   </div>
-                  <div class="hb-loading" id="hb-loading"><span class="ex-spin"></span> Reading your manuscript&hellip;</div>
-                  <div class="hb-chart" id="hb-chart">
-                    <svg viewBox="0 0 412 150" aria-hidden="true">
-                      <path class="hb-fill" d="M4,128 C18,118 26,98 40,102 C54,106 60,78 72,72 C84,66 92,96 104,100 C118,104 128,74 140,68 C152,62 160,100 172,110 C186,120 196,84 210,76 C224,68 232,40 246,34 C258,30 266,58 278,64 C292,70 300,46 312,40 C326,34 334,16 348,12 C360,9 368,26 380,24 C392,22 400,10 408,8 L408,140 L4,140 Z"/>
-                      <path class="hb-line" d="M4,128 C18,118 26,98 40,102 C54,106 60,78 72,72 C84,66 92,96 104,100 C118,104 128,74 140,68 C152,62 160,100 172,110 C186,120 196,84 210,76 C224,68 232,40 246,34 C258,30 266,58 278,64 C292,70 300,46 312,40 C326,34 334,16 348,12 C360,9 368,26 380,24 C392,22 400,10 408,8"/>
-                    </svg>
-                    <div class="hb-axis">
-                      <span>1</span><span>5</span><span>9</span><span>13</span><span>17</span><span>21</span><span>25</span><span>29</span><span>33</span><span>37</span><span>41</span><span>45</span>
+                </div>
+
+                <!-- Analysis picker -->
+                <div class="pm-menu" id="hb-menu">
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Synopsis</div>
+                  <div class="pm-mi hi" id="hb-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Heartbeat</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg> Atlas</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg> Ask</div>
+                </div>
+
+                <!-- Heartbeat panel -->
+                <div class="hb-panel" id="hb-panel">
+                  <div class="hb-panel__head">
+                    <svg class="hb-panel__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <h5>Heartbeat</h5>
+                    <svg class="hb-panel__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                  </div>
+                  <p class="hb-panel__sub">The shape of your story: dramatic tension across your manuscript, document by document.</p>
+
+                  <div class="hb-panel__card">
+                    <div class="hb-empty show" id="hb-empty">
+                      <p>See where tension rises and falls across your manuscript, one read for every document.</p>
+                      <div class="hb-scan-btn" id="hb-scan">Read your story's shape</div>
                     </div>
-                    <p class="hb-caption">Average tension 6.2 / 10. Peaks late, in chapters 38 through 45.</p>
-                    <div class="hb-rescan" id="hb-rescan">Rescan</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="lore-cursor" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
-              <span class="lore-ring"></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="cmp-panel" id="cmp-atlas" role="tabpanel" aria-labelledby="cmp-tab-atlas" hidden>
-        <div class="cf-media__frame cf-media__frame--anim">
-          <div class="atlas-anim" role="img" aria-label="Animated preview of Inkwell's Atlas: opening the analysis menu, selecting Atlas, filtering between characters and lore, and selecting a character to see how they connect.">
-            <div class="cx__bar">
-              <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> Wren of the Tideglass</div>
-              <div class="share-ed-tools">
-                <span class="cx__saved">&#10003; All changes saved</span>
-                <span class="cx__count">12,660 words</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h10M4 12h6M4 18h14"/><circle cx="17" cy="6" r="2"/><circle cx="12" cy="18" r="2"/></svg>
-                <svg class="atlas-btn" id="atlas-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
-              </div>
-            </div>
-
-            <div class="atlas-content">
-              <div class="syn-body">
-                <div class="cx__prose">
-                  <p>Grandma Maim used to say Tideglass Cove remembered everyone who ever rowed past the reef, whether the sea let them back or not.</p>
-                  <p>Wren was starting to believe her.</p>
-                </div>
-              </div>
-
-              <!-- Analysis picker -->
-              <div class="pm-menu" id="atlas-menu">
-                <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Synopsis</div>
-                <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Heartbeat</div>
-                <div class="pm-mi hi" id="atlas-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg> Atlas</div>
-                <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg> Ask</div>
-              </div>
-
-              <!-- Atlas panel -->
-              <div class="atlas-panel" id="atlas-panel">
-                <div class="atlas-panel__head">
-                  <svg class="atlas-panel__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg>
-                  <h5>Atlas</h5>
-                  <svg class="atlas-panel__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
-                </div>
-                <p class="atlas-panel__sub">Who and what your story connects, drawn from every character and lore entry that appears in your prose.</p>
-
-                <div class="atlas-card">
-                  <div class="atlas-toolbar">
-                    <div class="atlas-toggle">
-                      <div class="atlas-pill" id="atlas-pill-char"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2.5 19.5c0-4 3-6.5 6.5-6.5s6.5 2.5 6.5 6.5"/><circle cx="17.5" cy="8" r="2.3"/><path d="M15.5 13.2c2.5.4 4.2 2.4 4.5 5.3"/></svg> Characters</div>
-                      <div class="atlas-pill" id="atlas-pill-lore"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.2c-2.2-2-6-2.2-8.2-.6v13c2.2-1.6 6-1.4 8.2.6"/><path d="M12 6.2c2.2-2 6-2.2 8.2-.6v13c-2.2-1.6-6-1.4-8.2.6z"/></svg> Lore</div>
-                    </div>
-                    <div class="atlas-legend"><span><i></i> linked</span><span><i class="dashed"></i> named only</span></div>
-                  </div>
-
-                  <div class="atlas-graph" id="atlas-graph">
-                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                      <line class="atlas-edge" data-a="wren" data-b="bellamy" x1="44" y1="52" x2="24" y2="24"/>
-                      <line class="atlas-edge" data-a="wren" data-b="anders" x1="44" y1="52" x2="68" y2="60"/>
-                      <line class="atlas-edge" data-a="wren" data-b="reef" x1="44" y1="52" x2="12" y2="58"/>
-                      <line class="atlas-edge" data-a="wren" data-b="skiff" x1="44" y1="52" x2="22" y2="84"/>
-                      <line class="atlas-edge" data-a="wren" data-b="cove" x1="44" y1="52" x2="46" y2="90"/>
-                      <line class="atlas-edge" data-a="wren" data-b="map" x1="44" y1="52" x2="90" y2="40"/>
-                      <line class="atlas-edge atlas-edge--dashed" data-a="bellamy" data-b="iseult" x1="24" y1="24" x2="60" y2="14"/>
-                      <line class="atlas-edge" data-a="bellamy" data-b="map" x1="24" y1="24" x2="90" y2="40"/>
-                      <line class="atlas-edge" data-a="bellamy" data-b="skiff" x1="24" y1="24" x2="22" y2="84"/>
-                      <line class="atlas-edge" data-a="anders" data-b="office" x1="68" y1="60" x2="78" y2="88"/>
-                      <line class="atlas-edge atlas-edge--dashed" data-a="anders" data-b="map" x1="68" y1="60" x2="90" y2="40"/>
-                      <line class="atlas-edge" data-a="office" data-b="map" x1="78" y1="88" x2="90" y2="40"/>
-                      <line class="atlas-edge" data-a="skiff" data-b="reef" x1="22" y1="84" x2="12" y2="58"/>
-                      <line class="atlas-edge" data-a="cove" data-b="reef" x1="46" y1="90" x2="12" y2="58"/>
-                    </svg>
-
-                    <div class="atlas-node" data-id="wren" data-type="char" style="left:44%;top:52%"><span class="atlas-dot"></span><span class="atlas-label">Wren</span></div>
-                    <div class="atlas-node" data-id="bellamy" data-type="char" style="left:24%;top:24%"><span class="atlas-dot"></span><span class="atlas-label">Bellamy</span></div>
-                    <div class="atlas-node" data-id="iseult" data-type="char" style="left:60%;top:14%"><span class="atlas-dot"></span><span class="atlas-label">Iseult</span></div>
-                    <div class="atlas-node" data-id="anders" data-type="char" style="left:68%;top:60%"><span class="atlas-dot"></span><span class="atlas-label">Anders</span></div>
-
-                    <div class="atlas-node atlas-node--lore" data-id="reef" data-type="lore" style="left:12%;top:58%"><span class="atlas-dot"></span><span class="atlas-label">The Reef</span></div>
-                    <div class="atlas-node atlas-node--lore" data-id="skiff" data-type="lore" style="left:22%;top:84%"><span class="atlas-dot"></span><span class="atlas-label">The Skiff</span></div>
-                    <div class="atlas-node atlas-node--lore" data-id="cove" data-type="lore" style="left:46%;top:90%"><span class="atlas-dot"></span><span class="atlas-label">Tideglass Cove</span></div>
-                    <div class="atlas-node atlas-node--lore" data-id="office" data-type="lore" style="left:78%;top:88%"><span class="atlas-dot"></span><span class="atlas-label">Survey Office</span></div>
-                    <div class="atlas-node atlas-node--lore" data-id="map" data-type="lore" style="left:90%;top:40%"><span class="atlas-dot"></span><span class="atlas-label">Coastline Map</span></div>
-
-                    <div class="atlas-detail" id="atlas-detail">
-                      <div class="atlas-detail__name"><span class="atlas-dot"></span> Wren</div>
-                      <p class="atlas-detail__count">Connected to 6 other entries.</p>
-                      <div class="atlas-detail__list">
-                        <div class="atlas-detail__item"><b>Bellamy</b>, rescued from the wreck</div>
-                        <div class="atlas-detail__item"><b>Anders</b>, her brother</div>
-                        <div class="atlas-detail__item"><b>Tideglass Cove</b>, home</div>
+                    <div class="hb-loading" id="hb-loading"><span class="ex-spin"></span> Reading your manuscript&hellip;</div>
+                    <div class="hb-chart" id="hb-chart">
+                      <svg viewBox="0 0 412 150" aria-hidden="true">
+                        <path class="hb-fill" d="M4,128 C18,118 26,98 40,102 C54,106 60,78 72,72 C84,66 92,96 104,100 C118,104 128,74 140,68 C152,62 160,100 172,110 C186,120 196,84 210,76 C224,68 232,40 246,34 C258,30 266,58 278,64 C292,70 300,46 312,40 C326,34 334,16 348,12 C360,9 368,26 380,24 C392,22 400,10 408,8 L408,140 L4,140 Z"/>
+                        <path class="hb-line" d="M4,128 C18,118 26,98 40,102 C54,106 60,78 72,72 C84,66 92,96 104,100 C118,104 128,74 140,68 C152,62 160,100 172,110 C186,120 196,84 210,76 C224,68 232,40 246,34 C258,30 266,58 278,64 C292,70 300,46 312,40 C326,34 334,16 348,12 C360,9 368,26 380,24 C392,22 400,10 408,8"/>
+                      </svg>
+                      <div class="hb-axis">
+                        <span>1</span><span>5</span><span>9</span><span>13</span><span>17</span><span>21</span><span>25</span><span>29</span><span>33</span><span>37</span><span>41</span><span>45</span>
                       </div>
-                      <div class="atlas-detail__link">Open in codex</div>
+                      <p class="hb-caption">Average tension 6.2 / 10. Peaks late, in chapters 38 through 45.</p>
+                      <div class="hb-rescan" id="hb-rescan">Rescan</div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="lore-cursor" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
-              <span class="lore-ring"></span>
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="cmp-panel" id="cmp-ask" role="tabpanel" aria-labelledby="cmp-tab-ask" hidden>
-        <div class="cf-media__frame cf-media__frame--anim">
-          <div class="ask-anim" role="img" aria-label="Animated preview of Inkwell's Ask: opening the analysis menu, selecting Ask, typing a question, and receiving an answer grounded in the manuscript with linked citations.">
-            <div class="cx__bar">
-              <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> <span class="cx__proj">Wren of the Tideglass</span> <span class="cx__sep">&rsaquo;</span> <b>Landfall</b></div>
-              <div class="share-ed-tools">
-                <span class="cx__saved">&#10003; All changes saved</span>
-                <span class="cx__count">1,520 words</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h10M4 12h6M4 18h14"/><circle cx="17" cy="6" r="2"/><circle cx="12" cy="18" r="2"/></svg>
-                <svg class="ask-btn" id="ask-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
+        <div class="cmp-panel" id="cmp-atlas" role="tabpanel" aria-labelledby="cmp-tab-atlas" hidden>
+          <div class="cf-media__frame cf-media__frame--anim">
+            <div class="atlas-anim" role="img" aria-label="Animated preview of Inkwell's Atlas: opening the analysis menu, selecting Atlas, filtering between characters and lore, and selecting a character to see how they connect.">
+              <div class="cx__bar">
+                <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> Wren of the Tideglass</div>
+                <div class="share-ed-tools">
+                  <span class="cx__saved">&#10003; All changes saved</span>
+                  <span class="cx__count">12,660 words</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h10M4 12h6M4 18h14"/><circle cx="17" cy="6" r="2"/><circle cx="12" cy="18" r="2"/></svg>
+                  <svg class="atlas-btn" id="atlas-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
+                </div>
+              </div>
+
+              <div class="atlas-content">
+                <div class="syn-body">
+                  <div class="cx__prose">
+                    <p>Grandma Maim used to say Tideglass Cove remembered everyone who ever rowed past the reef, whether the sea let them back or not.</p>
+                    <p>Wren was starting to believe her.</p>
+                  </div>
+                </div>
+
+                <!-- Analysis picker -->
+                <div class="pm-menu" id="atlas-menu">
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Synopsis</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Heartbeat</div>
+                  <div class="pm-mi hi" id="atlas-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg> Atlas</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg> Ask</div>
+                </div>
+
+                <!-- Atlas panel -->
+                <div class="atlas-panel" id="atlas-panel">
+                  <div class="atlas-panel__head">
+                    <svg class="atlas-panel__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg>
+                    <h5>Atlas</h5>
+                    <svg class="atlas-panel__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                  </div>
+                  <p class="atlas-panel__sub">Who and what your story connects, drawn from every character and lore entry that appears in your prose.</p>
+
+                  <div class="atlas-card">
+                    <div class="atlas-toolbar">
+                      <div class="atlas-toggle">
+                        <div class="atlas-pill" id="atlas-pill-char"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M2.5 19.5c0-4 3-6.5 6.5-6.5s6.5 2.5 6.5 6.5"/><circle cx="17.5" cy="8" r="2.3"/><path d="M15.5 13.2c2.5.4 4.2 2.4 4.5 5.3"/></svg> Characters</div>
+                        <div class="atlas-pill" id="atlas-pill-lore"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.2c-2.2-2-6-2.2-8.2-.6v13c2.2-1.6 6-1.4 8.2.6"/><path d="M12 6.2c2.2-2 6-2.2 8.2-.6v13c-2.2-1.6-6-1.4-8.2.6z"/></svg> Lore</div>
+                      </div>
+                      <div class="atlas-legend"><span><i></i> linked</span><span><i class="dashed"></i> named only</span></div>
+                    </div>
+
+                    <div class="atlas-graph" id="atlas-graph">
+                      <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                        <line class="atlas-edge" data-a="wren" data-b="bellamy" x1="44" y1="52" x2="24" y2="24"/>
+                        <line class="atlas-edge" data-a="wren" data-b="anders" x1="44" y1="52" x2="68" y2="60"/>
+                        <line class="atlas-edge" data-a="wren" data-b="reef" x1="44" y1="52" x2="12" y2="58"/>
+                        <line class="atlas-edge" data-a="wren" data-b="skiff" x1="44" y1="52" x2="22" y2="84"/>
+                        <line class="atlas-edge" data-a="wren" data-b="cove" x1="44" y1="52" x2="46" y2="90"/>
+                        <line class="atlas-edge" data-a="wren" data-b="map" x1="44" y1="52" x2="90" y2="40"/>
+                        <line class="atlas-edge atlas-edge--dashed" data-a="bellamy" data-b="iseult" x1="24" y1="24" x2="60" y2="14"/>
+                        <line class="atlas-edge" data-a="bellamy" data-b="map" x1="24" y1="24" x2="90" y2="40"/>
+                        <line class="atlas-edge" data-a="bellamy" data-b="skiff" x1="24" y1="24" x2="22" y2="84"/>
+                        <line class="atlas-edge" data-a="anders" data-b="office" x1="68" y1="60" x2="78" y2="88"/>
+                        <line class="atlas-edge atlas-edge--dashed" data-a="anders" data-b="map" x1="68" y1="60" x2="90" y2="40"/>
+                        <line class="atlas-edge" data-a="office" data-b="map" x1="78" y1="88" x2="90" y2="40"/>
+                        <line class="atlas-edge" data-a="skiff" data-b="reef" x1="22" y1="84" x2="12" y2="58"/>
+                        <line class="atlas-edge" data-a="cove" data-b="reef" x1="46" y1="90" x2="12" y2="58"/>
+                      </svg>
+
+                      <div class="atlas-node" data-id="wren" data-type="char" style="left:44%;top:52%"><span class="atlas-dot"></span><span class="atlas-label">Wren</span></div>
+                      <div class="atlas-node" data-id="bellamy" data-type="char" style="left:24%;top:24%"><span class="atlas-dot"></span><span class="atlas-label">Bellamy</span></div>
+                      <div class="atlas-node" data-id="iseult" data-type="char" style="left:60%;top:14%"><span class="atlas-dot"></span><span class="atlas-label">Iseult</span></div>
+                      <div class="atlas-node" data-id="anders" data-type="char" style="left:68%;top:60%"><span class="atlas-dot"></span><span class="atlas-label">Anders</span></div>
+
+                      <div class="atlas-node atlas-node--lore" data-id="reef" data-type="lore" style="left:12%;top:58%"><span class="atlas-dot"></span><span class="atlas-label">The Reef</span></div>
+                      <div class="atlas-node atlas-node--lore" data-id="skiff" data-type="lore" style="left:22%;top:84%"><span class="atlas-dot"></span><span class="atlas-label">The Skiff</span></div>
+                      <div class="atlas-node atlas-node--lore" data-id="cove" data-type="lore" style="left:46%;top:90%"><span class="atlas-dot"></span><span class="atlas-label">Tideglass Cove</span></div>
+                      <div class="atlas-node atlas-node--lore" data-id="office" data-type="lore" style="left:78%;top:88%"><span class="atlas-dot"></span><span class="atlas-label">Survey Office</span></div>
+                      <div class="atlas-node atlas-node--lore" data-id="map" data-type="lore" style="left:90%;top:40%"><span class="atlas-dot"></span><span class="atlas-label">Coastline Map</span></div>
+
+                      <div class="atlas-detail" id="atlas-detail">
+                        <div class="atlas-detail__name"><span class="atlas-dot"></span> Wren</div>
+                        <p class="atlas-detail__count">Connected to 6 other entries.</p>
+                        <div class="atlas-detail__list">
+                          <div class="atlas-detail__item"><b>Bellamy</b>, rescued from the wreck</div>
+                          <div class="atlas-detail__item"><b>Anders</b>, her brother</div>
+                          <div class="atlas-detail__item"><b>Tideglass Cove</b>, home</div>
+                        </div>
+                        <div class="atlas-detail__link">Open in codex</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
               </div>
             </div>
-
-            <div class="ask-content">
-              <div class="syn-body">
-                <div class="cx__prose">
-                  <p>Bellamy's fever broke on the third night, and with it came the questions Wren had been too afraid to ask.</p>
-                  <p>"Who is Iseult," she said, not really a question anymore. He looked at her for a long moment before he answered, and when he did, she wished she hadn't asked.</p>
+          </div>
+        </div>
+        <div class="cmp-panel" id="cmp-ask" role="tabpanel" aria-labelledby="cmp-tab-ask" hidden>
+          <div class="cf-media__frame cf-media__frame--anim">
+            <div class="ask-anim" role="img" aria-label="Animated preview of Inkwell's Ask: opening the analysis menu, selecting Ask, typing a question, and receiving an answer grounded in the manuscript with linked citations.">
+              <div class="cx__bar">
+                <div class="cx__crumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 4C14 4 5 9 5 16v3h3c7 0 12-9 12-15z"/><path d="M5 19l6-6"/></svg> <span class="cx__proj">Wren of the Tideglass</span> <span class="cx__sep">&rsaquo;</span> <b>Landfall</b></div>
+                <div class="share-ed-tools">
+                  <span class="cx__saved">&#10003; All changes saved</span>
+                  <span class="cx__count">1,520 words</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 6h10M4 12h6M4 18h14"/><circle cx="17" cy="6" r="2"/><circle cx="12" cy="18" r="2"/></svg>
+                  <svg class="ask-btn" id="ask-btn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
                 </div>
               </div>
 
-              <!-- Analysis picker -->
-              <div class="pm-menu" id="ask-menu">
-                <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Synopsis</div>
-                <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Heartbeat</div>
-                <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg> Atlas</div>
-                <div class="pm-mi hi" id="ask-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg> Ask</div>
-              </div>
-
-              <!-- Ask panel -->
-              <div class="ask-panel" id="ask-panel">
-                <div class="ask-panel__head">
-                  <svg class="ask-panel__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg>
-                  <h5>Ask</h5>
-                  <svg class="ask-panel__trash" id="ask-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg>
-                  <svg class="ask-panel__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
-                </div>
-                <div class="ask-panel__body" id="ask-body">
-                  <div class="ask-empty show" id="ask-empty">
-                    <p>Ask a question about your story, like "did I already establish that Wren distrusts her brother" or "where did I describe the harbor." Answers are pulled from what you've actually written, with a link back to where.</p>
+              <div class="ask-content">
+                <div class="syn-body">
+                  <div class="cx__prose">
+                    <p>Bellamy's fever broke on the third night, and with it came the questions Wren had been too afraid to ask.</p>
+                    <p>"Who is Iseult," she said, not really a question anymore. He looked at her for a long moment before he answered, and when he did, she wished she hadn't asked.</p>
                   </div>
-                  <div class="ask-convo" id="ask-convo">
-                    <div class="ask-bubble ask-bubble--user">Why didn't Wren turn Bellamy in to her brother?</div>
-                    <div class="ask-loading" id="ask-loading"><span class="ex-spin"></span> Reading the manuscript&hellip;</div>
-                    <div class="ask-answer" id="ask-answer">
-                      <div class="ask-bubble ask-bubble--reply">
-                        <p>Wren doesn't trust the survey office to use Bellamy's map honestly, and she trusts her brother even less once he starts asking questions on their behalf. She also hasn't forgotten that the map might be the only proof the coastline warnings were true all along. Turning Bellamy in would settle the matter quickly. Rowing him past the reef keeps the question open, which is what she wants.</p>
-                        <div class="ask-cites">
-                          <span class="ask-chip">The Ninth Bell</span>
-                          <span class="ask-chip">Landfall</span>
+                </div>
+
+                <!-- Analysis picker -->
+                <div class="pm-menu" id="ask-menu">
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg> Synopsis</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Heartbeat</div>
+                  <div class="pm-mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg> Atlas</div>
+                  <div class="pm-mi hi" id="ask-opt"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg> Ask</div>
+                </div>
+
+                <!-- Ask panel -->
+                <div class="ask-panel" id="ask-panel">
+                  <div class="ask-panel__head">
+                    <svg class="ask-panel__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg>
+                    <h5>Ask</h5>
+                    <svg class="ask-panel__trash" id="ask-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M9 7V4h6v3"/><path d="M6 7l1 13h10l1-13"/></svg>
+                    <svg class="ask-panel__x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+                  </div>
+                  <div class="ask-panel__body" id="ask-body">
+                    <div class="ask-empty show" id="ask-empty">
+                      <p>Ask a question about your story, like "did I already establish that Wren distrusts her brother" or "where did I describe the harbor." Answers are pulled from what you've actually written, with a link back to where.</p>
+                    </div>
+                    <div class="ask-convo" id="ask-convo">
+                      <div class="ask-bubble ask-bubble--user">Why didn't Wren turn Bellamy in to her brother?</div>
+                      <div class="ask-loading" id="ask-loading"><span class="ex-spin"></span> Reading the manuscript&hellip;</div>
+                      <div class="ask-answer" id="ask-answer">
+                        <div class="ask-bubble ask-bubble--reply">
+                          <p>Wren doesn't trust the survey office to use Bellamy's map honestly, and she trusts her brother even less once he starts asking questions on their behalf. She also hasn't forgotten that the map might be the only proof the coastline warnings were true all along. Turning Bellamy in would settle the matter quickly. Rowing him past the reef keeps the question open, which is what she wants.</p>
+                          <div class="ask-cites">
+                            <span class="ask-chip">The Ninth Bell</span>
+                            <span class="ask-chip">Landfall</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="ask-input-row">
-                  <div class="ask-input" id="ask-input"><span class="csk__typed" id="ask-typed" data-ph="Ask your story&hellip;"></span><span class="csk__caret" id="ask-caret"></span></div>
-                  <div class="ask-send" id="ask-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg></div>
+                  <div class="ask-input-row">
+                    <div class="ask-input" id="ask-input"><span class="csk__typed" id="ask-typed" data-ph="Ask your story&hellip;"></span><span class="csk__caret" id="ask-caret"></span></div>
+                    <div class="ask-send" id="ask-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4z"/></svg></div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="lore-cursor" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
-              <span class="lore-ring"></span>
+              <div class="lore-cursor" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff" stroke="#0b1220" stroke-width="1.4" stroke-linejoin="round"><path d="M5 3l5.5 16 2.3-6.7L19 10z"/></svg>
+                <span class="lore-ring"></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>
-
-      <div class="compass-grid" role="tablist" aria-label="Compass tools">
-        <article class="feature compass-tab" role="tab" id="cmp-tab-synopsis" aria-controls="cmp-synopsis" aria-selected="false" tabindex="-1">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg>
-          <h3>Synopsis</h3>
-          <p>A short, factual recap of any document, so coming back to your story after a break gets you caught up in seconds.</p>
-        </article>
-        <article class="feature compass-tab is-active" role="tab" id="cmp-tab-heartbeat" aria-controls="cmp-heartbeat" aria-selected="true" tabindex="0">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-          <h3>Heartbeat</h3>
-          <p>See the shape of your manuscript's dramatic tension across every document. Visualize the rising and falling action so you can spot where the story surges and where it sags.</p>
-        </article>
-        <article class="feature compass-tab" role="tab" id="cmp-tab-atlas" aria-controls="cmp-atlas" aria-selected="false" tabindex="-1">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg>
-          <h3>The Atlas</h3>
-          <p>A living map of how your characters and your world connect, drawn from what you've actually written, built organically from the characters you've created and the world you have built.</p>
-        </article>
-        <article class="feature compass-tab" role="tab" id="cmp-tab-ask" aria-controls="cmp-ask" aria-selected="false" tabindex="-1">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg>
-          <h3>Ask</h3>
-          <p>Ask a question about your story and get an answer grounded in your manuscript, with a link to the passage to prove it.</p>
-        </article>
+        </div>
+        <div class="compass-tabs" role="tablist" aria-label="Compass tools">
+          <article class="feature compass-tab" role="tab" id="cmp-tab-synopsis" aria-controls="cmp-synopsis" aria-selected="false" tabindex="-1">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/><path d="M9 9h5M9 13h4"/></svg>
+            <h3>Synopsis</h3>
+            <p>A short, factual recap of any document, so coming back to your story after a break gets you caught up in seconds.</p>
+          </article>
+          <article class="feature compass-tab is-active" role="tab" id="cmp-tab-heartbeat" aria-controls="cmp-heartbeat" aria-selected="true" tabindex="0">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <h3>Heartbeat</h3>
+            <p>See the shape of your manuscript's dramatic tension across every document. Visualize the rising and falling action so you can spot where the story surges and where it sags.</p>
+          </article>
+          <article class="feature compass-tab" role="tab" id="cmp-tab-atlas" aria-controls="cmp-atlas" aria-selected="false" tabindex="-1">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h4l2.5 3-1.5 4"/><path d="M14 21.5 13 18l3-2-2-3 3-1 1.8 1.2"/><path d="M8 3.5 9 6l4 .5.5-3.2"/></svg>
+            <h3>The Atlas</h3>
+            <p>A living map of how your characters and your world connect, drawn from what you've actually written, built organically from the characters you've created and the world you have built.</p>
+          </article>
+          <article class="feature compass-tab" role="tab" id="cmp-tab-ask" aria-controls="cmp-ask" aria-selected="false" tabindex="-1">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.83 1c0 1.8-2.6 2.7-2.9 4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor"/></svg>
+            <h3>Ask</h3>
+            <p>Ask a question about your story and get an answer grounded in your manuscript, with a link to the passage to prove it.</p>
+          </article>
+        </div>
       </div>
 
       <div style="margin-top:40px">
@@ -1720,7 +1723,7 @@
     /* Compass tabs: each card swaps the demo above it. Only the selected demo
        runs, and only once the section has scrolled into view. */
     (function () {
-      var list = document.querySelector('.compass-grid[role="tablist"]');
+      var list = document.querySelector('.compass-tabs[role="tablist"]');
       if (!list) return;
       var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
       var current = null, inView = false;
