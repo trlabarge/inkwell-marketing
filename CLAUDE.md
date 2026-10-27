@@ -105,13 +105,15 @@ scripts/          Pre-PR checks: check.py (brand/SEO/link rules), preview.js
 
 ## What's on the site
 
-- **Home (`index.html`)** — In order: hero ("Your Writing Sanctuary") with a
-  typewriter sub-headline; a "Start writing in seconds" steps section closing
-  with a six-item trust row; a tabbed feature showcase (Codex Navigation,
-  Character Development, Lore Management, Project Management, Share &
-  Feedback, Export Documents, Story Notes) with interactive mocked-up UI
-  demos; **The Compass** (a live Synopsis demo borrowed from `compass.html`,
-  plus four feature cards); a finishing section
+- **Home (`index.html`)** — In order: a side-by-side hero ("Where big worlds
+  become finished novels.", CTAs, the Start Your Story Challenge line, and the
+  Codex preview on the right, larger than the demos below); a tabbed feature
+  showcase (Codex Navigation, Character Development, Lore Management, Project
+  Management, Share & Feedback, Export Documents, Story Notes; opens on
+  Character Development, and its Codex panel is cloned from the hero) with
+  interactive mocked-up UI demos; **The Compass** (demo on the left, four
+  tools as tabs on the right: Heartbeat, Atlas, Ask, Synopsis, each swapping
+  in its demo borrowed from `compass.html`); a finishing section
   ("Starting is easy. Inkwell helps you finish.") covering goals, streaks,
   milestones, Writing Insights, and writing analytics; testimonials ("Loved by
   Writers"); an FAQ (differentiation, data security/privacy, collaboration,
@@ -141,7 +143,7 @@ scripts/          Pre-PR checks: check.py (brand/SEO/link rules), preview.js
   Focus Mode, autosave, Markdown/TXT export, beta reader sharing), **Storyteller**
   ($9/mo, featured — unlimited projects, multi-book/series organization, DOCX/
   PDF/EPUB export, Writing Insights, writing analytics, unlimited Compass), and
-  **Worldbuilder** ($19/mo, "Coming soon" — advanced lore relationships, the
+  **Worldbuilder** ($19/mo, open for subscriptions: advanced lore relationships, the
   Atlas, faction tracking, timeline management, continuity tracking).
   `pricing.html` is the source of truth for tier contents and Compass metering,
   not this file.
@@ -161,8 +163,9 @@ scripts/          Pre-PR checks: check.py (brand/SEO/link rules), preview.js
   on-page copy and the brand voice rules (no "AI", no em dashes) whenever
   product facts or pricing change.
 
-App CTAs throughout the site read "Start Writing" / "Become a Storyteller" and
-all point to `https://app.inkwell.world/auth`.
+The nav on every page carries two buttons, "Enter Inkwell" and "Start Writing
+Free". App CTAs read "Start Writing Free" / "Become a Storyteller" / "Build
+Your World" and all point to `https://app.inkwell.world/auth`.
 
 ## Conventions
 

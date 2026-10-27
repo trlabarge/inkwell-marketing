@@ -137,7 +137,7 @@ Everything in Inkling, plus:
 - Enhanced writing statistics and productivity tracking
 - Priority service and support
 
-### Worldbuilder: $19 per month, coming soon
+### Worldbuilder: $19 per month
 
 Everything in Storyteller, plus:
 

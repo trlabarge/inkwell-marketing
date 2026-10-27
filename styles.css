@@ -132,17 +132,6 @@ h3.display { font-size: 1.5rem; }
   100% { box-shadow: 0 0 0 1.5px #2563eb, 0 0 10px 3px rgba(37,99,235,.55), 0 0 26px 10px rgba(37,99,235,.28); }
 }
 
-/* Start Your Story nav CTA — matches the challenge reward pill's gold */
-.btn--gold {
-  background: linear-gradient(180deg, #fbe7a8, #f3cf7a);
-  border: 1.5px solid #e7c878;
-  color: #5b4715;
-}
-.btn--gold:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 22px -8px rgba(196,148,41,.55);
-}
-
 /* ---- Header ---- */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 50;
@@ -160,7 +149,7 @@ h3.display { font-size: 1.5rem; }
   height: 72px;
 }
 /* Slightly smaller nav buttons */
-.site-header .btn--primary, .site-header .btn--gold, .site-header .btn--ghost { font-size: .88rem; padding: 9px 18px; }
+.site-header .btn--primary, .site-header .btn--ghost { font-size: .88rem; padding: 9px 18px; }
 .brand { display: inline-flex; align-items: center; }
 .brand img { height: 42px; width: auto; display: block; }
 .site-footer .brand img { height: 40px; }
@@ -612,7 +601,6 @@ h3.display { font-size: 1.5rem; }
   font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
   padding: 6px 14px; border-radius: 999px; white-space: nowrap;
 }
-.tier__badge--soon { background: #fff; color: var(--text-faint); border: 1px solid var(--line); }
 .tier__name { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--ink); margin: 0; }
 .tier__tag { font-family: var(--font-serif); color: var(--text-muted); margin: 8px 0 18px; min-height: 2.8em; }
 .tier__price { font-family: var(--font-display); font-weight: 700; font-size: 3rem; color: var(--ink); line-height: 1; }
@@ -623,9 +611,7 @@ h3.display { font-size: 1.5rem; }
 .tier .incl-sub { font-style: italic; font-family: var(--font-serif); color: var(--text-muted); font-size: .92rem; margin: 0 0 12px; }
 .feat-list { list-style: none; margin: 0; padding: 0; }
 .feat-list li { display: flex; gap: 10px; align-items: flex-start; font-size: .96rem; color: var(--text); margin-bottom: 11px; }
-.feat-list li.muted { color: var(--text-muted); }
 .feat-list svg { flex: none; width: 18px; height: 18px; color: var(--ink); margin-top: 3px; }
-.tier--soon .feat-list svg { color: var(--text-faint); }
 
 .trust-row { display: flex; gap: 90px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
 .trust-row .item { display: flex; flex-direction: column; align-items: center; gap: 10px; font-weight: 500; font-size: .98rem; color: var(--text-muted); letter-spacing: .01em; }
@@ -759,7 +745,7 @@ h3.display { font-size: 1.5rem; }
   .nav { gap: 10px; }
   .nav .navlink { display: none; }
   .navdrop { display: none; }
-  .site-header .btn--gold, .site-header .nav-enter { display: none; }
+  .site-header .nav-enter { display: none; }
   .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
 }
 @media (max-width: 560px) {
