@@ -1,6 +1,6 @@
 # Inkwell: Full Reference
 
-> Last updated: 2026-09-06
+> Last updated: 2026-10-27
 > Short version: https://inkwell.world/llms.txt
 > Site: https://inkwell.world
 
@@ -269,6 +269,21 @@ settle before finishing book one, seeding, how each book should end,
 maintaining continuity, a copyable planning grid, and four ways first series
 go wrong.
 
+### How to write 50,000 words in a month
+https://inkwell.world/learn/how-to-write-50000-words-in-a-month
+
+To write 50,000 words in a month, write 1,667 words a day for 30 days. If you
+write only on weekdays, aim for about 2,400 words a writing day (November 2026
+has 21 weekdays, so 2,381). Prepare your ending and first few scenes before
+day one, draft forward without editing, and when you fall behind, divide the
+words left by the days left.
+
+Covers: five daily plans (every day 1,667, one rest day a week 1,924,
+weekdays only 2,381, front-loaded 2,000 then 1,334, weekends only 5,556),
+drafting time by speed, word sprints, what to prepare before day one, habits
+for the middle of the month, a catch-up table, whether 50,000 words is a
+novel, and running a November challenge now that NaNoWriMo has closed.
+
 ---
 
 ## Writing tools
@@ -401,7 +416,7 @@ takes about as long again as drafting did.
 
 https://inkwell.world/learn/glossary
 
-Plain definitions for 59 craft terms novelists meet in writing books and
+Plain definitions for 60 craft terms novelists meet in writing books and
 workshops, grouped into story structure (15), character (8), point of view and voice (10), craft and technique (12), process and publishing (14). Every term carries its own anchor, so a
 single definition can be linked directly, for example
 https://inkwell.world/learn/glossary#inciting-incident
@@ -470,14 +485,15 @@ https://inkwell.world/writing-apps-breakdown
 | --- | --- | --- |
 | Home | https://inkwell.world/ | 2026-08-05 |
 | The Compass | https://inkwell.world/compass | 2026-08-05 |
-| Learn hub | https://inkwell.world/learn | 2026-09-06 |
+| Learn hub | https://inkwell.world/learn | 2026-10-27 |
 | How to outline a novel | https://inkwell.world/learn/how-to-outline-a-novel | 2026-08-05 |
 | How to write a story bible | https://inkwell.world/learn/how-to-write-a-story-bible | 2026-08-05 |
 | How to build a character profile | https://inkwell.world/learn/how-to-build-a-character-profile | 2026-08-05 |
 | How to plan a book series | https://inkwell.world/learn/how-to-plan-a-book-series | 2026-08-05 |
+| How to write 50,000 words in a month | https://inkwell.world/learn/how-to-write-50000-words-in-a-month | 2026-10-27 |
 | Word count to pages | https://inkwell.world/learn/tools/word-count-to-pages | 2026-09-05 |
 | How long should a novel be? | https://inkwell.world/learn/tools/novel-length | 2026-09-06 |
-| How long will it take to write my novel? | https://inkwell.world/learn/tools/writing-pace | 2026-09-06 |
+| How long will it take to write my novel? | https://inkwell.world/learn/tools/writing-pace | 2026-10-27 |
 | Start Your Story Challenge | https://inkwell.world/start-your-story | 2026-08-05 |
 | Pricing | https://inkwell.world/pricing | 2026-08-05 |
 | Compare hub | https://inkwell.world/compare | 2026-08-05 |
