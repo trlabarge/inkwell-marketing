@@ -7,6 +7,11 @@ already claimed by an open `SEO:` PR. Reorder freely; IDs never change.
 Status: `todo` → `in PR` (with PR number) → `live` (after merge).
 Type: `new` page, `rework` of an existing page, `compare` page, `glossary`.
 
+Content runs alternate: a new page (`new` or `compare`), then a rework
+(`rework` or `glossary`), then a new page, and so on. Keep the `todo` rows
+interleaved in that order so the top of the list always reads new, rework,
+new, rework. When one kind runs out, the other continues on its own.
+
 Seeded 2026-10-22 from 90 days of Search Console data (Jul 22 to Oct 19:
 513 clicks, 40,365 impressions, average position 10.4). Every click Search
 Console attributes to a query (412) is branded ("inkwell" and variants);
@@ -17,12 +22,13 @@ count and page count questions, where pages rank on page 2 to 6.
 | ID | Status | Type | Target query | URL | Why |
 |---|---|---|---|---|---|
 | B01 | live | new | how to write 50,000 words in a month | /learn/how-to-write-50000-words-in-a-month | Seasonal: November novel-writing month starts Nov 1. Daily-pace table (1,667/day), catch-up plans, links to the writing pace tool. Ship before Oct 31. |
-| B02 | in PR (#41) | rework | X words is how many pages (250, 500, 1,000, 3,000, 10,000, 80,000...) | /learn/tools/word-count-to-pages | 7,864 impressions, positions 14 to 64, CTR 0.1%. Hundreds of "N words in pages" variants. Add a quick-answer table for common counts with anchor IDs, short-form counts (essays, short stories), single vs double spacing, **a US Letter / A4 toggle that defaults to Letter** (77% of the site's generative AI impressions come from outside English-speaking countries, led by A4 markets: Brazil, Indonesia, India), a title and description that match the query shape. Already the most-cited non-home page in Google's AI answers (645 of 2,538 impressions). One page, not one page per number. |
-| B03 | todo | rework | how long is a novel / average novel length / book word count | /learn/tools/novel-length | 236 impressions at position 31 to 76. Strengthen the short answer, genre table with sources, debut vs established author ranges, FAQ. |
-| B04 | todo | rework | best novel writing apps / best writing software for novelists | /writing-apps-breakdown | Ranks 36 to 84. Retitle for the query, refresh 2026 pricing on competitor sites, add a "best for" summary table at the top, FAQ. |
+| B02 | live | rework | X words is how many pages (250, 500, 1,000, 3,000, 10,000, 80,000...) | /learn/tools/word-count-to-pages | 7,864 impressions, positions 14 to 64, CTR 0.1%. Hundreds of "N words in pages" variants. Add a quick-answer table for common counts with anchor IDs, short-form counts (essays, short stories), single vs double spacing, **a US Letter / A4 toggle that defaults to Letter** (77% of the site's generative AI impressions come from outside English-speaking countries, led by A4 markets: Brazil, Indonesia, India), a title and description that match the query shape. Already the most-cited non-home page in Google's AI answers (645 of 2,538 impressions). One page, not one page per number. |
 | B05 | todo | new | how to start writing a novel | /learn/how-to-start-writing-a-novel | Core positioning ("start writing in seconds"). Big beginner query; links to outline, character profile, and pace guides. |
+| B03 | todo | rework | how long is a novel / average novel length / book word count | /learn/tools/novel-length | 236 impressions at position 31 to 76. Strengthen the short answer, genre table with sources, debut vs established author ranges, FAQ. |
 | B06 | todo | new | how long should a chapter be | /learn/how-long-should-a-chapter-be | Classic answer-engine question. Genre ranges with sources, first chapter length, chapter count from word count. |
+| B04 | todo | rework | best novel writing apps / best writing software for novelists | /writing-apps-breakdown | Ranks 36 to 84. Retitle for the query, refresh 2026 pricing on competitor sites, add a "best for" summary table at the top, FAQ. |
 | B07 | todo | new | character profile template | /learn/character-profile-template | Template intent converts and earns links. Copyable template plus a filled example; complements the existing character profile guide. |
+| B38 | todo | glossary | novel writing terms | /learn/glossary | Grow from 59 to 100+ terms, each linking to the guide that covers it. |
 | B08 | todo | new | novel outline template | /learn/novel-outline-template | Same logic as B07, paired with the outlining guide. |
 | B09 | todo | new | three act structure | /learn/three-act-structure | Highly quoted structure topic; worked example with percentages and page counts for an 80k novel. |
 | B10 | todo | new | save the cat beat sheet | /learn/save-the-cat-beat-sheet | All 15 beats with page or word positions for common novel lengths. |
@@ -53,4 +59,3 @@ count and page count questions, where pages rank on page 2 to 6.
 | B35 | todo | new | how to name characters | /learn/how-to-name-characters | Large query family. Method plus curated lists; not a "generator". |
 | B36 | todo | new | series bible template | /learn/series-bible-template | Extends the book series guide. |
 | B37 | todo | new | how to write a scene (scene and sequel) | /learn/how-to-write-a-scene | Pairs with outline template. |
-| B38 | todo | glossary | novel writing terms | /learn/glossary | Grow from 59 to 100+ terms, each linking to the guide that covers it. |
