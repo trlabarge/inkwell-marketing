@@ -152,8 +152,13 @@ words for guides. Never pad.
 ## Mode: content
 
 1. Housekeeping (Step 0).
-2. Take the highest unclaimed `todo` row in `content/backlog.md`
-   (priority order is top to bottom).
+2. **Alternate new pages and reworks.** Find the most recent content-run
+   PR (title `SEO: B<nn> ...`, open or merged) and look up that row's type.
+   If it was `new` or `compare`, take the highest unclaimed `todo` row of
+   type `rework` or `glossary`; if it was `rework` or `glossary`, take the
+   highest unclaimed `new` or `compare` row. If no row of the needed kind
+   is left, take the highest unclaimed `todo` row of either kind.
+   Priority within each kind is top to bottom in `content/backlog.md`.
 3. Pull fresh Search Console data for related queries; search the target
    query and read the top results so the page beats them on usefulness.
 4. Write the page, wire it in, verify, open the PR.
@@ -195,4 +200,6 @@ words for guides. Never pad.
 3. Add up to ten new rows and reorder `todo` rows so the top five are the
    best opportunities: demand, a realistic chance to rank, and fit with a
    novelist who would use Inkwell. Write the one-line reason in the row.
+   Keep the `todo` rows interleaved new, rework, new, rework (see the
+   note at the top of the backlog) for as long as both kinds remain.
 4. Change only `content/backlog.md` in this PR.
