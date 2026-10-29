@@ -321,9 +321,12 @@ The conversion rates it uses, and where they come from:
   (2.54 cm) margins, A4's text block is 6.27 by 9.69 inches against Letter's
   6.5 by 9: lines 3.5% shorter, 7.7% more of them, about 4% more words
   (0.965 x 1.077 = 1.039).
-- **Printed book pages: 250 to 350 words a page.** The range is wide because
-  trim size, font, leading, and chapter openings all move the number. Only a
-  typesetter can give an exact count for a finished book.
+- **Printed book pages: about 275 to 375 words a page**, averaged across a
+  whole book. A 5.5 by 8.5 inch trade paperback has a text block of about
+  4.25 by 7 inches; 11 point type on 14 point leading gives 36 lines of 9 to
+  11 words, so 325 to 400 words on a full page of prose. Dialogue, chapter
+  openings, and scene breaks pull the average down. Only a typesetter can
+  give an exact count for a finished book.
 - **Reading time: 250 words a minute**, a typical adult reading speed for
   fiction.
 
@@ -332,18 +335,18 @@ Common conversions:
 | Word count | Roughly the length of | Manuscript pages | Printed book pages | Reading time |
 | --- | --- | --- | --- | --- |
 | 1,000 | A piece of flash fiction | 4 | 2 to 4 | 4 min |
-| 5,000 | A short story | 20 | 14 to 20 | 20 min |
-| 10,000 | A novelette | 40 | 28 to 40 | 40 min |
-| 25,000 | The Old Man and the Sea | 100 | 71 to 100 | 1 hr 40 min |
-| 50,000 | The Great Gatsby | 200 | 142 to 200 | 3 hr 20 min |
-| 60,000 | Brave New World | 240 | 171 to 240 | 4 hr |
-| 70,000 | The Catcher in the Rye | 280 | 200 to 280 | 4 hr 40 min |
-| 80,000 | Harry Potter and the Sorcerer's Stone | 320 | 228 to 320 | 5 hr 20 min |
-| 90,000 | The Hobbit | 360 | 257 to 360 | 6 hr |
-| 100,000 | The Hunger Games | 400 | 285 to 400 | 6 hr 40 min |
-| 120,000 | Pride and Prejudice | 480 | 342 to 480 | 8 hr |
-| 150,000 | Watership Down | 600 | 428 to 600 | 10 hr |
-| 200,000 | Moby-Dick | 800 | 571 to 800 | 13 hr 20 min |
+| 5,000 | A short story | 20 | 13 to 19 | 20 min |
+| 10,000 | A novelette | 40 | 26 to 37 | 40 min |
+| 25,000 | The Old Man and the Sea | 100 | 66 to 91 | 1 hr 40 min |
+| 50,000 | The Great Gatsby | 200 | 133 to 182 | 3 hr 20 min |
+| 60,000 | Brave New World | 240 | 160 to 219 | 4 hr |
+| 70,000 | The Catcher in the Rye | 280 | 186 to 255 | 4 hr 40 min |
+| 80,000 | Harry Potter and the Sorcerer's Stone | 320 | 213 to 291 | 5 hr 20 min |
+| 90,000 | The Hobbit | 360 | 240 to 328 | 6 hr |
+| 100,000 | The Hunger Games | 400 | 266 to 364 | 6 hr 40 min |
+| 120,000 | Pride and Prejudice | 480 | 320 to 437 | 8 hr |
+| 150,000 | Watership Down | 600 | 400 to 546 | 10 hr |
+| 200,000 | Moby-Dick | 800 | 533 to 728 | 13 hr 20 min |
 
 Published word counts vary by edition and by how the counting is done, so the
 comparisons are close approximations rather than exact matches.
