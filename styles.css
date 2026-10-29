@@ -2078,6 +2078,36 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 }
 .calc__note + .calc__mini { margin-top: 20px; padding-top: 20px; }
 
+/* Two-way segmented choice (paper size). Native radios stay in the tab order
+   and keep arrow-key behavior; only their labels are drawn. */
+.calc__paper { border: 0; margin: 0; padding: 0; min-width: 0; }
+.calc__paper .calc__label { padding: 0; margin-bottom: 8px; }
+.calc__row .calc__paper.calc__field { flex: 0 1 auto; }
+.calc__seg {
+  display: inline-flex; height: 50px; padding: 4px; gap: 4px;
+  background: var(--bg-tint); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.calc__seg input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+.calc__seg label {
+  display: flex; align-items: center; padding: 0 18px; cursor: pointer;
+  font-family: var(--font-sans); font-weight: 500; font-size: 1rem; color: var(--text-muted);
+  border-radius: calc(var(--radius) - 3px); transition: background .2s ease, color .2s ease;
+}
+.calc__seg input:checked + label { background: var(--ink); color: #fff; }
+.calc__seg input:focus-visible + label { outline: 2px solid var(--gold); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .calc__seg label { transition: none; } }
+
+/* Quick-answer table: three short columns, so it keeps the prose measure and
+   needs no horizontal scroll on a phone. */
+@media (min-width: 1040px) {
+  .guide-table-wrap.guide-table-wrap--narrow { width: auto; margin-left: 0; }
+}
+table.guide-table.guide-table--quick { min-width: 0; }
+table.guide-table--quick tbody th { width: 40%; }
+table.guide-table--quick tbody tr { scroll-margin-top: 96px; }
+table.guide-table--quick tbody tr:target th,
+table.guide-table--quick tbody tr:target td { background: var(--bg-tint); }
+
 @media (max-width: 720px) {
   .calc { padding: 24px 20px; }
   .calc__results { gap: 18px; margin-top: 24px; padding-top: 22px; }
