@@ -1,6 +1,6 @@
 # Inkwell
 
-> Last updated: 2026-10-29
+> Last updated: 2026-11-03
 > Full reference: https://inkwell.world/llms-full.txt
 
 > Inkwell is a calm, distraction-free writing home for novelists. It combines a

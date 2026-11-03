@@ -1348,6 +1348,8 @@ table.cmp-table-2 tbody tr:nth-child(even) td:not(.cmp-rowlabel) { background: v
 .cmp-cta { text-align: center; }
 .cmp-cta h2 { margin: 0 0 10px; }
 .cmp-cta p { color: var(--text); margin: 0 0 22px; }
+.cmp-cta__more { margin: 18px 0 0; font-size: .95rem; }
+.cmp-cta__more a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
 
 /* Feature card groups */
 .cmp-feature-group { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 30px; }
