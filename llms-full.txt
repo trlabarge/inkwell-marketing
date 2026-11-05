@@ -1,6 +1,6 @@
 # Inkwell: Full Reference
 
-> Last updated: 2026-11-03
+> Last updated: 2026-11-05
 > Short version: https://inkwell.world/llms.txt
 > Site: https://inkwell.world
 
@@ -355,16 +355,22 @@ Agents and editors want a word count, not a page count, because a word count
 is the same number on every machine that opens the file. If a guideline does
 ask for pages, it means manuscript pages in standard format.
 
-### How long should a novel be?
+### How long is a novel?
 https://inkwell.world/learn/tools/novel-length
 
-Target word counts by genre, with a picker that reports whether a draft sits
-under, inside, or over its range.
+Average novel word counts by genre, with a picker that reports whether a
+draft sits under, inside, or over its range.
 
-Most adult novels run 70,000 to 100,000 words, and 90,000 is a safe target
-with no other information. Below 50,000 a book reads as a novella to most
-trade publishers. Above 120,000 it is a harder sell for a debut, because a
-longer book costs more to edit, print, and ship.
+A novel is usually 70,000 to 100,000 words, about 280 to 400 double-spaced
+manuscript pages. Aim for 90,000 if you know nothing else. Genre moves the
+target: a cozy mystery is comfortable at 70,000, epic fantasy can run past
+120,000. Under 40,000 words, a book counts as a novella.
+
+Covers: word counts for sixteen categories; the published guidelines behind
+them (SFWA Nebula rules, Writer's Digest, Harlequin series lengths); a debut
+zone for first novels (the middle half of each range, for example 97,500 to
+112,500 for adult fantasy); manuscript and printed page counts from 50,000 to
+120,000 words; and what to do when a draft lands outside its range.
 
 | Category | Usual range | Aim for |
 | --- | --- | --- |
@@ -512,7 +518,7 @@ https://inkwell.world/writing-apps-breakdown
 | How to plan a book series | https://inkwell.world/learn/how-to-plan-a-book-series | 2026-08-05 |
 | How to write 50,000 words in a month | https://inkwell.world/learn/how-to-write-50000-words-in-a-month | 2026-10-27 |
 | Word count to pages | https://inkwell.world/learn/tools/word-count-to-pages | 2026-10-29 |
-| How long should a novel be? | https://inkwell.world/learn/tools/novel-length | 2026-11-03 |
+| How long is a novel? | https://inkwell.world/learn/tools/novel-length | 2026-11-05 |
 | How long will it take to write my novel? | https://inkwell.world/learn/tools/writing-pace | 2026-10-27 |
 | Start Your Story Challenge | https://inkwell.world/start-your-story | 2026-08-05 |
 | Pricing | https://inkwell.world/pricing | 2026-08-05 |
