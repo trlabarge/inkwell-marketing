@@ -211,6 +211,22 @@ are written to be useful to any writer, whether or not they use Inkwell.
 
 Hub: https://inkwell.world/learn
 
+### How to start writing a novel
+https://inkwell.world/learn/how-to-start-writing-a-novel
+
+To start writing a novel, write your idea as one sentence: a character, what
+they want, and what stands in the way. Sketch a rough ending and your first
+three scenes, choose a small daily target (300 to 500 words is plenty), and
+write the first scene this week without editing. Revision comes once the
+draft is done.
+
+Covers: seven first steps, turning an idea into a premise (a worked example
+built a piece at a time), how much to outline before starting, how much to
+know about characters, daily targets for an 80,000 word draft at five days a
+week (250 words: 64 weeks, 500: 32, 750: about 22, 1,000: 16, 1,500: about
+11), writing the first page, a first-week plan with prose by day three, and
+why first novels stall.
+
 ### How to outline a novel
 https://inkwell.world/learn/how-to-outline-a-novel
 
@@ -436,8 +452,8 @@ takes about as long again as drafting did.
 
 https://inkwell.world/learn/glossary
 
-Plain definitions for 60 craft terms novelists meet in writing books and
-workshops, grouped into story structure (15), character (8), point of view and voice (10), craft and technique (12), process and publishing (14). Every term carries its own anchor, so a
+Plain definitions for 61 craft terms novelists meet in writing books and
+workshops, grouped into story structure (16), character (8), point of view and voice (10), craft and technique (12), process and publishing (15). Every term carries its own anchor, so a
 single definition can be linked directly, for example
 https://inkwell.world/learn/glossary#inciting-incident
 
@@ -446,6 +462,7 @@ DefinedTermSet, generated from the same list that renders the page.
 
 A sample of the entries:
 
+- **Premise** (premise): A one-sentence statement of what a story is about: a character, what they want, and what stands in the way.
 - **Inciting incident** (inciting-incident): The event that disturbs the protagonist's ordinary life and sets the story moving.
 - **Three-act structure** (three-act-structure): The most common shape for a novel: a setup that establishes the world and the problem, a longer middle of escalating complications, and a resolution.
 - **Protagonist** (protagonist): The character whose choices drive the story and whose change the book is about.
@@ -505,12 +522,13 @@ https://inkwell.world/writing-apps-breakdown
 | --- | --- | --- |
 | Home | https://inkwell.world/ | 2026-08-05 |
 | The Compass | https://inkwell.world/compass | 2026-08-05 |
-| Learn hub | https://inkwell.world/learn | 2026-10-27 |
-| How to outline a novel | https://inkwell.world/learn/how-to-outline-a-novel | 2026-08-05 |
+| Learn hub | https://inkwell.world/learn | 2026-11-03 |
+| How to start writing a novel | https://inkwell.world/learn/how-to-start-writing-a-novel | 2026-11-03 |
+| How to outline a novel | https://inkwell.world/learn/how-to-outline-a-novel | 2026-11-03 |
 | How to write a story bible | https://inkwell.world/learn/how-to-write-a-story-bible | 2026-08-05 |
 | How to build a character profile | https://inkwell.world/learn/how-to-build-a-character-profile | 2026-08-05 |
 | How to plan a book series | https://inkwell.world/learn/how-to-plan-a-book-series | 2026-08-05 |
-| How to write 50,000 words in a month | https://inkwell.world/learn/how-to-write-50000-words-in-a-month | 2026-10-27 |
+| How to write 50,000 words in a month | https://inkwell.world/learn/how-to-write-50000-words-in-a-month | 2026-11-03 |
 | Word count to pages | https://inkwell.world/learn/tools/word-count-to-pages | 2026-10-29 |
 | How long should a novel be? | https://inkwell.world/learn/tools/novel-length | 2026-11-03 |
 | How long will it take to write my novel? | https://inkwell.world/learn/tools/writing-pace | 2026-10-27 |
