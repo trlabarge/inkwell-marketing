@@ -243,6 +243,24 @@ to outline before drafting, outlining in one sitting, what to do when the
 draft leaves the outline behind, outlining for discovery writers, and five
 mistakes to avoid.
 
+### How long should a chapter be
+https://inkwell.world/learn/how-long-should-a-chapter-be
+
+Most novel chapters run 2,000 to 4,000 words, about 8 to 16 double-spaced
+manuscript pages. Thrillers often go shorter, around 1,000 to 2,500 words,
+and epic fantasy longer, 5,000 or more. For an 80,000 word novel, that works
+out to roughly 20 to 40 chapters. Past that, let each chapter end when its
+job is done.
+
+Covers: chapter length bands (under 1,000 very short, 2,000 to 4,000
+standard, over 5,000 very long, after Jericho Writers), typical chapter
+length by genre, average chapter length in seven well-known novels (from
+about 1,100 words in Along Came a Spider to about 4,970 in A Game of
+Thrones), chapters per novel (total words divided by average chapter
+length, with a table from 50,000 to 120,000 words), first chapter length and
+agent samples (ten manuscript pages is about 2,500 words), where to end a
+chapter, varying chapter length for pacing, and a revision checklist.
+
 ### How to write a story bible
 https://inkwell.world/learn/how-to-write-a-story-bible
 
@@ -543,6 +561,7 @@ manuscript between apps.
 | Learn hub | https://inkwell.world/learn | 2026-11-03 |
 | How to start writing a novel | https://inkwell.world/learn/how-to-start-writing-a-novel | 2026-11-03 |
 | How to outline a novel | https://inkwell.world/learn/how-to-outline-a-novel | 2026-11-03 |
+| How long should a chapter be | https://inkwell.world/learn/how-long-should-a-chapter-be | 2026-11-10 |
 | How to write a story bible | https://inkwell.world/learn/how-to-write-a-story-bible | 2026-08-05 |
 | How to build a character profile | https://inkwell.world/learn/how-to-build-a-character-profile | 2026-08-05 |
 | How to plan a book series | https://inkwell.world/learn/how-to-plan-a-book-series | 2026-08-05 |
