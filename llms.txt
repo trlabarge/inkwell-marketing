@@ -1,6 +1,6 @@
 # Inkwell
 
-> Last updated: 2026-11-05
+> Last updated: 2026-11-12
 > Full reference: https://inkwell.world/llms-full.txt
 
 > Inkwell is a calm, distraction-free writing home for novelists. It combines a
@@ -41,7 +41,7 @@ Atlas (a relationship map built from the writing, on the Worldbuilder plan).
 - [Inkwell vs. Google Docs](https://inkwell.world/compare/google-docs)
 - [Inkwell vs. Microsoft Word](https://inkwell.world/compare/word)
 - [Inkwell vs. Reedsy](https://inkwell.world/compare/reedsy)
-- [Best novel writing software 2026](https://inkwell.world/writing-apps-breakdown): a breakdown of eleven novel-writing apps by price, pros, cons, and fit.
+- [The best novel writing apps for 2026](https://inkwell.world/writing-apps-breakdown): eleven novel-writing apps compared by price, free options, pros, cons, and fit, with a best-for table and the cost of each over a one- and two-year draft.
 - [Privacy Policy](https://inkwell.world/privacy)
 - [Terms of Service](https://inkwell.world/terms)
 

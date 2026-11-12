@@ -1,6 +1,6 @@
 # Inkwell: Full Reference
 
-> Last updated: 2026-11-05
+> Last updated: 2026-11-12
 > Short version: https://inkwell.world/llms.txt
 > Site: https://inkwell.world
 
@@ -503,7 +503,7 @@ and offline access.
 - **Reedsy.** Free core. Automatic sync. Built for novelists. Collaboration.
   Light worldbuilding. EPUB and PDF. Focus mode. Browser only offline.
   https://inkwell.world/compare/reedsy
-- **Microsoft Word.** About $70 per year. Sync if set up. Not built for
+- **Microsoft Word.** About $100 per year. Sync if set up. Not built for
   novelists. Collaboration. No worldbuilding. No EPUB. No focus mode.
   Offline. https://inkwell.world/compare/word
 - **Google Docs.** Free. Automatic sync. Not built for novelists.
@@ -519,6 +519,18 @@ and offline access.
 A wider roundup of eleven novel-writing apps by price, pros, cons, and fit
 (the eight above plus Novlr, Ulysses, LivingWriter, and Sudowrite) is at
 https://inkwell.world/writing-apps-breakdown
+
+Short answer from that page: there is no single best novel writing app.
+Scrivener ($59.99 once) is the deepest for structure and formatting, Dabble
+suits writers who plot first, Reedsy Studio is the strongest free option,
+Ulysses fits Apple users, and Sudowrite leads the AI-first tools. Choose by
+how you plan, what you will spend before the draft is finished, and where
+you write.
+
+Covers: a best-for table of all eleven apps with November 2026 prices, five
+questions for choosing, the cost of each app over 12 and 24 months, and FAQs
+on free options, whether Scrivener is worth it, offline use, and moving a
+manuscript between apps.
 
 ---
 
@@ -540,14 +552,14 @@ https://inkwell.world/writing-apps-breakdown
 | How long will it take to write my novel? | https://inkwell.world/learn/tools/writing-pace | 2026-10-27 |
 | Start Your Story Challenge | https://inkwell.world/start-your-story | 2026-08-05 |
 | Pricing | https://inkwell.world/pricing | 2026-08-05 |
-| Compare hub | https://inkwell.world/compare | 2026-08-05 |
+| Compare hub | https://inkwell.world/compare | 2026-11-12 |
 | Inkwell vs. Scrivener | https://inkwell.world/compare/scrivener | 2026-08-05 |
 | Inkwell vs. Dabble | https://inkwell.world/compare/dabble | 2026-08-05 |
 | Inkwell vs. Ellipsus | https://inkwell.world/compare/ellipsus | 2026-08-05 |
 | Inkwell vs. Google Docs | https://inkwell.world/compare/google-docs | 2026-08-05 |
-| Inkwell vs. Microsoft Word | https://inkwell.world/compare/word | 2026-08-05 |
+| Inkwell vs. Microsoft Word | https://inkwell.world/compare/word | 2026-11-12 |
 | Inkwell vs. Reedsy | https://inkwell.world/compare/reedsy | 2026-08-05 |
-| Writing apps breakdown | https://inkwell.world/writing-apps-breakdown | 2026-08-05 |
+| Writing apps breakdown | https://inkwell.world/writing-apps-breakdown | 2026-11-12 |
 | Privacy Policy | https://inkwell.world/privacy | 2026-08-05 |
 | Terms of Service | https://inkwell.world/terms | 2026-08-05 |
 

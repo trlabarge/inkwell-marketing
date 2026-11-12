@@ -84,7 +84,7 @@ window.COMPARE_DATA = {
       pageUrl: "/compare/word",
       desc: "For writers who already live in Word and want a familiar page, though it was built for documents rather than novels.",
       values: {
-        cost:          { symbol: "$$$", tone: "bad",  label: "~$70/yr" },
+        cost:          { symbol: "$$$", tone: "bad",  label: "~$100/yr" },
         cloudSync:     { symbol: "≈", tone: "warn", label: "If set up" },
         novelists:     { symbol: "✗", tone: "bad",  label: "No" },
         collab:        { symbol: "✓", tone: "good", label: "Yes" },
