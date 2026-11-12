@@ -132,6 +132,42 @@ h3.display { font-size: 1.5rem; }
   100% { box-shadow: 0 0 0 1.5px #2563eb, 0 0 10px 3px rgba(37,99,235,.55), 0 0 26px 10px rgba(37,99,235,.28); }
 }
 
+/* Storyteller CTA: same glow treatment, in the site's gold/amber */
+.btn--glow-gold:hover {
+  transform: translateY(-2px);
+  animation: glow-gold 2.6s linear infinite;
+}
+@keyframes glow-gold {
+  0%   { box-shadow: 0 0 0 1.5px #b07c12, 0 0 10px 3px rgba(176,124,18,.55), 0 0 26px 10px rgba(176,124,18,.28); }
+  25%  { box-shadow: 0 0 0 1.5px #d9a53a, 0 0 13px 4px rgba(217,165,58,.65), 0 0 30px 12px rgba(217,165,58,.32); }
+  50%  { box-shadow: 0 0 0 1.5px #f0c060, 0 0 13px 4px rgba(240,192,96,.65), 0 0 30px 12px rgba(240,192,96,.32); }
+  75%  { box-shadow: 0 0 0 1.5px #d9a53a, 0 0 13px 4px rgba(217,165,58,.65), 0 0 30px 12px rgba(217,165,58,.32); }
+  100% { box-shadow: 0 0 0 1.5px #b07c12, 0 0 10px 3px rgba(176,124,18,.55), 0 0 26px 10px rgba(176,124,18,.28); }
+}
+
+/* Worldbuilder CTA: a hotter, faster, flickering fire glow */
+.btn--glow-fire:hover {
+  border-color: transparent;
+  transform: translateY(-2px);
+  animation: glow-fire 1.6s ease-in-out infinite;
+}
+@keyframes glow-fire {
+  0%   { box-shadow: 0 0 0 1.5px #dc2626, 0 0 12px 4px rgba(220,38,38,.6),  0 0 30px 12px rgba(234,88,12,.35); }
+  20%  { box-shadow: 0 0 0 1.5px #ea580c, 0 0 15px 5px rgba(234,88,12,.7),  0 0 36px 14px rgba(245,158,11,.38); }
+  40%  { box-shadow: 0 0 0 1.5px #f97316, 0 0 11px 4px rgba(249,115,22,.6), 0 0 28px 11px rgba(220,38,38,.32); }
+  60%  { box-shadow: 0 0 0 1.5px #f59e0b, 0 0 16px 6px rgba(245,158,11,.7), 0 0 38px 15px rgba(234,88,12,.4); }
+  80%  { box-shadow: 0 0 0 1.5px #ea580c, 0 0 13px 5px rgba(234,88,12,.65), 0 0 32px 13px rgba(220,38,38,.36); }
+  100% { box-shadow: 0 0 0 1.5px #dc2626, 0 0 12px 4px rgba(220,38,38,.6),  0 0 30px 12px rgba(234,88,12,.35); }
+}
+
+/* Reduced motion: hold each glow steady instead of cycling */
+@media (prefers-reduced-motion: reduce) {
+  .btn--gradient:hover, .btn--glow-gold:hover, .btn--glow-fire:hover { animation: none; transform: none; }
+  .btn--gradient:hover  { box-shadow: 0 0 0 1.5px #06b6d4, 0 0 13px 4px rgba(6,182,212,.65), 0 0 30px 12px rgba(6,182,212,.32); }
+  .btn--glow-gold:hover { box-shadow: 0 0 0 1.5px #d9a53a, 0 0 13px 4px rgba(217,165,58,.65), 0 0 30px 12px rgba(217,165,58,.32); }
+  .btn--glow-fire:hover { box-shadow: 0 0 0 1.5px #ea580c, 0 0 15px 5px rgba(234,88,12,.7), 0 0 36px 14px rgba(245,158,11,.38); }
+}
+
 /* ---- Header ---- */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 50;
