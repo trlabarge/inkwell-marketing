@@ -1,6 +1,6 @@
 # Inkwell
 
-> Last updated: 2026-11-12
+> Last updated: 2026-11-17
 > Full reference: https://inkwell.world/llms-full.txt
 
 > Inkwell is a calm, distraction-free writing home for novelists. It combines a
@@ -55,6 +55,7 @@ written to be useful to any writer, whether or not they use Inkwell.
 - [How long should a chapter be](https://inkwell.world/learn/how-long-should-a-chapter-be): most novel chapters run 2,000 to 4,000 words (8 to 16 manuscript pages); thrillers often shorter, epic fantasy longer. Includes length bands, a genre table, average chapter lengths of seven well-known novels, a chapters-per-novel table, first chapter length, where to end a chapter, and a revision checklist.
 - [How to write a story bible](https://inkwell.world/learn/how-to-write-a-story-bible): what a story bible is (a reference document of what is true, as distinct from an outline of what happens), when to start one, the six sections that matter, and a copyable template.
 - [How to build a character profile](https://inkwell.world/learn/how-to-build-a-character-profile): why long character questionnaires produce flat characters, the fields that change your prose (want, need, the lie, voice, behaviour under pressure), and a copyable template.
+- [Character profile template](https://inkwell.world/learn/character-profile-template): free copy-and-paste character profile templates for main characters (want, need, the lie, behaviour under pressure, voice, repeatable physical details, a three-state arc, relationships), supporting characters (eight lines), and minor characters (three lines), plus an antagonist add-on, genre add-ons, a fully filled-in example, and the order to fill fields in.
 - [How to plan a book series](https://inkwell.world/learn/how-to-plan-a-book-series): choosing a series shape, balancing the series arc against each book's own arc, seeding book one, ending each book, and keeping continuity across books.
 - [How to write 50,000 words in a month](https://inkwell.world/learn/how-to-write-50000-words-in-a-month): 1,667 words a day for 30 days, or 2,381 a writing day on weekdays only. Five daily plans, drafting time by speed, what to prepare before day one, a catch-up table for falling behind, and running a November challenge now that NaNoWriMo has closed.
 
@@ -68,7 +69,7 @@ Free calculators published under /learn/tools.
 
 ## Glossary
 
-A glossary of 61 novel writing terms at https://inkwell.world/learn/glossary,
+A glossary of 64 novel writing terms at https://inkwell.world/learn/glossary,
 grouped into story structure, character, point of view and voice, craft and
 technique, and process and publishing. Each term has an anchor of its own, so
 a definition can be linked directly (for example
