@@ -1,6 +1,6 @@
 # Inkwell: Full Reference
 
-> Last updated: 2026-11-12
+> Last updated: 2026-11-19
 > Short version: https://inkwell.world/llms.txt
 > Site: https://inkwell.world
 
@@ -476,8 +476,10 @@ takes about as long again as drafting did.
 
 https://inkwell.world/learn/glossary
 
-Plain definitions for 61 craft terms novelists meet in writing books and
-workshops, grouped into story structure (16), character (8), point of view and voice (10), craft and technique (12), process and publishing (15). Every term carries its own anchor, so a
+Plain definitions for 124 terms novelists meet in writing books, workshops,
+and publishing, grouped into story structure (24), character (16), point of
+view and voice (15), craft and technique (25), length and genre (13), process
+and revision (17), and publishing (14). Every term carries its own anchor, so a
 single definition can be linked directly, for example
 https://inkwell.world/learn/glossary#inciting-incident
 
@@ -497,6 +499,18 @@ A sample of the entries:
 - **Exposition** (exposition): Background information the reader needs in order to follow the story.
 - **Plotter and pantser** (plotter-pantser): The two ends of a spectrum of process: writers who plan before drafting, and writers who discover the story as they write.
 - **Discovery writing** (discovery-writing): Drafting without a detailed plan and finding the story on the page.
+- **Plot point** (plot-point): A turn the protagonist cannot undo, which spins the story in a new direction. The first ends the setup near 25 percent, the second ends the middle near 75 percent.
+- **Novella** (novella): Fiction from 17,500 to 40,000 words by the SFWA Nebula Award rules. A novel is 40,000 words or more.
+- **Upmarket fiction** (upmarket-fiction): Fiction between literary and commercial: accessible and plot-driven, with prose and themes that invite book club discussion.
+- **Developmental edit** (developmental-edit): An editor's read of the whole book for structure, character, pacing, and plot. The first stage of professional editing.
+- **Advance** (advance): Money a traditional publisher pays an author before publication, against future royalties.
+
+Covers: story structure beats and turns, character types and arcs, point of
+view, tense and voice, craft devices (theme, motif, red herring, MacGuffin,
+deus ex machina), story lengths from flash fiction to the novel, genre and
+market labels (literary, commercial, upmarket, young adult, middle grade),
+the stages of editing, and the vocabulary of agents, advances, and
+self-publishing.
 
 ---
 
@@ -569,6 +583,7 @@ manuscript between apps.
 | Word count to pages | https://inkwell.world/learn/tools/word-count-to-pages | 2026-10-29 |
 | How long is a novel? | https://inkwell.world/learn/tools/novel-length | 2026-11-05 |
 | How long will it take to write my novel? | https://inkwell.world/learn/tools/writing-pace | 2026-10-27 |
+| Glossary of novel writing terms | https://inkwell.world/learn/glossary | 2026-11-19 |
 | Start Your Story Challenge | https://inkwell.world/start-your-story | 2026-08-05 |
 | Pricing | https://inkwell.world/pricing | 2026-08-05 |
 | Compare hub | https://inkwell.world/compare | 2026-11-12 |
