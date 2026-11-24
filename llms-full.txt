@@ -1,6 +1,6 @@
 # Inkwell: Full Reference
 
-> Last updated: 2026-11-12
+> Last updated: 2026-11-24
 > Short version: https://inkwell.world/llms.txt
 > Site: https://inkwell.world
 
@@ -242,6 +242,23 @@ snowflake, index cards, chapter grid, reverse outline, guardrails), how much
 to outline before drafting, outlining in one sitting, what to do when the
 draft leaves the outline behind, outlining for discovery writers, and five
 mistakes to avoid.
+
+### Novel outline template
+https://inkwell.world/learn/novel-outline-template
+
+A novel outline template needs five parts: a one-sentence premise, the
+ending, the four turning points that hold the book up (the opening, the
+commitment, the low point, and the climax), a chapter list with one line
+naming what changes in each chapter, and a list of open questions. For an
+80,000 word novel, that fits on two to four pages.
+
+Covers: which template to use when, a one-page novel outline template, a
+chapter-by-chapter template and a tab-separated spreadsheet header, a
+filled-in example (one-page outline and three chapters), where the turning
+points fall (commitment 25%, midpoint 50%, low point 75%, climax 90%; at
+80,000 words and 3,000 word chapters, about chapters 7, 14, 20, and 24 of
+27), a scene card with goal, obstacle, and outcome, a reverse outline for
+revision, and the order to fill fields in without stalling.
 
 ### How long should a chapter be
 https://inkwell.world/learn/how-long-should-a-chapter-be
@@ -558,9 +575,10 @@ manuscript between apps.
 | --- | --- | --- |
 | Home | https://inkwell.world/ | 2026-08-05 |
 | The Compass | https://inkwell.world/compass | 2026-08-05 |
-| Learn hub | https://inkwell.world/learn | 2026-11-03 |
+| Learn hub | https://inkwell.world/learn | 2026-11-24 |
 | How to start writing a novel | https://inkwell.world/learn/how-to-start-writing-a-novel | 2026-11-03 |
-| How to outline a novel | https://inkwell.world/learn/how-to-outline-a-novel | 2026-11-03 |
+| How to outline a novel | https://inkwell.world/learn/how-to-outline-a-novel | 2026-11-24 |
+| Novel outline template | https://inkwell.world/learn/novel-outline-template | 2026-11-24 |
 | How long should a chapter be | https://inkwell.world/learn/how-long-should-a-chapter-be | 2026-11-10 |
 | How to write a story bible | https://inkwell.world/learn/how-to-write-a-story-bible | 2026-08-05 |
 | How to build a character profile | https://inkwell.world/learn/how-to-build-a-character-profile | 2026-08-05 |
