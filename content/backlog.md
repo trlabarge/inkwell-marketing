@@ -29,7 +29,7 @@ count and page count questions, where pages rank on page 2 to 6.
 | B04 | in PR (#47) | rework | best novel writing apps / best writing software for novelists | /writing-apps-breakdown | Ranks 36 to 84. Retitle for the query, refresh 2026 pricing on competitor sites, add a "best for" summary table at the top, FAQ. |
 | B07 | todo | new | character profile template | /learn/character-profile-template | Template intent converts and earns links. Copyable template plus a filled example; complements the existing character profile guide. |
 | B38 | todo | glossary | novel writing terms | /learn/glossary | Grow from 59 to 100+ terms, each linking to the guide that covers it. |
-| B08 | todo | new | novel outline template | /learn/novel-outline-template | Same logic as B07, paired with the outlining guide. |
+| B08 | in PR (#52) | new | novel outline template | /learn/novel-outline-template | Same logic as B07, paired with the outlining guide. |
 | B09 | todo | new | three act structure | /learn/three-act-structure | Highly quoted structure topic; worked example with percentages and page counts for an 80k novel. |
 | B10 | todo | new | save the cat beat sheet | /learn/save-the-cat-beat-sheet | All 15 beats with page or word positions for common novel lengths. |
 | B11 | todo | new | hero's journey | /learn/heros-journey | The 12 stages, with a novel-length worked example. |
